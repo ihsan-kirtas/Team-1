@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7667143887130239629
+--- !u!114 &-8678278771394209742
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,139 +9,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Link to Patient 1 NPC Interaction
   m_EditorClassIdentifier: 
-  Name: Player
+  Name: Link to Patient 1 NPC Interaction
   Text: 
-  UID: c3114cca-6051-4b8b-a616-eeb19ef3667c
+  UID: 3580148f-8635-4269-958d-5aceca1ffc64
   CharacterName: Player
-  CallingNodeData: {fileID: -7667143887130239629}
+  CallingNodeData: {fileID: 3297757814454014732}
   EnvironmentName: 
   Pass: 0
-  DataConnectedToMe: []
+  DataConnectedToMe:
+  - {fileID: 6952150064645518981}
   DataIconnectedTo:
-  - {fileID: 4865584702884130259}
+  - {fileID: -670396113139963628}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
   StartTime: 0
   DurationSum: 0
   useTime: 0
-  IsPlayer: 0
+  IsPlayer: 1
   OverrideTime: 0
   LocalizedText:
   - 
-  NodeDataInMyChain:
-  - {fileID: 7933753490947677789}
-  - {fileID: -767098716613788585}
-  - {fileID: 4865584702884130259}
-  - {fileID: 5493435204747974222}
-  - {fileID: 5511651652897844340}
-  - {fileID: -7667143887130239629}
-  CharacterImage: {fileID: 0}
-  CharacterPersonality:
-    NegativeTraits:
-      Angry: 0
-      Arrogantt: 0
-      Careless: 0
-      Childish: 0
-      Cowardly: 0
-      Crafty: 0
-      Crazy: 0
-      Cruel: 0
-      Dependent: 0
-      Destructive: 0
-      Devious: 0
-      Disloyal: 0
-      Disobedient: 0
-      Disorderly: 0
-      Disorganized: 0
-      Fearful: 0
-      Fickle: 0
-      Foolish: 0
-      Forgetful: 0
-      Frightening: 0
-      Frivolous: 0
-      Graceless: 0
-      Gullible: 0
-      Hostile: 0
-      Impractical: 0
-      Irritable: 0
-      Lazy: 0
-      Meddlesome: 0
-      Miserable: 0
-      Neglectful: 0
-      Opportunistic: 0
-      Provocative: 0
-      Slow: 0
-      Timid: 0
-      Uncooperative: 0
-      Unreliable: 0
-      Weak: 0
-      WeakWilled: 0
-    NeutralTraits:
-      Aggressive: 0
-      Deceptive: 0
-      Dominating: 0
-      Enigmatic: 0
-      Experimental: 0
-      Iconoclastic: 0
-      Idiosyncratic: 0
-      Impassive: 0
-      Obedient: 0
-      Progressive: 0
-      Questioning: 0
-      Reserved: 0
-      Stubborn: 0
-    PositiveTraits:
-      Accessible: 0
-      Active: 0
-      Adaptable: 0
-      Adventurous: 0
-      Alert: 0
-      Brilliant: 0
-      Calm: 0
-      Capable: 0
-      Challenging: 0
-      Charismatic: 0
-      Clever: 0
-      Confident: 0
-      Cooperative: 0
-      Courageous: 0
-      Curious: 0
-      Daring: 0
-      Decisive: 0
-      Discreet: 0
-      Efficient: 0
-      Energetic: 0
-      Focused: 0
-      Helpful: 0
-      Independent: 0
-      Individualistic: 0
-      Innovative: 0
-      Intelligent: 0
-      Leaderly: 0
-      Logical: 0
-      Loyal: 0
-      Methodical: 0
-      Orderly: 0
-      Organized: 0
-      Patient: 0
-      Patriotic: 0
-      Peaceful: 0
-      Reliable: 0
-      Resourceful: 0
-      Responsible: 0
-      Responsive: 0
-      Sane: 0
-      Selfless: 0
-      Serious: 0
-      Skillful: 0
-      Stoic: 0
-      Strong: 0
-  SortingID: 0
---- !u!114 &-911638623848141404
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-8355438967789789823
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,11 +53,12 @@ MonoBehaviour:
   Text: 
   UID: 3a487f60-bb13-4b27-bd8f-6df5ff7fa344
   CharacterName: Patient 1 NPC
-  CallingNodeData: {fileID: -911638623848141404}
+  CallingNodeData: {fileID: -8355438967789789823}
   EnvironmentName: 
   Pass: 0
   DataConnectedToMe: []
-  DataIconnectedTo: []
+  DataIconnectedTo:
+  - {fileID: 1428220978914972167}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -173,7 +70,9 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: -911638623848141404}
+  - {fileID: -586477038964240124}
+  - {fileID: 1428220978914972167}
+  - {fileID: -8355438967789789823}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -276,7 +175,84 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 1
---- !u!114 &-767098716613788585
+--- !u!114 &-7600105033716106955
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 28_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 28_Dialogue
+  Text: 
+  UID: b571e50b-8a86-4043-872e-8bae351d891b
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: -3614181375885324223}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 1
+  useTime: 1
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - Hi Assistant 2
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-6958844895452161943
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 16_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 16_Dialogue
+  Text: 
+  UID: cf652a18-878e-460c-84f0-977a11930d9c
+  CharacterName: Assistant 2 NPC
+  CallingNodeData: {fileID: 1970449037494598369}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: 1970449037494598369}
+  DataIconnectedTo:
+  - {fileID: 5683388121220703332}
+  Duration: 3.15
+  Delay: 0.70000005
+  RealtimeDelay: 0
+  StartTime: 0.70000005
+  DurationSum: 3.8500001
+  useTime: 1
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Assistant 2 - 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-5274949082385548700
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,25 +262,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
-  m_Name: 9_Link
+  m_Name: Link to Assistant 1 NPC Interaction
   m_EditorClassIdentifier: 
-  Name: 9_Link
+  Name: Link to Assistant 1 NPC Interaction
   Text: 
-  UID: 62bc1b31-4906-4d12-814a-7b3f262af7f6
+  UID: e892263f-da39-4b37-a0c8-1c829f2e0190
   CharacterName: Player
-  CallingNodeData: {fileID: -7667143887130239629}
+  CallingNodeData: {fileID: 3297757814454014732}
   EnvironmentName: 
   Pass: 1
   DataConnectedToMe:
-  - {fileID: 4865584702884130259}
-  DataIconnectedTo: []
+  - {fileID: 6952150064645518981}
+  DataIconnectedTo:
+  - {fileID: 5466928333315250697}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
   StartTime: 0
   DurationSum: 0
   useTime: 0
-  IsPlayer: 0
+  IsPlayer: 1
   OverrideTime: 0
   LocalizedText:
   - 
@@ -312,6 +289,307 @@ MonoBehaviour:
   LoopValue: 0
   loopRoute: {fileID: 0}
   _iterationCount: 0
+--- !u!114 &-3614181375885324223
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Assistant 2 Interaction
+  m_EditorClassIdentifier: 
+  Name: Assistant 2 Interaction
+  Text: 
+  UID: 31e66161-84d6-4dbf-b4c0-1d0b29744c84
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: 6506964891386010318}
+  DataIconnectedTo:
+  - {fileID: -7600105033716106955}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-3002107122894265594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 13_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 13_Dialogue
+  Text: 
+  UID: b7e01bff-376d-4863-beb3-3814ab8d67e1
+  CharacterName: Patient 2 NPC
+  CallingNodeData: {fileID: 8692357701778944220}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1184397379183544427}
+  DataIconnectedTo: []
+  Duration: 8.35
+  Delay: 1.7500001
+  RealtimeDelay: 0
+  StartTime: 5.5
+  DurationSum: 13.85
+  useTime: 1
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Patient 2 - 2
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-2939870443116575613
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 22_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 22_Dialogue
+  Text: 
+  UID: 12562fcc-2303-4a54-9ce7-728153b1adab
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: -670396113139963628}
+  DataIconnectedTo: []
+  Duration: 8.5
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 8.5
+  useTime: 1
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - Hi Patient 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-2721102800221218057
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Patient 2 Interaction
+  m_EditorClassIdentifier: 
+  Name: Patient 2 Interaction
+  Text: 
+  UID: 57d6a25d-b178-437c-9d04-fae1c61364c7
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2334047471406645284}
+  DataIconnectedTo:
+  - {fileID: 3074618499022959677}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-2334047471406645284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Link to Patient 2 NPC Interaction
+  m_EditorClassIdentifier: 
+  Name: Link to Patient 2 NPC Interaction
+  Text: 
+  UID: e4396677-9f11-4253-adfc-6f0e4a726589
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: 6952150064645518981}
+  DataIconnectedTo:
+  - {fileID: -2721102800221218057}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-1184397379183544427
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 12_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 12_Dialogue
+  Text: 
+  UID: 3ba12a5b-ff9b-4c15-abad-277eef05272b
+  CharacterName: Patient 2 NPC
+  CallingNodeData: {fileID: 8692357701778944220}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: 8692357701778944220}
+  DataIconnectedTo:
+  - {fileID: -3002107122894265594}
+  Duration: 3.1
+  Delay: 0.65
+  RealtimeDelay: 0
+  StartTime: 0.65
+  DurationSum: 3.75
+  useTime: 1
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Patient 2 - 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-670396113139963628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Patient 1 Interaction
+  m_EditorClassIdentifier: 
+  Name: Patient 1 Interaction
+  Text: 
+  UID: 501c57d5-6797-42ba-a3e6-c060345bfeb9
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: -8678278771394209742}
+  DataIconnectedTo:
+  - {fileID: -2939870443116575613}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-586477038964240124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 11_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 11_Dialogue
+  Text: 
+  UID: 075f5ceb-0716-4d2e-9c3d-1923fed14970
+  CharacterName: Patient 1 NPC
+  CallingNodeData: {fileID: -8355438967789789823}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: 1428220978914972167}
+  DataIconnectedTo: []
+  Duration: 9.75
+  Delay: 4.2000003
+  RealtimeDelay: 0
+  StartTime: 7.9500003
+  DurationSum: 17.7
+  useTime: 1
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Some more text
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,26 +603,50 @@ MonoBehaviour:
   m_Name: Main SceneData
   m_EditorClassIdentifier: 
   UID: 65ea9cdb-04df-4513-a6b5-098431d83c83
-  UpdateUID: 550afbe2-8651-4c0a-9110-a5e5aaa3ddf9
+  UpdateUID: 56f5c46d-6277-452a-8a25-caa165b1147a
   SceneID: 0
   FullCharacterDialogueSet:
-  - {fileID: 7930632382581539254}
-  - {fileID: 2466708131577874179}
-  - {fileID: 3194994133134712859}
-  - {fileID: 7933753490947677789}
-  - {fileID: -767098716613788585}
-  - {fileID: 4865584702884130259}
-  - {fileID: 5493435204747974222}
-  - {fileID: 5511651652897844340}
-  - {fileID: -911638623848141404}
-  - {fileID: -7667143887130239629}
-  ActiveCharacterDialogueSet: []
+  - {fileID: -5274949082385548700}
+  - {fileID: 5466928333315250697}
+  - {fileID: -3614181375885324223}
+  - {fileID: -670396113139963628}
+  - {fileID: -2334047471406645284}
+  - {fileID: -2721102800221218057}
+  - {fileID: 3074618499022959677}
+  - {fileID: 7651855176721981358}
+  - {fileID: -7600105033716106955}
+  - {fileID: 79128670511692208}
+  - {fileID: -8678278771394209742}
+  - {fileID: -8355438967789789823}
+  - {fileID: 8692357701778944220}
+  - {fileID: 6932806639786015587}
+  - {fileID: 1970449037494598369}
+  - {fileID: 6506964891386010318}
+  - {fileID: 6952150064645518981}
+  - {fileID: 3297757814454014732}
+  - {fileID: -2939870443116575613}
+  - {fileID: 1428220978914972167}
+  - {fileID: -1184397379183544427}
+  - {fileID: 7672112583276349889}
+  - {fileID: -6958844895452161943}
+  - {fileID: -3002107122894265594}
+  - {fileID: 6535294720961261596}
+  - {fileID: 5683388121220703332}
+  - {fileID: -586477038964240124}
+  ActiveCharacterDialogueSet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Characters:
-  - {fileID: -7667143887130239629}
-  - {fileID: -911638623848141404}
-  - {fileID: 7930632382581539254}
-  - {fileID: 2466708131577874179}
-  - {fileID: 3194994133134712859}
+  - {fileID: 3297757814454014732}
+  - {fileID: -8355438967789789823}
+  - {fileID: 8692357701778944220}
+  - {fileID: 6932806639786015587}
+  - {fileID: 1970449037494598369}
   Languages:
   - Name: English
     CountryCode: en-US
@@ -353,7 +655,7 @@ MonoBehaviour:
   LanguageIndex: 0
   LanguageNameArray:
   - English
---- !u!114 &2466708131577874179
+--- !u!114 &79128670511692208
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,133 +664,75 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
-  m_Name: Assistant 1 NPC
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 20_Dialogue
   m_EditorClassIdentifier: 
-  Name: Assistant 1 NPC
+  Name: 20_Dialogue
   Text: 
-  UID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
-  CharacterName: Assistant 1 NPC
-  CallingNodeData: {fileID: 2466708131577874179}
+  UID: b8eeece1-32bd-42c7-ab7f-e6f23394dd86
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
   EnvironmentName: 
-  Pass: 0
-  DataConnectedToMe: []
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3074618499022959677}
   DataIconnectedTo: []
-  Duration: 0
+  Duration: 1
   Delay: 0
   RealtimeDelay: 0
   StartTime: 0
   DurationSum: 0
-  useTime: 0
+  useTime: 1
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - Hello P2 again
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &1428220978914972167
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 10_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 10_Dialogue
+  Text: 
+  UID: 09e0de74-228d-4c90-94c7-49755b42d25f
+  CharacterName: Patient 1 NPC
+  CallingNodeData: {fileID: -8355438967789789823}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: -8355438967789789823}
+  DataIconnectedTo:
+  - {fileID: -586477038964240124}
+  Duration: 3.15
+  Delay: 0.6
+  RealtimeDelay: 0
+  StartTime: 0.6
+  DurationSum: 3.75
+  useTime: 1
   IsPlayer: 0
   OverrideTime: 0
   LocalizedText:
-  - 
-  NodeDataInMyChain:
-  - {fileID: 2466708131577874179}
-  CharacterImage: {fileID: 0}
-  CharacterPersonality:
-    NegativeTraits:
-      Angry: 0
-      Arrogantt: 0
-      Careless: 0
-      Childish: 0
-      Cowardly: 0
-      Crafty: 0
-      Crazy: 0
-      Cruel: 0
-      Dependent: 0
-      Destructive: 0
-      Devious: 0
-      Disloyal: 0
-      Disobedient: 0
-      Disorderly: 0
-      Disorganized: 0
-      Fearful: 0
-      Fickle: 0
-      Foolish: 0
-      Forgetful: 0
-      Frightening: 0
-      Frivolous: 0
-      Graceless: 0
-      Gullible: 0
-      Hostile: 0
-      Impractical: 0
-      Irritable: 0
-      Lazy: 0
-      Meddlesome: 0
-      Miserable: 0
-      Neglectful: 0
-      Opportunistic: 0
-      Provocative: 0
-      Slow: 0
-      Timid: 0
-      Uncooperative: 0
-      Unreliable: 0
-      Weak: 0
-      WeakWilled: 0
-    NeutralTraits:
-      Aggressive: 0
-      Deceptive: 0
-      Dominating: 0
-      Enigmatic: 0
-      Experimental: 0
-      Iconoclastic: 0
-      Idiosyncratic: 0
-      Impassive: 0
-      Obedient: 0
-      Progressive: 0
-      Questioning: 0
-      Reserved: 0
-      Stubborn: 0
-    PositiveTraits:
-      Accessible: 0
-      Active: 0
-      Adaptable: 0
-      Adventurous: 0
-      Alert: 0
-      Brilliant: 0
-      Calm: 0
-      Capable: 0
-      Challenging: 0
-      Charismatic: 0
-      Clever: 0
-      Confident: 0
-      Cooperative: 0
-      Courageous: 0
-      Curious: 0
-      Daring: 0
-      Decisive: 0
-      Discreet: 0
-      Efficient: 0
-      Energetic: 0
-      Focused: 0
-      Helpful: 0
-      Independent: 0
-      Individualistic: 0
-      Innovative: 0
-      Intelligent: 0
-      Leaderly: 0
-      Logical: 0
-      Loyal: 0
-      Methodical: 0
-      Orderly: 0
-      Organized: 0
-      Patient: 0
-      Patriotic: 0
-      Peaceful: 0
-      Reliable: 0
-      Resourceful: 0
-      Responsible: 0
-      Responsive: 0
-      Sane: 0
-      Selfless: 0
-      Serious: 0
-      Skillful: 0
-      Stoic: 0
-      Strong: 0
-  SortingID: 3
---- !u!114 &3194994133134712859
+  - Some Text 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &1970449037494598369
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -504,11 +748,12 @@ MonoBehaviour:
   Text: 
   UID: 69aacccd-b0d4-4ea7-9c04-81c8453baa71
   CharacterName: Assistant 2 NPC
-  CallingNodeData: {fileID: 3194994133134712859}
+  CallingNodeData: {fileID: 1970449037494598369}
   EnvironmentName: 
   Pass: 0
   DataConnectedToMe: []
-  DataIconnectedTo: []
+  DataIconnectedTo:
+  - {fileID: -6958844895452161943}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -520,7 +765,9 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: 3194994133134712859}
+  - {fileID: 5683388121220703332}
+  - {fileID: -6958844895452161943}
+  - {fileID: 1970449037494598369}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -623,7 +870,486 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 4
---- !u!114 &4865584702884130259
+--- !u!114 &3074618499022959677
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 19_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 19_Dialogue
+  Text: 
+  UID: 3c34c7df-520e-46d8-b77a-86580459e996
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2721102800221218057}
+  DataIconnectedTo:
+  - {fileID: 79128670511692208}
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 1
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - Hi Patient 2
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &3297757814454014732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  Name: Player
+  Text: 
+  UID: c3114cca-6051-4b8b-a616-eeb19ef3667c
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: 6952150064645518981}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: -5274949082385548700}
+  - {fileID: 5466928333315250697}
+  - {fileID: -3614181375885324223}
+  - {fileID: -670396113139963628}
+  - {fileID: -2334047471406645284}
+  - {fileID: -2721102800221218057}
+  - {fileID: 3074618499022959677}
+  - {fileID: 7651855176721981358}
+  - {fileID: -7600105033716106955}
+  - {fileID: 79128670511692208}
+  - {fileID: -8678278771394209742}
+  - {fileID: 6506964891386010318}
+  - {fileID: 6952150064645518981}
+  - {fileID: 3297757814454014732}
+  - {fileID: -2939870443116575613}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 0
+--- !u!114 &5466928333315250697
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Assistant 1 Interaction
+  m_EditorClassIdentifier: 
+  Name: Assistant 1 Interaction
+  Text: 
+  UID: ee99d23d-4114-48e1-ad85-18c2f8912a61
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: -5274949082385548700}
+  DataIconnectedTo:
+  - {fileID: 7651855176721981358}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &5683388121220703332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 17_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 17_Dialogue
+  Text: 
+  UID: 6b46bb34-3593-4954-9df9-64393b1d6b0b
+  CharacterName: Assistant 2 NPC
+  CallingNodeData: {fileID: 1970449037494598369}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: -6958844895452161943}
+  DataIconnectedTo: []
+  Duration: 8.5
+  Delay: 1.9
+  RealtimeDelay: 0
+  StartTime: 5.75
+  DurationSum: 14.25
+  useTime: 1
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Assistant 2 - 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6506964891386010318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: Link to Assistant 2 NPC Interaction
+  m_EditorClassIdentifier: 
+  Name: Link to Assistant 2 NPC Interaction
+  Text: 
+  UID: 62bc1b31-4906-4d12-814a-7b3f262af7f6
+  CharacterName: Player
+  CallingNodeData: {fileID: 3297757814454014732}
+  EnvironmentName: 
+  Pass: 1
+  DataConnectedToMe:
+  - {fileID: 6952150064645518981}
+  DataIconnectedTo:
+  - {fileID: -3614181375885324223}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 1
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &6535294720961261596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 15_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 15_Dialogue
+  Text: 
+  UID: 81f9a3a5-5dc8-40c7-bef8-4f258a56a42e
+  CharacterName: Assistant 1 NPC
+  CallingNodeData: {fileID: 6932806639786015587}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe:
+  - {fileID: 7672112583276349889}
+  DataIconnectedTo: []
+  Duration: 5.95
+  Delay: 1.75
+  RealtimeDelay: 0
+  StartTime: 5.55
+  DurationSum: 11.5
+  useTime: 1
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'Assistant 1 - 2
+
+'
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6932806639786015587
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Assistant 1 NPC
+  m_EditorClassIdentifier: 
+  Name: Assistant 1 NPC
+  Text: 
+  UID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
+  CharacterName: Assistant 1 NPC
+  CallingNodeData: {fileID: 6932806639786015587}
+  EnvironmentName: 
+  Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: 7672112583276349889}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsPlayer: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: 6535294720961261596}
+  - {fileID: 7672112583276349889}
+  - {fileID: 6932806639786015587}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 3
+--- !u!114 &6952150064645518981
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -639,32 +1365,32 @@ MonoBehaviour:
   Text: 
   UID: 1f9a1949-53cd-4a6b-9ada-3fabc3ab20df
   CharacterName: Player
-  CallingNodeData: {fileID: -7667143887130239629}
+  CallingNodeData: {fileID: 3297757814454014732}
   EnvironmentName: 
   Pass: 0
   DataConnectedToMe:
-  - {fileID: -7667143887130239629}
+  - {fileID: 3297757814454014732}
   DataIconnectedTo:
-  - {fileID: 5511651652897844340}
-  - {fileID: 5493435204747974222}
-  - {fileID: 7933753490947677789}
-  - {fileID: -767098716613788585}
+  - {fileID: -2334047471406645284}
+  - {fileID: -5274949082385548700}
+  - {fileID: 6506964891386010318}
+  - {fileID: -8678278771394209742}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
   StartTime: 0
   DurationSum: 0
   useTime: 0
-  IsPlayer: 0
-  OverrideTime: 0
+  IsPlayer: 1
+  OverrideTime: 1
   LocalizedText:
   - 
-  RouteID: 0
+  RouteID: 3
   TempRouteID: 0
   LinkedRoute: {fileID: 0}
   AutoSwitchValue: 0
   RoutesLinkedToMe: []
---- !u!114 &5493435204747974222
+--- !u!114 &7651855176721981358
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,34 +1399,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
-  m_Name: 7_Link
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 27_Dialogue
   m_EditorClassIdentifier: 
-  Name: 7_Link
+  Name: 27_Dialogue
   Text: 
-  UID: e4396677-9f11-4253-adfc-6f0e4a726589
+  UID: 502d8c01-b1c4-4553-83b5-4556c213e391
   CharacterName: Player
-  CallingNodeData: {fileID: -7667143887130239629}
+  CallingNodeData: {fileID: 3297757814454014732}
   EnvironmentName: 
   Pass: 1
   DataConnectedToMe:
-  - {fileID: 4865584702884130259}
+  - {fileID: 5466928333315250697}
   DataIconnectedTo: []
-  Duration: 0
+  Duration: 1
   Delay: 0
   RealtimeDelay: 0
   StartTime: 0
   DurationSum: 0
-  useTime: 0
-  IsPlayer: 0
+  useTime: 1
+  IsPlayer: 1
   OverrideTime: 0
   LocalizedText:
-  - 
-  Loop: 0
-  LoopValue: 0
-  loopRoute: {fileID: 0}
-  _iterationCount: 0
---- !u!114 &5511651652897844340
+  - Hi Assistant 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &7672112583276349889
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,34 +1437,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
-  m_Name: Link to Player 1 NPC Interaction
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 14_Dialogue
   m_EditorClassIdentifier: 
-  Name: Link to Player 1 NPC Interaction
+  Name: 14_Dialogue
   Text: 
-  UID: 3580148f-8635-4269-958d-5aceca1ffc64
-  CharacterName: Player
-  CallingNodeData: {fileID: -7667143887130239629}
+  UID: 850d4a34-e20c-4e68-b1d2-5b7647701da8
+  CharacterName: Assistant 1 NPC
+  CallingNodeData: {fileID: 6932806639786015587}
   EnvironmentName: 
   Pass: 0
   DataConnectedToMe:
-  - {fileID: 4865584702884130259}
-  DataIconnectedTo: []
-  Duration: 0
-  Delay: 0
+  - {fileID: 6932806639786015587}
+  DataIconnectedTo:
+  - {fileID: 6535294720961261596}
+  Duration: 3.15
+  Delay: 0.65
   RealtimeDelay: 0
-  StartTime: 0
-  DurationSum: 0
-  useTime: 0
+  StartTime: 0.65
+  DurationSum: 3.8000002
+  useTime: 1
   IsPlayer: 0
   OverrideTime: 0
   LocalizedText:
-  - 
-  Loop: 0
-  LoopValue: 0
-  loopRoute: {fileID: 0}
-  _iterationCount: 0
---- !u!114 &7930632382581539254
+  - Assistant 1 - 1
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &8692357701778944220
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,11 +1483,12 @@ MonoBehaviour:
   Text: 
   UID: 61b6dec7-8858-4559-982e-5e8d76b0a433
   CharacterName: Patient 2 NPC
-  CallingNodeData: {fileID: 7930632382581539254}
+  CallingNodeData: {fileID: 8692357701778944220}
   EnvironmentName: 
   Pass: 0
   DataConnectedToMe: []
-  DataIconnectedTo: []
+  DataIconnectedTo:
+  - {fileID: -1184397379183544427}
   Duration: 0
   Delay: 0
   RealtimeDelay: 0
@@ -768,7 +1500,9 @@ MonoBehaviour:
   LocalizedText:
   - 
   NodeDataInMyChain:
-  - {fileID: 7930632382581539254}
+  - {fileID: -3002107122894265594}
+  - {fileID: -1184397379183544427}
+  - {fileID: 8692357701778944220}
   CharacterImage: {fileID: 0}
   CharacterPersonality:
     NegativeTraits:
@@ -871,39 +1605,3 @@ MonoBehaviour:
       Stoic: 0
       Strong: 0
   SortingID: 2
---- !u!114 &7933753490947677789
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
-  m_Name: 8_Link
-  m_EditorClassIdentifier: 
-  Name: 8_Link
-  Text: 
-  UID: e892263f-da39-4b37-a0c8-1c829f2e0190
-  CharacterName: Player
-  CallingNodeData: {fileID: -7667143887130239629}
-  EnvironmentName: 
-  Pass: 1
-  DataConnectedToMe:
-  - {fileID: 4865584702884130259}
-  DataIconnectedTo: []
-  Duration: 0
-  Delay: 0
-  RealtimeDelay: 0
-  StartTime: 0
-  DurationSum: 0
-  useTime: 0
-  IsPlayer: 0
-  OverrideTime: 0
-  LocalizedText:
-  - 
-  Loop: 0
-  LoopValue: 0
-  loopRoute: {fileID: 0}
-  _iterationCount: 0
