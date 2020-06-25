@@ -2263,6 +2263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 226314335}
+  - component: {fileID: 226314336}
   m_Layer: 0
   m_Name: Patient 1
   m_TagString: Untagged
@@ -2285,6 +2286,26 @@ Transform:
   m_Father: {fileID: 2027215601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &226314336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226314334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  added: 0
+  character: {fileID: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &228040823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6894,6 +6915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 719030004}
+  - component: {fileID: 719030005}
   m_Layer: 0
   m_Name: Patient 2
   m_TagString: Untagged
@@ -6916,6 +6938,26 @@ Transform:
   m_Father: {fileID: 2027215601}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &719030005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719030003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  added: 0
+  character: {fileID: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &721264477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8107,6 +8149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 899675923}
+  - component: {fileID: 899675924}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8129,6 +8172,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899675924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899675922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b37a4d736056e4c89518a2e104c834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCharacterComponent: {fileID: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  TargetTag: 
 --- !u!1 &910552347
 GameObject:
   m_ObjectHideFlags: 0
@@ -10342,6 +10405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1099629227}
+  - component: {fileID: 1099629228}
   m_Layer: 0
   m_Name: Assistant 1
   m_TagString: Untagged
@@ -10364,6 +10428,26 @@ Transform:
   m_Father: {fileID: 7690849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099629228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099629226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  added: 0
+  character: {fileID: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1111051532
 GameObject:
   m_ObjectHideFlags: 0
@@ -12174,6 +12258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1338953537}
+  - component: {fileID: 1338953538}
   m_Layer: 0
   m_Name: Assistant 2
   m_TagString: Untagged
@@ -12196,6 +12281,26 @@ Transform:
   m_Father: {fileID: 7690849}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338953538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338953536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  added: 0
+  character: {fileID: 0}
+  OnEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1345042046
 GameObject:
   m_ObjectHideFlags: 0
