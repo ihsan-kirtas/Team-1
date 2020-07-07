@@ -5,23 +5,25 @@ using UnityEngine;
 public class AC_AnimationController : MonoBehaviour
 {
     [SerializeField] Animator myAnimatorController;
-    public GameObject NPC;
+    //public GameObject NPC;
+    bool idleTrue = false;
+
+    private void Start()
+    {
+        idleTrue = false;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {   
         if (other.CompareTag("Assistant 3 NPC"))
         {
-            myAnimatorController.SetBool("IdleTrue", true);
+
+            idleTrue = true;
+            //myAnimatorController.SetBool("IdleTrue", true);
         }
         
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Assistant 3 NPC"))
-        {
-            myAnimatorController.SetBool("IdleTrue", false);
-        }
-
-    }
+    
 }

@@ -7,6 +7,10 @@ public class AC_RaycastScript : MonoBehaviour
 {
     public RaycastHit hit;
     public Ray ray;
+    private int currentColor, length;
+
+
+
 
     private void Update()
     {
@@ -21,7 +25,10 @@ public class AC_RaycastScript : MonoBehaviour
                 if (hit.collider != null)
                 {
                     hit.collider.enabled = true;
+
+
                     Debug.Log(hit.transform.name);
+
                 }
             }
 

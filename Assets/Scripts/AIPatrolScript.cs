@@ -22,6 +22,10 @@ public class AIPatrolScript : MonoBehaviour
         GotoNextPoint();
     }
 
+    //IEnumerator waitForSecs()
+    //{
+    //    yield return new WaitForSeconds(5);
+    //}
 
     void GotoNextPoint()
     {
@@ -29,12 +33,16 @@ public class AIPatrolScript : MonoBehaviour
         if (points.Length == 0)
             return;
 
+
+        //StartCoroutine(waitForSecs());
         // Set the agent to go to the currently selected destination.
         agent.destination = points[destPoint].position;
+        
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
         destPoint = (destPoint + 1) % points.Length;
+       
     }
 
 
