@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
-
+// Setup steps
 // Tag player with "Player" Tag
-
 // Link UI Next button to Next function in inspector
 // Link UI Close button to StopDialog function in inspector
 
@@ -14,7 +14,11 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+    // Dialog Event
+    public UnityEvent start_dialog;
+
     public GameObject dialogPanel;
+
     public Text npcNameText;
     public Text dialogText;
 
@@ -26,24 +30,20 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(false);                               // Sets the dialog panel to not active
     }
 
-
-    public void Start_Dialog(string _npcName, List<string> _convo)
+    public void Start_Dialog(Patient_Data _convo)
     {
-        npcNameText.text = _npcName;                                // Set the UI NPC name on the dialog box
-        conversation = new List<string>(_convo);                    // Create a list from the convo provided to the function call
+        GameEvents.current.UIActivated();                           // EVENT Broadcast - UI opened
+        npcNameText.text = _convo.name;                             // Set the UI NPC name on the dialog box
+        conversation = new List<string>(_convo.conversation);       // Create a list from the convo provided to the function call
         dialogPanel.SetActive(true);                                // Shows the dialog box
         convoIndex = 0;                                             // The 1st thing in our list
         ShowText();
     }
 
-    public void Start_Dialog()
-    {
-
-    }
-
 
     public void StopDialog()
     {
+        GameEvents.current.UIDeactivated();                         // EVENT Broadcast - UI closed
         dialogPanel.SetActive(false);                               // Hide the dialog panel
     }
 
@@ -58,6 +58,15 @@ public class DialogManager : MonoBehaviour
         if (convoIndex < conversation.Count - 1)                    // Check the convo length before incrementing
         {
             convoIndex += 1;
+            ShowText();
+        }
+    }
+
+    public void Previous()                                              // decrement convo to the previous message
+    {
+        if (convoIndex > 0)                                             // only go as low as 0
+        {
+            convoIndex -= 1;
             ShowText();
         }
     }
