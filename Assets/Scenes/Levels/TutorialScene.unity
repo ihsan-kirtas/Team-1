@@ -557,37 +557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1973479396}
-  self: {fileID: 28570562}
-  UID: 502d8c01-b1c4-4553-83b5-4556c213e391
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &31442896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -718,38 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 1
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 31675293}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2087349356}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &32423555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,37 +1061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1226712296}
-  self: {fileID: 40267536}
-  UID: b571e50b-8a86-4043-872e-8bae351d891b
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &41905094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,27 +4052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 148602515}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1001 &175792753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4298,37 +4183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1069044874}
-  self: {fileID: 180099343}
-  UID: 61b6dec7-8858-4559-982e-5e8d76b0a433
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 230760323}
-  character: {fileID: 230760325}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &181161310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5175,69 +5029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneData: {fileID: 11400000, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  ActiveIndex: 0
-  Characters: []
-  ReflectedDataSet:
-  - {fileID: 290169387}
-  TempReflectedDataSet: []
-  ReflectedDataParent: {fileID: 619167475}
-  TargetReflectedData: {fileID: 0}
-  GeneralReflectedData: {fileID: 1703273818}
-  GeneralReflectedDataParent: {fileID: 1390454631}
-  TempGeneralReflectedDataSet: {fileID: 0}
-  NameUI: {fileID: 0}
-  NameText: {fileID: 0}
-  DisplayedTextUI: {fileID: 0}
-  DisplayedText: {fileID: 0}
-  MoveNextButton: {fileID: 0}
-  MovePreviousButton: {fileID: 0}
-  RouteButton: {fileID: 0}
-  RouteButtons: []
-  RouteParent: {fileID: 0}
-  UseNameUI: 1
-  UseDialogueTextUI: 1
-  UseMoveNextButton: 1
-  UseMovePreviousButton: 1
-  UseRouteButton: 1
-  textDisplayMode: 0
-  TypingSpeed: 0.05
-  Timer: 0
-  startDelay: 0.5
-  VolumeVariation: 0.1
-  TypingAudioSource: {fileID: 340237483}
-  TypingAudioCip: {fileID: 0}
-  VoiceAudioSource: {fileID: 1011670406}
-  SoundEffectAudioSource: {fileID: 1854647444}
-  CommunicatingCharacters: []
-  CommunicatingCharacterGameobject: []
-  self: {fileID: 6932806639786015587, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  targetChararacterIndex: 3
-  CachedUID: 
-  TargetRoute: 0
-  MatchingRouteNumber: 2
-  UsesText: 1
-  UsesStoryboardImages: 0
-  UsesVoiceOver: 1
-  AutoStartVoiceClip: 0
-  UsesSoundffects: 1
-  AutoStartSoundEffectClip: 0
-  KeywordFilters: []
-  UseKeywordFilters: 0
-  FilterCount: 0
-  ShowGeneralSettings: 0
-  ShowKeywordFilterFouldout: 0
-  ShowNodeSpecificSettings: 1
-  SetupRouteButtons: 0
-  LastSelectedUID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
-  ShowUIAndTextSettings: 0
-  ShowTextDisplayModeSettings: 0
-  ShowGeneralConditionsSettings: 1
-  ShowNodeSpecificConditionSettings: 1
-  NameColour: {r: 1, g: 1, b: 1, a: 1}
-  TextColour: {r: 1, g: 1, b: 1, a: 1}
-  AutoStartAllConditionsByDefault: 0
-  UpdateUID: 
 --- !u!1001 &208678331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5486,27 +5277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 220088873}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!43 &223585684
 Mesh:
   m_ObjectHideFlags: 0
@@ -5758,69 +5528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneData: {fileID: 11400000, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  ActiveIndex: 0
-  Characters: []
-  ReflectedDataSet:
-  - {fileID: 180099345}
-  TempReflectedDataSet: []
-  ReflectedDataParent: {fileID: 251789555}
-  TargetReflectedData: {fileID: 0}
-  GeneralReflectedData: {fileID: 2146724683}
-  GeneralReflectedDataParent: {fileID: 1841125709}
-  TempGeneralReflectedDataSet: {fileID: 0}
-  NameUI: {fileID: 0}
-  NameText: {fileID: 0}
-  DisplayedTextUI: {fileID: 0}
-  DisplayedText: {fileID: 0}
-  MoveNextButton: {fileID: 0}
-  MovePreviousButton: {fileID: 0}
-  RouteButton: {fileID: 0}
-  RouteButtons: []
-  RouteParent: {fileID: 0}
-  UseNameUI: 1
-  UseDialogueTextUI: 1
-  UseMoveNextButton: 1
-  UseMovePreviousButton: 1
-  UseRouteButton: 1
-  textDisplayMode: 0
-  TypingSpeed: 0.05
-  Timer: 0
-  startDelay: 0.5
-  VolumeVariation: 0.1
-  TypingAudioSource: {fileID: 2064476107}
-  TypingAudioCip: {fileID: 0}
-  VoiceAudioSource: {fileID: 46945098}
-  SoundEffectAudioSource: {fileID: 1689414463}
-  CommunicatingCharacters: []
-  CommunicatingCharacterGameobject: []
-  self: {fileID: 8692357701778944220, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  targetChararacterIndex: 2
-  CachedUID: 
-  TargetRoute: 0
-  MatchingRouteNumber: 1
-  UsesText: 1
-  UsesStoryboardImages: 0
-  UsesVoiceOver: 1
-  AutoStartVoiceClip: 0
-  UsesSoundffects: 1
-  AutoStartSoundEffectClip: 0
-  KeywordFilters: []
-  UseKeywordFilters: 0
-  FilterCount: 0
-  ShowGeneralSettings: 0
-  ShowKeywordFilterFouldout: 0
-  ShowNodeSpecificSettings: 1
-  SetupRouteButtons: 0
-  LastSelectedUID: 61b6dec7-8858-4559-982e-5e8d76b0a433
-  ShowUIAndTextSettings: 0
-  ShowTextDisplayModeSettings: 0
-  ShowGeneralConditionsSettings: 1
-  ShowNodeSpecificConditionSettings: 1
-  NameColour: {r: 1, g: 1, b: 1, a: 1}
-  TextColour: {r: 1, g: 1, b: 1, a: 1}
-  AutoStartAllConditionsByDefault: 0
-  UpdateUID: 
 --- !u!1 &235442258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7705,37 +7412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1512870766}
-  self: {fileID: 290169385}
-  UID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 204787828}
-  character: {fileID: 204787830}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &296920921
 GameObject:
   m_ObjectHideFlags: 0
@@ -8440,37 +8116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1513232679}
-  self: {fileID: 318386051}
-  UID: e4396677-9f11-4253-adfc-6f0e4a726589
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &318426357
 GameObject:
   m_ObjectHideFlags: 0
@@ -8515,37 +8160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 220088875}
-  self: {fileID: 318426357}
-  UID: 57d6a25d-b178-437c-9d04-fae1c61364c7
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &320374041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10379,37 +9993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 2018099515}
-  self: {fileID: 395744118}
-  UID: 69aacccd-b0d4-4ea7-9c04-81c8453baa71
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1208437040}
-  character: {fileID: 1208437042}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!4 &395744120
 Transform:
   m_ObjectHideFlags: 0
@@ -11064,38 +10647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 1
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 422907195}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2087349356}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &426298705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 75e14550dea62de4c9a6660ed81978cc,
@@ -11393,37 +10944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 974216901}
-  self: {fileID: 436768517}
-  UID: 69aacccd-b0d4-4ea7-9c04-81c8453baa71
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1208437040}
-  character: {fileID: 1208437042}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &438359588
 GameObject:
   m_ObjectHideFlags: 0
@@ -12450,37 +11970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1814579968}
-  self: {fileID: 499826619}
-  UID: 12562fcc-2303-4a54-9ce7-728153b1adab
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &501354027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13384,27 +12873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 521788244}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 0}
 --- !u!1 &533591443
 GameObject:
   m_ObjectHideFlags: 0
@@ -13580,14 +13048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  added: 0
-  character: {fileID: 1208437042}
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!64 &533749971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16285,37 +15745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1359516261}
-  self: {fileID: 638984213}
-  UID: e892263f-da39-4b37-a0c8-1c829f2e0190
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &639330812
 GameObject:
   m_ObjectHideFlags: 0
@@ -17374,27 +16803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 699453967}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &701551689
 GameObject:
   m_ObjectHideFlags: 0
@@ -17424,27 +16832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 701551689}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 204787828}
-  character: {fileID: 204787830}
 --- !u!4 &701551691
 Transform:
   m_ObjectHideFlags: 0
@@ -17552,27 +16939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 704253622}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &710212370
 GameObject:
   m_ObjectHideFlags: 0
@@ -18017,37 +17383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 758833632}
-  self: {fileID: 726449393}
-  UID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 553793080}
-  character: {fileID: 0}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!4 &726449395
 Transform:
   m_ObjectHideFlags: 0
@@ -19418,41 +18753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 422907197}
-  self: {fileID: 757486711}
-  UID: 1f9a1949-53cd-4a6b-9ada-3fabc3ab20df
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles:
-      - 
-      - 
-      - 
-      - 
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &758580280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19557,27 +18857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 758833631}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 553793080}
-  character: {fileID: 0}
 --- !u!4 &758833633
 Transform:
   m_ObjectHideFlags: 0
@@ -21112,27 +20391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 837088807}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &840111920
 GameObject:
   m_ObjectHideFlags: 0
@@ -21177,37 +20435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1731184279}
-  self: {fileID: 840111920}
-  UID: 62bc1b31-4906-4d12-814a-7b3f262af7f6
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &844965079
 GameObject:
   m_ObjectHideFlags: 0
@@ -21429,37 +20656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1478449934}
-  self: {fileID: 858943753}
-  UID: 3c34c7df-520e-46d8-b77a-86580459e996
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &860788306
 GameObject:
   m_ObjectHideFlags: 0
@@ -23124,37 +22320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1786977496}
-  self: {fileID: 913811458}
-  UID: b8eeece1-32bd-42c7-ab7f-e6f23394dd86
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &915463302
 GameObject:
   m_ObjectHideFlags: 0
@@ -23568,6 +22733,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -23636,14 +22805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b37a4d736056e4c89518a2e104c834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCharacterComponent: {fileID: 933296342}
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetTag: NPC
 --- !u!4 &933296341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -23662,85 +22823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneData: {fileID: 11400000, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  ActiveIndex: 0
-  Characters: []
-  ReflectedDataSet:
-  - {fileID: 1288859167}
-  - {fileID: 638984215}
-  - {fileID: 1211152602}
-  - {fileID: 1124898896}
-  - {fileID: 1715436939}
-  - {fileID: 318386053}
-  - {fileID: 318426359}
-  - {fileID: 1553392280}
-  - {fileID: 858943755}
-  - {fileID: 28570564}
-  - {fileID: 40267538}
-  - {fileID: 913811460}
-  - {fileID: 499826621}
-  - {fileID: 1360280920}
-  - {fileID: 1538496351}
-  - {fileID: 840111922}
-  - {fileID: 757486713}
-  TempReflectedDataSet: []
-  ReflectedDataParent: {fileID: 1654376414}
-  TargetReflectedData: {fileID: 0}
-  GeneralReflectedData: {fileID: 1759329711}
-  GeneralReflectedDataParent: {fileID: 655221181}
-  TempGeneralReflectedDataSet: {fileID: 0}
-  NameUI: {fileID: 0}
-  NameText: {fileID: 49481260}
-  DisplayedTextUI: {fileID: 0}
-  DisplayedText: {fileID: 283495628}
-  MoveNextButton: {fileID: 1700802585}
-  MovePreviousButton: {fileID: 1376206102}
-  RouteButton: {fileID: 1151732384}
-  RouteButtons: []
-  RouteParent: {fileID: 920021581}
-  UseNameUI: 1
-  UseDialogueTextUI: 1
-  UseMoveNextButton: 1
-  UseMovePreviousButton: 1
-  UseRouteButton: 1
-  textDisplayMode: 0
-  TypingSpeed: 0.05
-  Timer: 0
-  startDelay: 0.5
-  VolumeVariation: 0.1
-  TypingAudioSource: {fileID: 803754594}
-  TypingAudioCip: {fileID: 0}
-  VoiceAudioSource: {fileID: 1212415311}
-  SoundEffectAudioSource: {fileID: 286419598}
-  CommunicatingCharacters: []
-  CommunicatingCharacterGameobject: []
-  self: {fileID: 3297757814454014732, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  targetChararacterIndex: 0
-  CachedUID: 
-  TargetRoute: 0
-  MatchingRouteNumber: 0
-  UsesText: 1
-  UsesStoryboardImages: 0
-  UsesVoiceOver: 1
-  AutoStartVoiceClip: 0
-  UsesSoundffects: 1
-  AutoStartSoundEffectClip: 0
-  KeywordFilters: []
-  UseKeywordFilters: 0
-  FilterCount: 0
-  ShowGeneralSettings: 1
-  ShowKeywordFilterFouldout: 0
-  ShowNodeSpecificSettings: 1
-  SetupRouteButtons: 0
-  LastSelectedUID: 12562fcc-2303-4a54-9ce7-728153b1adab
-  ShowUIAndTextSettings: 1
-  ShowTextDisplayModeSettings: 0
-  ShowGeneralConditionsSettings: 1
-  ShowNodeSpecificConditionSettings: 1
-  NameColour: {r: 1, g: 1, b: 1, a: 1}
-  TextColour: {r: 1, g: 1, b: 1, a: 1}
-  AutoStartAllConditionsByDefault: 0
-  UpdateUID: 
 --- !u!1001 &936527604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24518,27 +23600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 974216899}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1208437040}
-  character: {fileID: 1208437042}
 --- !u!1 &979154225
 GameObject:
   m_ObjectHideFlags: 0
@@ -25555,14 +24616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  added: 0
-  character: {fileID: 0}
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!64 &1016427484
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25854,27 +24907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1028167954}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1224119502}
-  character: {fileID: 1224119504}
 --- !u!4 &1030184688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55,
@@ -26784,27 +25816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1065863543}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1224119502}
-  character: {fileID: 1224119504}
 --- !u!4 &1065863545
 Transform:
   m_ObjectHideFlags: 0
@@ -26999,27 +26010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1069044872}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 230760323}
-  character: {fileID: 230760325}
 --- !u!1 &1073883527
 GameObject:
   m_ObjectHideFlags: 0
@@ -28729,27 +27719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1119100791}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1124898894
 GameObject:
   m_ObjectHideFlags: 0
@@ -28794,37 +27763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 148602517}
-  self: {fileID: 1124898894}
-  UID: 31e66161-84d6-4dbf-b4c0-1d0b29744c84
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &1126058638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30820,69 +29758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneData: {fileID: 11400000, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  ActiveIndex: 0
-  Characters: []
-  ReflectedDataSet:
-  - {fileID: 436768519}
-  TempReflectedDataSet: []
-  ReflectedDataParent: {fileID: 1784451101}
-  TargetReflectedData: {fileID: 0}
-  GeneralReflectedData: {fileID: 395744119}
-  GeneralReflectedDataParent: {fileID: 314727820}
-  TempGeneralReflectedDataSet: {fileID: 0}
-  NameUI: {fileID: 0}
-  NameText: {fileID: 0}
-  DisplayedTextUI: {fileID: 0}
-  DisplayedText: {fileID: 0}
-  MoveNextButton: {fileID: 0}
-  MovePreviousButton: {fileID: 0}
-  RouteButton: {fileID: 0}
-  RouteButtons: []
-  RouteParent: {fileID: 0}
-  UseNameUI: 1
-  UseDialogueTextUI: 1
-  UseMoveNextButton: 1
-  UseMovePreviousButton: 1
-  UseRouteButton: 1
-  textDisplayMode: 0
-  TypingSpeed: 0.05
-  Timer: 0
-  startDelay: 0.5
-  VolumeVariation: 0.1
-  TypingAudioSource: {fileID: 594286430}
-  TypingAudioCip: {fileID: 0}
-  VoiceAudioSource: {fileID: 1394003779}
-  SoundEffectAudioSource: {fileID: 990778463}
-  CommunicatingCharacters: []
-  CommunicatingCharacterGameobject: []
-  self: {fileID: 1970449037494598369, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  targetChararacterIndex: 4
-  CachedUID: 
-  TargetRoute: 0
-  MatchingRouteNumber: 3
-  UsesText: 1
-  UsesStoryboardImages: 0
-  UsesVoiceOver: 1
-  AutoStartVoiceClip: 0
-  UsesSoundffects: 1
-  AutoStartSoundEffectClip: 0
-  KeywordFilters: []
-  UseKeywordFilters: 0
-  FilterCount: 0
-  ShowGeneralSettings: 0
-  ShowKeywordFilterFouldout: 0
-  ShowNodeSpecificSettings: 1
-  SetupRouteButtons: 0
-  LastSelectedUID: 69aacccd-b0d4-4ea7-9c04-81c8453baa71
-  ShowUIAndTextSettings: 0
-  ShowTextDisplayModeSettings: 0
-  ShowGeneralConditionsSettings: 1
-  ShowNodeSpecificConditionSettings: 1
-  NameColour: {r: 1, g: 1, b: 1, a: 1}
-  TextColour: {r: 1, g: 1, b: 1, a: 1}
-  AutoStartAllConditionsByDefault: 0
-  UpdateUID: 
 --- !u!1 &1211152600
 GameObject:
   m_ObjectHideFlags: 0
@@ -30927,37 +29802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1596129365}
-  self: {fileID: 1211152600}
-  UID: ee99d23d-4114-48e1-ad85-18c2f8912a61
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &1211715619
 GameObject:
   m_ObjectHideFlags: 0
@@ -31757,69 +30601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneData: {fileID: 11400000, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  ActiveIndex: 0
-  Characters: []
-  ReflectedDataSet:
-  - {fileID: 1436592862}
-  TempReflectedDataSet: []
-  ReflectedDataParent: {fileID: 456470074}
-  TargetReflectedData: {fileID: 0}
-  GeneralReflectedData: {fileID: 1617095209}
-  GeneralReflectedDataParent: {fileID: 2074726515}
-  TempGeneralReflectedDataSet: {fileID: 0}
-  NameUI: {fileID: 0}
-  NameText: {fileID: 0}
-  DisplayedTextUI: {fileID: 0}
-  DisplayedText: {fileID: 0}
-  MoveNextButton: {fileID: 0}
-  MovePreviousButton: {fileID: 0}
-  RouteButton: {fileID: 0}
-  RouteButtons: []
-  RouteParent: {fileID: 0}
-  UseNameUI: 1
-  UseDialogueTextUI: 1
-  UseMoveNextButton: 1
-  UseMovePreviousButton: 1
-  UseRouteButton: 1
-  textDisplayMode: 0
-  TypingSpeed: 0.05
-  Timer: 0
-  startDelay: 0.5
-  VolumeVariation: 0.1
-  TypingAudioSource: {fileID: 1732005414}
-  TypingAudioCip: {fileID: 0}
-  VoiceAudioSource: {fileID: 2102182281}
-  SoundEffectAudioSource: {fileID: 890156678}
-  CommunicatingCharacters: []
-  CommunicatingCharacterGameobject: []
-  self: {fileID: -8355438967789789823, guid: f3cd305cfaac10d4fa8d4263bad712d8, type: 2}
-  targetChararacterIndex: 1
-  CachedUID: 
-  TargetRoute: 0
-  MatchingRouteNumber: 0
-  UsesText: 1
-  UsesStoryboardImages: 0
-  UsesVoiceOver: 1
-  AutoStartVoiceClip: 0
-  UsesSoundffects: 1
-  AutoStartSoundEffectClip: 0
-  KeywordFilters: []
-  UseKeywordFilters: 0
-  FilterCount: 0
-  ShowGeneralSettings: 0
-  ShowKeywordFilterFouldout: 0
-  ShowNodeSpecificSettings: 1
-  SetupRouteButtons: 0
-  LastSelectedUID: 3a487f60-bb13-4b27-bd8f-6df5ff7fa344
-  ShowUIAndTextSettings: 0
-  ShowTextDisplayModeSettings: 0
-  ShowGeneralConditionsSettings: 1
-  ShowNodeSpecificConditionSettings: 1
-  NameColour: {r: 1, g: 1, b: 1, a: 1}
-  TextColour: {r: 1, g: 1, b: 1, a: 1}
-  AutoStartAllConditionsByDefault: 0
-  UpdateUID: 
 --- !u!1 &1226712294
 GameObject:
   m_ObjectHideFlags: 0
@@ -31863,27 +30644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1226712294}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1001 &1233009164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32314,14 +31074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  added: 0
-  character: {fileID: 230760325}
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!64 &1259250413
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32911,6 +31663,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266883110}
   m_CullTransparentMesh: 0
+--- !u!1 &1268403507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268403508}
+  - component: {fileID: 1268403510}
+  - component: {fileID: 1268403509}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1268403508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268403507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2081840011}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6, y: -64.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1268403509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268403507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1268403510
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268403507}
+  m_CullTransparentMesh: 0
 --- !u!1 &1274410283
 GameObject:
   m_ObjectHideFlags: 0
@@ -33197,37 +32022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 704253624}
-  self: {fileID: 1288859165}
-  UID: c48887e9-ffba-43f2-9063-361e157adaef
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &1299028981
 GameObject:
   m_ObjectHideFlags: 0
@@ -35363,27 +34157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1359516259}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1360280918
 GameObject:
   m_ObjectHideFlags: 0
@@ -35428,37 +34201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1119100793}
-  self: {fileID: 1360280918}
-  UID: c3114cca-6051-4b8b-a616-eeb19ef3667c
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &1361027281
 GameObject:
   m_ObjectHideFlags: 0
@@ -38446,37 +37188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1028167956}
-  self: {fileID: 1436592860}
-  UID: 3a487f60-bb13-4b27-bd8f-6df5ff7fa344
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1224119502}
-  character: {fileID: 1224119504}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1001 &1436787924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39898,27 +38609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1478449932}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1001 &1480500888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40029,27 +38719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1481834480}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1488557632
 GameObject:
   m_ObjectHideFlags: 0
@@ -40093,27 +38762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1488557632}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1499584958
 GameObject:
   m_ObjectHideFlags: 0
@@ -40307,27 +38955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1512870764}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 204787828}
-  character: {fileID: 204787830}
 --- !u!1 &1513232677
 GameObject:
   m_ObjectHideFlags: 0
@@ -40371,27 +38998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1513232677}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1518679769
 GameObject:
   m_ObjectHideFlags: 0
@@ -40673,37 +39279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 699453969}
-  self: {fileID: 1538496349}
-  UID: 3580148f-8635-4269-958d-5aceca1ffc64
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &1538561595
 GameObject:
   m_ObjectHideFlags: 1
@@ -41153,37 +39728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 837088809}
-  self: {fileID: 1553392278}
-  UID: 60e63bd5-b01f-4a64-afde-8a0c60b34db2
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!43 &1555249023
 Mesh:
   m_ObjectHideFlags: 0
@@ -42680,27 +41224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1596129363}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1598159721
 GameObject:
   m_ObjectHideFlags: 0
@@ -42746,14 +41269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  added: 0
-  character: {fileID: 1224119504}
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!64 &1598159724
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43256,37 +41771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1065863544}
-  self: {fileID: 1617095208}
-  UID: 3a487f60-bb13-4b27-bd8f-6df5ff7fa344
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1224119502}
-  character: {fileID: 1224119504}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!4 &1617095210
 Transform:
   m_ObjectHideFlags: 0
@@ -43867,27 +42351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1633067001}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 553793080}
-  character: {fileID: 0}
 --- !u!4 &1633067003
 Transform:
   m_ObjectHideFlags: 0
@@ -45913,37 +44376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 701551690}
-  self: {fileID: 1703273817}
-  UID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 204787828}
-  character: {fileID: 204787830}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!4 &1703273819
 Transform:
   m_ObjectHideFlags: 0
@@ -46059,27 +44491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1709088089}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 230760323}
-  character: {fileID: 230760325}
 --- !u!4 &1709088091
 Transform:
   m_ObjectHideFlags: 0
@@ -46296,37 +44707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1481834482}
-  self: {fileID: 1715436937}
-  UID: 501c57d5-6797-42ba-a3e6-c060345bfeb9
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &1722536580
 GameObject:
   m_ObjectHideFlags: 0
@@ -46629,27 +45009,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1731184277}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1732005412
 GameObject:
   m_ObjectHideFlags: 0
@@ -47332,38 +45691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 31675295}
-  - {fileID: 1488557634}
-  self: {fileID: 1759329709}
-  UID: c3114cca-6051-4b8b-a616-eeb19ef3667c
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!43 &1766465716
 Mesh:
   m_ObjectHideFlags: 0
@@ -48128,37 +46455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1633067002}
-  self: {fileID: 1784439167}
-  UID: 0c9b0aff-de0f-4178-b13d-9e20f72d279a
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 553793080}
-  character: {fileID: 0}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!4 &1784439169
 Transform:
   m_ObjectHideFlags: 0
@@ -48248,27 +46544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1786977494}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!4 &1788407518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 436670, guid: 54eb5844754051b40a918a84c33b7c1a,
@@ -48982,27 +47257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1814579966}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1815098785
 GameObject:
   m_ObjectHideFlags: 0
@@ -50344,7 +48598,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842507625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.264147, y: 4.2742414, z: -2.74}
+  m_LocalPosition: {x: -9.264147, y: 6.04, z: -2.74}
   m_LocalScale: {x: 1, y: 3.8925, z: 3.9827}
   m_Children: []
   m_Father: {fileID: 1211715620}
@@ -51089,14 +49343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ee4ddf842ccaa442a41017fb1e6fc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  added: 0
-  character: {fileID: 204787830}
-  OnEnterEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!64 &1863017498
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53802,27 +52048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 1973479394}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 933296342}
 --- !u!1 &1975902049
 GameObject:
   m_ObjectHideFlags: 0
@@ -54663,37 +52888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 521788246}
-  self: {fileID: 2013573872}
-  UID: c3114cca-6051-4b8b-a616-eeb19ef3667c
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 933296339}
-  character: {fileID: 0}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!1 &2018099514
 GameObject:
   m_ObjectHideFlags: 0
@@ -54723,27 +52917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3fd7e9b9682f4458e1869ce15de6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStart: 0
-  cachedTargetObject: {fileID: 0}
-  ComponentIndex: 0
-  Components: []
-  Disabled: 0
-  Invoked: 0
-  MethodIndex: 0
-  ObjectiveBool: 0
-  Self: {fileID: 2018099514}
-  serializedMethods: []
-  targetEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  TargetGameObject: {fileID: 0}
-  timeUseMethod: 0
-  UseTime: 0
-  CustomWaitTime: 0
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 1208437040}
-  character: {fileID: 1208437042}
 --- !u!4 &2018099516
 Transform:
   m_ObjectHideFlags: 0
@@ -56062,6 +54235,105 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078113333}
   m_Mesh: {fileID: -7501779384425396496, guid: dcc7b7076d4c64d41ad5c46eae8dbdd9, type: 3}
+--- !u!1 &2081840007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081840011}
+  - component: {fileID: 2081840010}
+  - component: {fileID: 2081840009}
+  - component: {fileID: 2081840008}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2081840008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081840007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2081840009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081840007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &2081840010
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081840007}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &2081840011
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081840007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1268403508}
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &2081974201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 75e14550dea62de4c9a6660ed81978cc,
@@ -57864,37 +56136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4ba758f14c174fbb3b40d8f593a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conditions:
-  - {fileID: 1709088090}
-  self: {fileID: 2146724682}
-  UID: 61b6dec7-8858-4559-982e-5e8d76b0a433
-  DialoguerGameObject: {fileID: 0}
-  dialoguer: {fileID: 0}
-  CharacterGameObject: {fileID: 230760323}
-  character: {fileID: 230760325}
-  CharacterSpecificData:
-    IsTheMainPlayer: 0
-  RouteSpecificDataset:
-    AlternativeRouteTitles: []
-    LanguageSpecificData:
-    - RouteTitles: []
-    UseAlternativeRouteTitles: 0
-  ActionSpecificData:
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    useDurationLengthForSoundEffects: 1
-    useSoundEffectLength: 0
-  DialogueSpecificData:
-    OverrideTextDisplayMethod: 0
-    OverrideUseSoundEffect: 0
-    OverrideUseStoryboardImage: 0
-    OverrideUseVoiceover: 0
-    useDurationLengthForSoundEffects: 1
-    useDurationLengthForVoiceOver: 1
-    useSoundEffectLength: 0
-    useVoiceOverLength: 0
-  EndSpecificData:
-    sceneToContinueTo: 0
 --- !u!4 &2146724684
 Transform:
   m_ObjectHideFlags: 0

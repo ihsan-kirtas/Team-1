@@ -7,16 +7,13 @@ public class AC_RaycastScript : MonoBehaviour
 {
     public RaycastHit hit;
     public Ray ray;
-    private int currentColor, length;
-
-
-
-
+    public GameObject uiTextObject;
+    
     private void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-
+        uiTextObject.SetActive(false);
 
         if (Physics.Raycast(ray, out hit))
         {
@@ -25,14 +22,16 @@ public class AC_RaycastScript : MonoBehaviour
                 if (hit.collider != null)
                 {
                     hit.collider.enabled = true;
-
-
+                    uiTextObject.SetActive(true);
                     Debug.Log(hit.transform.name);
 
                 }
             }
 
-            
+            if (Input.GetButtonDown("escape"))
+            {
+                uiTextObject.SetActive(false);
+            }
 
            
         }
