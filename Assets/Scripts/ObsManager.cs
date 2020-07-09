@@ -33,8 +33,8 @@ public class ObsManager : MonoBehaviour
     {
         foreach (Patient_Data patient_data in patients)
         {
-            patient_data.bloodPressureDiastolicTracker.Clear();     // Blood Pressure - Diastolic
             patient_data.bloodPressureSystolicTracker.Clear();      // Blood Pressure - Systolic
+            patient_data.bloodPressureDiastolicTracker.Clear();     // Blood Pressure - Diastolic
             patient_data.breathRateTracker.Clear();                 // Breath Rate
             patient_data.capillaryRefillTracker.Clear();            // Capillary Refill
             patient_data.glasgowComaScaleTracker.Clear();           // Glasgow Coma Scale
@@ -49,8 +49,8 @@ public class ObsManager : MonoBehaviour
     // Called when patient added. Adds initial values as the 1st observation recording in the tracker list
     void NewPatientInitialObs(Patient_Data patient_data)
     {
-        patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicInit);        // Blood Pressure - Diastolic
         patient_data.bloodPressureSystolicTracker.Add(patient_data.bloodPressureSystolicInit);          // Blood Pressure - Systolic
+        patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicInit);        // Blood Pressure - Diastolic
         patient_data.breathRateTracker.Add(patient_data.breathRateInit);                                // Breath Rate
         patient_data.capillaryRefillTracker.Add(patient_data.capillaryRefillInit);                      // Capillary Refill
         patient_data.glasgowComaScaleTracker.Add(patient_data.glasgowComaScaleInit);                    // Glasgow Coma Scale
@@ -89,8 +89,8 @@ public class ObsManager : MonoBehaviour
     {
         if (patient_data.initValsAdded)
         {
-            patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicTracker.Last() + patient_data.bloodPressureDiastolicMod);     // Blood Pressure - Diastolic
             patient_data.bloodPressureSystolicTracker.Add(patient_data.bloodPressureSystolicTracker.Last() + patient_data.bloodPressureSystolicMod);        // Blood Pressure - Systolic
+            patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicTracker.Last() + patient_data.bloodPressureDiastolicMod);     // Blood Pressure - Diastolic
             patient_data.breathRateTracker.Add(patient_data.breathRateTracker.Last() + patient_data.breathRateMod);                                         // Breath Rate
             patient_data.capillaryRefillTracker.Add(patient_data.capillaryRefillTracker.Last() + patient_data.capillaryRefillMod);                          // Capillary Refill
             patient_data.glasgowComaScaleTracker.Add(patient_data.glasgowComaScaleTracker.Last() + patient_data.glasgowComaScaleMod);                       // Glasgow Coma Scale
