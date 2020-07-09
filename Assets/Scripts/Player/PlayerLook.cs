@@ -50,7 +50,7 @@ public class PlayerLook : MonoBehaviour
     // Switch camera mode to Game
     void ActivateGameCamera()
     {
-        Debug.Log("GAME CAMERA SETTIGS");
+        //Debug.Log("GAME CAMERA SETTIGS");
         moveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen
     }
@@ -59,7 +59,7 @@ public class PlayerLook : MonoBehaviour
     // Switch camera mode to UI
     void ActivateUICamera()
     {
-        Debug.Log("UI CAMERA SETTINGS");
+        //Debug.Log("UI CAMERA SETTINGS");
         moveCamera = false;
         Cursor.lockState = CursorLockMode.None;   // Unlocks the cursor for UI buttons
     }

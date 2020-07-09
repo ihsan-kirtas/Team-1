@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
     // Switch movement mode to Game
     void ActivateGameMovement()
     {
-        Debug.Log("GAME MOVE SETTIGS");
+        //Debug.Log("GAME MOVE SETTIGS");
         moveBody = true;
     }
 
@@ -57,7 +57,7 @@ public class PlayerMove : MonoBehaviour
     // Switch movement mode to UI
     void ActivateUIMovement()
     {
-        Debug.Log("UI MOVE SETTINGS");
+        //Debug.Log("UI MOVE SETTINGS");
         moveBody = false;
     }
 
