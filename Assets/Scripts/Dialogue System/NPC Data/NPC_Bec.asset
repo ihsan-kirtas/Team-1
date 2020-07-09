@@ -10,30 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
-  m_Name: NPC_DATA_Bob
+  m_Name: NPC_Bec
   m_EditorClassIdentifier: 
-  name: Bob
+  name: Bec
   age: 30
   gender: Male
   overallHealth: Generally healthy
   additionalNotes: None
   conversation:
-  - Hi I'm Bob
-  - I am sick
-  - message 1
-  - message 2
-  - End of conversation
-  selfVentilating: 0
-  oxygen: 95
-  breathRate: 15
+  - msg1
+  - msg2
+  selfVentilating: 1
+  oxygenInit: 95
+  oxygenMod: 0.5
+  oxygenTracker: []
+  breathRateInit: 15
+  breathRateMod: 0.5
+  breathRateTracker: []
   accessoryMuscles: 1
-  bloodPressureSystolic: 140
-  bloodPressureDiastolic: 90
-  pulseRate: 70
+  bloodPressureSystolicInit: 140
+  bloodPressureSystolicMod: 0.5
+  bloodPressureSystolicTracker: []
+  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicMod: 0.5
+  bloodPressureDiastolicTracker: []
+  pulseRateInit: 70
+  pulseRateMod: 0.5
+  pulseRateTracker: []
   wholeBodyPerfusion: 1
-  capillaryRefill: 2
-  glasgowComaScale: 12
-  pupilReaction: 4
+  capillaryRefillInit: 2
+  capillaryRefillMod: 0.5
+  capillaryRefillTracker: []
+  glasgowComaScaleInit: 12
+  glasgowComaScaleMod: 0.5
+  glasgowComaScaleTracker: []
+  pupilReactionInit: 4
+  pupilReactionMod: 0.5
+  pupilReactionTracker: []
   repetitiveQuestining: 1
   hasInternalDevices: 0
   hasCannula: 0
@@ -45,3 +58,6 @@ MonoBehaviour:
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 0
   currentLocation: 
+  patientActive: 0
+  initValsAdded: 0
+  character: {fileID: 0}

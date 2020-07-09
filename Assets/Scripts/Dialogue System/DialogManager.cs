@@ -30,11 +30,11 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(false);                               // Sets the dialog panel to not active
     }
 
-    public void Start_Dialog(Patient_Data _convo)
+    public void Start_Dialog(Patient_Data patient)
     {
         GameEvents.current.UIActivated();                           // EVENT Broadcast - UI opened
-        npcNameText.text = _convo.name;                             // Set the UI NPC name on the dialog box
-        conversation = new List<string>(_convo.conversation);       // Create a list from the convo provided to the function call
+        npcNameText.text = patient.name;                            // Set the UI NPC name on the dialog box
+        conversation = new List<string>(patient.conversation);      // Create a list from the convo provided to the function call
         dialogPanel.SetActive(true);                                // Shows the dialog box
         convoIndex = 0;                                             // The 1st thing in our list
         ShowText();
@@ -70,8 +70,4 @@ public class DialogManager : MonoBehaviour
             ShowText();
         }
     }
-
-
-
-
 }

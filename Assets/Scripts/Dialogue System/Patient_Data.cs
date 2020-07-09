@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NPC_DATA_PATIENTNAME", menuName = "Create New NPC Data")]
+[CreateAssetMenu(fileName = "NPC_PATIENTNAME", menuName = "Create New NPC Data")]
 public class Patient_Data : ScriptableObject
 {
 
@@ -14,9 +14,8 @@ public class Patient_Data : ScriptableObject
     public string gender = "Male";                          // Example: "Male"
 
     public string overallHealth = "Generally healthy";      // Example: Generally healthy past medical history of asthma
-
-
     public string additionalNotes = "None";
+
 
 
     // --------------------------------------------------------------------------------------------------------------------
@@ -43,10 +42,14 @@ public class Patient_Data : ScriptableObject
     [Header("B - Breathing")]
 
     // Oxygen Status
-    public int oxygen = 95;                      // Example value "95"
+    public float oxygenInit = 95.0f;                      // Example value "95"
+    public float oxygenMod = 0.5f;
+    public List<float> oxygenTracker;
 
     // Breaths per minute
-    public int breathRate = 15;                  // Example value 15 BPM - (Normal adult 12-20 BPM)
+    public float breathRateInit = 15.0f;                  // Example value 15 BPM - (Normal adult 12-20 BPM)
+    public float breathRateMod = 0.5f;
+    public List<float> breathRateTracker;
 
     // Using accessory muscles?
     public bool accessoryMuscles = true;
@@ -63,19 +66,27 @@ public class Patient_Data : ScriptableObject
      * High: 140/90 mm Hg  
      */
     // Blood Pressure - Systolic
-    public int bloodPressureSystolic = 140;       // Example "140"
+    public float bloodPressureSystolicInit = 140.0f;       // Example "140"
+    public float bloodPressureSystolicMod = 0.5f;
+    public List<float> bloodPressureSystolicTracker;
 
     // Blood Pressure - Diastolic
-    public int bloodPressureDiastolic = 90;      // Example "90"
+    public float bloodPressureDiastolicInit = 90.0f;      // Example "90"
+    public float bloodPressureDiastolicMod = 0.5f;
+    public List<float> bloodPressureDiastolicTracker;
 
     // Pulse Rate
-    public int pulseRate = 70;                   // Example: "70" - (Normal adult 60-80 BPM)
+    public float pulseRateInit = 70.0f;                   // Example: "70" - (Normal adult 60-80 BPM)
+    public float pulseRateMod = 0.5f;
+    public List<float> pulseRateTracker;
 
     // Whole Body Perfusion
     public bool wholeBodyPerfusion = true;
 
     // Capillary Refill - The time it takes for blood to flow back into a squeezed hand
-    public float capillaryRefill = 2.0f;
+    public float capillaryRefillInit = 2.0f;
+    public float capillaryRefillMod = 0.5f;
+    public List<float> capillaryRefillTracker;
 
 
 
@@ -84,10 +95,14 @@ public class Patient_Data : ScriptableObject
     [Header("D - Disability")]
 
     // Glasgow Coma Scale
-    public int glasgowComaScale = 12;            // Example "12"
+    public float glasgowComaScaleInit = 12.0f;            // Example "12"
+    public float glasgowComaScaleMod = 0.5f;
+    public List<float> glasgowComaScaleTracker;
 
     // Pupil Reaction
-    public int pupilReaction = 4;               // Example "4"
+    public float pupilReactionInit = 4.0f;               // Example "4"
+    public float pupilReactionMod = 0.5f;
+    public List<float> pupilReactionTracker;
 
     // Repetitive Questioning
     public bool repetitiveQuestining = true;
@@ -149,6 +164,14 @@ public class Patient_Data : ScriptableObject
     public int triageScale;
 
     // for a move to function maybe?
-    public string currentLocation;      
+    public string currentLocation;
+
+
+    [Header("---------- System ----------")]
+    public bool patientActive = false;
+    public bool initValsAdded = false;
+
+    public GameObject character;
+
 
 }

@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogManager: {fileID: 1543410700}
-  NPC_data: {fileID: 11400000, guid: b8dd0262b11ad56478641f2770924b7c, type: 2}
+  NPC_data: {fileID: 11400000, guid: 97d6e98e0a1070c46a511269d0560b21, type: 2}
 --- !u!65 &467329930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -532,6 +532,8 @@ GameObject:
   m_Component:
   - component: {fileID: 467934691}
   - component: {fileID: 467934692}
+  - component: {fileID: 467934694}
+  - component: {fileID: 467934693}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -565,6 +567,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ab6fd4f1998df489f79733eafb27dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &467934693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467934690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fa4e0073455864d8946190d53e457d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patients:
+  - {fileID: 11400000, guid: 97d6e98e0a1070c46a511269d0560b21, type: 2}
+  - {fileID: 11400000, guid: 7ddfc563e50ca954c962075fadac99d7, type: 2}
+  takeObsFrequency: 5
+--- !u!114 &467934694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467934690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bc364619f7a9f41919f486d7ee5633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patients:
+  - {fileID: 11400000, guid: 97d6e98e0a1070c46a511269d0560b21, type: 2}
+  - {fileID: 11400000, guid: 7ddfc563e50ca954c962075fadac99d7, type: 2}
 --- !u!1 &502093552
 GameObject:
   m_ObjectHideFlags: 0

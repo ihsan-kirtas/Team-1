@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
+  m_Name: NPC_Trevor
+  m_EditorClassIdentifier: 
+  name: Trevor
+  age: 30
+  gender: Male
+  overallHealth: Generally healthy
+  additionalNotes: None
+  conversation:
+  - msg1
+  - msg2
+  selfVentilating: 1
+  oxygenInit: 95
+  oxygenMod: 0.5
+  oxygenTracker:
+  - 95
+  - 95.5
+  - 96
+  - 96.5
+  - 97
+  breathRateInit: 15
+  breathRateMod: 0.5
+  breathRateTracker:
+  - 15
+  - 15.5
+  - 16
+  - 16.5
+  - 17
+  accessoryMuscles: 1
+  bloodPressureSystolicInit: 140
+  bloodPressureSystolicMod: 0.5
+  bloodPressureSystolicTracker:
+  - 140
+  - 140.5
+  - 141
+  - 141.5
+  - 142
+  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicMod: 0.5
+  bloodPressureDiastolicTracker:
+  - 90
+  - 90.5
+  - 91
+  - 91.5
+  - 92
+  pulseRateInit: 70
+  pulseRateMod: 0.5
+  pulseRateTracker:
+  - 70
+  - 70.5
+  - 71
+  - 71.5
+  - 72
+  wholeBodyPerfusion: 1
+  capillaryRefillInit: 2
+  capillaryRefillMod: 0.5
+  capillaryRefillTracker:
+  - 2
+  - 2.5
+  - 3
+  - 3.5
+  - 4
+  glasgowComaScaleInit: 12
+  glasgowComaScaleMod: 0.5
+  glasgowComaScaleTracker:
+  - 12
+  - 12.5
+  - 13
+  - 13.5
+  - 14
+  pupilReactionInit: 4
+  pupilReactionMod: 0.5
+  pupilReactionTracker:
+  - 4
+  - 4.5
+  - 5
+  - 5.5
+  - 6
+  repetitiveQuestining: 1
+  hasInternalDevices: 0
+  hasCannula: 0
+  hasFever: 0
+  allergies: []
+  medicationList: []
+  medicalHistoryList: []
+  lastMealTime: 19:00
+  leadingEvents: Events leading to the presentation to hospital
+  triageScale: 0
+  currentLocation: 
+  patientActive: 1
+  initValsAdded: 1
+  character: {fileID: 0}
