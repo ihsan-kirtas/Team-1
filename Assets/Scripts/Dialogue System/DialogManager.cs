@@ -32,7 +32,7 @@ public class DialogManager : MonoBehaviour
 
     public void Start_Dialog(Patient_Data patient)
     {
-        GameEvents.current.UIActivated();                           // EVENT Broadcast - UI opened
+        GameEvents.current.UIActivated();                           // EVENT Broadcast - Dialog UI opened
         npcNameText.text = patient.name;                            // Set the UI NPC name on the dialog box
         conversation = new List<string>(patient.conversation);      // Create a list from the convo provided to the function call
         dialogPanel.SetActive(true);                                // Shows the dialog box
@@ -43,7 +43,7 @@ public class DialogManager : MonoBehaviour
 
     public void StopDialog()
     {
-        GameEvents.current.UIDeactivated();                         // EVENT Broadcast - UI closed
+        GameEvents.current.UIDeactivated();                         // EVENT Broadcast - Dialog UI closed
         dialogPanel.SetActive(false);                               // Hide the dialog panel
     }
 

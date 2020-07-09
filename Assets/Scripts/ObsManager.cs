@@ -7,7 +7,7 @@ using System.Linq;
 public class ObsManager : MonoBehaviour
 {
     public List<Patient_Data> patients;                 // The patient_data scriptable objects to record obs on
-    public float takeObsFrequency = 60.0f;              // Take obs every x seconds
+    public float takeObsFrequency = 15.0f;              // Take obs every x seconds
 
     void Start()
     {

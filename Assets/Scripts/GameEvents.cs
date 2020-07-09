@@ -14,7 +14,7 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    // UI Activated
+    // Dialog UI Activated
     public event Action onUIActivated;
     public void UIActivated()
     {
@@ -24,7 +24,7 @@ public class GameEvents : MonoBehaviour
         }
     }
 
-    // UI Deactivated
+    // Dialog UI Deactivated
     public event Action onUIDeactivated;
     public void UIDeactivated()
     {

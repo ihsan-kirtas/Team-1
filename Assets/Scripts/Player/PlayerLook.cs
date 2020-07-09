@@ -26,7 +26,7 @@ public class PlayerLook : MonoBehaviour
 
     private void OnEnable()
     {
-        // Subscribe to events
+        // Subscribe to events - Dialog UI
         GameEvents.current.onUIActivated += ActivateUICamera;
         GameEvents.current.onUIDeactivated += ActivateGameCamera;
     }

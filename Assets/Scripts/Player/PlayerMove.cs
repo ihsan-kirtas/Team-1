@@ -14,6 +14,10 @@ public class PlayerMove : MonoBehaviour
     // Lock player movement when UI visible
     public bool moveBody;
 
+    //HACK to close all panels on game camera
+    public GameObject dialogPanel;
+    public GameObject ClipBoardPanel;
+
 
     private void OnEnable()
     {
@@ -23,7 +27,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnDisable()
     {
-        // Unsubscribe to events
+        // Unsubscribe to events - Dialog UI
         GameEvents.current.onUIActivated -= ActivateUIMovement;
         GameEvents.current.onUIDeactivated -= ActivateGameMovement;
     }
@@ -51,6 +55,10 @@ public class PlayerMove : MonoBehaviour
     {
         //Debug.Log("GAME MOVE SETTIGS");
         moveBody = true;
+
+        // HACK - todo FIX THIS
+        dialogPanel.SetActive(false);
+        ClipBoardPanel.SetActive(false);
     }
 
 

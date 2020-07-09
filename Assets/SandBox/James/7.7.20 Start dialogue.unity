@@ -1277,7 +1277,7 @@ MonoBehaviour:
   patients:
   - {fileID: 11400000, guid: 97d6e98e0a1070c46a511269d0560b21, type: 2}
   - {fileID: 11400000, guid: 7ddfc563e50ca954c962075fadac99d7, type: 2}
-  takeObsFrequency: 1
+  takeObsFrequency: 15
 --- !u!114 &467934694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,8 +1322,12 @@ MonoBehaviour:
   oxygenCurrent: {fileID: 522302785}
   pulseRateCurrent: {fileID: 987007274}
   pupilReactionCurrent: {fileID: 1409143579}
+  clipBoardPanel: {fileID: 1870430220}
   patient_data: {fileID: 11400000, guid: 97d6e98e0a1070c46a511269d0560b21, type: 2}
   viewingChart: 1
+  start_clipboardUI:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &502093552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1396,8 @@ MonoBehaviour:
   verticalInputName: Vertical
   movementSpeed: 6
   moveBody: 0
+  dialogPanel: {fileID: 1519922347}
+  ClipBoardPanel: {fileID: 1870430220}
 --- !u!114 &502093556
 MonoBehaviour:
   m_ObjectHideFlags: 0

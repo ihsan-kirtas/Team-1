@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.Events;
 
 public class ClipBoardManager : MonoBehaviour
 {
     [Header("Settings")]
-    public float updateFrequency = 15.0f;
+    public float updateFrequency = 1.0f;
 
     [Header("Tracker strings")]
     public Text bloodPressureSTracker;
@@ -29,14 +30,39 @@ public class ClipBoardManager : MonoBehaviour
     public Text pulseRateCurrent;
     public Text pupilReactionCurrent;
 
+    [Header("Other")]
+    public GameObject clipBoardPanel;
+
     [Header("System")]
     public Patient_Data patient_data;
     public bool viewingChart = true;
+
+    // Dialog Event
+    public UnityEvent start_clipboardUI;
+
+
+    private void OnEnable()
+    {
+        // Subscribe to events - Clip Board UI
+        GameEvents.current.onUIActivated += ShowClipBoardUI;
+        GameEvents.current.onUIDeactivated += HideClipBoardUI;
+    }
+    private void OnDisable()
+    {
+        // Unsubscribe to events - Clip Board UI
+        GameEvents.current.onUIActivated -= ShowClipBoardUI;
+        GameEvents.current.onUIDeactivated -= HideClipBoardUI;
+    }
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        viewingChart = false;
+        clipBoardPanel.SetActive(false);
+
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
         InvokeRepeating("ClipBoardProcessor", 0.0f, updateFrequency);
     }
@@ -44,7 +70,34 @@ public class ClipBoardManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Toggles clip board UI on space bar
+        if (Input.GetKeyDown("space"))
+        {
+            if (!viewingChart)
+            {
+                GameEvents.current.UIActivated();                     // EVENT Broadcast - Clip Board UI opened
+            }
+            else
+            {
+                GameEvents.current.UIDeactivated();                   // EVENT Broadcast - Clip Board UI closed
+            }
+        }
+    }
+
+
+
+     void ShowClipBoardUI()
+    {
+        // Toggle viewing chart bool
+        viewingChart = true;
+        clipBoardPanel.SetActive(true);
+    }
+
+    void HideClipBoardUI()
+    {
+        // Toggle viewing chart bool
+        viewingChart = false;
+        clipBoardPanel.SetActive(false);
     }
 
     void ClipBoardProcessor()
