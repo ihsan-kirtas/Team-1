@@ -32,7 +32,7 @@ public class DialogManager : MonoBehaviour
 
     public void Start_Dialog(Patient_Data patient)
     {
-        GameEvents.current.UIActivated();                           // EVENT Broadcast - Dialog UI opened
+        GameEvents.current.UIActivated();                           // Call "UIActivated()" function that will boardcast "onUIActivated" Event
         npcNameText.text = patient.name;                            // Set the UI NPC name on the dialog box
         conversation = new List<string>(patient.conversation);      // Create a list from the convo provided to the function call
         dialogPanel.SetActive(true);                                // Shows the dialog box

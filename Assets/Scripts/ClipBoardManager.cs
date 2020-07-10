@@ -41,30 +41,26 @@ public class ClipBoardManager : MonoBehaviour
     public UnityEvent start_clipboardUI;
 
 
-    private void OnEnable()
+    // Start is called before the first frame update
+    void Start()
     {
         // Subscribe to events - Clip Board UI
         GameEvents.current.onUIActivated += ShowClipBoardUI;
         GameEvents.current.onUIDeactivated += HideClipBoardUI;
-    }
-    private void OnDisable()
-    {
-        // Unsubscribe to events - Clip Board UI
-        GameEvents.current.onUIActivated -= ShowClipBoardUI;
-        GameEvents.current.onUIDeactivated -= HideClipBoardUI;
-    }
 
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
         viewingChart = false;
         clipBoardPanel.SetActive(false);
 
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
         InvokeRepeating("ClipBoardProcessor", 0.0f, updateFrequency);
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to events - Clip Board UI
+        GameEvents.current.onUIActivated -= ShowClipBoardUI;
+        GameEvents.current.onUIDeactivated -= HideClipBoardUI;
     }
 
     // Update is called once per frame
@@ -75,7 +71,7 @@ public class ClipBoardManager : MonoBehaviour
         {
             if (!viewingChart)
             {
-                GameEvents.current.UIActivated();                     // EVENT Broadcast - Clip Board UI opened
+                GameEvents.current.UIActivated();                     // Call "UIActivated()" function that will boardcast "onUIActivated" Event
             }
             else
             {

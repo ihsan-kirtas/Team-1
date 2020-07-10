@@ -24,21 +24,6 @@ public class PlayerLook : MonoBehaviour
     private float xAxisClamp;
 
 
-    private void OnEnable()
-    {
-        // Subscribe to events - Dialog UI
-        GameEvents.current.onUIActivated += ActivateUICamera;
-        GameEvents.current.onUIDeactivated += ActivateGameCamera;
-    }
-    private void OnDisable()
-    {
-        // Unsubscribe to events
-        GameEvents.current.onUIActivated -= ActivateUICamera;
-        GameEvents.current.onUIDeactivated -= ActivateGameCamera;
-    }
-
-
-
     private void Awake()
     {
         playerBody = this.transform.parent;         // Attach parent's transform on script run
@@ -46,7 +31,20 @@ public class PlayerLook : MonoBehaviour
         xAxisClamp = 0.0f;
     }
 
-   
+    private void Start()
+    {
+        // Subscribe to event Action "onUIActivated" - If received call ActivateUICamera()
+        GameEvents.current.onUIActivated += ActivateUICamera;
+        GameEvents.current.onUIDeactivated += ActivateGameCamera;
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to events
+        GameEvents.current.onUIActivated -= ActivateUICamera;
+        GameEvents.current.onUIDeactivated -= ActivateGameCamera;
+    }
+
     // Switch camera mode to Game
     void ActivateGameCamera()
     {

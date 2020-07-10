@@ -7,15 +7,19 @@ using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 {
+
+
     public static GameEvents current;
+
+
 
     private void Awake()
     {
         current = this;
     }
 
-    // Dialog UI Activated
-    public event Action onUIActivated;
+    // -- UI Activated Event --
+    // First check that onUIActivated != null
     public void UIActivated()
     {
         if (onUIActivated != null)
@@ -23,9 +27,14 @@ public class GameEvents : MonoBehaviour
             onUIActivated();
         }
     }
+    // Then bradcast the event "onUIActivated"
+    public event Action onUIActivated;
 
-    // Dialog UI Deactivated
-    public event Action onUIDeactivated;
+
+
+
+    // -- UI Deactivated Event --
+    // First check that onUIActivated != null
     public void UIDeactivated()
     {
         if (onUIDeactivated != null)
@@ -33,4 +42,20 @@ public class GameEvents : MonoBehaviour
             onUIDeactivated();
         }
     }
+    // Then bradcast the event "onUIActivated"
+    public event Action onUIDeactivated;
+
+
+
+    // -- DEMO EVENT --
+    // First check that onDemoEvent != null
+    public void DemoEvent()
+    {
+        if (onDemoEvent != null)
+        {
+            onDemoEvent();
+        }
+    }
+    // Then bradcast the event "onDemoEvent"
+    public event Action onDemoEvent;
 }

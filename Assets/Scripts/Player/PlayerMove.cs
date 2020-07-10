@@ -19,27 +19,25 @@ public class PlayerMove : MonoBehaviour
     public GameObject ClipBoardPanel;
 
 
-    private void OnEnable()
-    {
-        // Subscribe to events
-        GameEvents.current.onUIActivated += ActivateUIMovement;
-        GameEvents.current.onUIDeactivated += ActivateGameMovement;
-    }
-    private void OnDisable()
-    {
-        // Unsubscribe to events - Dialog UI
-        GameEvents.current.onUIActivated -= ActivateUIMovement;
-        GameEvents.current.onUIDeactivated -= ActivateGameMovement;
-    }
-
-
-
-
     private void Awake()
     {
         // Gets the Character controller on this object.
         charController = GetComponent<CharacterController>();
         ActivateGameMovement();
+    }
+
+    private void Start()
+    {
+        // Subscribe to event Action "onUIActivated" - If received call ActivateUIMovement()
+        GameEvents.current.onUIActivated += ActivateUIMovement;
+        GameEvents.current.onUIDeactivated += ActivateGameMovement;
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to events
+        GameEvents.current.onUIActivated -= ActivateUIMovement;
+        GameEvents.current.onUIDeactivated -= ActivateGameMovement;
     }
 
     private void Update()
