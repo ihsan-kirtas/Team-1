@@ -3,7 +3,17 @@ guid: 5dbf597e557db2f47b54508da21e43a0
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: biohazard
+    second: {fileID: 2100000, guid: 36027cb575d4e214984cbea9f0209c0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white plastic
+    second: {fileID: 2100000, guid: 9d697c8ef96a98d4f8d9c03199786774, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

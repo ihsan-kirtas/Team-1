@@ -3,7 +3,12 @@ guid: 741b2680156a255419cdb09c1688b163
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Anesthesia_SystemsMat
+    second: {fileID: 2100000, guid: 04c3271e4513420448554470bda2b9e9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

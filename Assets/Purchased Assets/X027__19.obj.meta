@@ -3,7 +3,12 @@ guid: bc6a1e421124a7b4ba971794a74075ac
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x-ray_lightboxMat
+    second: {fileID: 2100000, guid: 7b067b810eb64e446ab9df3fda98dacd, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

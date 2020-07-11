@@ -3,7 +3,37 @@ guid: f267b38059dbc1e45a8a5ec29568548b
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black plastic
+    second: {fileID: 2100000, guid: ae4e0ace45760f2438a3abf588ed8a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 71196751aa89d6449a83abc79187a40f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ss metal
+    second: {fileID: 2100000, guid: 8dcd714ad7a622c4aa840bdbf339d83e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x-ray01
+    second: {fileID: 2100000, guid: c5112f57407d04a4fb33fd40b628b1bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x-ray02
+    second: {fileID: 2100000, guid: 8eda8398ce2ae8e44948da5deb72e24e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x-ray03
+    second: {fileID: 2100000, guid: 64ae53bc9d8920d43a17f8e5098d4de0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
