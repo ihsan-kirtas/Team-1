@@ -19,19 +19,25 @@ public class AC_RaycastScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (hit.collider != null)
+                if (hit.collider!=null)
                 {
-                    hit.collider.enabled = true;
+                    
                     uiTextObject.SetActive(true);
                     Debug.Log(hit.transform.name);
 
                 }
+
+                else
+                {
+                    
+                    uiTextObject.SetActive(false);
+                }
             }
 
-            if (Input.GetButtonDown("escape"))
-            {
-                uiTextObject.SetActive(false);
-            }
+            //if (Input.GetButtonDown("escape"))
+            //{
+            //    uiTextObject.SetActive(false);
+            //}
 
            
         }

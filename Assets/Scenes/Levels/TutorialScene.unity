@@ -9233,7 +9233,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh345878
+  m_Name: pb_Mesh19804
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9654,7 +9654,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346164
+  m_Name: pb_Mesh20132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11367,7 +11367,7 @@ PrefabInstance:
     - target: {fileID: 2807046644099877876, guid: b3b9c6f50590e254ea7377679a60f977,
         type: 3}
       propertyPath: m_Name
-      value: Sanitizer Dispenser_MD_02 (1)
+      value: Sanitizer Dispenser_MD_5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3b9c6f50590e254ea7377679a60f977, type: 3}
@@ -11732,9 +11732,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896078380}
     m_Modifications:
+    - target: {fileID: 1003246338769688, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: Monitor4
+      objectReference: {fileID: 0}
     - target: {fileID: 1189145021290828, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_Name
       value: Wall 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337989489776848, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: bloodpressuremachine4
       objectReference: {fileID: 0}
     - target: {fileID: 4666360577287894, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12121,7 +12129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344270
+  m_Name: pb_Mesh18074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19092,6 +19100,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 767473233}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &768977516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 768977517}
+  - component: {fileID: 768977519}
+  - component: {fileID: 768977518}
+  m_Layer: 5
+  m_Name: BPUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &768977517
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768977516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2081840011}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &768977518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768977516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &768977519
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768977516}
+  m_CullTransparentMesh: 0
 --- !u!1001 &775107542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21128,7 +21209,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346232
+  m_Name: pb_Mesh20200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21623,7 +21704,7 @@ GameObject:
   - component: {fileID: 881338297}
   - component: {fileID: 881338296}
   m_Layer: 0
-  m_Name: Sanitizer Dispenser.001 (2)
+  m_Name: Sanitizer Dispenser3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21903,9 +21984,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1454071681}
     m_Modifications:
+    - target: {fileID: 1003246338769688, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: monitor2
+      objectReference: {fileID: 0}
     - target: {fileID: 1189145021290828, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_Name
       value: Wall 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337989489776848, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: bloodpressure2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588202553465998, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: monitor2
       objectReference: {fileID: 0}
     - target: {fileID: 4666360577287894, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22802,27 +22895,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 933296339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b37a4d736056e4c89518a2e104c834, type: 3}
+  m_Script: {fileID: 11500000, guid: c250bdecd40acc64c94f1e1517bc557b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  internalObject: 
 --- !u!4 &933296341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
     type: 3}
   m_PrefabInstance: {fileID: 933296338}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &933296342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933296339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &936527604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23246,7 +23328,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh347004
+  m_Name: pb_Mesh21076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25337,9 +25419,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1579030680}
     m_Modifications:
+    - target: {fileID: 1003246338769688, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: monitor5
+      objectReference: {fileID: 0}
     - target: {fileID: 1189145021290828, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_Name
       value: Wall 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337989489776848, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: bloodpressuremachine5
       objectReference: {fileID: 0}
     - target: {fileID: 4666360577287894, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26623,7 +26713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_Name
-      value: Bed_1 (1)
+      value: Bed5
       objectReference: {fileID: 0}
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_IsActive
@@ -26948,7 +27038,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344206
+  m_Name: pb_Mesh18010
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27334,7 +27424,7 @@ GameObject:
   - component: {fileID: 1101840285}
   - component: {fileID: 1101840284}
   m_Layer: 0
-  m_Name: Sanitizer Dispenser.001 (2)
+  m_Name: Sanitizer Dispenser2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30277,7 +30367,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344788
+  m_Name: pb_Mesh18620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30728,7 +30818,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_Name
-      value: Bed_1 (1)
+      value: Bed_3
       objectReference: {fileID: 0}
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_IsActive
@@ -31821,7 +31911,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh347032
+  m_Name: pb_Mesh21104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33024,7 +33114,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346504
+  m_Name: pb_Mesh20536
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34370,7 +34460,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344914
+  m_Name: pb_Mesh18754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36987,7 +37077,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346942
+  m_Name: pb_Mesh21014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38618,7 +38708,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_Name
-      value: Bed_1 (1)
+      value: Bed_4
       objectReference: {fileID: 0}
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_IsActive
@@ -39734,7 +39824,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344068
+  m_Name: pb_Mesh17856
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39987,7 +40077,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346606
+  m_Name: pb_Mesh20656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40665,7 +40755,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346148
+  m_Name: pb_Mesh20116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41171,7 +41261,7 @@ PrefabInstance:
     - target: {fileID: 2807046644099877876, guid: b3b9c6f50590e254ea7377679a60f977,
         type: 3}
       propertyPath: m_Name
-      value: Sanitizer Dispenser_MD_02 (1)
+      value: Sanitizer Dispenser_MD_4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3b9c6f50590e254ea7377679a60f977, type: 3}
@@ -43246,9 +43336,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 704146531}
     m_Modifications:
+    - target: {fileID: 1003246338769688, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: Monitor1
+      objectReference: {fileID: 0}
     - target: {fileID: 1189145021290828, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_Name
       value: Wall 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337989489776848, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: BloodPressure1
       objectReference: {fileID: 0}
     - target: {fileID: 4666360577287894, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43661,7 +43759,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344722
+  m_Name: pb_Mesh18546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45324,7 +45422,7 @@ PrefabInstance:
     - target: {fileID: 2807046644099877876, guid: b3b9c6f50590e254ea7377679a60f977,
         type: 3}
       propertyPath: m_Name
-      value: Sanitizer Dispenser_MD_02 (1)
+      value: Sanitizer Dispenser_MD_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3b9c6f50590e254ea7377679a60f977, type: 3}
@@ -45697,7 +45795,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344154
+  m_Name: pb_Mesh17958
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48583,6 +48681,7 @@ GameObject:
   - component: {fileID: 1842507629}
   - component: {fileID: 1842507628}
   - component: {fileID: 1842507627}
+  - component: {fileID: 1842507630}
   m_Layer: 0
   m_Name: Tutorial Trigger 1
   m_TagString: Untagged
@@ -48599,7 +48698,7 @@ Transform:
   m_GameObject: {fileID: 1842507625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.264147, y: 6.04, z: -2.74}
-  m_LocalScale: {x: 1, y: 3.8925, z: 3.9827}
+  m_LocalScale: {x: 2.3016, y: 3.8925, z: 3.9827}
   m_Children: []
   m_Father: {fileID: 1211715620}
   m_RootOrder: 0
@@ -48664,6 +48763,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842507625}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1842507630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842507625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e143ecaf92f9f6d4584cfcafe33081d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiTextObject: {fileID: 1268403507}
 --- !u!1 &1842832711
 GameObject:
   m_ObjectHideFlags: 0
@@ -51134,7 +51246,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh346024
+  m_Name: pb_Mesh19966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51643,7 +51755,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_Name
-      value: Bed_1 (1)
+      value: Bed_2
       objectReference: {fileID: 0}
     - target: {fileID: 1193186933577358, guid: 392d24cc01618594c8dcba05a6f1eb2a, type: 3}
       propertyPath: m_IsActive
@@ -53816,9 +53928,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 639963645}
     m_Modifications:
+    - target: {fileID: 1003246338769688, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: monitor3
+      objectReference: {fileID: 0}
     - target: {fileID: 1189145021290828, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_Name
       value: Wall 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588202553465998, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
+      propertyPath: m_Name
+      value: monitor3
       objectReference: {fileID: 0}
     - target: {fileID: 4666360577287894, guid: 67f6057b5d201044180e7d546c139f80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54326,6 +54446,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1268403508}
+  - {fileID: 768977517}
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55792,7 +55913,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh344586
+  m_Name: pb_Mesh18402
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -12,9 +12,9 @@ public class AC_UiTrigger : MonoBehaviour
         uiTextObject.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider player)
     {
-        if (gameObject.CompareTag("Player"))
+        if (player.gameObject.tag=="Player")
         {
             uiTextObject.SetActive(true);
             Debug.Log("player entered trigger");
@@ -23,9 +23,9 @@ public class AC_UiTrigger : MonoBehaviour
         
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider player)
     {
-        if (gameObject.CompareTag("Player"))
+        if (player.gameObject.tag == "Player")
         {
             uiTextObject.SetActive(false);
             Debug.Log("player exited trigger");
