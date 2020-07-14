@@ -66,18 +66,18 @@ public class ClipBoardManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Toggles clip board UI on space bar
-        if (Input.GetKeyDown("space"))
-        {
-            if (!viewingChart)
-            {
-                GameEvents.current.UIActivated();                     // Call "UIActivated()" function that will boardcast "onUIActivated" Event
-            }
-            else
-            {
-                GameEvents.current.UIDeactivated();                   // EVENT Broadcast - Clip Board UI closed
-            }
-        }
+        //// Toggles clip board UI on space bar
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    if (!viewingChart)
+        //    {
+        //        GameEvents.current.UIActivated();                     // Call "UIActivated()" function that will boardcast "onUIActivated" Event
+        //    }
+        //    else
+        //    {
+        //        GameEvents.current.UIDeactivated();                   // EVENT Broadcast - Clip Board UI closed
+        //    }
+        //}
     }
 
 
