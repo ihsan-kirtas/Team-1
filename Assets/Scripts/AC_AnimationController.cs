@@ -15,15 +15,15 @@ public class AC_AnimationController : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other)
-    {
+    {   
         if (other.CompareTag("Assistant 3 NPC"))
         {
 
             idleTrue = true;
             //myAnimatorController.SetBool("IdleTrue", true);
         }
-
+        
     }
 
-
+    
 }
