@@ -31,7 +31,7 @@ public class ClipBoardManager : MonoBehaviour
     public Text pupilReactionCurrent;
 
     [Header("Other")]
-    public GameObject clipBoardPanel;
+    public GameObject chartsMasterPanel;
 
     [Header("System")]
     public Patient_Data patient_data;
@@ -50,7 +50,7 @@ public class ClipBoardManager : MonoBehaviour
 
 
         viewingChart = false;
-        clipBoardPanel.SetActive(false);
+        chartsMasterPanel.SetActive(false);
 
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
         InvokeRepeating("ClipBoardProcessor", 0.0f, updateFrequency);
@@ -86,14 +86,14 @@ public class ClipBoardManager : MonoBehaviour
     {
         // Toggle viewing chart bool
         viewingChart = true;
-        clipBoardPanel.SetActive(true);
+        chartsMasterPanel.SetActive(true);
     }
 
     void HideClipBoardUI()
     {
         // Toggle viewing chart bool
         viewingChart = false;
-        clipBoardPanel.SetActive(false);
+        chartsMasterPanel.SetActive(false);
     }
 
     void ClipBoardProcessor()
