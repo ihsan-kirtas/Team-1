@@ -17,8 +17,10 @@ public class PatientSpawner : MonoBehaviour
             }
 
             // Spawn the 1st patient
-            SpawnPatient(patients[0]);
-            Debug.Log("1st Patient Spawned");
+            //SpawnPatient(patients[0]);
+
+            // NOT IN USE YET
+            
         }
         else
         {
@@ -27,12 +29,24 @@ public class PatientSpawner : MonoBehaviour
         
     }
 
+    // time delay - 1st spawn, spawning too early for scripts
+    IEnumerator SpawnDelay(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SpawnPatient(patients[0]);
+    }
+
+
     void SpawnPatient(Patient_Data patient_data)
     {
         // Activate Patient Model visibility
         //patient_data.character.SetActive(true);
 
+
         // Calls the ActivatePatient function in the ObsManager script
         this.GetComponent<ObsManager>().ActivatePatient(patient_data);
+
+        Debug.Log("Patient Spawned");
+
     }
 }
