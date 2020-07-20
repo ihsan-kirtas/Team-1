@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class GraphPlotter : MonoBehaviour
 {
-    [SerializeField] private Sprite circleSprite;
+
+    [SerializeField] private Sprite circleSprite;       // Serialized So you can set in the editor
     public RectTransform graphContainer;
 
     public Patient_Data patientData;
@@ -15,20 +16,18 @@ public class GraphPlotter : MonoBehaviour
     public List<float> tracker;
 
     public Text maxValue;
-    private float graphMax;
-
     public Text HighValue;
-    private float graphHigh;
-
     public Text LowValue;
-    private float graphLow;
-
     public Text MinValue;
+
+    // Graph limits and zones
+    private float graphMax;
+    private float graphHigh;
+    private float graphLow;
     private float graphMin;
 
 
-    // Hacky
-    // Pick 1 only
+    // Which chart are you using - 1 only
     public bool usingBloodPressureDiastolicTracker;
     public bool usingBloodPressureSystolicTracker;
     public bool usingOxygenTracker;
@@ -42,7 +41,118 @@ public class GraphPlotter : MonoBehaviour
     private void Start()
     {
 
-        // HACKY QUICK FIX
+        // Subscribe to event Action "onChartUpdate"
+        GameEvents.current.onChartUpdate += UpdateValues;
+
+
+        // Sets variables for the specific chart.
+        // Max, High, Low, Min & the tracker data to use.
+        SetTrackerData();
+
+        // Draws the borders, zones and guide lines.
+        DrawBorders();
+
+        // Repeat Function - (FunctionName, Start Delay, Repeat every)
+        // InvokeRepeating("UpdateValues", 0.0f, 3f);
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to events
+        GameEvents.current.onChartUpdate -= UpdateValues;
+    }
+
+    private void UpdateValues()
+    {
+        float listLength = tracker.Count;
+        float xSpacingPercentage = 0.1f;
+        float xSpacing = graphContainer.rect.width * xSpacingPercentage;
+
+        float graphHeight = graphContainer.rect.height;
+        float graphYrange = graphMax - graphMin;
+
+        GameObject lastCircleGameObject = null;
+
+
+        for (int i = 0; i < listLength; i++)
+        {
+            // Calculate X
+            float xPos = i * xSpacing;                                  // TODO issues with > 10 values
+
+            // Calculate Y
+            float obValue = tracker[i];                                 // Ob Value
+            float yPercent = (obValue - graphMin) / graphYrange;        // percentage of the allowable range
+            float yPos = yPercent * graphHeight;                        // apply to graph height
+
+            // Plot point on graph - get the GO it returns
+            GameObject circleGameObject =  PlotPoint(new Vector2(xPos, yPos));
+
+            if(lastCircleGameObject != null)
+            {
+                // Join the previous point to this point with a line - LinkPoints(PosA, PosB)
+                LinkPoints(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
+
+            }
+            lastCircleGameObject = circleGameObject;
+
+        }
+    }
+
+    private GameObject PlotPoint(Vector2 position)
+    {
+        GameObject gameObject = new GameObject("circle", typeof(Image));                // Create a new game object, Type: Image, name: circle
+        gameObject.transform.SetParent(graphContainer, false);                          // Make circle a child of the graph container
+        gameObject.GetComponent<Image>().sprite = circleSprite;                         // Set the gameobjects sprite to the circle sptite
+        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get the rect transform
+        rectTransform.anchoredPosition = position;                                      // Set a new position for that rect transform
+        rectTransform.sizeDelta = new Vector2(11, 11);                                  // ?? size delta ??
+
+        rectTransform.anchorMin = new Vector2(0, 0);                                    // Anchor to lower left corner
+        rectTransform.anchorMax = new Vector2(0, 0);                                    // Anchor to lower left corner
+
+        return gameObject;                                                              // Returns the game object so we can use it to make the connecting lines.
+    }
+
+    private void DrawBorders()
+    {
+
+        // Max Limit
+
+        // High Zone
+
+        // Normal Zone
+
+        // Low Zone
+
+        // Min Limit
+
+        // Guide Lines
+
+        // Outside borders
+    }
+
+    private void LinkPoints(Vector2 pointPosA, Vector2 pointPosB)
+    {
+        GameObject gameObject = new GameObject("link", typeof(Image));                  // create new link GO
+        gameObject.transform.SetParent(graphContainer, false);                          // Set parent
+        gameObject.GetComponent<Image>().color = new Color(1, 1, 1, .5f);               // Set line colour
+        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get rect transform
+        Vector2 dir = (pointPosB - pointPosA).normalized;                               // Line Direction
+        float distance = Vector2.Distance(pointPosA, pointPosB);                        // Line Distance
+        rectTransform.anchorMin = new Vector2(0, 0);                                    // Set anchor
+        rectTransform.anchorMax = new Vector2(0, 0);                                    // Set anchor
+        rectTransform.sizeDelta = new Vector2(100, 3f);                                 // Set size delta
+        rectTransform.anchoredPosition = pointPosA + dir * distance * .5f;              // Half way between A and B
+
+        Vector2 forward = new Vector2(1, 0);
+        float angle = Vector2.Angle(forward, dir);                                      // Get line angle
+
+        rectTransform.localEulerAngles = new Vector3(0, 0, angle);                      // Apply angle to new line
+    }
+
+    private void SetTrackerData()
+    {
+
         if (usingBloodPressureDiastolicTracker)
         {
 
@@ -109,65 +219,10 @@ public class GraphPlotter : MonoBehaviour
             graphMin = 0;
             tracker = patientData.pupilReactionTracker;
         }
+
         maxValue.text = graphMax.ToString();
         HighValue.text = graphHigh.ToString();
         LowValue.text = graphLow.ToString();
         MinValue.text = graphMin.ToString();
-
-
-        // Repeat Function - (FunctionName, Start Delay, Repeat every)
-        InvokeRepeating("UpdateValues", 0.0f, 0.5f);
-    }
-
-
-    private void UpdateValues()
-    {
-        float listLength = tracker.Count;
-        float xSpacingPercentage = 0.1f;
-        float xSpacing = graphContainer.rect.width * xSpacingPercentage;
-
-        float graphHeight = graphContainer.rect.height;
-        float graphYrange = graphMax - graphMin;
-
-
-        for (int i = 0; i < listLength; i++)
-        {
-            // Calculate X
-            // Will have issues when > 10
-            float xPos = i * xSpacing;
-
-            // Calculate Y
-            float obValue = tracker[i];                                 // Ob Value
-            float yPercent = (obValue - graphMin) / graphYrange;        // percentage of the allowable range
-            float yPos = yPercent * graphHeight;                        // apply to graph height
-
-            // Plot point on graph
-            PlotPoint(new Vector2(xPos, yPos));
-
-            //Debug.Log(obValue.ToString());
-            //Debug.Log(yPercent.ToString());
-            //Debug.Log(xPos.ToString());
-        }
-    }
-
-    public void PlotPoint(Vector2 position)
-    {
-        GameObject gameobject = new GameObject("circle", typeof(Image));
-
-        // Make circle a child of the graph container
-        gameobject.transform.SetParent(graphContainer, false);
-
-        // Set the sprite to the circle sptite
-        gameobject.GetComponent<Image>().sprite = circleSprite;
-
-        RectTransform rectTransform = gameobject.GetComponent<RectTransform>();
-
-        rectTransform.anchoredPosition = position;
-
-        rectTransform.sizeDelta = new Vector2(11, 11);
-
-        // Anchor to lower left corner
-        rectTransform.anchorMin = new Vector2(0, 0);
-        rectTransform.anchorMax = new Vector2(0, 0);
     }
 }

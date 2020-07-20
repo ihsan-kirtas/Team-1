@@ -114,4 +114,27 @@ public class GameEvents : MonoBehaviour
     // Broadcast the event
     public event Action onGoToMainScene;
 
+
+
+
+
+
+    //--------------------------------------------
+    // -- UI EVENTS --
+    //--------------------------------------------
+
+
+    // -- Update the charts --
+    // First check that onDemoEvent != null
+    public void ChartUpdate()
+    {
+        if (onChartUpdate != null)
+        {
+            onChartUpdate();
+        }
+    }
+    // Then broadcast the event
+    public event Action onChartUpdate;
+
+
 }

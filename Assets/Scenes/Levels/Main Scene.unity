@@ -8159,7 +8159,7 @@ PrefabInstance:
         type: 0}
     - target: {fileID: 113348, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 436670, guid: 54eb5844754051b40a918a84c33b7c1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12351,9 +12351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fc28c7f0599104a85de529d2324995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 127414116}
-  - {fileID: 704146531}
+  assistantPosition: {fileID: 0}
+  startPosition: {fileID: 0}
+  assistantTimer: 0
 --- !u!1 &554575859
 GameObject:
   m_ObjectHideFlags: 0
@@ -50285,7 +50285,7 @@ PrefabInstance:
     - target: {fileID: 2118597552238531527, guid: 2058a2853da8b34459312dc46313deea,
         type: 3}
       propertyPath: takeObsFrequency
-      value: 3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2118597552238531583, guid: 2058a2853da8b34459312dc46313deea,
         type: 3}

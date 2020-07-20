@@ -80,7 +80,10 @@ public class ObsManager : MonoBehaviour
         {
             Debug.LogError("Triage Error - Patients required in ObsManager List");
         }
-        
+
+
+        // Broadcast UI update event
+        GameEvents.current.ChartUpdate();
     }
 
     // Add new Observations to the tracker. (new value = last value + modifier)
