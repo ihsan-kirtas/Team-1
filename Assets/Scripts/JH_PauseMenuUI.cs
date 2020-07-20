@@ -48,6 +48,11 @@ public class JH_PauseMenuUI : MonoBehaviour
 
     public void Restart()
     {
+        pauseMenuUIPanel.SetActive(false);
+        //Cursor.lockState = CursorLockMode.Locked; 
+        //Cursor.visible = false;
+        Time.timeScale = 1f;
+        GameIsPaused = false;
         SceneManager.LoadScene("Main Scene");       //Using scene names as Index hasn't been worked on yet. This will need to be changed in the script - I forgot how to make it changable in Unity
     }
 
@@ -63,13 +68,11 @@ public class JH_PauseMenuUI : MonoBehaviour
         pauseMenuUI.SetActive(true);
     }
 
-    //public void Credits()                     //Unsure what will be done with this but I have set this up for when it is ready.
-    //{
-
-    //}
-
     public void ExitToMenu()
     {
+        //Cursor.lockState = CursorLockMode.None; 
+        //Cursor.visible = true;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Start Menu");       //Using scene name as no Index exist currently
     }
 
