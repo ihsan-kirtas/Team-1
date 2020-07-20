@@ -11,8 +11,8 @@ public class ObsManager : MonoBehaviour
 
     void Start()
     {
-        // Clear All Obs Trackers
-        ClearAllObsTrackers();
+        // spawn 1st patient
+        ActivatePatient(patients[0]);
 
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
         InvokeRepeating("ProcessAllCurrentPatients", 0.0f, takeObsFrequency);
@@ -25,24 +25,23 @@ public class ObsManager : MonoBehaviour
     public void ActivatePatient(Patient_Data patient_data)
     {
         // Set Initial Obs Chart data + Activate
+        ClearObsTrackers(patient_data);                  // clears out any data from the previous game in the scriptable object.
         NewPatientInitialObs(patient_data);
         patient_data.patientActive = true;
+        Debug.Log("activate patient complete");
     }
 
-    void ClearAllObsTrackers()
+    void ClearObsTrackers(Patient_Data patient_data)
     {
-        foreach (Patient_Data patient_data in patients)
-        {
-            patient_data.bloodPressureSystolicTracker.Clear();      // Blood Pressure - Systolic
-            patient_data.bloodPressureDiastolicTracker.Clear();     // Blood Pressure - Diastolic
-            patient_data.breathRateTracker.Clear();                 // Breath Rate
-            patient_data.capillaryRefillTracker.Clear();            // Capillary Refill
-            patient_data.glasgowComaScaleTracker.Clear();           // Glasgow Coma Scale
-            patient_data.oxygenTracker.Clear();                     // Oxygen
-            patient_data.pulseRateTracker.Clear();                  // Pulse Rate
-            patient_data.pupilReactionTracker.Clear();              // Pupil Reaction
-        }
-        
+        patient_data.bloodPressureSystolicTracker.Clear();      // Blood Pressure - Systolic
+        patient_data.bloodPressureDiastolicTracker.Clear();     // Blood Pressure - Diastolic
+        patient_data.breathRateTracker.Clear();                 // Breath Rate
+        patient_data.capillaryRefillTracker.Clear();            // Capillary Refill
+        patient_data.glasgowComaScaleTracker.Clear();           // Glasgow Coma Scale
+        patient_data.oxygenTracker.Clear();                     // Oxygen
+        patient_data.pulseRateTracker.Clear();                  // Pulse Rate
+        patient_data.pupilReactionTracker.Clear();              // Pupil Reaction
+        Debug.Log("patient data cleared");
     }
 
 
@@ -61,7 +60,7 @@ public class ObsManager : MonoBehaviour
         // Set initial values added to true, allows obs to start auto recording
         patient_data.initValsAdded = true;
 
-        //Debug.Log("DEV - initial obs done");
+        Debug.Log("DEV - initial obs done");
     }
 
     void ProcessAllCurrentPatients()

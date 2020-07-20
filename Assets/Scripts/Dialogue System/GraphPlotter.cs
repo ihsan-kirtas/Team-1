@@ -144,9 +144,9 @@ public class GraphPlotter : MonoBehaviour
             // Plot point on graph
             PlotPoint(new Vector2(xPos, yPos));
 
-            Debug.Log(obValue.ToString());
-            Debug.Log(yPercent.ToString());
-            Debug.Log(xPos.ToString());
+            //Debug.Log(obValue.ToString());
+            //Debug.Log(yPercent.ToString());
+            //Debug.Log(xPos.ToString());
         }
     }
 
