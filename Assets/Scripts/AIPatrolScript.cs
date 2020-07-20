@@ -5,52 +5,46 @@ using UnityEngine.AI;
 
 public class AIPatrolScript : MonoBehaviour
 {
-    public Transform[] points;
-    private int destPoint = 0;
+    public Transform assistantPosition;
+    public Transform startPosition;
     private NavMeshAgent agent;
+    public float assistantTimer;
 
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
-        // Disabling auto-braking allows for continuous movement
-        // between points (ie, the agent doesn't slow down as it
-        // approaches a destination point).
-        agent.autoBraking = false;
-
-        GotoNextPoint();
+               
     }
-
-    //IEnumerator waitForSecs()
-    //{
-    //    yield return new WaitForSeconds(5);
-    //}
-
-    void GotoNextPoint()
-    {
-        // Returns if no points have been set up
-        if (points.Length == 0)
-            return;
-
-
-        //StartCoroutine(waitForSecs());
-        // Set the agent to go to the currently selected destination.
-        agent.destination = points[destPoint].position;
-        
-
-        // Choose the next point in the array as the destination,
-        // cycling to the start if necessary.
-        destPoint = (destPoint + 1) % points.Length;
-       
-    }
-
 
     void Update()
     {
-        // Choose the next destination point when the agent gets
-        // close to the current one.
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            GotoNextPoint();
+        assistantTimer -= Time.deltaTime;
+        if (assistantTimer < 0)
+        {
+            StartCoroutine(assistantWaitTime());
+        }
+
     }
+
+
+    IEnumerator assistantWaitTime()
+    {
+        agent.destination = assistantPosition.position;
+
+        if (agent.remainingDistance < 0.3)
+        {
+            yield return new WaitForSeconds(3);
+            agent.destination = startPosition.position;
+            assistantTimer = 10f;
+
+        }
+        
+    }
+
+     
 }
+
+
+    
+

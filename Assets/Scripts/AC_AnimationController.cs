@@ -6,24 +6,24 @@ public class AC_AnimationController : MonoBehaviour
 {
     [SerializeField] Animator myAnimatorController;
     //public GameObject NPC;
-    bool idleTrue = false;
+    //bool idleTrue = false;
 
-    private void Start()
-    {
-        idleTrue = false;
-    }
+    //private void Start()
+    //{
+    //    idleTrue = false;
+    //}
 
 
-    private void OnTriggerEnter(Collider other)
-    {   
-        if (other.CompareTag("Assistant 3 NPC"))
-        {
+    //private void OnTriggerEnter(Collider other)
+    //{   
+    //    if (other.CompareTag("Assistant 3 NPC"))
+    //    {
 
-            idleTrue = true;
-            //myAnimatorController.SetBool("IdleTrue", true);
-        }
+    //        idleTrue = true;
+    //        //myAnimatorController.SetBool("IdleTrue", true);
+    //    }
         
-    }
+    //}
 
     
 }

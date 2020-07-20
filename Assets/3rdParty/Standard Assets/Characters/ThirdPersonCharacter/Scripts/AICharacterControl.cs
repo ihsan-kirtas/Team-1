@@ -34,11 +34,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             else
                 character.Move(Vector3.zero, false, false);
         }
+        
 
+        
 
         public void SetTarget(Transform target)
         {
             this.target = target;
         }
+
+        
     }
 }
