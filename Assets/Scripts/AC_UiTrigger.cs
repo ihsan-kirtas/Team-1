@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class AC_UiTrigger : MonoBehaviour
 {
     public GameObject uiTextObject;
+    public GameObject tutText;
     
     public void Start()
     {
         uiTextObject.SetActive(false);
+        tutText.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider player)
@@ -17,6 +19,7 @@ public class AC_UiTrigger : MonoBehaviour
         if (player.gameObject.tag=="Player")
         {
             uiTextObject.SetActive(true);
+            tutText.SetActive(true);
             Debug.Log("player entered trigger");
         }
 
@@ -28,6 +31,7 @@ public class AC_UiTrigger : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             uiTextObject.SetActive(false);
+            tutText.SetActive(false);
             Debug.Log("player exited trigger");
         }
     }
