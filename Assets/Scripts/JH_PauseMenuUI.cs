@@ -12,6 +12,12 @@ public class JH_PauseMenuUI : MonoBehaviour
     public GameObject pauseMenuUI;                  //This is the Pause Menu UI which is under the panel - connect this to PauseMenuUIBackground in Unity
     public GameObject settingsMenuUI;               //Connect this to SettingMenuUIBackground in Unity
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
