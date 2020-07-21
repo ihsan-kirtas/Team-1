@@ -15,12 +15,10 @@ public class JH_PatientSpawner : MonoBehaviour
             spawnPoints[i] = GameObject.FindGameObjectsWithTag("SpawnPoint")[i]; //Find tag in the dropdown menu on an item prefab
         }
 
-        //for (int i = 0; i < patients.Length; i++)
-        //{
-        //    patients[i] = GameObject.FindGameObjectsWithTag("Patients")[i];       //Can't do this because patients don't exist in game yet
-        //}
-
-        //Instantiate(patients[], spawnPoints[].transform.position, Quaternion.identity); //Do Not know how to finish this but I am working on this as a way to spawn in our patients from an array
+        for (int i = 0; i < patients.Length; i++)
+        {
+            Instantiate(patients[i], spawnPoints[i].transform.position, Quaternion.identity); 
+        }               
     }
 
     // Update is called once per frame
