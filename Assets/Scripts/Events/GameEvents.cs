@@ -96,24 +96,6 @@ public class GameEvents : MonoBehaviour
     public event Action event_resumeGame;
 
 
-
-
-
-                            // -- DELETE ME ---
-                            // -- Update the charts --
-                            // First check that onDemoEvent != null
-                            public void ChartUpdate()
-                            {
-                                if (onChartUpdate != null)
-                                {
-                                    onChartUpdate();
-                                }
-                            }
-                            // Then broadcast the event
-                            public event Action onChartUpdate;
-
-
-
     // ---------------- UI Events -----------------------------------------------------------------
 
     // Charts UI - Show
@@ -161,37 +143,46 @@ public class GameEvents : MonoBehaviour
     }
     public event Action event_hidePauseMenuUI;
 
+    // ---------------- Player Events -----------------------------------------------------------------
+
+    // Player entered Ambulance Bay
+    public void PlayerEnteredAmbulanceBay()
+    {
+        if (event_playerEnteredAmbulanceBay != null) { event_playerEnteredAmbulanceBay(); }
+    }
+    public event Action event_playerEnteredAmbulanceBay;
 
 
+    // Player entered Beds Area
+    public void PlayerEnteredBedsArea()
+    {
+        if (event_playerEnteredBedsArea != null) { event_playerEnteredBedsArea(); }
+    }
+    public event Action event_playerEnteredBedsArea;
 
 
-
-                        // - DELETE ME --
-                        // -- UI Deactivated Event --
-                        // First check that onUIActivated != null
-                        public void UIDeactivated()
-                        {
-                            if (onUIDeactivated != null)
-                            {
-                                onUIDeactivated();
-                            }
-                        }
-                        // Then broadcast the event "onUIActivated"
-                        public event Action onUIDeactivated;
+    // Player entered Resus 1
+    public void PlayerEnteredResus1()
+    {
+        if (event_playerEnteredResus1 != null) { event_playerEnteredResus1(); }
+    }
+    public event Action event_playerEnteredResus1;
 
 
-                        // - DELETE ME --
-                        // -- UI Activated Event --
-                        // First check that onUIActivated != null
-                        public void UIActivated()
-                        {
-                            if (onUIActivated != null)
-                            {
-                                onUIActivated();
-                            }
-                        }
-                        // Then broadcast the event "onUIActivated"
-                        public event Action onUIActivated;
+    // Player entered Resus 2
+    public void PlayerEnteredResus2()
+    {
+        if (event_playerEnteredResus2 != null) { event_playerEnteredResus2(); }
+    }
+    public event Action event_playerEnteredResus2;
+
+
+    // Player entered Hallway
+    public void PlayerEnteredHallway()
+    {
+        if (event_playerEnteredHallway != null) { event_playerEnteredHallway(); }
+    }
+    public event Action event_playerEnteredHallway;
 
 
 

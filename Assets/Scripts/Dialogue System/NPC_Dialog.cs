@@ -14,7 +14,14 @@ public class NPC_Dialog : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            dialogManager.Start_Dialog(NPC_data);
+            GameEvents.current.ShowDialogueUI();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameEvents.current.HideDialogueUI();
         }
     }
 }

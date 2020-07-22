@@ -33,16 +33,43 @@ public class PlayerLook : MonoBehaviour
 
     private void Start()
     {
-        // Subscribe to event Action "onUIActivated" - If received call ActivateUICamera()
-        GameEvents.current.onUIActivated += ActivateUICamera;
-        GameEvents.current.onUIDeactivated += ActivateGameCamera;
+        // Subscribe OLD
+        //GameEvents.current.onUIActivated += ActivateUICamera;
+        //GameEvents.current.onUIDeactivated += ActivateGameCamera;
+
+
+
+        // Subscribe to events
+
+        // Camera - Activate UI Mode
+        GameEvents.current.event_showChartUI += ActivateUICamera;           // Chart UI
+        GameEvents.current.event_showDialogueUI += ActivateUICamera;        // Dialogue UI
+        GameEvents.current.event_showPauseMenuUI += ActivateUICamera;       // Pause Menu UI
+
+        // Camera - Activate Game Mode
+        GameEvents.current.event_hideChartUI += ActivateGameCamera;         // Chart UI
+        GameEvents.current.event_hideDialogueUI += ActivateGameCamera;      // Dialogue UI
+        GameEvents.current.event_hidePauseMenuUI += ActivateGameCamera;     // Pause Menu UI
+
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe to events
-        GameEvents.current.onUIActivated -= ActivateUICamera;
-        GameEvents.current.onUIDeactivated -= ActivateGameCamera;
+        // Unsubscribe to events - OLD
+        //GameEvents.current.onUIActivated -= ActivateUICamera;
+        //GameEvents.current.onUIDeactivated -= ActivateGameCamera;
+
+
+
+        // Camera - Activate UI Mode
+        GameEvents.current.event_showChartUI -= ActivateUICamera;           // Chart UI
+        GameEvents.current.event_showDialogueUI -= ActivateUICamera;        // Dialogue UI
+        GameEvents.current.event_showPauseMenuUI -= ActivateUICamera;       // Pause Menu UI
+
+        // Camera - Activate Game Mode
+        GameEvents.current.event_hideChartUI -= ActivateGameCamera;         // Chart UI
+        GameEvents.current.event_hideDialogueUI -= ActivateGameCamera;      // Dialogue UI
+        GameEvents.current.event_hidePauseMenuUI -= ActivateGameCamera;     // Pause Menu UI
     }
 
     // Switch camera mode to Game

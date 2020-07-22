@@ -40,26 +40,21 @@ public class GraphPlotter : MonoBehaviour
 
     private void Start()
     {
+        // Subscribe to events
+        GameEvents.current.event_updatePatientData += UpdateValues;
 
-        // Subscribe to event Action "onChartUpdate"
-        GameEvents.current.onChartUpdate += UpdateValues;
 
-
-        // Sets variables for the specific chart.
-        // Max, High, Low, Min & the tracker data to use.
+        // Sets variables for the specific chart.   Max, High, Low, Min & the tracker data to use.
         SetTrackerData();
 
         // Draws the borders, zones and guide lines.
         DrawBorders();
-
-        // Repeat Function - (FunctionName, Start Delay, Repeat every)
-        // InvokeRepeating("UpdateValues", 0.0f, 3f);
     }
 
     private void OnDestroy()
     {
         // Unsubscribe to events
-        GameEvents.current.onChartUpdate -= UpdateValues;
+        GameEvents.current.event_updatePatientData -= UpdateValues;
     }
 
     private void UpdateValues()

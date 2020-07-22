@@ -13,17 +13,31 @@ public class KeyInputs : MonoBehaviour
 
     void Update()
     {
-
-        // Toggles clip board UI on space bar
-        if (Input.GetKeyDown("space") || Input.GetKeyDown("escape"))
+        // Clip Board UI
+        if (Input.GetKeyDown("space"))
         {
-            if (!gameManager.GetComponent<ClipBoardManager>().viewingChart)
+            if (!gameManager.GetComponent<ChartUIManager>().viewingChart)
             {
-                GameEvents.current.UIActivated();                     // Call "UIActivated()" function that will boardcast "onUIActivated" Event
+                GameEvents.current.ShowChartUI();
             }
             else
             {
-                GameEvents.current.UIDeactivated();                   // EVENT Broadcast - Clip Board UI closed
+                GameEvents.current.HideChartUI();
+            }
+        }
+
+        // Pause Menu UI
+        if (Input.GetKeyDown("escape"))
+        {
+            bool is_ui_showing = true;
+
+            if (is_ui_showing)
+            {
+                GameEvents.current.ShowPauseMenuUI();
+            }
+            else
+            {
+                GameEvents.current.HidePauseMenuUI();
             }
         }
     }

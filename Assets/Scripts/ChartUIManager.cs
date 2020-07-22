@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.Events;
 
-public class ClipBoardManager : MonoBehaviour
+public class ChartUIManager : MonoBehaviour
 {
     [Header("Settings")]
     public float updateFrequency = 1.0f;
@@ -37,66 +37,44 @@ public class ClipBoardManager : MonoBehaviour
     public Patient_Data patient_data;
     public bool viewingChart = true;
 
-    // Dialog Event
-    public UnityEvent start_clipboardUI;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        // Subscribe to events - Clip Board UI
-        GameEvents.current.onUIActivated += ShowClipBoardUI;
-        GameEvents.current.onUIDeactivated += HideClipBoardUI;
-
+        // Subscribe to events
+        GameEvents.current.event_showChartUI += ShowChartsUI;    // Show Charts UI
+        GameEvents.current.event_hideChartUI += HideChartsUI;    // Hide Charts UI
 
         viewingChart = false;
         chartsMasterPanel.SetActive(false);
 
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
-        InvokeRepeating("ClipBoardProcessor", 0.0f, updateFrequency);
+        InvokeRepeating("ChartsProcessor", 0.0f, updateFrequency);
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe to events - Clip Board UI
-        GameEvents.current.onUIActivated -= ShowClipBoardUI;
-        GameEvents.current.onUIDeactivated -= HideClipBoardUI;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //// Toggles clip board UI on space bar
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    if (!viewingChart)
-        //    {
-        //        GameEvents.current.UIActivated();                     // Call "UIActivated()" function that will boardcast "onUIActivated" Event
-        //    }
-        //    else
-        //    {
-        //        GameEvents.current.UIDeactivated();                   // EVENT Broadcast - Clip Board UI closed
-        //    }
-        //}
+        // Unsubscribe to events
+        GameEvents.current.event_showChartUI -= ShowChartsUI;
+        GameEvents.current.event_hideChartUI -= HideChartsUI;
     }
 
 
-
-     void ShowClipBoardUI()
+     void ShowChartsUI()
     {
         // Toggle viewing chart bool
         viewingChart = true;
         chartsMasterPanel.SetActive(true);
     }
 
-    void HideClipBoardUI()
+    void HideChartsUI()
     {
         // Toggle viewing chart bool
         viewingChart = false;
         chartsMasterPanel.SetActive(false);
     }
 
-    void ClipBoardProcessor()
+    void ChartsProcessor()
     {
         if(patient_data != null && viewingChart)
         {

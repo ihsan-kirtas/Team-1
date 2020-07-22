@@ -14,9 +14,6 @@ using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
-    // Dialog Event
-    public UnityEvent start_dialog;
-
     public GameObject dialogPanel;
 
     public Text npcNameText;
@@ -25,17 +22,66 @@ public class DialogManager : MonoBehaviour
     private List<string> conversation;
     private int convoIndex;
 
+
     void Start()
     {
+        // Subscribe to events
+        GameEvents.current.event_showDialogueUI += ShowDialoguePanel;   // Show dialogue
+        GameEvents.current.event_hideDialogueUI += HideDialoguePanel;   // Hide Dialogue
+
         dialogPanel.SetActive(false);                               // Sets the dialog panel to not active
     }
 
+    private void OnDestroy()
+    {
+        // Unsubscribe to events
+        GameEvents.current.event_showDialogueUI -= ShowDialoguePanel;   // Show dialogue
+        GameEvents.current.event_hideDialogueUI -= HideDialoguePanel;   // Hide Dialogue
+    }
+
+    private void ShowDialoguePanel()
+    {
+        dialogPanel.SetActive(true);
+    }
+
+    private void HideDialoguePanel()
+    {
+        dialogPanel.SetActive(false);
+    }
+
+    // UI - Close Button
+    public void CloseButton()
+    {
+        // Calls Hide Dialogue event
+        GameEvents.current.HideDialogueUI();
+    }
+
+
     public void Start_Dialog(Patient_Data patient)
     {
-        GameEvents.current.UIActivated();                           // Call "UIActivated()" function that will boardcast "onUIActivated" Event
         npcNameText.text = patient.name;                            // Set the UI NPC name on the dialog box
-        conversation = new List<string>(patient.conversation);      // Create a list from the convo provided to the function call
-        dialogPanel.SetActive(true);                                // Shows the dialog box
+
+
+
+        // Which convsersation to use based on players location
+        if (ZoneManager.inAmbulanceBay)
+        {
+            conversation = new List<string>(patient.ambulanceBayConversation);
+        }
+        else if (ZoneManager.inBedsArea)
+        {
+            conversation = new List<string>(patient.bedsAreaConversation);
+        }
+        else if (ZoneManager.inResus1 || ZoneManager.inResus2)
+        {
+            conversation = new List<string>(patient.resusBayConversation);
+        }
+        else
+        {
+            conversation = null;
+        }
+
+
         convoIndex = 0;                                             // The 1st thing in our list
         ShowText();
     }
@@ -43,7 +89,6 @@ public class DialogManager : MonoBehaviour
 
     public void StopDialog()
     {
-        GameEvents.current.UIDeactivated();                         // EVENT Broadcast - Dialog UI closed
         dialogPanel.SetActive(false);                               // Hide the dialog panel
     }
 

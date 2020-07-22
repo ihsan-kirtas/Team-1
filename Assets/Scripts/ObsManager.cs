@@ -83,7 +83,9 @@ public class ObsManager : MonoBehaviour
 
 
         // Broadcast UI update event
-        GameEvents.current.ChartUpdate();
+        //GameEvents.current.ChartUpdate(); // OLD
+        GameEvents.current.UpdatePatientData();
+
     }
 
     // Add new Observations to the tracker. (new value = last value + modifier)

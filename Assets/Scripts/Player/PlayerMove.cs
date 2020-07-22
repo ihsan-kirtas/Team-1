@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject ClipBoardPanel;
 
 
+
     private void Awake()
     {
         // Gets the Character controller on this object.
@@ -28,16 +29,32 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        // Subscribe to event Action "onUIActivated" - If received call ActivateUIMovement()
-        GameEvents.current.onUIActivated += ActivateUIMovement;
-        GameEvents.current.onUIDeactivated += ActivateGameMovement;
+        // Subscribe to events
+
+        // Player Movement - Activate UI Mode
+        GameEvents.current.event_showChartUI += ActivateUIMovement;           // Chart UI
+        GameEvents.current.event_showDialogueUI += ActivateUIMovement;        // Dialogue UI
+        GameEvents.current.event_showPauseMenuUI += ActivateUIMovement;       // Pause Menu UI
+
+        // Player Movement - Activate Game Mode
+        GameEvents.current.event_hideChartUI += ActivateGameMovement;         // Chart UI
+        GameEvents.current.event_hideDialogueUI += ActivateGameMovement;      // Dialogue UI
+        GameEvents.current.event_hidePauseMenuUI += ActivateGameMovement;     // Pause Menu UI
     }
 
     private void OnDestroy()
     {
         // Unsubscribe to events
-        GameEvents.current.onUIActivated -= ActivateUIMovement;
-        GameEvents.current.onUIDeactivated -= ActivateGameMovement;
+
+        // Player Movement - Activate UI Mode
+        GameEvents.current.event_showChartUI -= ActivateUIMovement;           // Chart UI
+        GameEvents.current.event_showDialogueUI -= ActivateUIMovement;        // Dialogue UI
+        GameEvents.current.event_showPauseMenuUI -= ActivateUIMovement;       // Pause Menu UI
+
+        // Player Movement - Activate Game Mode
+        GameEvents.current.event_hideChartUI -= ActivateGameMovement;         // Chart UI
+        GameEvents.current.event_hideDialogueUI -= ActivateGameMovement;      // Dialogue UI
+        GameEvents.current.event_hidePauseMenuUI -= ActivateGameMovement;     // Pause Menu UI
     }
 
     private void Update()
@@ -48,15 +65,19 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+
     // Switch movement mode to Game
     void ActivateGameMovement()
     {
-        //Debug.Log("GAME MOVE SETTIGS");
         moveBody = true;
 
-        // HACK - todo FIX THIS
-        dialogPanel.SetActive(false);
         ClipBoardPanel.SetActive(false);
+
+
+
+
+        // HACK - todo FIX THIS
+        // dialogPanel.SetActive(false);
     }
 
 
