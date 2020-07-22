@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
+  m_Name: NPC_Patient2_Peter_Wilbourne
+  m_EditorClassIdentifier: 
+  name: Peter Wilbourne
+  age: 30
+  gender: Male
+  overallHealth: Generally healthy
+  additionalNotes: None
+  ambulanceBayConversation:
+  - amb 1
+  - amb 2
+  - amb 3
+  - amb 4
+  - amb 5
+  bedsAreaConversation:
+  - beds 1
+  - beds 2
+  - beds 3
+  - beds 4
+  - beds 5
+  resusBayConversation:
+  - resus 1
+  - resus 2
+  - resus 3
+  - resus 4
+  - resus 5
+  walkInConversation:
+  - walk 1
+  - walk 2
+  - walk 3
+  - walk 4
+  - walk 5
+  selfVentilating: 1
+  oxygenInit: 95
+  oxygenMod: 0.5
+  oxygenTracker: []
+  breathRateInit: 15
+  breathRateMod: 0.5
+  breathRateTracker: []
+  accessoryMuscles: 1
+  bloodPressureSystolicInit: 140
+  bloodPressureSystolicMod: 0.5
+  bloodPressureSystolicTracker: []
+  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicMod: 0.5
+  bloodPressureDiastolicTracker: []
+  pulseRateInit: 70
+  pulseRateMod: 0.5
+  pulseRateTracker: []
+  wholeBodyPerfusion: 1
+  capillaryRefillInit: 2
+  capillaryRefillMod: 0.5
+  capillaryRefillTracker: []
+  glasgowComaScaleInit: 12
+  glasgowComaScaleMod: 0.5
+  glasgowComaScaleTracker: []
+  pupilReactionInit: 4
+  pupilReactionMod: 0.5
+  pupilReactionTracker: []
+  repetitiveQuestining: 1
+  hasInternalDevices: 0
+  hasCannula: 0
+  hasFever: 0
+  allergies: []
+  medicationList: []
+  medicalHistoryList: []
+  lastMealTime: 19:00
+  leadingEvents: Events leading to the presentation to hospital
+  triageScale: 0
+  currentLocation: 
+  patientActive: 0
+  initValsAdded: 0
+  character: {fileID: 0}

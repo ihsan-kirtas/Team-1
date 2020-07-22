@@ -10,17 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
-  m_Name: NPC greg
+  m_Name: NPC_Patient4_No_Name
   m_EditorClassIdentifier: 
-  name: 'Example: Greg Marhe'
+  name: Patient 4
   age: 30
   gender: Male
   overallHealth: Generally healthy
   additionalNotes: None
-  conversation: []
+  ambulanceBayConversation:
+  - amb 1
+  - amb 2
+  - amb 3
+  - amb 4
+  - amb 5
+  bedsAreaConversation:
+  - beds 1
+  - beds 2
+  - beds 3
+  - beds 4
+  - beds 5
+  resusBayConversation:
+  - resus 1
+  - resus 2
+  - resus 3
+  - resus 4
+  - resus 5
+  walkInConversation:
+  - walk 1
+  - walk 2
+  - walk 3
+  - walk 4
+  - walk 5
   selfVentilating: 1
-  oxygenInit: 100
-  oxygenMod: 3
+  oxygenInit: 95
+  oxygenMod: 0.5
   oxygenTracker: []
   breathRateInit: 15
   breathRateMod: 0.5
