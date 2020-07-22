@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyInputs : MonoBehaviour
 {
-    public GameObject gameManager;
+    private GameObject gameManager;
 
     private void Start()
     {

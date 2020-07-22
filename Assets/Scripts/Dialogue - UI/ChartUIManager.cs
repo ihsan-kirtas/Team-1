@@ -45,6 +45,9 @@ public class ChartUIManager : MonoBehaviour
         GameEvents.current.event_showChartUI += ShowChartsUI;    // Show Charts UI
         GameEvents.current.event_hideChartUI += HideChartsUI;    // Hide Charts UI
 
+        // Link all of the UI text etc, keeps the inspector cleaner.
+        LinkObjects();
+
         viewingChart = false;
         chartsMasterPanel.SetActive(false);
 
@@ -59,6 +62,42 @@ public class ChartUIManager : MonoBehaviour
         GameEvents.current.event_hideChartUI -= HideChartsUI;
     }
 
+    private void LinkObjects()
+    {
+
+
+
+    // Text
+        //bloodPressureSTracker = GameObject.Find("ChartsMasterPanel/ObsChartPanel/ObsDataTrackers/Blood Pressure - S Tracker").GetComponent<Text>();
+        bloodPressureSTracker = GameObject.Find("Layer1/Test Text").GetComponent<Text>();
+        //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent[UnityEngine.UI.Text]();
+        //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent<Text>();
+
+
+
+        //        bloodPressureDTracker;
+        //breathRateTracker;
+        //capillaryRefillTracker;
+        //glasgowComaScaleTracker;
+        //oxygenTracker;
+        //pulseRateTracker;
+        //pupilReactionTracker;
+
+        //bloodPressureSCurrent;
+        //bloodPressureDCurrent;
+        //breathRateCurrent;
+        //capillaryRefillCurrent;
+        //glasgowComaScaleCurrent;
+        //oxygenCurrent;
+        //pulseRateCurrent;
+        //pupilReactionCurrent;
+
+        //        // Panel
+        //        bloodPressureSTracker = GameObject.Find("Blood Pressure - S Title").GetComponent<Text>();
+        //chartsMasterPanel;
+
+
+    }
 
      void ShowChartsUI()
     {
