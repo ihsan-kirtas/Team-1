@@ -5417,6 +5417,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761aadee16b335444b1af83a758b1613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &231717268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 231717269}
+  m_Layer: 0
+  m_Name: AmboBay5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &231717269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231717268}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.36, y: 0.88276243, z: -3.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 465608079}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235442258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,7 +7708,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'There are many objects that you can interact with throughout the game '
+  m_Text: 'There are many objects that you can interact with throughout the game.
+
+
+    Some
+    characters are also interactable, a dialogue box will pop up and you will be
+    able to get information from these characters, go and find Dr Joe to use this
+    system.'
 --- !u!222 &314386245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11119,6 +11155,11 @@ Transform:
   - {fileID: 899160636}
   - {fileID: 197078223}
   - {fileID: 1661855706}
+  - {fileID: 1559616138}
+  - {fileID: 882001739}
+  - {fileID: 1476641701}
+  - {fileID: 1504567637}
+  - {fileID: 231717269}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21329,6 +21370,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881338294}
   m_Mesh: {fileID: 4300002, guid: b2a5649b688066243a3b1ddb7c0a048e, type: 3}
+--- !u!1 &882001738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882001739}
+  m_Layer: 0
+  m_Name: AmboBay2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882001739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882001738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.812, y: 0.88276243, z: 2.582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 465608079}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890156676
 GameObject:
   m_ObjectHideFlags: 0
@@ -32308,8 +32379,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354926518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16, y: 0, z: 6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15.96, y: 0, z: 6.49}
+  m_LocalScale: {x: 1, y: 1, z: 1.6581}
   m_Children: []
   m_Father: {fileID: 2022380466}
   m_RootOrder: 4
@@ -34739,9 +34810,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Here is the Ambulance Offload Bay.\nPatients are handed over from Ambulance
     Officers here.\n\nYou will get a full handover of why the paitent presented to
-    hospital.\nObjects that are interactable are highlighted in red.\n\nYou can move
-    the blood pressure cuff by clicking and dragging it on to the patient. \n\nOther
-    Nurses and Doctors are also here to help you walk up and interact with them"
+    hospital.\n\nThis is where you would give the patient a triage score, from here
+    they will either be moved into the Bed Space Area or the Resuscitation Bay.\n\nObjects
+    that are interactable are highlighted in red.\n\nYou can move the blood pressure
+    cuff by clicking and dragging it on to the patient. \n\nOther Nurses and Doctors
+    are also here to help you walk up and interact with them"
 --- !u!222 &1403865210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36914,6 +36987,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+--- !u!1 &1476641700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1476641701}
+  m_Layer: 0
+  m_Name: AmboBay3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1476641701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476641700}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.727, y: 0.88276243, z: 2.582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 465608079}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1480500888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37060,6 +37163,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499584958}
   m_Mesh: {fileID: 4300002, guid: b2a5649b688066243a3b1ddb7c0a048e, type: 3}
+--- !u!1 &1504567636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1504567637}
+  m_Layer: 0
+  m_Name: AmboBay4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1504567637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504567636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.05, y: 0.88276243, z: -3.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 465608079}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1511440234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37735,7 +37868,7 @@ GameObject:
   - component: {fileID: 1550729276}
   - component: {fileID: 1550729275}
   m_Layer: 5
-  m_Name: TutIntro
+  m_Name: TutIntroText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38057,6 +38190,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1555444244}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1559616137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559616138}
+  m_Layer: 0
+  m_Name: AmboBay1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559616138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559616137}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.667, y: 0.88276243, z: 2.582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 465608079}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1559974097
 Mesh:
   m_ObjectHideFlags: 0
@@ -65178,7 +65341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assistantPosition: {fileID: 1227703073}
-  startPosition: {fileID: 762137106}
+  startPosition: {fileID: 465421140}
   assistantTimer: 0
 --- !u!195 &8296172669283161892
 NavMeshAgent:
