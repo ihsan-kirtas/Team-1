@@ -19,8 +19,29 @@ public class Patient_Data : ScriptableObject
 
 
     // --------------------------------------------------------------------------------------------------------------------
+
+
     // Dialog
-    [Header("---------- Dialog ----------")]
+    [Header("---------- Dialog Ambulance Bay ----------")]
+    public List<string> ambulanceBayConversation = new List<string>();
+
+    // Dialog
+    [Header("---------- Dialog - Bed Area ----------")]
+    public List<string> BedAreaConversation = new List<string>();
+
+    // Dialog
+    [Header("---------- Dialog - Resus Bay ----------")]
+    public List<string> ResusBayConversation = new List<string>();
+
+
+
+    // STRETCH GOAL
+    // Dialog
+    [Header("---------- Dialog - Walk In ----------")]
+    public List<string> walkInConversation = new List<string>();
+
+    // Dialog - TO BE DELETED
+    [Header("---------- Dialog Delete me ----------")]
     public List<string> conversation = new List<string>();
 
 
