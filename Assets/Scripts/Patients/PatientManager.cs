@@ -8,5 +8,5 @@ public class PatientManager : MonoBehaviour
     public List<GameObject> allPatients;
 
     // Lists all of the patients that currently exist in the game (spawned in)
-    public List<GameObject> activePatients;
+    //public List<GameObject> activePatients;
 }

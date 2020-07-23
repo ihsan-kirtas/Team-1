@@ -72,6 +72,7 @@ public class ChartUIManager : MonoBehaviour
         bloodPressureSTracker = GameObject.Find("Blood Pressure - S Title").GetComponent<Text>();
 
 
+
         //bloodPressureSTracker = GameObject.Find("ChartsMasterPanel/ObsChartPanel/ObsDataTrackers/Blood Pressure - S Tracker").GetComponent<Text>();
         //bloodPressureSTracker = GameObject.FindObjectsOfTypeAll(typeof(GameObject))("Blood Pressure - S Tracker1").GetComponent<Text>();
         //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent[UnityEngine.UI.Text]();

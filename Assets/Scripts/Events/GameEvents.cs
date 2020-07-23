@@ -195,7 +195,15 @@ public class GameEvents : MonoBehaviour
     }
     public event Action event_spawnNextPatient;
 
-    
+
+    // Patient Spawned
+    public void PatientSpawned()
+    {
+        if (event_patientSpawned != null) { event_patientSpawned(); }
+    }
+    public event Action event_patientSpawned;
+
+
     // Patient Moved to Beds
     public void MovePatientToBeds()
     {
