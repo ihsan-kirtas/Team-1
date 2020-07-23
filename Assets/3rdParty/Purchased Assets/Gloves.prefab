@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4401120198108757104}
   - component: {fileID: 7939673432937611401}
   - component: {fileID: 1490313507395010277}
-  - component: {fileID: 1098203426462191648}
   m_Layer: 0
   m_Name: Gloves
   m_TagString: Untagged
@@ -113,22 +112,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07082654, y: 0.22694957}
   m_EdgeRadius: 0
---- !u!114 &1098203426462191648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8508343027398898773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea8492c602aac64f83ac36326a352c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedObject: {fileID: 8508343027398898773}
-  redCol: 0
-  greenCol: 0
-  blueCol: 0
-  lookingAtObject: 0
-  flashingIn: 1
-  startedFlashing: 0
