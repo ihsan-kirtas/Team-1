@@ -5,7 +5,7 @@ using UnityEngine;
 public class JH_PatientSpawner : MonoBehaviour
 {
     public GameObject[] spawnPoints;
-    public GameObject[] patients;
+    //public GameObject[] patients;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +15,14 @@ public class JH_PatientSpawner : MonoBehaviour
             spawnPoints[i] = GameObject.FindGameObjectsWithTag("SpawnPoint")[i]; //Find tag in the dropdown menu on an item prefab
         }
 
-        for (int i = 0; i < patients.Length; i++)
-        {
-            Instantiate(patients[i], spawnPoints[i].transform.position, Quaternion.identity); 
-        }               
+        //for (int i = 0; i < patients.Length; i++)
+        //{
+        //    Instantiate(patients[i], spawnPoints[i].transform.position, Quaternion.identity); 
+        //}
+
+        // reference game manager and get component for patient manager script. all patients
+
+
     }
 
     // Update is called once per frame

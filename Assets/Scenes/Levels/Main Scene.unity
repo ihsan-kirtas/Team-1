@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4205,7 +4205,7 @@ GameObject:
   - component: {fileID: 197078223}
   m_Layer: 0
   m_Name: Bed Space 5
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17604,7 +17604,7 @@ GameObject:
   - component: {fileID: 875916139}
   m_Layer: 0
   m_Name: Bed Space 3
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17962,7 +17962,7 @@ GameObject:
   - component: {fileID: 899160636}
   m_Layer: 0
   m_Name: Bed Space 4
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35944,7 +35944,7 @@ GameObject:
   - component: {fileID: 1661855706}
   m_Layer: 0
   m_Name: Bed Space 6
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40455,7 +40455,7 @@ GameObject:
   - component: {fileID: 1850692578}
   m_Layer: 0
   m_Name: Bed Space 1
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45905,7 +45905,7 @@ GameObject:
   - component: {fileID: 2131247812}
   m_Layer: 0
   m_Name: Resus 2 Bed
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45918,7 +45918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131247811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.5, y: 0, z: -11}
+  m_LocalPosition: {x: 31.5, y: 0, z: -8.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 465608079}
@@ -46855,6 +46855,7 @@ GameObject:
   - component: {fileID: 1581790838832090840}
   - component: {fileID: 1581790838832090843}
   - component: {fileID: 1581790838832090849}
+  - component: {fileID: 1581790838832090850}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46904,6 +46905,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e39cf3d89b63641beec436b84f2d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1581790838832090850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581790838832090846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa32186c5c3a37e4e9304332ec1e7d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1778202705666856003 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2148247761649465147, guid: f700dc920ed6ffe45803b19cca8a4e2e,
