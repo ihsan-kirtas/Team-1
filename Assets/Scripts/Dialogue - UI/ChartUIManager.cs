@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class ChartUIManager : MonoBehaviour
 {
-    [Header("Settings")]
+    [Header("Refresh rate")]
     public float updateFrequency = 1.0f;
 
     
@@ -33,7 +33,7 @@ public class ChartUIManager : MonoBehaviour
     [Header("Other")]
     public GameObject chartsMasterPanel;
 
-    [Header("System")]
+    [Header("System / debug")]
     public Patient_Data patient_data;
     public bool viewingChart = true;
 
@@ -44,6 +44,11 @@ public class ChartUIManager : MonoBehaviour
         // Subscribe to events
         GameEvents.current.event_showChartUI += ShowChartsUI;    // Show Charts UI
         GameEvents.current.event_hideChartUI += HideChartsUI;    // Hide Charts UI
+
+
+
+
+
 
         // Link all of the UI text etc, keeps the inspector cleaner.
         LinkObjects();

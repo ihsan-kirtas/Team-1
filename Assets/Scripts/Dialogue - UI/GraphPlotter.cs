@@ -12,6 +12,10 @@ public class GraphPlotter : MonoBehaviour
 
     public Patient_Data patientData;
 
+    public List<GameObject> currentGraphObjects;
+
+    public Color lineColor;
+
     // Global
     public List<float> tracker;
 
@@ -68,6 +72,12 @@ public class GraphPlotter : MonoBehaviour
 
         GameObject lastCircleGameObject = null;
 
+        // Delete all current graph items ready for new items
+        foreach(GameObject item in currentGraphObjects)
+        {
+            Destroy(item);
+        }
+
 
         for (int i = 0; i < listLength; i++)
         {
@@ -96,6 +106,7 @@ public class GraphPlotter : MonoBehaviour
     private GameObject PlotPoint(Vector2 position)
     {
         GameObject gameObject = new GameObject("circle", typeof(Image));                // Create a new game object, Type: Image, name: circle
+        currentGraphObjects.Add(gameObject);                                            // Add new object to list so they can all be deleted on refresh
         gameObject.transform.SetParent(graphContainer, false);                          // Make circle a child of the graph container
         gameObject.GetComponent<Image>().sprite = circleSprite;                         // Set the gameobjects sprite to the circle sptite
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get the rect transform
@@ -129,6 +140,7 @@ public class GraphPlotter : MonoBehaviour
     private void LinkPoints(Vector2 pointPosA, Vector2 pointPosB)
     {
         GameObject gameObject = new GameObject("link", typeof(Image));                  // create new link GO
+        currentGraphObjects.Add(gameObject);                                            // Add new object to list so they can all be deleted on refresh
         gameObject.transform.SetParent(graphContainer, false);                          // Set parent
         gameObject.GetComponent<Image>().color = new Color(1, 1, 1, .5f);               // Set line colour
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get rect transform
@@ -136,7 +148,7 @@ public class GraphPlotter : MonoBehaviour
         float distance = Vector2.Distance(pointPosA, pointPosB);                        // Line Distance
         rectTransform.anchorMin = new Vector2(0, 0);                                    // Set anchor
         rectTransform.anchorMax = new Vector2(0, 0);                                    // Set anchor
-        rectTransform.sizeDelta = new Vector2(100, 3f);                                 // Set size delta
+        rectTransform.sizeDelta = new Vector2(80, 3f);                                 // Set size delta
         rectTransform.anchoredPosition = pointPosA + dir * distance * .5f;              // Half way between A and B
 
         Vector2 forward = new Vector2(1, 0);
