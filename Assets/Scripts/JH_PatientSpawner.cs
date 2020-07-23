@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class JH_PatientSpawner : MonoBehaviour
 {
+    public GameObject gameManager;
+
     public GameObject[] spawnPoints;
-    //public GameObject[] patients;
+
+    public List<GameObject> patients;
 
     // Start is called before the first frame update
     void Start()
     {
+        patients = gameManager.GetComponent<PatientManager>().allPatients;
+
+
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             spawnPoints[i] = GameObject.FindGameObjectsWithTag("SpawnPoint")[i]; //Find tag in the dropdown menu on an item prefab
