@@ -16,6 +16,7 @@ public class JH_PatientSpawner : MonoBehaviour
         patients = gameManager.GetComponent<PatientManager>().allPatients;
 
 
+
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             spawnPoints[i] = GameObject.FindGameObjectsWithTag("SpawnPoint")[i]; //Find tag in the dropdown menu on an item prefab
@@ -27,7 +28,6 @@ public class JH_PatientSpawner : MonoBehaviour
         //}
 
         // reference game manager and get component for patient manager script. all patients
-
 
     }
 
