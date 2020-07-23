@@ -10,25 +10,25 @@ public class ChartUIManager : MonoBehaviour
     [Header("Settings")]
     public float updateFrequency = 1.0f;
 
-    [Header("Tracker strings")]
-    public Text bloodPressureSTracker;
-    public Text bloodPressureDTracker;
-    public Text breathRateTracker;
-    public Text capillaryRefillTracker;
-    public Text glasgowComaScaleTracker;
-    public Text oxygenTracker;
-    public Text pulseRateTracker;
-    public Text pupilReactionTracker;
+    
+    private Text bloodPressureSTracker;
+    private Text bloodPressureDTracker;
+    private Text breathRateTracker;
+    private Text capillaryRefillTracker;
+    private Text glasgowComaScaleTracker;
+    private Text oxygenTracker;
+    private Text pulseRateTracker;
+    private Text pupilReactionTracker;
 
-    [Header("Current Values")]
-    public Text bloodPressureSCurrent;
-    public Text bloodPressureDCurrent;
-    public Text breathRateCurrent;
-    public Text capillaryRefillCurrent;
-    public Text glasgowComaScaleCurrent;
-    public Text oxygenCurrent;
-    public Text pulseRateCurrent;
-    public Text pupilReactionCurrent;
+
+    private Text bloodPressureSCurrent;
+    private Text bloodPressureDCurrent;
+    private Text breathRateCurrent;
+    private Text capillaryRefillCurrent;
+    private Text glasgowComaScaleCurrent;
+    private Text oxygenCurrent;
+    private Text pulseRateCurrent;
+    private Text pupilReactionCurrent;
 
     [Header("Other")]
     public GameObject chartsMasterPanel;
@@ -68,38 +68,26 @@ public class ChartUIManager : MonoBehaviour
         // Activate UI to allow linking
         chartsMasterPanel.SetActive(true);
 
-        // Text
-        bloodPressureSTracker = GameObject.Find("Blood Pressure - S Title").GetComponent<Text>();
+        // Text Link Trackers
+        bloodPressureSTracker = GameObject.Find("Obs Blood Pressure - S Tracker").GetComponent<Text>();
+        bloodPressureDTracker = GameObject.Find("Obs Blood Pressure - D Tracker").GetComponent<Text>();
+        breathRateTracker = GameObject.Find("Obs Breath Rate Tracker").GetComponent<Text>();
+        capillaryRefillTracker = GameObject.Find("Obs Capillary Refill Tracker").GetComponent<Text>();
+        glasgowComaScaleTracker = GameObject.Find("Obs Glasgow Coma Scale Tracker").GetComponent<Text>();
+        oxygenTracker = GameObject.Find("Obs Oxygen Tracker").GetComponent<Text>();
+        pulseRateTracker = GameObject.Find("Obs Pulse Rate Tracker").GetComponent<Text>();
+        pupilReactionTracker = GameObject.Find("Obs Pupil Reaction Tracker").GetComponent<Text>();
 
+        // Text link current values
+        bloodPressureSCurrent = GameObject.Find("Obs Blood Pressure - S Current").GetComponent<Text>();
+        bloodPressureDCurrent = GameObject.Find("Obs Blood Pressure - D Current").GetComponent<Text>();
+        breathRateCurrent = GameObject.Find("Obs Breath Rate Current").GetComponent<Text>();
+        capillaryRefillCurrent = GameObject.Find("Obs Capillary Refill Current").GetComponent<Text>();
+        glasgowComaScaleCurrent = GameObject.Find("Obs Glasgow Coma Scale Current").GetComponent<Text>();
+        oxygenCurrent = GameObject.Find("Obs Oxygen Current").GetComponent<Text>();
+        pulseRateCurrent = GameObject.Find("Obs Pulse Rate Current").GetComponent<Text>();
+        pupilReactionCurrent = GameObject.Find("Obs Pupil Reaction Current").GetComponent<Text>();
 
-
-        //bloodPressureSTracker = GameObject.Find("ChartsMasterPanel/ObsChartPanel/ObsDataTrackers/Blood Pressure - S Tracker").GetComponent<Text>();
-        //bloodPressureSTracker = GameObject.FindObjectsOfTypeAll(typeof(GameObject))("Blood Pressure - S Tracker1").GetComponent<Text>();
-        //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent[UnityEngine.UI.Text]();
-        //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent<Text>();
-
-
-
-        //        bloodPressureDTracker;
-        //breathRateTracker;
-        //capillaryRefillTracker;
-        //glasgowComaScaleTracker;
-        //oxygenTracker;
-        //pulseRateTracker;
-        //pupilReactionTracker;
-
-        //bloodPressureSCurrent;
-        //bloodPressureDCurrent;
-        //breathRateCurrent;
-        //capillaryRefillCurrent;
-        //glasgowComaScaleCurrent;
-        //oxygenCurrent;
-        //pulseRateCurrent;
-        //pupilReactionCurrent;
-
-        //        // Panel
-        //        bloodPressureSTracker = GameObject.Find("Blood Pressure - S Title").GetComponent<Text>();
-        //chartsMasterPanel;
 
         // Deactivate UI after linking
         chartsMasterPanel.SetActive(false);

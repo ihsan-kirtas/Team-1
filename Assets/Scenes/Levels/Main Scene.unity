@@ -1005,83 +1005,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41905094}
   m_Mesh: {fileID: 4300024, guid: e8328baf0603fb747b8605e2a1758b2c, type: 3}
---- !u!1 &44333944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 44333945}
-  - component: {fileID: 44333947}
-  - component: {fileID: 44333946}
-  m_Layer: 5
-  m_Name: Blood Pressure - S Tracker1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &44333945
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44333944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 930047688}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -350, y: 386.00018}
-  m_SizeDelta: {x: 1000, y: 200}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &44333946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44333944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---- !u!222 &44333947
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44333944}
-  m_CullTransparentMesh: 0
 --- !u!1 &53218025
 GameObject:
   m_ObjectHideFlags: 0
@@ -17060,7 +16983,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 794577631}
-  - {fileID: 44333945}
   m_Father: {fileID: 115937456}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44027,21 +43949,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
   - {fileID: 11400000, guid: cf2220d078f039d4cb8cf750e730ebf8, type: 2}
   takeObsFrequency: 0.5
---- !u!114 &1581790838832090842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581790838832090846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7bc364619f7a9f41919f486d7ee5633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patients:
-  - {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
-  - {fileID: 11400000, guid: cf2220d078f039d4cb8cf750e730ebf8, type: 2}
 --- !u!114 &1581790838832090843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44056,21 +43963,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateFrequency: 1
   bloodPressureSTracker: {fileID: 0}
-  bloodPressureDTracker: {fileID: 6516616172704502884}
-  breathRateTracker: {fileID: 6516616172781137664}
-  capillaryRefillTracker: {fileID: 6516616172060758645}
-  glasgowComaScaleTracker: {fileID: 6516616172337776541}
-  oxygenTracker: {fileID: 6516616172134595239}
-  pulseRateTracker: {fileID: 6516616171353859134}
-  pupilReactionTracker: {fileID: 6516616171166080094}
-  bloodPressureSCurrent: {fileID: 6516616170946423253}
-  bloodPressureDCurrent: {fileID: 6516616171571966531}
-  breathRateCurrent: {fileID: 6516616172583066894}
-  capillaryRefillCurrent: {fileID: 6516616172647741734}
-  glasgowComaScaleCurrent: {fileID: 6516616171147492552}
-  oxygenCurrent: {fileID: 6516616172603662633}
-  pulseRateCurrent: {fileID: 6516616172114173250}
-  pupilReactionCurrent: {fileID: 6516616171457283955}
+  bloodPressureDTracker: {fileID: 0}
+  breathRateTracker: {fileID: 0}
+  capillaryRefillTracker: {fileID: 0}
+  glasgowComaScaleTracker: {fileID: 0}
+  oxygenTracker: {fileID: 0}
+  pulseRateTracker: {fileID: 0}
+  pupilReactionTracker: {fileID: 0}
+  bloodPressureSCurrent: {fileID: 0}
+  bloodPressureDCurrent: {fileID: 0}
+  breathRateCurrent: {fileID: 0}
+  capillaryRefillCurrent: {fileID: 0}
+  glasgowComaScaleCurrent: {fileID: 0}
+  oxygenCurrent: {fileID: 0}
+  pulseRateCurrent: {fileID: 0}
+  pupilReactionCurrent: {fileID: 0}
   chartsMasterPanel: {fileID: 5747521122795326653}
   patient_data: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
   viewingChart: 1
@@ -44085,7 +43992,6 @@ GameObject:
   - component: {fileID: 1581790838832090847}
   - component: {fileID: 1581790838832090848}
   - component: {fileID: 1581790838832090841}
-  - component: {fileID: 1581790838832090842}
   - component: {fileID: 1581790838832090840}
   - component: {fileID: 1581790838832090843}
   - component: {fileID: 1581790838832090849}
@@ -46820,7 +46726,7 @@ GameObject:
   - component: {fileID: 6516616170946423254}
   - component: {fileID: 6516616170946423253}
   m_Layer: 5
-  m_Name: Blood Pressure - S Current
+  m_Name: Obs Blood Pressure - S Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47262,7 +47168,7 @@ GameObject:
   - component: {fileID: 6516616171147492553}
   - component: {fileID: 6516616171147492552}
   m_Layer: 5
-  m_Name: Glasgow Coma Scale Current
+  m_Name: Obs Glasgow Coma Scale Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47299,7 +47205,7 @@ GameObject:
   - component: {fileID: 6516616171166080095}
   - component: {fileID: 6516616171166080094}
   m_Layer: 5
-  m_Name: Pupil Reaction Tracker
+  m_Name: Obs Pupil Reaction Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47600,7 +47506,7 @@ GameObject:
   - component: {fileID: 6516616171353859135}
   - component: {fileID: 6516616171353859134}
   m_Layer: 5
-  m_Name: Pulse Rate Tracker
+  m_Name: Obs Pulse Rate Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47754,7 +47660,7 @@ GameObject:
   - component: {fileID: 6516616171457283956}
   - component: {fileID: 6516616171457283955}
   m_Layer: 5
-  m_Name: Pupil Reaction Current
+  m_Name: Obs Pupil Reaction Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47831,7 +47737,7 @@ GameObject:
   - component: {fileID: 6516616171571966532}
   - component: {fileID: 6516616171571966531}
   m_Layer: 5
-  m_Name: Blood Pressure - D Current
+  m_Name: Obs Blood Pressure - D Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48264,7 +48170,7 @@ GameObject:
   - component: {fileID: 6516616172060758646}
   - component: {fileID: 6516616172060758645}
   m_Layer: 5
-  m_Name: Capillary Refill Tracker
+  m_Name: Obs Capillary Refill Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48418,7 +48324,7 @@ GameObject:
   - component: {fileID: 6516616172114173251}
   - component: {fileID: 6516616172114173250}
   m_Layer: 5
-  m_Name: Pulse Rate Current
+  m_Name: Obs Pulse Rate Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48495,7 +48401,7 @@ GameObject:
   - component: {fileID: 6516616172134595256}
   - component: {fileID: 6516616172134595239}
   m_Layer: 5
-  m_Name: Oxygen Tracker
+  m_Name: Obs Oxygen Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48615,7 +48521,7 @@ GameObject:
   - component: {fileID: 6516616172337776542}
   - component: {fileID: 6516616172337776541}
   m_Layer: 5
-  m_Name: Glasgow Coma Scale Tracker
+  m_Name: Obs Glasgow Coma Scale Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48854,7 +48760,7 @@ GameObject:
   - component: {fileID: 6516616172493912928}
   - component: {fileID: 6516616172493912943}
   m_Layer: 5
-  m_Name: Blood Pressure - S Tracker
+  m_Name: Obs Blood Pressure - S Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49077,7 +48983,7 @@ GameObject:
   - component: {fileID: 6516616172583066895}
   - component: {fileID: 6516616172583066894}
   m_Layer: 5
-  m_Name: Breath Rate Current
+  m_Name: Obs Breath Rate Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49290,7 +49196,7 @@ GameObject:
   - component: {fileID: 6516616172603662634}
   - component: {fileID: 6516616172603662633}
   m_Layer: 5
-  m_Name: Oxygen Current
+  m_Name: Obs Oxygen Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49308,7 +49214,7 @@ GameObject:
   - component: {fileID: 6516616172647741735}
   - component: {fileID: 6516616172647741734}
   m_Layer: 5
-  m_Name: Capillary Refill Current
+  m_Name: Obs Capillary Refill Current
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49385,7 +49291,7 @@ GameObject:
   - component: {fileID: 6516616172704502885}
   - component: {fileID: 6516616172704502884}
   m_Layer: 5
-  m_Name: Blood Pressure - D Tracker
+  m_Name: Obs Blood Pressure - D Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49502,7 +49408,7 @@ GameObject:
   - component: {fileID: 6516616172781137665}
   - component: {fileID: 6516616172781137664}
   m_Layer: 5
-  m_Name: Breath Rate Tracker
+  m_Name: Obs Breath Rate Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

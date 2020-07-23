@@ -7,6 +7,5 @@ public class PatientManager : MonoBehaviour
     // Lists all the possible patients in the game
     public List<GameObject> allPatients;
 
-    // Lists all of the patients that currently exist in the game (spawned in)
-    //public List<GameObject> activePatients;
+    // to check if a patient is in active use patient_data isActive = true
 }

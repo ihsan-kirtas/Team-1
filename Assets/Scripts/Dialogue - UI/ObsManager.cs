@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 
 public class ObsManager : MonoBehaviour
 {
     public List<Patient_Data> patients;                 // The patient_data scriptable objects to record obs on
     public float takeObsFrequency = 15.0f;              // Take obs every x seconds
+
 
     void Start()
     {
@@ -18,9 +18,6 @@ public class ObsManager : MonoBehaviour
         InvokeRepeating("ProcessAllCurrentPatients", 0.0f, takeObsFrequency);
     }
 
-    void Update()
-    {
-    }
 
     public void ActivatePatient(Patient_Data patient_data)
     {
@@ -65,7 +62,7 @@ public class ObsManager : MonoBehaviour
 
     void ProcessAllCurrentPatients()
     {
-        if(patients.Count != 0)
+        if (patients.Count != 0)
         {
             foreach (Patient_Data patient in patients)
             {
@@ -93,6 +90,7 @@ public class ObsManager : MonoBehaviour
     {
         if (patient_data.initValsAdded)
         {
+            // Add values to existing list
             patient_data.bloodPressureSystolicTracker.Add(patient_data.bloodPressureSystolicTracker.Last() + patient_data.bloodPressureSystolicMod);        // Blood Pressure - Systolic
             patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicTracker.Last() + patient_data.bloodPressureDiastolicMod);     // Blood Pressure - Diastolic
             patient_data.breathRateTracker.Add(patient_data.breathRateTracker.Last() + patient_data.breathRateMod);                                         // Breath Rate
@@ -102,7 +100,27 @@ public class ObsManager : MonoBehaviour
             patient_data.pulseRateTracker.Add(patient_data.pulseRateTracker.Last() + patient_data.pulseRateMod);                                            // Pulse Rate
             patient_data.pupilReactionTracker.Add(patient_data.pupilReactionTracker.Last() + patient_data.pupilReactionMod);                                // Pupil Reaction
 
+            // if length > 10 remove 2nd item in the list
+            TrimListSize(patient_data.bloodPressureSystolicTracker);
+            TrimListSize(patient_data.bloodPressureDiastolicTracker);
+            TrimListSize(patient_data.breathRateTracker);
+            TrimListSize(patient_data.capillaryRefillTracker);
+            TrimListSize(patient_data.glasgowComaScaleTracker);
+            TrimListSize(patient_data.oxygenTracker);
+            TrimListSize(patient_data.pulseRateTracker);
+            TrimListSize(patient_data.pupilReactionTracker);
+
             //Debug.Log("DEV - Obs updated for " + patient_data.name);
+        }
+    }
+
+    // List cleanup - Used to stop the Obs array from getting too huge. keeps the initial value and deletes the 2nd value if length >10
+    void TrimListSize(List<float> tracker)
+    {
+        while (tracker.Count > 10)
+        {
+            // remove the 2nd value in the list
+            tracker.Remove(tracker[1]);
         }
     }
 }
