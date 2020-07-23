@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 809493594624632705}
   - component: {fileID: 809493594625762625}
   - component: {fileID: 380857470145429149}
+  - component: {fileID: 3034967209585140397}
   m_Layer: 0
   m_Name: Sanitizer Dispenser_MD_01
   m_TagString: Untagged
@@ -173,3 +174,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.28003418, y: 0.48296848, z: 0.2235159}
   m_Center: {x: 0, y: 0.021949247, z: 0.11175795}
+--- !u!114 &3034967209585140397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809493594627767175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea8492c602aac64f83ac36326a352c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObject: {fileID: 809493594627767175}
+  redCol: 0
+  greenCol: 0
+  blueCol: 0
+  lookingAtObject: 0
+  flashingIn: 1
+  startedFlashing: 0
