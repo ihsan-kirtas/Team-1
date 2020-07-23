@@ -49,8 +49,9 @@ public class JH_PatientSpawner : MonoBehaviour
             // Set the newly instantiated patient to be the child of the Patients GameObject - Keeps things tidy :)
             newPatient.transform.parent = GameObject.Find("Patients").transform;
 
-            // Set the Patient_Data's patientActive bool to true (Attached to the patient)
-            newPatient.GetComponent<NPC_Dialog>().NPC_data.patientActive = true;
+            // Calls a function in the ObsManager which sets up the new patients UI data. Also sends that function this patient_data object
+            Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_data;
+            gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
 
             // Broadcast event for a new patient being spawned
             GameEvents.current.PatientSpawned();
