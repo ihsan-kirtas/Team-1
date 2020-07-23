@@ -10,25 +10,25 @@ public class ChartUIManager : MonoBehaviour
     [Header("Settings")]
     public float updateFrequency = 1.0f;
 
-    [Header("Tracker strings")]
-    public Text bloodPressureSTracker;
-    public Text bloodPressureDTracker;
-    public Text breathRateTracker;
-    public Text capillaryRefillTracker;
-    public Text glasgowComaScaleTracker;
-    public Text oxygenTracker;
-    public Text pulseRateTracker;
-    public Text pupilReactionTracker;
+    
+    private Text bloodPressureSTracker;
+    private Text bloodPressureDTracker;
+    private Text breathRateTracker;
+    private Text capillaryRefillTracker;
+    private Text glasgowComaScaleTracker;
+    private Text oxygenTracker;
+    private Text pulseRateTracker;
+    private Text pupilReactionTracker;
 
-    [Header("Current Values")]
-    public Text bloodPressureSCurrent;
-    public Text bloodPressureDCurrent;
-    public Text breathRateCurrent;
-    public Text capillaryRefillCurrent;
-    public Text glasgowComaScaleCurrent;
-    public Text oxygenCurrent;
-    public Text pulseRateCurrent;
-    public Text pupilReactionCurrent;
+
+    private Text bloodPressureSCurrent;
+    private Text bloodPressureDCurrent;
+    private Text breathRateCurrent;
+    private Text capillaryRefillCurrent;
+    private Text glasgowComaScaleCurrent;
+    private Text oxygenCurrent;
+    private Text pulseRateCurrent;
+    private Text pupilReactionCurrent;
 
     [Header("Other")]
     public GameObject chartsMasterPanel;
