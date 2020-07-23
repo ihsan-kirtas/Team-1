@@ -65,11 +65,15 @@ public class ChartUIManager : MonoBehaviour
     private void LinkObjects()
     {
 
+        // Activate UI to allow linking
+        chartsMasterPanel.SetActive(true);
+
+        // Text
+        bloodPressureSTracker = GameObject.Find("Blood Pressure - S Title").GetComponent<Text>();
 
 
-    // Text
         //bloodPressureSTracker = GameObject.Find("ChartsMasterPanel/ObsChartPanel/ObsDataTrackers/Blood Pressure - S Tracker").GetComponent<Text>();
-        bloodPressureSTracker = GameObject.Find("Layer1/Test Text").GetComponent<Text>();
+        //bloodPressureSTracker = GameObject.FindObjectsOfTypeAll(typeof(GameObject))("Blood Pressure - S Tracker1").GetComponent<Text>();
         //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent[UnityEngine.UI.Text]();
         //Text cameraLabel = GameObject.Find("Canvas/Camera Label").GetComponent<Text>();
 
@@ -96,6 +100,8 @@ public class ChartUIManager : MonoBehaviour
         //        bloodPressureSTracker = GameObject.Find("Blood Pressure - S Title").GetComponent<Text>();
         //chartsMasterPanel;
 
+        // Deactivate UI after linking
+        chartsMasterPanel.SetActive(false);
 
     }
 
