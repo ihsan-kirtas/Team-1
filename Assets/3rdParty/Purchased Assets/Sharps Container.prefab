@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4420265274423368412}
   - component: {fileID: 7956566088789272101}
   - component: {fileID: 1585362013006807329}
+  - component: {fileID: 1459599469425042533}
   m_Layer: 0
-  m_Name: X018_018
+  m_Name: Sharps Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,3 +101,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.35697305, y: 0.44255853, z: 0.1588319}
   m_Center: {x: 0.0001731292, y: 0.028660446, z: 0.09353198}
+--- !u!114 &1459599469425042533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8527478754097107705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea8492c602aac64f83ac36326a352c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedObject: {fileID: 8527478754097107705}
+  redCol: 0
+  greenCol: 0
+  blueCol: 0
+  lookingAtObject: 0
+  flashingIn: 1
+  startedFlashing: 0
