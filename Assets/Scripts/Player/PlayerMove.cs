@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerMove : MonoBehaviour
 
     //HACK to close all panels on game camera
     public GameObject dialogPanel;
-    public GameObject ClipBoardPanel;
+    public GameObject ChartsMasterPanel;
 
 
 
@@ -40,6 +41,7 @@ public class PlayerMove : MonoBehaviour
         GameEvents.current.event_hideChartUI += ActivateGameMovement;         // Chart UI
         GameEvents.current.event_hideDialogueUI += ActivateGameMovement;      // Dialogue UI
         GameEvents.current.event_hidePauseMenuUI += ActivateGameMovement;     // Pause Menu UI
+
     }
 
     private void OnDestroy()
@@ -71,10 +73,7 @@ public class PlayerMove : MonoBehaviour
     {
         moveBody = true;
 
-        ClipBoardPanel.SetActive(false);
-
-
-
+        ChartsMasterPanel.SetActive(false);
 
         // HACK - todo FIX THIS
         // dialogPanel.SetActive(false);
