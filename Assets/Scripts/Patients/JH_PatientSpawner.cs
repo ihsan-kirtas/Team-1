@@ -50,7 +50,7 @@ public class JH_PatientSpawner : MonoBehaviour
             newPatient.transform.parent = GameObject.Find("Patients").transform;
 
             // Calls a function in the ObsManager which sets up the new patients UI data. Also sends that function this patient_data object
-            Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_data;
+            Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_Data;
             gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
 
             // Broadcast event for a new patient being spawned

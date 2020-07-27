@@ -542,8 +542,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6a2ecccbd988e47b69ebdc50ceb05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogManager: {fileID: 0}
-  NPC_data: {fileID: 11400000, guid: cf2220d078f039d4cb8cf750e730ebf8, type: 2}
+  patient1: 0
+  patient2: 1
+  patient3: 0
+  patient4: 0
+  patient5: 0
+  NPC_Data: {fileID: 11400000, guid: cf2220d078f039d4cb8cf750e730ebf8, type: 2}
 --- !u!1 &1926387206324161609
 GameObject:
   m_ObjectHideFlags: 0

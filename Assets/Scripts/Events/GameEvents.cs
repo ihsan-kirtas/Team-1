@@ -226,4 +226,77 @@ public class GameEvents : MonoBehaviour
         if (event_movePatientToResus2 != null) { event_movePatientToResus2(); }
     }
     public event Action event_movePatientToResus2;
+
+
+
+    // ---------------- Dialogue Events -----------------------------------------------------------------
+
+    // --- Patient 1 Start / End Convo ---
+    public void StartConvoPatient1()
+    {
+        if (event_startConvoPatient1 != null) { event_startConvoPatient1(); }
+    }
+    public event Action event_startConvoPatient1;
+
+    public void EndConvoPatient1()
+    {
+        if (event_endConvoPatient1 != null) { event_endConvoPatient1(); }
+    }
+    public event Action event_endConvoPatient1;
+
+
+    // --- Patient 2 Start / End Convo ---
+    public void StartConvoPatient2()
+    {
+        if (event_startConvoPatient2 != null) { event_startConvoPatient2(); }
+    }
+    public event Action event_startConvoPatient2;
+
+    public void EndConvoPatient2()
+    {
+        if (event_endConvoPatient2 != null) { event_endConvoPatient2(); }
+    }
+    public event Action event_endConvoPatient2;
+
+
+    // --- Patient 3 Start / End Convo ---
+    public void StartConvoPatient3()
+    {
+        if (event_startConvoPatient3 != null) { event_startConvoPatient3(); }
+    }
+    public event Action event_startConvoPatient3;
+
+    public void EndConvoPatient3()
+    {
+        if (event_endConvoPatient3 != null) { event_endConvoPatient3(); }
+    }
+    public event Action event_endConvoPatient3;
+
+
+    // --- Patient 1 Start / End Convo ---
+    public void StartConvoPatient4()
+    {
+        if (event_startConvoPatient4 != null) { event_startConvoPatient4(); }
+    }
+    public event Action event_startConvoPatient4;
+
+    public void EndConvoPatient4()
+    {
+        if (event_endConvoPatient4 != null) { event_endConvoPatient4(); }
+    }
+    public event Action event_endConvoPatient4;
+
+
+    // --- Patient 1 Start / End Convo ---
+    public void StartConvoPatient5()
+    {
+        if (event_startConvoPatient5 != null) { event_startConvoPatient5(); }
+    }
+    public event Action event_startConvoPatient5;
+
+    public void EndConvoPatient5()
+    {
+        if (event_endConvoPatient5 != null) { event_endConvoPatient5(); }
+    }
+    public event Action event_endConvoPatient5;
 }

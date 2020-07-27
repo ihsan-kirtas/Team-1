@@ -14,10 +14,13 @@ using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
+    public List<GameObject> patientsList;
+    public Patient_Data currentPatient;
+
     public GameObject dialogPanel;
 
-    public Text npcNameText;
-    public Text dialogText;
+    private Text npcNameText;
+    private Text dialogText;
 
     private List<string> conversation;
     private int convoIndex;
@@ -26,9 +29,28 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         // Subscribe to events
-        GameEvents.current.event_showDialogueUI += ShowDialoguePanel;   // Show dialogue
-        GameEvents.current.event_hideDialogueUI += HideDialoguePanel;   // Hide Dialogue
+        GameEvents.current.event_showDialogueUI += ShowDialoguePanel;   // maybe delete
+        GameEvents.current.event_hideDialogueUI += HideDialoguePanel;   // maybe delete
 
+
+        GameEvents.current.event_startConvoPatient1 += startConvoPatient1;
+        GameEvents.current.event_startConvoPatient2 += startConvoPatient2;
+        GameEvents.current.event_startConvoPatient3 += startConvoPatient3;
+        GameEvents.current.event_startConvoPatient4 += startConvoPatient4;
+        GameEvents.current.event_startConvoPatient5 += startConvoPatient5;
+
+        GameEvents.current.event_endConvoPatient1 += endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient2 += endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient3 += endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient4 += endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient5 += endConvoPatientAll;
+
+
+        patientsList = GameObject.Find("GameManager").GetComponent<PatientManager>().allPatients;
+
+        dialogPanel.SetActive(true);
+        npcNameText = GameObject.Find("Dialog_NPC_Name").GetComponent<Text>();
+        dialogText = GameObject.Find("Dialog_Text").GetComponent<Text>();
         dialogPanel.SetActive(false);                               // Sets the dialog panel to not active
     }
 
@@ -37,7 +59,89 @@ public class DialogManager : MonoBehaviour
         // Unsubscribe to events
         GameEvents.current.event_showDialogueUI -= ShowDialoguePanel;   // Show dialogue
         GameEvents.current.event_hideDialogueUI -= HideDialoguePanel;   // Hide Dialogue
+
+
+
+        GameEvents.current.event_startConvoPatient1 -= startConvoPatient1;
+        GameEvents.current.event_startConvoPatient2 -= startConvoPatient2;
+        GameEvents.current.event_startConvoPatient3 -= startConvoPatient3;
+        GameEvents.current.event_startConvoPatient4 -= startConvoPatient4;
+        GameEvents.current.event_startConvoPatient5 -= startConvoPatient5;
+
+        GameEvents.current.event_endConvoPatient1 -= endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient2 -= endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient3 -= endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient4 -= endConvoPatientAll;
+        GameEvents.current.event_endConvoPatient5 -= endConvoPatientAll;
     }
+
+    // Start dialogue setup
+    private void startConvoPatient1()
+    {
+        Debug.Log("Patient 1 convo started");
+        if (patientsList.Count > 0)
+        {
+            Debug.Log("list > 0");
+            currentPatient = patientsList[0].GetComponent<NPC_Dialog>().NPC_Data;
+            convoIndex = 0;
+            ShowDialoguePanel();
+        }
+    }
+    private void startConvoPatient2()
+    {
+        Debug.Log("Patient 2 convo started");
+        if (patientsList.Count > 0)
+        {
+            currentPatient = patientsList[1].GetComponent<NPC_Dialog>().NPC_Data;
+            convoIndex = 0;
+            ShowDialoguePanel();
+        }
+    }
+    private void startConvoPatient3()
+    {
+        Debug.Log("Patient 3 convo started");
+        if (patientsList.Count > 0)
+        {
+            currentPatient = patientsList[2].GetComponent<NPC_Dialog>().NPC_Data;
+            convoIndex = 0;
+            ShowDialoguePanel();
+        }
+    }
+    private void startConvoPatient4()
+    {
+        Debug.Log("Patient 4 convo started");
+        if (patientsList.Count > 0)
+        {
+            currentPatient = patientsList[3].GetComponent<NPC_Dialog>().NPC_Data;
+            convoIndex = 0;
+            ShowDialoguePanel();
+        }
+    }
+    private void startConvoPatient5()
+    {
+        Debug.Log("Patient 5 convo started");
+        if (patientsList.Count > 0)
+        {
+            currentPatient = patientsList[4].GetComponent<NPC_Dialog>().NPC_Data;
+            convoIndex = 0;
+            ShowDialoguePanel();
+        }
+    }
+
+    // End dialogue
+    private void endConvoPatientAll()
+    {
+        Debug.Log("All patient convo ended");
+        HideDialoguePanel();
+        currentPatient = null;
+    }
+
+
+
+
+
+
+
 
     private void ShowDialoguePanel()
     {
@@ -57,24 +161,24 @@ public class DialogManager : MonoBehaviour
     }
 
 
-    public void Start_Dialog(Patient_Data patient)
+    public void Start_Dialog()
     {
-        npcNameText.text = patient.name;                            // Set the UI NPC name on the dialog box
+        npcNameText.text = currentPatient.name;                            // Set the UI NPC name on the dialog box
 
 
 
         // Which convsersation to use based on players location
         if (ZoneManager.inAmbulanceBay)
         {
-            conversation = new List<string>(patient.ambulanceBayConversation);
+            conversation = new List<string>(currentPatient.ambulanceBayConversation);
         }
         else if (ZoneManager.inBedsArea)
         {
-            conversation = new List<string>(patient.bedsAreaConversation);
+            conversation = new List<string>(currentPatient.bedsAreaConversation);
         }
         else if (ZoneManager.inResus1 || ZoneManager.inResus2)
         {
-            conversation = new List<string>(patient.resusBayConversation);
+            conversation = new List<string>(currentPatient.resusBayConversation);
         }
         else
         {

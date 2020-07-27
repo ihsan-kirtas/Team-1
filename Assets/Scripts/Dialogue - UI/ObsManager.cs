@@ -12,7 +12,7 @@ public class ObsManager : MonoBehaviour
     void Start()
     {
         // spawn 1st patient
-        ActivatePatient(patients[0]);
+        //ActivatePatient(patients[0]);
 
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
         InvokeRepeating("ProcessAllCurrentPatients", 0.0f, takeObsFrequency);
@@ -25,7 +25,7 @@ public class ObsManager : MonoBehaviour
         ClearObsTrackers(patient_data);                  // clears out any data from the previous game in the scriptable object.
         NewPatientInitialObs(patient_data);
         patient_data.patientActive = true;
-        Debug.Log("activate patient complete");
+        //Debug.Log("activate patient complete");
     }
 
     void ClearObsTrackers(Patient_Data patient_data)
@@ -38,7 +38,7 @@ public class ObsManager : MonoBehaviour
         patient_data.oxygenTracker.Clear();                     // Oxygen
         patient_data.pulseRateTracker.Clear();                  // Pulse Rate
         patient_data.pupilReactionTracker.Clear();              // Pupil Reaction
-        Debug.Log("patient data cleared");
+        //Debug.Log("patient data cleared");
     }
 
 
@@ -57,7 +57,7 @@ public class ObsManager : MonoBehaviour
         // Set initial values added to true, allows obs to start auto recording
         patient_data.initValsAdded = true;
 
-        Debug.Log("DEV - initial obs done");
+        //Debug.Log("DEV - initial obs done");
     }
 
     void ProcessAllCurrentPatients()
