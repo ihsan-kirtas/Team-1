@@ -10,7 +10,7 @@ public class GraphPlotter : MonoBehaviour
     [SerializeField] private Sprite circleSprite;       // Serialized So you can set in the editor
     public RectTransform graphContainer;
 
-    public Patient_Data patientData;
+    public Patient_Data currentPatientData;
 
     public List<GameObject> currentGraphObjects;
 
@@ -167,7 +167,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 180;
             graphLow = 120;
             graphMin = 100;
-            tracker = patientData.bloodPressureDiastolicTracker;
+            tracker = currentPatientData.bloodPressureDiastolicTracker;
         }
         if (usingBloodPressureSystolicTracker)
         {
@@ -175,7 +175,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 120;
             graphLow = 80;
             graphMin = 50;
-            tracker = patientData.bloodPressureSystolicTracker;
+            tracker = currentPatientData.bloodPressureSystolicTracker;
         }
         if (usingOxygenTracker)
         {
@@ -183,7 +183,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 130;
             graphLow = 60;
             graphMin = 50;
-            tracker = patientData.oxygenTracker;
+            tracker = currentPatientData.oxygenTracker;
         }
         if (usingBreathRateTracker)
         {
@@ -191,7 +191,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 30;
             graphLow = 10;
             graphMin = 5;
-            tracker = patientData.breathRateTracker;
+            tracker = currentPatientData.breathRateTracker;
         }
 
         if (usingPulseRateTracker)
@@ -200,7 +200,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 150;
             graphLow = 50;
             graphMin = 20;
-            tracker = patientData.pulseRateTracker;
+            tracker = currentPatientData.pulseRateTracker;
         }
         if (usingCapillaryRefillTracker)
         {
@@ -208,7 +208,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 5;
             graphLow = 1;
             graphMin = 0;
-            tracker = patientData.capillaryRefillTracker;
+            tracker = currentPatientData.capillaryRefillTracker;
         }
         if (usingGlasgowComaScaleTracker)
         {
@@ -216,7 +216,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 20;
             graphLow = 5;
             graphMin = 1;
-            tracker = patientData.glasgowComaScaleTracker;
+            tracker = currentPatientData.glasgowComaScaleTracker;
         }
         if (usingPupilReactionTracker)
         {
@@ -224,7 +224,7 @@ public class GraphPlotter : MonoBehaviour
             graphHigh = 8;
             graphLow = 2;
             graphMin = 0;
-            tracker = patientData.pupilReactionTracker;
+            tracker = currentPatientData.pupilReactionTracker;
         }
 
         maxValue.text = graphMax.ToString();
