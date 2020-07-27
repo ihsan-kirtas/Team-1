@@ -16,6 +16,13 @@ public class GraphPlotter : MonoBehaviour
 
     public Color lineColor;
 
+    public GameObject noDataAvailable;
+    public GameObject dataOwner;
+
+    
+
+
+
     // Global
     public List<float> tracker;
 
@@ -47,6 +54,8 @@ public class GraphPlotter : MonoBehaviour
         // Subscribe to events
         GameEvents.current.event_updatePatientData += UpdateValues;
 
+        noDataAvailable.SetActive(true);
+
         // Draws the borders, zones and guide lines.
         DrawBorders();
     }
@@ -71,6 +80,25 @@ public class GraphPlotter : MonoBehaviour
 
         // check / link the current patient data
         currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+
+
+        noDataAvailable.SetActive(false);
+        dataOwner.GetComponent<Text>().text = currentPatientData.name;
+
+
+    //Debug - data belongs to
+    GameObject ownerText = new GameObject("DataOwnerText", typeof(RectTransform));
+        Text ownerTextComp = ownerText.AddComponent<Text>();
+        currentGraphObjects.Add(ownerText);
+        ownerText.transform.SetParent(graphContainer, false);
+
+        ownerTextComp.text = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient.name;
+        ownerTextComp.color = Color.white;
+        ownerTextComp.fontSize = 16;
+
+        RectTransform ownerRectTransform = ownerText.GetComponent<RectTransform>();
+        ownerRectTransform.anchorMin = new Vector2(0, 0);
+        ownerRectTransform.anchorMax = new Vector2(0, 0);
 
 
 
@@ -118,20 +146,7 @@ public class GraphPlotter : MonoBehaviour
         {
             Debug.Log("NO GRAPH DATA AVAILABLE");
 
-            // Create error message
-            GameObject newText = new GameObject("text", typeof(RectTransform));
-            Text newTextComp = newText.AddComponent<Text>();
-            currentGraphObjects.Add(newText);
-
-            newTextComp.text = "No Data Available";
-            //newTextComp.font = font;
-            newTextComp.color = Color.white;
-            newTextComp.fontSize = 16;
-
-
-            //RectTransform rectTransform = newText.GetComponent<RectTransform>();
-            //rectTransform.anchorMin = new Vector2(0, 0);
-            //rectTransform.anchorMax = new Vector2(0, 0);
+            noDataAvailable.SetActive(true);
 
         }
     }
