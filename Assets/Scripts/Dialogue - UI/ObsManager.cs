@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObsManager : MonoBehaviour
 {
-    public List<Patient_Data> patients;                 // The patient_data scriptable objects to record obs on
+    private List<GameObject> patientsList;                 // The patient_data scriptable objects to record obs on
     public float takeObsFrequency = 15.0f;              // Take obs every x seconds
 
 
@@ -13,6 +13,8 @@ public class ObsManager : MonoBehaviour
     {
         // spawn 1st patient
         //ActivatePatient(patients[0]);
+
+        patientsList = GameObject.Find("GameManager").GetComponent<PatientManager>().allPatients;
 
         // Repeat Function - (FunctionName, Start Delay, Repeat every)
         InvokeRepeating("ProcessAllCurrentPatients", 0.0f, takeObsFrequency);
@@ -62,13 +64,15 @@ public class ObsManager : MonoBehaviour
 
     void ProcessAllCurrentPatients()
     {
-        if (patients.Count != 0)
+        if (patientsList.Count != 0)
         {
-            foreach (Patient_Data patient in patients)
+            // Checks if patient active, if yes record obs
+            foreach (GameObject patientGO in patientsList)
             {
-                if (patient.patientActive)
+                Patient_Data patient_data = patientGO.GetComponent<NPC_Dialog>().NPC_Data;
+                if (patient_data.patientActive)
                 {
-                    RecordObsChanges(patient);
+                    RecordObsChanges(patient_data);
                 }
             }
             //Debug.Log("DEV - Obs cycle complete");

@@ -78,10 +78,10 @@ public class DialogManager : MonoBehaviour
     // Start dialogue setup
     private void startConvoPatient1()
     {
-        Debug.Log("Patient 1 convo started");
+        //Debug.Log("Patient 1 convo started");
         if (patientsList.Count > 0)
         {
-            Debug.Log("list > 0");
+            //Debug.Log("list > 0");
             currentPatient = patientsList[0].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
             GameEvents.current.ShowDialogueUI();
@@ -90,7 +90,7 @@ public class DialogManager : MonoBehaviour
     }
     private void startConvoPatient2()
     {
-        Debug.Log("Patient 2 convo started");
+        //Debug.Log("Patient 2 convo started");
         if (patientsList.Count > 0)
         {
             currentPatient = patientsList[1].GetComponent<NPC_Dialog>().NPC_Data;
@@ -101,7 +101,7 @@ public class DialogManager : MonoBehaviour
     }
     private void startConvoPatient3()
     {
-        Debug.Log("Patient 3 convo started");
+        //Debug.Log("Patient 3 convo started");
         if (patientsList.Count > 0)
         {
             currentPatient = patientsList[2].GetComponent<NPC_Dialog>().NPC_Data;
@@ -112,7 +112,7 @@ public class DialogManager : MonoBehaviour
     }
     private void startConvoPatient4()
     {
-        Debug.Log("Patient 4 convo started");
+        //Debug.Log("Patient 4 convo started");
         if (patientsList.Count > 0)
         {
             currentPatient = patientsList[3].GetComponent<NPC_Dialog>().NPC_Data;
@@ -123,7 +123,7 @@ public class DialogManager : MonoBehaviour
     }
     private void startConvoPatient5()
     {
-        Debug.Log("Patient 5 convo started");
+        //Debug.Log("Patient 5 convo started");
         if (patientsList.Count > 0)
         {
             currentPatient = patientsList[4].GetComponent<NPC_Dialog>().NPC_Data;
@@ -136,7 +136,7 @@ public class DialogManager : MonoBehaviour
     // End dialogue
     private void endConvoPatientAll()
     {
-        Debug.Log("All patient convo ended");
+        //Debug.Log("All patient convo ended");
         GameEvents.current.HideDialogueUI();
         currentPatient = null;
     }

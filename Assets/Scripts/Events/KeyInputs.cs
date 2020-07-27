@@ -18,7 +18,15 @@ public class KeyInputs : MonoBehaviour
         {
             if (!gameManager.GetComponent<ChartUIManager>().viewingChart)
             {
-                GameEvents.current.ShowChartUI();
+                // Player must be within a patients trigger to launch charts UI
+                if (GameObject.Find("Player").GetComponent<DialogManager>().currentPatient != null)
+                {
+                    GameEvents.current.ShowChartUI();
+                }
+                else
+                {
+                    Debug.Log("You need to be at the patient first - Make me a UI notification");
+                }
             }
             else
             {

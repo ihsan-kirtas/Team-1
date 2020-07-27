@@ -24,6 +24,10 @@ public class PlayerLook : MonoBehaviour
     private float xAxisClamp;
 
 
+    public GameObject dialogueUI;
+    public GameObject chartsMasterUI;
+
+
     private void Awake()
     {
         playerBody = this.transform.parent;         // Attach parent's transform on script run
@@ -33,23 +37,22 @@ public class PlayerLook : MonoBehaviour
 
     private void Start()
     {
-        // Subscribe OLD
-        //GameEvents.current.onUIActivated += ActivateUICamera;
-        //GameEvents.current.onUIDeactivated += ActivateGameCamera;
-
-
-
         // Subscribe to events
 
         // Camera - Activate UI Mode
-        GameEvents.current.event_showChartUI += ActivateUICamera;           // Chart UI
+        //GameEvents.current.event_showChartUI += ActivateUICamera;           // Chart UI
         GameEvents.current.event_showDialogueUI += ActivateUICamera;        // Dialogue UI
         GameEvents.current.event_showPauseMenuUI += ActivateUICamera;       // Pause Menu UI
 
         // Camera - Activate Game Mode
-        GameEvents.current.event_hideChartUI += ActivateGameCamera;         // Chart UI
+        //GameEvents.current.event_hideChartUI += ActivateGameCamera;         // Chart UI
         GameEvents.current.event_hideDialogueUI += ActivateGameCamera;      // Dialogue UI
         GameEvents.current.event_hidePauseMenuUI += ActivateGameCamera;     // Pause Menu UI
+
+
+        // set cursor and cam to game mode
+        moveCamera = true;
+        Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen
 
     }
 
@@ -62,22 +65,25 @@ public class PlayerLook : MonoBehaviour
 
 
         // Camera - Activate UI Mode
-        GameEvents.current.event_showChartUI -= ActivateUICamera;           // Chart UI
+        //GameEvents.current.event_showChartUI -= ActivateUICamera;           // Chart UI
         GameEvents.current.event_showDialogueUI -= ActivateUICamera;        // Dialogue UI
         GameEvents.current.event_showPauseMenuUI -= ActivateUICamera;       // Pause Menu UI
 
         // Camera - Activate Game Mode
-        GameEvents.current.event_hideChartUI -= ActivateGameCamera;         // Chart UI
+        //GameEvents.current.event_hideChartUI -= ActivateGameCamera;         // Chart UI
         GameEvents.current.event_hideDialogueUI -= ActivateGameCamera;      // Dialogue UI
         GameEvents.current.event_hidePauseMenuUI -= ActivateGameCamera;     // Pause Menu UI
     }
 
     // Switch camera mode to Game
     void ActivateGameCamera()
-    {
+    {   
+
         //Debug.Log("GAME CAMERA SETTIGS");
         moveCamera = true;
         Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen
+
+
     }
 
 

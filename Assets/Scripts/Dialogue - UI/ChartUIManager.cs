@@ -34,8 +34,13 @@ public class ChartUIManager : MonoBehaviour
     public GameObject chartsMasterPanel;
 
     [Header("System / debug")]
-    public Patient_Data patient_data;
+
+
+    public Patient_Data current_patient_data;
     public bool viewingChart = true;
+
+
+
 
 
     // Start is called before the first frame update
@@ -47,6 +52,18 @@ public class ChartUIManager : MonoBehaviour
 
 
 
+        // Tap into StartCvonvo events to swap the current patient data
+        GameEvents.current.event_startConvoPatient1 += LoadPatient1Data;
+        GameEvents.current.event_startConvoPatient2 += LoadPatient2Data;
+        GameEvents.current.event_startConvoPatient3 += LoadPatient3Data;
+        GameEvents.current.event_startConvoPatient4 += LoadPatient4Data;
+        GameEvents.current.event_startConvoPatient5 += LoadPatient5Data;
+
+        GameEvents.current.event_endConvoPatient1 += UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient2 += UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient3 += UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient4 += UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient5 += UnloadAllPatientData;
 
 
 
@@ -65,6 +82,20 @@ public class ChartUIManager : MonoBehaviour
         // Unsubscribe to events
         GameEvents.current.event_showChartUI -= ShowChartsUI;
         GameEvents.current.event_hideChartUI -= HideChartsUI;
+
+
+        // Tap into StartCvonvo events to swap the current patient data
+        GameEvents.current.event_startConvoPatient1 -= LoadPatient1Data;
+        GameEvents.current.event_startConvoPatient2 -= LoadPatient2Data;
+        GameEvents.current.event_startConvoPatient3 -= LoadPatient3Data;
+        GameEvents.current.event_startConvoPatient4 -= LoadPatient4Data;
+        GameEvents.current.event_startConvoPatient5 -= LoadPatient5Data;
+
+        GameEvents.current.event_endConvoPatient1 -= UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient2 -= UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient3 -= UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient4 -= UnloadAllPatientData;
+        GameEvents.current.event_endConvoPatient5 -= UnloadAllPatientData;
     }
 
     private void LinkObjects()
@@ -99,11 +130,42 @@ public class ChartUIManager : MonoBehaviour
 
     }
 
-     void ShowChartsUI()
+
+    void LoadPatient1Data()
     {
+        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+    }
+    void LoadPatient2Data()
+    {
+        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+    }
+    void LoadPatient3Data()
+    {
+        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+    }
+    void LoadPatient4Data()
+    {
+        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+    }
+    void LoadPatient5Data()
+    {
+        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+    }
+
+    void UnloadAllPatientData()
+    {
+        current_patient_data = null;
+    }
+
+
+    void ShowChartsUI()
+    {
+
         // Toggle viewing chart bool
         viewingChart = true;
+
         chartsMasterPanel.SetActive(true);
+
     }
 
     void HideChartsUI()
@@ -115,7 +177,7 @@ public class ChartUIManager : MonoBehaviour
 
     void ChartsProcessor()
     {
-        if(patient_data != null && viewingChart)
+        if(current_patient_data != null && viewingChart)
         {
             updateValues();
         }
@@ -124,24 +186,24 @@ public class ChartUIManager : MonoBehaviour
     public void updateValues()
     {
         // Tracker strings
-        bloodPressureSTracker.text = generateTrackerString(patient_data.bloodPressureSystolicTracker);  // Blood Pressure - S
-        bloodPressureDTracker.text = generateTrackerString(patient_data.bloodPressureDiastolicTracker); // Blood Pressure - D
-        breathRateTracker.text = generateTrackerString(patient_data.breathRateTracker);                 // Breath Rate
-        capillaryRefillTracker.text = generateTrackerString(patient_data.capillaryRefillTracker);       // Capillary Refill
-        glasgowComaScaleTracker.text = generateTrackerString(patient_data.glasgowComaScaleTracker);     // Glasgow Coma Scale
-        oxygenTracker.text = generateTrackerString(patient_data.oxygenTracker);                         // Oxygen
-        pulseRateTracker.text = generateTrackerString(patient_data.pulseRateTracker);                   // Pulse Rate
-        pupilReactionTracker.text = generateTrackerString(patient_data.pupilReactionTracker);           // Pupil Reaction
+        bloodPressureSTracker.text = generateTrackerString(current_patient_data.bloodPressureSystolicTracker);  // Blood Pressure - S
+        bloodPressureDTracker.text = generateTrackerString(current_patient_data.bloodPressureDiastolicTracker); // Blood Pressure - D
+        breathRateTracker.text = generateTrackerString(current_patient_data.breathRateTracker);                 // Breath Rate
+        capillaryRefillTracker.text = generateTrackerString(current_patient_data.capillaryRefillTracker);       // Capillary Refill
+        glasgowComaScaleTracker.text = generateTrackerString(current_patient_data.glasgowComaScaleTracker);     // Glasgow Coma Scale
+        oxygenTracker.text = generateTrackerString(current_patient_data.oxygenTracker);                         // Oxygen
+        pulseRateTracker.text = generateTrackerString(current_patient_data.pulseRateTracker);                   // Pulse Rate
+        pupilReactionTracker.text = generateTrackerString(current_patient_data.pupilReactionTracker);           // Pupil Reaction
 
         // Current Values
-        bloodPressureSCurrent.text = System.Math.Round(patient_data.bloodPressureSystolicTracker.Last(), 1).ToString();       // Blood Pressure - S
-        bloodPressureDCurrent.text = System.Math.Round(patient_data.bloodPressureDiastolicTracker.Last(), 1).ToString();      // Blood Pressure - D
-        breathRateCurrent.text = System.Math.Round(patient_data.breathRateTracker.Last(), 1).ToString();                     // Breath Rate
-        capillaryRefillCurrent.text = System.Math.Round(patient_data.capillaryRefillTracker.Last(), 1).ToString();          // Capillary Refill
-        glasgowComaScaleCurrent.text = System.Math.Round(patient_data.glasgowComaScaleTracker.Last(), 1).ToString();         // Glasgow Coma Scale
-        oxygenCurrent.text = System.Math.Round(patient_data.oxygenTracker.Last(), 1).ToString();                              // Oxygen
-        pulseRateCurrent.text = System.Math.Round(patient_data.pulseRateTracker.Last(), 1).ToString();                       // Pulse Rate
-        pupilReactionCurrent.text = System.Math.Round(patient_data.pupilReactionTracker.Last(), 1).ToString();               // Pupil Reaction
+        bloodPressureSCurrent.text = System.Math.Round(current_patient_data.bloodPressureSystolicTracker.Last(), 1).ToString();       // Blood Pressure - S
+        bloodPressureDCurrent.text = System.Math.Round(current_patient_data.bloodPressureDiastolicTracker.Last(), 1).ToString();      // Blood Pressure - D
+        breathRateCurrent.text = System.Math.Round(current_patient_data.breathRateTracker.Last(), 1).ToString();                     // Breath Rate
+        capillaryRefillCurrent.text = System.Math.Round(current_patient_data.capillaryRefillTracker.Last(), 1).ToString();          // Capillary Refill
+        glasgowComaScaleCurrent.text = System.Math.Round(current_patient_data.glasgowComaScaleTracker.Last(), 1).ToString();         // Glasgow Coma Scale
+        oxygenCurrent.text = System.Math.Round(current_patient_data.oxygenTracker.Last(), 1).ToString();                              // Oxygen
+        pulseRateCurrent.text = System.Math.Round(current_patient_data.pulseRateTracker.Last(), 1).ToString();                       // Pulse Rate
+        pupilReactionCurrent.text = System.Math.Round(current_patient_data.pupilReactionTracker.Last(), 1).ToString();               // Pupil Reaction
     }
 
     string generateTrackerString(List<float> tracker)
