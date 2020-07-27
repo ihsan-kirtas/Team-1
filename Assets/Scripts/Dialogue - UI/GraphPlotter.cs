@@ -47,10 +47,6 @@ public class GraphPlotter : MonoBehaviour
         // Subscribe to events
         GameEvents.current.event_updatePatientData += UpdateValues;
 
-
-        // Sets variables for the specific chart.   Max, High, Low, Min & the tracker data to use.
-        SetTrackerData();
-
         // Draws the borders, zones and guide lines.
         DrawBorders();
     }
@@ -63,42 +59,79 @@ public class GraphPlotter : MonoBehaviour
 
     private void UpdateValues()
     {
-        float listLength = tracker.Count;
-        float xSpacingPercentage = 0.1f;
-        float xSpacing = graphContainer.rect.width * xSpacingPercentage;
-
-        float graphHeight = graphContainer.rect.height;
-        float graphYrange = graphMax - graphMin;
-
-        GameObject lastCircleGameObject = null;
-
         // Delete all current graph items ready for new items
-        foreach(GameObject item in currentGraphObjects)
+        if(currentGraphObjects.Count > 0)
         {
-            Destroy(item);
-        }
-
-
-        for (int i = 0; i < listLength; i++)
-        {
-            // Calculate X
-            float xPos = i * xSpacing;                                  // TODO issues with > 10 values
-
-            // Calculate Y
-            float obValue = tracker[i];                                 // Ob Value
-            float yPercent = (obValue - graphMin) / graphYrange;        // percentage of the allowable range
-            float yPos = yPercent * graphHeight;                        // apply to graph height
-
-            // Plot point on graph - get the GO it returns
-            GameObject circleGameObject =  PlotPoint(new Vector2(xPos, yPos));
-
-            if(lastCircleGameObject != null)
+            foreach (GameObject item in currentGraphObjects)
             {
-                // Join the previous point to this point with a line - LinkPoints(PosA, PosB)
-                LinkPoints(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
+                Destroy(item);
+            }
+        }
+        
+
+        // check / link the current patient data
+        currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+
+
+
+        if (currentPatientData != null)
+        {
+            // Sets variables for the specific chart.   Max, High, Low, Min & the tracker data to use.
+            SetTrackerData();
+
+            float listLength = tracker.Count;
+            float xSpacingPercentage = 0.1f;
+            float xSpacing = graphContainer.rect.width * xSpacingPercentage;
+
+            float graphHeight = graphContainer.rect.height;
+            float graphYrange = graphMax - graphMin;
+
+            GameObject lastCircleGameObject = null;
+
+          
+
+
+            for (int i = 0; i < listLength; i++)
+            {
+                // Calculate X
+                float xPos = i * xSpacing;                                  // TODO issues with > 10 values
+
+                // Calculate Y
+                float obValue = tracker[i];                                 // Ob Value
+                float yPercent = (obValue - graphMin) / graphYrange;        // percentage of the allowable range
+                float yPos = yPercent * graphHeight;                        // apply to graph height
+
+                // Plot point on graph - get the GO it returns
+                GameObject circleGameObject = PlotPoint(new Vector2(xPos, yPos));
+
+                if (lastCircleGameObject != null)
+                {
+                    // Join the previous point to this point with a line - LinkPoints(PosA, PosB)
+                    LinkPoints(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
+
+                }
+                lastCircleGameObject = circleGameObject;
 
             }
-            lastCircleGameObject = circleGameObject;
+        }
+        else
+        {
+            Debug.Log("NO GRAPH DATA AVAILABLE");
+
+            // Create error message
+            GameObject newText = new GameObject("text", typeof(RectTransform));
+            Text newTextComp = newText.AddComponent<Text>();
+            currentGraphObjects.Add(newText);
+
+            newTextComp.text = "No Data Available";
+            //newTextComp.font = font;
+            newTextComp.color = Color.white;
+            newTextComp.fontSize = 16;
+
+
+            //RectTransform rectTransform = newText.GetComponent<RectTransform>();
+            //rectTransform.anchorMin = new Vector2(0, 0);
+            //rectTransform.anchorMax = new Vector2(0, 0);
 
         }
     }

@@ -9,10 +9,10 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     // Set input names
-    [SerializeField] private string mouseXInputName = "Mouse X";
-    [SerializeField] private string mouseYInputName = "Mouse Y";
+    private string mouseXInputName = "Mouse X";
+    private string mouseYInputName = "Mouse Y";
 
-    [SerializeField] private float mouseSensitivity = 150;
+    private float mouseSensitivity = 150;
 
     // Parent's body transform
     private Transform playerBody;
@@ -24,8 +24,8 @@ public class PlayerLook : MonoBehaviour
     private float xAxisClamp;
 
 
-    public GameObject dialogueUI;
-    public GameObject chartsMasterUI;
+    private GameObject dialogPanel;
+    private GameObject chartsMasterPanel;
 
 
     private void Awake()
@@ -49,6 +49,9 @@ public class PlayerLook : MonoBehaviour
         GameEvents.current.event_hideDialogueUI += ActivateGameCamera;      // Dialogue UI
         GameEvents.current.event_hidePauseMenuUI += ActivateGameCamera;     // Pause Menu UI
 
+        // link panels
+        dialogPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().dialogueUiPanel;
+        chartsMasterPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().chartsMasterPanel;
 
         // set cursor and cam to game mode
         moveCamera = true;

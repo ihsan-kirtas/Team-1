@@ -18,17 +18,10 @@ public class PlayerMove : MonoBehaviour
     public bool moveBody;
 
     //HACK to close all panels on game camera
-    public GameObject dialogPanel;
-    public GameObject ChartsMasterPanel;
+    private GameObject dialogPanel;
+    private GameObject chartsMasterPanel;
 
 
-
-    private void Awake()
-    {
-        // Gets the Character controller on this object.
-        charController = GetComponent<CharacterController>();
-        ActivateGameMovement();
-    }
 
     private void Start()
     {
@@ -44,6 +37,15 @@ public class PlayerMove : MonoBehaviour
         GameEvents.current.event_hideDialogueUI += ActivateGameMovement;      // Dialogue UI
         GameEvents.current.event_hidePauseMenuUI += ActivateGameMovement;     // Pause Menu UI
 
+        // link panels
+        dialogPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().dialogueUiPanel;
+        chartsMasterPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().chartsMasterPanel;
+
+        // Gets the Character controller on this object.
+        charController = GetComponent<CharacterController>();
+        ActivateGameMovement();
+
+        
     }
 
     private void OnDestroy()
@@ -75,7 +77,7 @@ public class PlayerMove : MonoBehaviour
     {
         moveBody = true;
 
-        ChartsMasterPanel.SetActive(false);
+        chartsMasterPanel.SetActive(false);
 
         // HACK - todo FIX THIS
         // dialogPanel.SetActive(false);

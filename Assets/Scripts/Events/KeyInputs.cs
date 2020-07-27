@@ -6,9 +6,13 @@ public class KeyInputs : MonoBehaviour
 {
     private GameObject gameManager;
 
+    private GameObject noObsAvailablePanel;
+
     private void Start()
     {
         gameManager = GameObject.Find("GameManager");
+        noObsAvailablePanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().ObsNotAvailableAlert;
+        noObsAvailablePanel.SetActive(false);
     }
 
     void Update()
@@ -25,13 +29,29 @@ public class KeyInputs : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("You need to be at the patient first - Make me a UI notification");
+                    //Debug.Log("You need to be at the patient first - Make me a UI notification");
+
+                    // Show error message
+                    StartCoroutine(DisplayNoObsMessage());
                 }
             }
             else
             {
                 GameEvents.current.HideChartUI();
             }
+        }
+
+
+        IEnumerator DisplayNoObsMessage()
+        {
+            // Show message
+            noObsAvailablePanel.SetActive(true);
+
+            //yield on a new YieldInstruction that waits for X seconds.
+            yield return new WaitForSeconds(2);
+
+            // Hide Message
+            noObsAvailablePanel.SetActive(false);
         }
 
         // Pause Menu UI

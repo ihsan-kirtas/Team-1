@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class ChartUIManager : MonoBehaviour
 {
     [Header("Refresh rate")]
-    public float updateFrequency = 1.0f;
+    private float updateFrequency = 0.5f;
 
     
     private Text bloodPressureSTracker;
@@ -30,13 +30,12 @@ public class ChartUIManager : MonoBehaviour
     private Text pulseRateCurrent;
     private Text pupilReactionCurrent;
 
-    [Header("Other")]
-    public GameObject chartsMasterPanel;
+    private GameObject chartsMasterPanel;
 
     [Header("System / debug")]
 
 
-    public Patient_Data current_patient_data;
+    private Patient_Data current_patient_data;
     public bool viewingChart = true;
 
 
@@ -65,7 +64,8 @@ public class ChartUIManager : MonoBehaviour
         GameEvents.current.event_endConvoPatient4 += UnloadAllPatientData;
         GameEvents.current.event_endConvoPatient5 += UnloadAllPatientData;
 
-
+        // link to charts panel
+        chartsMasterPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().chartsMasterPanel;
 
         // Link all of the UI text etc, keeps the inspector cleaner.
         LinkObjects();
@@ -133,33 +133,34 @@ public class ChartUIManager : MonoBehaviour
 
     void LoadPatient1Data()
     {
-        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+        //current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
     }
     void LoadPatient2Data()
     {
-        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+        //current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
     }
     void LoadPatient3Data()
     {
-        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+        //current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
     }
     void LoadPatient4Data()
     {
-        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+        //current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
     }
     void LoadPatient5Data()
     {
-        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
+        //current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
     }
 
     void UnloadAllPatientData()
     {
-        current_patient_data = null;
+        //current_patient_data = null;
     }
 
 
     void ShowChartsUI()
     {
+        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
 
         // Toggle viewing chart bool
         viewingChart = true;
@@ -173,6 +174,8 @@ public class ChartUIManager : MonoBehaviour
         // Toggle viewing chart bool
         viewingChart = false;
         chartsMasterPanel.SetActive(false);
+
+        current_patient_data = null;
     }
 
     void ChartsProcessor()

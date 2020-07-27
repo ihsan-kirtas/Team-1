@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour
     public List<GameObject> patientsList;
     public Patient_Data currentPatient;
 
-    public GameObject dialogPanel;
+    private GameObject dialogPanel;
 
     private Text npcNameText;
     private Text dialogText;
@@ -45,6 +45,9 @@ public class DialogManager : MonoBehaviour
         GameEvents.current.event_endConvoPatient4 += endConvoPatientAll;
         GameEvents.current.event_endConvoPatient5 += endConvoPatientAll;
 
+
+        // link panels
+        dialogPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().dialogueUiPanel;
 
         patientsList = GameObject.Find("GameManager").GetComponent<PatientManager>().allPatients;
 
@@ -137,12 +140,11 @@ public class DialogManager : MonoBehaviour
     private void endConvoPatientAll()
     {
         //Debug.Log("All patient convo ended");
+
         GameEvents.current.HideDialogueUI();
+
         currentPatient = null;
     }
-
-
-
 
 
 
