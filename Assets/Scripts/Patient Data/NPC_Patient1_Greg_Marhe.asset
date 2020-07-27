@@ -52,7 +52,6 @@ MonoBehaviour:
   oxygenMod: 3
   oxygenTracker:
   - 100
-  - 175
   - 178
   - 181
   - 184
@@ -61,11 +60,11 @@ MonoBehaviour:
   - 193
   - 196
   - 199
+  - 202
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
-  - 27.5
   - 28
   - 28.5
   - 29
@@ -74,12 +73,12 @@ MonoBehaviour:
   - 30.5
   - 31
   - 31.5
+  - 32
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
-  - 152.5
   - 153
   - 153.5
   - 154
@@ -88,11 +87,11 @@ MonoBehaviour:
   - 155.5
   - 156
   - 156.5
+  - 157
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
-  - 102.5
   - 103
   - 103.5
   - 104
@@ -101,11 +100,11 @@ MonoBehaviour:
   - 105.5
   - 106
   - 106.5
+  - 107
   pulseRateInit: 70
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
-  - 82.5
   - 83
   - 83.5
   - 84
@@ -114,12 +113,12 @@ MonoBehaviour:
   - 85.5
   - 86
   - 86.5
+  - 87
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 14.5
   - 15
   - 15.5
   - 16
@@ -128,11 +127,11 @@ MonoBehaviour:
   - 17.5
   - 18
   - 18.5
+  - 19
   glasgowComaScaleInit: 12
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
-  - 24.5
   - 25
   - 25.5
   - 26
@@ -141,11 +140,11 @@ MonoBehaviour:
   - 27.5
   - 28
   - 28.5
+  - 29
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker:
   - 4
-  - 16.5
   - 17
   - 17.5
   - 18
@@ -154,6 +153,7 @@ MonoBehaviour:
   - 19.5
   - 20
   - 20.5
+  - 21
   repetitiveQuestining: 1
   hasInternalDevices: 0
   hasCannula: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   medicationList: []
   medicalHistoryList: []
   lastMealTime: 19:00
-  leadingEvents: Events leading to the presentation to hospital
+  leadingEvents: presentation to hospitalesentation to hospital
   triageScale: 0
   currentLocation: 
   patientActive: 1

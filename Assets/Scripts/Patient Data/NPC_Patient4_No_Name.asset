@@ -18,35 +18,15 @@ MonoBehaviour:
   overallHealth: Generally healthy
   additionalNotes: None
   ambulanceBayConversation:
-  - amb 1
-  - amb 2
-  - amb 3
-  - amb 4
-  - amb 5
+  - Patients are handed over here assigned a triage score press next to see more
+    information and X to close the dialogue box
   bedsAreaConversation:
-  - beds 1
-  - beds 2
-  - beds 3
-  - beds 4
-  - beds 5
+  - Patients who do not need to be in the resus bay will come here
   resusBayConversation:
-  - resus 1
-  - resus 2
-  - resus 3
-  - resus 4
-  - resus 5
-  walkInConversation:
-  - walk 1
-  - walk 2
-  - walk 3
-  - walk 4
-  - walk 5
+  - Patients who require resus will be placed here
+  walkInConversation: []
   otherConversation:
-  - P4 - Other 1
-  - P4 - Other 2
-  - P4 - Other 3
-  - P4 - Other 4
-  - P4 - Other 5
+  - Hello, I am here to assist you.
   selfVentilating: 1
   oxygenInit: 95
   oxygenMod: 0.5
