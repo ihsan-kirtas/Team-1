@@ -18,35 +18,35 @@ MonoBehaviour:
   overallHealth: Generally healthy
   additionalNotes: None
   ambulanceBayConversation:
-  - amb 1
-  - amb 2
-  - amb 3
-  - amb 4
-  - amb 5
+  - This is Greg Marhe, he is a 35 year old male presents post tripping on a bowling
+    ball in his garage leading him to falling over in an awkward way.
+  - Patient hit his head on the right temporal lobe on a corner of a shelf which
+    has a small cut and what seems to be a fractured left ankle in his leg caused
+    by a loss of consciousness for 15 seconds
+  - Enroute he became combative, but his vital signs have remained stable and Greg
+    is complaining of pain in his left ankle
+  - Greg lives with his wife Maria who is expecting their first child in two weeks
+  - 'Gregs vitals are RR: 15 SPo2:95 on room air BP:130/88 HR:60 BGL:5.5 GCS:11 Eyes
+    3 Verbal 4 Motor 5 Pupils:4+  Arms: 5  Legs:5 Temp:37 Pain:5 Behaviour: aggressive
+    not following direction '
+  - Greg has a past medical history of asthma but is otherwise healthy
   bedsAreaConversation:
-  - beds 1
-  - beds 2
-  - beds 3
-  - beds 4
-  - beds 5
+  - Greg is aggitated have you checked his obs?
+  - Greg doesn't look so good would you like me to call the doctor for a review?
+  - Greg is unresponisve and making abnormal movements, we should move him to resus
   resusBayConversation:
-  - resus 1
-  - resus 2
-  - resus 3
-  - resus 4
-  - resus 5
-  walkInConversation:
-  - walk 1
-  - walk 2
-  - walk 3
-  - walk 4
-  - walk 5
+  - The team leader has let us know that we have sent a trauma page out
+  - The neurosurgery team are on their way
+  - Would you like me to set up the ventilator, the resus trolley is stocked and
+    ready to go
+  - Remember GCS less than 8 lets get ready to intubate
+  - Neurosurgery team have ordered a CT,
+  - Greg has been sent straight to theatres for surgical intervention and management,
+    the CT showed a bleed in the front right temporal lobe
+  walkInConversation: []
   otherConversation:
-  - Greg Other 1
-  - Greg Other 2
-  - Greg Other 3
-  - Greg Other 4
-  - Greg Other 5
+  - Do you need any help?
+  - How are you travelling, have you had a break yet?
   selfVentilating: 1
   oxygenInit: 100
   oxygenMod: 3
@@ -160,7 +160,8 @@ MonoBehaviour:
   hasFever: 0
   allergies: []
   medicationList: []
-  medicalHistoryList: []
+  medicalHistoryList:
+  - Asthma
   lastMealTime: 19:00
   leadingEvents: presentation to hospitalesentation to hospital
   triageScale: 0
