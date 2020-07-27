@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
 
     private CharacterController charController;
 
+    public bool disablePlayerLock;
+
     // Lock player movement when UI visible
     public bool moveBody;
 
@@ -84,7 +86,11 @@ public class PlayerMove : MonoBehaviour
     void ActivateUIMovement()
     {
         //Debug.Log("UI MOVE SETTINGS");
-        moveBody = false;
+        if (!disablePlayerLock)
+        {
+            moveBody = false;
+        }
+        
     }
 
 

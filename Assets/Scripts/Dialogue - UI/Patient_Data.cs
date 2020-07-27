@@ -31,6 +31,9 @@ public class Patient_Data : ScriptableObject
     [Header("---------- Dialog - Walk In ----------")]
     public List<string> walkInConversation = new List<string>();
 
+    [Header("---------- Dialog - Other / Hallway ----------")]
+    public List<string> otherConversation = new List<string>();
+
 
     // --------------------------------------------------------------------------------------------------------------------
 

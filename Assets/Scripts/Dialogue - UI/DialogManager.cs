@@ -84,7 +84,8 @@ public class DialogManager : MonoBehaviour
             Debug.Log("list > 0");
             currentPatient = patientsList[0].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
-            ShowDialoguePanel();
+            GameEvents.current.ShowDialogueUI();
+            Start_Dialog();
         }
     }
     private void startConvoPatient2()
@@ -94,7 +95,8 @@ public class DialogManager : MonoBehaviour
         {
             currentPatient = patientsList[1].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
-            ShowDialoguePanel();
+            GameEvents.current.ShowDialogueUI();
+            Start_Dialog();
         }
     }
     private void startConvoPatient3()
@@ -104,7 +106,8 @@ public class DialogManager : MonoBehaviour
         {
             currentPatient = patientsList[2].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
-            ShowDialoguePanel();
+            GameEvents.current.ShowDialogueUI();
+            Start_Dialog();
         }
     }
     private void startConvoPatient4()
@@ -114,7 +117,8 @@ public class DialogManager : MonoBehaviour
         {
             currentPatient = patientsList[3].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
-            ShowDialoguePanel();
+            GameEvents.current.ShowDialogueUI();
+            Start_Dialog();
         }
     }
     private void startConvoPatient5()
@@ -124,7 +128,8 @@ public class DialogManager : MonoBehaviour
         {
             currentPatient = patientsList[4].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
-            ShowDialoguePanel();
+            GameEvents.current.ShowDialogueUI();
+            Start_Dialog();
         }
     }
 
@@ -132,7 +137,7 @@ public class DialogManager : MonoBehaviour
     private void endConvoPatientAll()
     {
         Debug.Log("All patient convo ended");
-        HideDialoguePanel();
+        GameEvents.current.HideDialogueUI();
         currentPatient = null;
     }
 
@@ -182,7 +187,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            conversation = null;
+            conversation = new List<string>(currentPatient.otherConversation);
         }
 
 

@@ -20,29 +20,29 @@ public class ZoneManager : MonoBehaviour
             inAmbulanceBay = true;
             Debug.Log("Player entered Ambulance Bay");
         }
-        if (other.CompareTag("BedsArea"))
+        else if (other.CompareTag("BedsArea"))
         {
             GameEvents.current.PlayerEnteredBedsArea();
             inBedsArea = true;
             Debug.Log("Player entered Beds Area");
         }
-        if (other.CompareTag("Resus1"))
+        else if (other.CompareTag("Resus1"))
         {
             GameEvents.current.PlayerEnteredResus1();
             inResus1 = true;
             Debug.Log("Player entered Resus 1");
         }
-        if (other.CompareTag("Resus2"))
+        else if (other.CompareTag("Resus2"))
         {
             GameEvents.current.PlayerEnteredResus2();
             inResus2 = true;
             Debug.Log("Player entered Resus 2");
         }
-        if (other.CompareTag("Hallway"))
+        else
         {
             GameEvents.current.PlayerEnteredHallway();
             inHallway = true;
-            Debug.Log("Player entered Hallway");
+            Debug.Log("Player entered Hallway / Other");
         }
     }
 

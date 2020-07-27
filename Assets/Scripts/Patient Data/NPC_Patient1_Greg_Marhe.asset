@@ -41,33 +41,119 @@ MonoBehaviour:
   - walk 3
   - walk 4
   - walk 5
+  otherConversation:
+  - Greg Other 1
+  - Greg Other 2
+  - Greg Other 3
+  - Greg Other 4
+  - Greg Other 5
   selfVentilating: 1
   oxygenInit: 100
   oxygenMod: 3
-  oxygenTracker: []
+  oxygenTracker:
+  - 100
+  - 175
+  - 178
+  - 181
+  - 184
+  - 187
+  - 190
+  - 193
+  - 196
+  - 199
   breathRateInit: 15
   breathRateMod: 0.5
-  breathRateTracker: []
+  breathRateTracker:
+  - 15
+  - 27.5
+  - 28
+  - 28.5
+  - 29
+  - 29.5
+  - 30
+  - 30.5
+  - 31
+  - 31.5
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
-  bloodPressureSystolicTracker: []
+  bloodPressureSystolicTracker:
+  - 140
+  - 152.5
+  - 153
+  - 153.5
+  - 154
+  - 154.5
+  - 155
+  - 155.5
+  - 156
+  - 156.5
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
-  bloodPressureDiastolicTracker: []
+  bloodPressureDiastolicTracker:
+  - 90
+  - 102.5
+  - 103
+  - 103.5
+  - 104
+  - 104.5
+  - 105
+  - 105.5
+  - 106
+  - 106.5
   pulseRateInit: 70
   pulseRateMod: 0.5
-  pulseRateTracker: []
+  pulseRateTracker:
+  - 70
+  - 82.5
+  - 83
+  - 83.5
+  - 84
+  - 84.5
+  - 85
+  - 85.5
+  - 86
+  - 86.5
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
-  capillaryRefillTracker: []
+  capillaryRefillTracker:
+  - 2
+  - 14.5
+  - 15
+  - 15.5
+  - 16
+  - 16.5
+  - 17
+  - 17.5
+  - 18
+  - 18.5
   glasgowComaScaleInit: 12
   glasgowComaScaleMod: 0.5
-  glasgowComaScaleTracker: []
+  glasgowComaScaleTracker:
+  - 12
+  - 24.5
+  - 25
+  - 25.5
+  - 26
+  - 26.5
+  - 27
+  - 27.5
+  - 28
+  - 28.5
   pupilReactionInit: 4
   pupilReactionMod: 0.5
-  pupilReactionTracker: []
+  pupilReactionTracker:
+  - 4
+  - 16.5
+  - 17
+  - 17.5
+  - 18
+  - 18.5
+  - 19
+  - 19.5
+  - 20
+  - 20.5
   repetitiveQuestining: 1
   hasInternalDevices: 0
   hasCannula: 0
@@ -79,6 +165,6 @@ MonoBehaviour:
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 0
   currentLocation: 
-  patientActive: 0
-  initValsAdded: 0
+  patientActive: 1
+  initValsAdded: 1
   character: {fileID: 0}
