@@ -19,7 +19,7 @@ public class GraphPlotter : MonoBehaviour
     public GameObject noDataAvailable;
     public GameObject dataOwner;
 
-    
+
 
 
 
@@ -54,6 +54,9 @@ public class GraphPlotter : MonoBehaviour
         // Subscribe to events
         GameEvents.current.event_updatePatientData += UpdateValues;
 
+
+
+
         noDataAvailable.SetActive(true);
 
         // Draws the borders, zones and guide lines.
@@ -69,41 +72,28 @@ public class GraphPlotter : MonoBehaviour
     private void UpdateValues()
     {
         // Delete all current graph items ready for new items
-        if(currentGraphObjects.Count > 0)
+        if (currentGraphObjects.Count > 0)
         {
             foreach (GameObject item in currentGraphObjects)
             {
                 Destroy(item);
             }
         }
-        
+
 
         // check / link the current patient data
         currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
 
 
         noDataAvailable.SetActive(false);
-        dataOwner.GetComponent<Text>().text = currentPatientData.name;
-
-
-    //Debug - data belongs to
-    GameObject ownerText = new GameObject("DataOwnerText", typeof(RectTransform));
-        Text ownerTextComp = ownerText.AddComponent<Text>();
-        currentGraphObjects.Add(ownerText);
-        ownerText.transform.SetParent(graphContainer, false);
-
-        ownerTextComp.text = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient.name;
-        ownerTextComp.color = Color.white;
-        ownerTextComp.fontSize = 16;
-
-        RectTransform ownerRectTransform = ownerText.GetComponent<RectTransform>();
-        ownerRectTransform.anchorMin = new Vector2(0, 0);
-        ownerRectTransform.anchorMax = new Vector2(0, 0);
 
 
 
         if (currentPatientData != null)
         {
+
+            dataOwner.GetComponent<Text>().text = currentPatientData.name;
+
             // Sets variables for the specific chart.   Max, High, Low, Min & the tracker data to use.
             SetTrackerData();
 
@@ -116,7 +106,9 @@ public class GraphPlotter : MonoBehaviour
 
             GameObject lastCircleGameObject = null;
 
-          
+            // Set debug owner name
+            dataOwner.GetComponent<Text>().text = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient.name;
+
 
 
             for (int i = 0; i < listLength; i++)
