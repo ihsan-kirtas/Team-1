@@ -2298,6 +2298,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6185956374061179214, guid: a01fd348a8e5eaf498b13c3a2faac934,
+        type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6185956374061179250, guid: a01fd348a8e5eaf498b13c3a2faac934,
         type: 3}
       propertyPath: m_Name
@@ -3134,6 +3139,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3791092338698853696, guid: cfd0fde7d8063e34bbd32736176aa867,
     type: 3}
   m_PrefabInstance: {fileID: 135047710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &138860036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2342562574024044579, guid: d41292340c6eece45a8006ff3fe3f45d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1394558445}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &141167268
 GameObject:
@@ -30708,6 +30719,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2342562572468432751, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342562572535761525, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342562572757909069, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342562572764324215, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342562573448869783, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342562573458998982, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342562574289879394, guid: d41292340c6eece45a8006ff3fe3f45d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2342562574344500409, guid: d41292340c6eece45a8006ff3fe3f45d,
         type: 3}
       propertyPath: m_Name
@@ -33051,6 +33097,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1330772547}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466781525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466781526}
+  m_Layer: 0
+  m_Name: 'Ambulance Handover Space 1 '
+  m_TagString: SpawnPoint
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466781526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466781525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.84, y: 1.04, z: 4.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 138860036}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1480500888
 PrefabInstance:
