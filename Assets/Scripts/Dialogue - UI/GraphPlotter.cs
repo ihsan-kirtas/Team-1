@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 
 public class GraphPlotter : MonoBehaviour
@@ -30,6 +31,8 @@ public class GraphPlotter : MonoBehaviour
     public Text HighValue;
     public Text LowValue;
     public Text MinValue;
+
+    private string chartName;
 
     // Graph limits and zones
     private float graphMax;
@@ -86,6 +89,7 @@ public class GraphPlotter : MonoBehaviour
 
 
         noDataAvailable.SetActive(false);
+        dataOwner.SetActive(false);
 
 
 
@@ -106,8 +110,11 @@ public class GraphPlotter : MonoBehaviour
 
             GameObject lastCircleGameObject = null;
 
-            // Set debug owner name
-            dataOwner.GetComponent<Text>().text = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient.name;
+
+            string currentValue = tracker.Last().ToString();
+
+            dataOwner.GetComponent<Text>().text = chartName + " | " + GameObject.Find("Player").GetComponent<DialogManager>().currentPatient.name + " | " + currentValue;
+            dataOwner.SetActive(true);
 
 
 
@@ -208,6 +215,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 120;
             graphMin = 100;
             tracker = currentPatientData.bloodPressureDiastolicTracker;
+            chartName = "Blood Pressure Diastolic";
         }
         if (usingBloodPressureSystolicTracker)
         {
@@ -216,6 +224,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 80;
             graphMin = 50;
             tracker = currentPatientData.bloodPressureSystolicTracker;
+            chartName = "Blood Pressure Systolic";
         }
         if (usingOxygenTracker)
         {
@@ -224,6 +233,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 60;
             graphMin = 50;
             tracker = currentPatientData.oxygenTracker;
+            chartName = "Oxygen";
         }
         if (usingBreathRateTracker)
         {
@@ -232,6 +242,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 10;
             graphMin = 5;
             tracker = currentPatientData.breathRateTracker;
+            chartName = "Breath Rate";
         }
 
         if (usingPulseRateTracker)
@@ -241,6 +252,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 50;
             graphMin = 20;
             tracker = currentPatientData.pulseRateTracker;
+            chartName = "Pulse Rate";
         }
         if (usingCapillaryRefillTracker)
         {
@@ -249,6 +261,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 1;
             graphMin = 0;
             tracker = currentPatientData.capillaryRefillTracker;
+            chartName = "Capillary Refill";
         }
         if (usingGlasgowComaScaleTracker)
         {
@@ -257,6 +270,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 5;
             graphMin = 1;
             tracker = currentPatientData.glasgowComaScaleTracker;
+            chartName = "Glasgow Coma Scale";
         }
         if (usingPupilReactionTracker)
         {
@@ -265,6 +279,7 @@ public class GraphPlotter : MonoBehaviour
             graphLow = 2;
             graphMin = 0;
             tracker = currentPatientData.pupilReactionTracker;
+            chartName = "Pupil Reaction";
         }
 
         maxValue.text = graphMax.ToString();
