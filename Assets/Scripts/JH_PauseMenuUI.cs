@@ -62,6 +62,16 @@ public class JH_PauseMenuUI : MonoBehaviour
         SceneManager.LoadScene("Main Scene");       //Using scene names as Index hasn't been worked on yet. This will need to be changed in the script - I forgot how to make it changable in Unity
     }
 
+    public void RestartTutorial()
+    {
+        pauseMenuUIPanel.SetActive(false);
+        //Cursor.lockState = CursorLockMode.Locked; 
+        //Cursor.visible = false;
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene("TutorialScene");       //Using scene names as Index hasn't been worked on yet. This will need to be changed in the script - I forgot how to make it changable in Unity
+    }
+
     public void SettingsMenu()
     {
         pauseMenuUI.SetActive(false);
