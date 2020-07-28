@@ -210,19 +210,19 @@ public class GraphPlotter : MonoBehaviour
         if (usingBloodPressureDiastolicTracker)
         {
 
-            graphMax = 200;
-            graphHigh = 180;
-            graphLow = 120;
-            graphMin = 100;
+            graphMax = 180;
+            graphHigh = 140;
+            graphLow = 60;
+            graphMin = 50;
             tracker = currentPatientData.bloodPressureDiastolicTracker;
             chartName = "Blood Pressure Diastolic";
         }
         if (usingBloodPressureSystolicTracker)
         {
-            graphMax = 150;
-            graphHigh = 120;
-            graphLow = 80;
-            graphMin = 50;
+            graphMax = 200;
+            graphHigh = 160;
+            graphLow = 110;
+            graphMin = 80;
             tracker = currentPatientData.bloodPressureSystolicTracker;
             chartName = "Blood Pressure Systolic";
         }

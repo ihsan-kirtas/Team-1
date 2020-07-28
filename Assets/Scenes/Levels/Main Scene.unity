@@ -61937,10 +61937,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 322714773447114571, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 486401408549494232, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 999476839312043361, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
     - target: {fileID: 1077344742477963551, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079244222335437341, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419538197051446804, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437231922520961401, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
       objectReference: {fileID: 0}
     - target: {fileID: 1539301970790422040, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -61956,6 +61986,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723062214059029662, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882338853967583760, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
       objectReference: {fileID: 0}
     - target: {fileID: 1959177101091700899, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -61977,6 +62017,16 @@ PrefabInstance:
       propertyPath: usingPulseRateTracker
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2291550579932118176, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305866795180687083, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
     - target: {fileID: 2396385706275303318, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -61996,6 +62046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: usingPupilReactionTracker
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743299479999035935, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
       objectReference: {fileID: 0}
     - target: {fileID: 2793110427715462195, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -62027,10 +62082,20 @@ PrefabInstance:
       propertyPath: usingCapillaryRefillTracker
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2868469448276324596, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154521409616931795, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
     - target: {fileID: 3313864383842469634, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313864383842469645, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -62046,6 +62111,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530607568477323408, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709517271833906359, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848950486638144573, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935366274544215177, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026287485965090633, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050573942641415240, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
       objectReference: {fileID: 0}
     - target: {fileID: 4058255613553438306, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -62122,10 +62217,35 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5065519759179493179, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
+      objectReference: {fileID: 0}
     - target: {fileID: 5066751538517150720, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308043750733056121, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414880807445051924, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424096800991170386, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609540173198290101, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
       objectReference: {fileID: 0}
     - target: {fileID: 5873791734753680912, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -62137,10 +62257,50 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -400
       objectReference: {fileID: 0}
+    - target: {fileID: 6357218628285255781, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397246253080983876, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455520305000211912, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516215940275871695, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
+      objectReference: {fileID: 0}
     - target: {fileID: 6523062259451800402, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6785111812410035977, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804822004365763768, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808529933588268584, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875792841864554758, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
       objectReference: {fileID: 0}
     - target: {fileID: 7079229920942217999, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -62318,10 +62478,40 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 7144430847821661868, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220343524327210101, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
     - target: {fileID: 8094501508029574639, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225978518666264296, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335644375779847085, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Max
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629974515752162896, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Min
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701944901093158815, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: High
       objectReference: {fileID: 0}
     - target: {fileID: 8758426164637368139, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
@@ -62358,6 +62548,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1102789776708497214}
+    - target: {fileID: 8952314316401624164, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128687167661288232, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_Text
+      value: Chart Name | Data Owner | Current Value
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5259f332b3ed3a74b83be437574f5193, type: 3}
 --- !u!1 &7079229921058016192 stripped
