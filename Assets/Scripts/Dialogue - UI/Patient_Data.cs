@@ -16,6 +16,8 @@ public class Patient_Data : ScriptableObject
     public string overallHealth = "Generally healthy";      // Example: Generally healthy past medical history of asthma
     public string additionalNotes = "None";
 
+    public string startPatientInfo = "None";
+
 
     // --------------------------------------------------------------------------------------------------------------------
 
