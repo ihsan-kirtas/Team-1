@@ -30,9 +30,12 @@ public class AC_UiTrigger : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            uiTextObject.SetActive(false);
-            tutText.SetActive(false);
-            Debug.Log("player exited trigger");
+
+            Destroy(uiTextObject);
+            Destroy(tutText);
+            //uiTextObject.SetActive(false);
+            //tutText.SetActive(false);
+            //Debug.Log("player exited trigger");
         }
     }
 }
