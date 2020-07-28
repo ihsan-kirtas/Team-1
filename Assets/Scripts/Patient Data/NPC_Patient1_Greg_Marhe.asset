@@ -17,6 +17,7 @@ MonoBehaviour:
   gender: Male
   overallHealth: Generally healthy
   additionalNotes: None
+  startPatientInfo: None
   ambulanceBayConversation:
   - This is Greg Marhe, he is a 35 year old male presents post tripping on a bowling
     ball in his garage leading him to falling over in an awkward way.
@@ -52,118 +53,71 @@ MonoBehaviour:
   oxygenMod: 3
   oxygenTracker:
   - 100
-  - 178
-  - 181
-  - 184
-  - 187
-  - 190
-  - 193
-  - 196
-  - 199
-  - 202
+  - 103
+  - 106
+  - 109
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
-  - 28
-  - 28.5
-  - 29
-  - 29.5
-  - 30
-  - 30.5
-  - 31
-  - 31.5
-  - 32
+  - 15.5
+  - 16
+  - 16.5
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
-  - 153
-  - 153.5
-  - 154
-  - 154.5
-  - 155
-  - 155.5
-  - 156
-  - 156.5
-  - 157
+  - 140.5
+  - 141
+  - 141.5
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
-  - 103
-  - 103.5
-  - 104
-  - 104.5
-  - 105
-  - 105.5
-  - 106
-  - 106.5
-  - 107
+  - 90.5
+  - 91
+  - 91.5
   pulseRateInit: 70
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
-  - 83
-  - 83.5
-  - 84
-  - 84.5
-  - 85
-  - 85.5
-  - 86
-  - 86.5
-  - 87
+  - 70.5
+  - 71
+  - 71.5
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 15
-  - 15.5
-  - 16
-  - 16.5
-  - 17
-  - 17.5
-  - 18
-  - 18.5
-  - 19
-  glasgowComaScaleInit: 12
+  - 2.5
+  - 3
+  - 3.5
+  glasgowComaScaleInit: 11
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
-  - 25
-  - 25.5
-  - 26
-  - 26.5
-  - 27
-  - 27.5
-  - 28
-  - 28.5
-  - 29
+  - 12.5
+  - 13
+  - 13.5
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker:
   - 4
-  - 17
-  - 17.5
-  - 18
-  - 18.5
-  - 19
-  - 19.5
-  - 20
-  - 20.5
-  - 21
+  - 4.5
+  - 5
+  - 5.5
   repetitiveQuestining: 1
-  hasInternalDevices: 0
-  hasCannula: 0
+  hasInternalDevices: 1
+  hasCannula: 1
   hasFever: 0
   allergies: []
-  medicationList: []
+  medicationList:
+  - Salbutamol
   medicalHistoryList:
   - Asthma
   lastMealTime: 19:00
-  leadingEvents: presentation to hospitalesentation to hospital
+  leadingEvents: Fall over bowling ball LOC 15 seconds left ankle fracture
   triageScale: 0
   currentLocation: 
   patientActive: 1
