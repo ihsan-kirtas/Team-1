@@ -1,24 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class ModifyTriageScale : MonoBehaviour
 {
     // for buttons
-
-
+    
     public Patient_Data currentPatientData;
-    public GameObject patient;
-    //public Transform triage1and2location;
-    //public Transform triage3to5location;
-    public GameObject patientResusBed;
-    public GameObject patientBedspaceBed;
+    
+    public GameObject triageCanvas;//triage canvas 
+
+
 
 
     void Start()
     {
-        patientResusBed.SetActive(true);
-        patientBedspaceBed.SetActive(true);
+        
+        triageCanvas.SetActive(false);//set all objects as false so that the player can triage using a key
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            triageCanvas.SetActive(true);
+            Debug.Log("triage key pressed");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            triageCanvas.SetActive(false);
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider player)
+    {
+
+        if (player.gameObject.tag == "Player")
+        {
+            triageCanvas.SetActive(true);
+        }
+                       
+
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            triageCanvas.SetActive(false);
+        }
     }
 
     void SetTriageScale(int cat)
@@ -35,32 +65,32 @@ public class ModifyTriageScale : MonoBehaviour
     void setScale1()
     {
         SetTriageScale(1);
-        patientResusBed.SetActive(false);//resus bed is disabled and animation can put bed in the position
+        
     }
 
     void setScale2()
     {
         SetTriageScale(2);
-        patientResusBed.SetActive(false);//resus bed is disabled and animation can put bed in the position
+        
     }
 
     void setScale3()
     {
         SetTriageScale(3);
-        patientBedspaceBed.SetActive(false);//bedspace bed disabled and animation can put bed into the position
+        
     }
 
     void setScale4()
     {
         SetTriageScale(4);
-        patientBedspaceBed.SetActive(false); //bedspace bed disabled and animation can put bed into the position
+        
 
     }
 
     void setScale5()
     {
         SetTriageScale(5);
-        patientBedspaceBed.SetActive(false);//bedspace bed disabled and animation can put bed into the position
+       
     }
 }
 

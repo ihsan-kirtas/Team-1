@@ -8956,6 +8956,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404278228}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &404393165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404393166}
+  - component: {fileID: 404393170}
+  - component: {fileID: 404393169}
+  - component: {fileID: 404393168}
+  - component: {fileID: 404393167}
+  m_Layer: 0
+  m_Name: TriageTrigger3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404393166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404393165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.44, y: 0.47, z: 4.11}
+  m_LocalScale: {x: 2.3369, y: 1, z: 3.0509}
+  m_Children: []
+  m_Father: {fileID: 1271442082}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404393167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404393165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
+  triageCanvas: {fileID: 1704342241}
+--- !u!65 &404393168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404393165}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &404393169
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404393165}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &404393170
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404393165}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &412010686
 GameObject:
   m_ObjectHideFlags: 0
@@ -10310,6 +10418,114 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 485940520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &486689937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486689938}
+  - component: {fileID: 486689942}
+  - component: {fileID: 486689941}
+  - component: {fileID: 486689940}
+  - component: {fileID: 486689939}
+  m_Layer: 0
+  m_Name: TriageTrigger5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486689938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486689937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.61, y: 0.47, z: -5.03}
+  m_LocalScale: {x: 2.3369, y: 1, z: 3.0509}
+  m_Children: []
+  m_Father: {fileID: 1271442082}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486689939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486689937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
+  triageCanvas: {fileID: 1704342241}
+--- !u!65 &486689940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486689937}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &486689941
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486689937}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &486689942
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486689937}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &486731120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15251,6 +15467,114 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 713097067}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &713885255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 713885256}
+  - component: {fileID: 713885259}
+  - component: {fileID: 713885258}
+  - component: {fileID: 713885257}
+  - component: {fileID: 713885260}
+  m_Layer: 0
+  m_Name: TriageTrigger1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &713885256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.15, y: 0.47, z: 4.11}
+  m_LocalScale: {x: 2.3369, y: 1, z: 3.0509}
+  m_Children: []
+  m_Father: {fileID: 1271442082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &713885257
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &713885258
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885255}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &713885259
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885255}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &713885260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
+  triageCanvas: {fileID: 1704342241}
 --- !u!1 &714035806
 GameObject:
   m_ObjectHideFlags: 0
@@ -16196,6 +16520,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738169282}
   m_Mesh: {fileID: 288011404}
+--- !u!1 &740301461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740301462}
+  - component: {fileID: 740301466}
+  - component: {fileID: 740301465}
+  - component: {fileID: 740301464}
+  - component: {fileID: 740301463}
+  m_Layer: 0
+  m_Name: TriageTrigger4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740301462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740301461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.15, y: 0.47, z: -4.61}
+  m_LocalScale: {x: 2.3369, y: 1, z: 3.0509}
+  m_Children: []
+  m_Father: {fileID: 1271442082}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &740301463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740301461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
+  triageCanvas: {fileID: 1704342241}
+--- !u!65 &740301464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740301461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &740301465
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740301461}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &740301466
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740301461}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &742003392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21919,7 +22351,7 @@ PrefabInstance:
     - target: {fileID: 3317896623279343486, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 143.1
+      value: 165.5
       objectReference: {fileID: 0}
     - target: {fileID: 3317896623279343486, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
@@ -21929,12 +22361,33 @@ PrefabInstance:
     - target: {fileID: 3317896623279343486, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 85.999
+      value: 90.7
       objectReference: {fileID: 0}
     - target: {fileID: 3317896623279343486, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.7999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317896623279343486, guid: 8cefea019a60da34887dd37121e2004d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 263.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317896623279343486, guid: 8cefea019a60da34887dd37121e2004d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 172.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317896623279343487, guid: 8cefea019a60da34887dd37121e2004d,
+        type: 3}
+      propertyPath: m_Text
+      value: "What Triage score are you going to give the patient? \n\nClick on the
+        appropriate score on the left\n\nTo exit Triage Scoring press N on the keyboard"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317896623279343487, guid: 8cefea019a60da34887dd37121e2004d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3317896623472319461, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
@@ -21950,6 +22403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.7999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317896623472319461, guid: 8cefea019a60da34887dd37121e2004d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 3317896623747541984, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
@@ -24833,6 +25291,114 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1141983661}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1142346707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1142346708}
+  - component: {fileID: 1142346712}
+  - component: {fileID: 1142346711}
+  - component: {fileID: 1142346710}
+  - component: {fileID: 1142346709}
+  m_Layer: 0
+  m_Name: TriageTrigger2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1142346708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142346707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.67, y: 0.47, z: 4.11}
+  m_LocalScale: {x: 2.3369, y: 1, z: 3.0509}
+  m_Children: []
+  m_Father: {fileID: 1271442082}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142346709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142346707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
+  triageCanvas: {fileID: 1704342241}
+--- !u!65 &1142346710
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142346707}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1142346711
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142346707}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1142346712
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142346707}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1149206435
 GameObject:
   m_ObjectHideFlags: 0
@@ -27552,6 +28118,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268403507}
   m_CullTransparentMesh: 0
+--- !u!1 &1271442081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1271442082}
+  m_Layer: 0
+  m_Name: TriageTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1271442082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271442081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 713885256}
+  - {fileID: 1142346708}
+  - {fileID: 404393166}
+  - {fileID: 740301462}
+  - {fileID: 486689938}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274410283
 GameObject:
   m_ObjectHideFlags: 0
@@ -31471,10 +32072,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Here is the Ambulance Offload Bay.\nPatients are handed over from Ambulance
     Officers here.\n\nYou will get a full handover of why the paitent presented to
-    hospital.\n\nThis is where you would give the patient a triage score, from here
-    they will either be moved into the Bed Space Area or the Resuscitation Bay.\n\nCheck
-    on the triage scale on the wall next to you if you need clarification. \n\nTo
-    exit prompt press q"
+    hospital.\n\nThis is where you would give the patient a triage score, press T
+    on the keyboard to triage your patient from here they will either be moved into
+    the Bed Space Area or the Resuscitation Bay.\n\nCheck on the triage scale on
+    the wall next to you if you need clarification. \n\nTo exit prompt press q"
 --- !u!222 &1403865210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37734,22 +38335,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1046381377}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1704342246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704342241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
-  patient: {fileID: 0}
-  patientResusBed: {fileID: 0}
-  patientBedspaceBed: {fileID: 0}
 --- !u!1 &1710196325
 GameObject:
   m_ObjectHideFlags: 0
@@ -43617,22 +44202,22 @@ PrefabInstance:
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.008527696
+      value: -0.0005272238
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7070554
+      value: 0.7071028
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.70705944
+      value: -0.70711064
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.008182199
+      value: -0.00018179533
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
@@ -43642,17 +44227,17 @@ PrefabInstance:
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 89.97201
+      value: 90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -91.354004
+      value: -180.02899
       objectReference: {fileID: 0}
     - target: {fileID: 4755513248879864940, guid: c732fb92933d32844a986d281ba83faa,
         type: 3}
@@ -47722,7 +48307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104463544}
   m_LocalRotation: {x: -0, y: -0.72322166, z: -0, w: 0.690616}
-  m_LocalPosition: {x: -3.207, y: 4.47, z: 0.473}
+  m_LocalPosition: {x: -1.85, y: 4.47, z: -2.77}
   m_LocalScale: {x: 3.390257, y: 2.2621262, z: 4.2694545}
   m_Children: []
   m_Father: {fileID: 1211715620}
