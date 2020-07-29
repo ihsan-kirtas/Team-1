@@ -18,6 +18,8 @@ MonoBehaviour:
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
+  PatientPrefab: {fileID: 2706584118823153244, guid: 2fffc6fe8526be345876feb81a213662,
+    type: 3}
   ambulanceBayConversation:
   - This is Greg Marhe, he is a 35 year old male presents post tripping on a bowling
     ball in his garage leading him to falling over in an awkward way.
@@ -53,60 +55,108 @@ MonoBehaviour:
   oxygenMod: 3
   oxygenTracker:
   - 100
-  - 103
-  - 106
-  - 109
+  - 556
+  - 559
+  - 562
+  - 565
+  - 568
+  - 571
+  - 574
+  - 577
+  - 580
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
-  - 15.5
-  - 16
-  - 16.5
+  - 91
+  - 91.5
+  - 92
+  - 92.5
+  - 93
+  - 93.5
+  - 94
+  - 94.5
+  - 95
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
-  - 140.5
-  - 141
-  - 141.5
+  - 216
+  - 216.5
+  - 217
+  - 217.5
+  - 218
+  - 218.5
+  - 219
+  - 219.5
+  - 220
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
-  - 90.5
-  - 91
-  - 91.5
+  - 166
+  - 166.5
+  - 167
+  - 167.5
+  - 168
+  - 168.5
+  - 169
+  - 169.5
+  - 170
   pulseRateInit: 70
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
-  - 70.5
-  - 71
-  - 71.5
+  - 146
+  - 146.5
+  - 147
+  - 147.5
+  - 148
+  - 148.5
+  - 149
+  - 149.5
+  - 150
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 2.5
-  - 3
-  - 3.5
+  - 78
+  - 78.5
+  - 79
+  - 79.5
+  - 80
+  - 80.5
+  - 81
+  - 81.5
+  - 82
   glasgowComaScaleInit: 11
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
-  - 12.5
-  - 13
-  - 13.5
+  - 88
+  - 88.5
+  - 89
+  - 89.5
+  - 90
+  - 90.5
+  - 91
+  - 91.5
+  - 92
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker:
   - 4
-  - 4.5
-  - 5
-  - 5.5
+  - 80
+  - 80.5
+  - 81
+  - 81.5
+  - 82
+  - 82.5
+  - 83
+  - 83.5
+  - 84
   repetitiveQuestining: 1
   hasInternalDevices: 1
   hasCannula: 1
@@ -119,7 +169,7 @@ MonoBehaviour:
   lastMealTime: 19:00
   leadingEvents: Fall over bowling ball LOC 15 seconds left ankle fracture
   triageScale: 0
-  currentLocation: 
+  currentLocation: Bed Space 1
   patientActive: 1
   initValsAdded: 1
   character: {fileID: 0}

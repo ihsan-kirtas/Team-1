@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
-  m_Name: NPC_Patient3_No_Name
+  m_Name: NPC_Patient5
   m_EditorClassIdentifier: 
-  name: Patient 3
+  name: Patient 5
   age: 30
   gender: Male
   overallHealth: Generally healthy
   additionalNotes: None
+  startPatientInfo: None
+  PatientPrefab: {fileID: 1740931221816456438, guid: f5e45a99247bb2a47b79b7ba74a91981,
+    type: 3}
   ambulanceBayConversation:
   - amb 1
   - amb 2
@@ -42,11 +45,11 @@ MonoBehaviour:
   - walk 4
   - walk 5
   otherConversation:
-  - P3 - Other 1
-  - P3 - Other 2
-  - P3 - Other 3
-  - P3 - Other 4
-  - P3 - Other 5
+  - P5 - Other 1
+  - P5 - Other 2
+  - P5 - Other 3
+  - P5 - Other 4
+  - P5 - Other 5
   selfVentilating: 1
   oxygenInit: 95
   oxygenMod: 0.5
@@ -84,7 +87,7 @@ MonoBehaviour:
   lastMealTime: 19:00
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 0
-  currentLocation: 
+  currentLocation: Bed Space 2
   patientActive: 0
   initValsAdded: 0
   character: {fileID: 0}

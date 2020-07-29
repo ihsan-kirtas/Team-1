@@ -19,13 +19,4 @@ public class CanvasManager : MonoBehaviour
 
     // Move patient panel
     public GameObject MovePatientPanel;
-
-    private void Start()
-    {
-        // Hide panels on start
-        //dialogueUiPanel.SetActive(false);
-        //chartsMasterPanel.SetActive(false);
-        //ObsNotAvailableAlert.SetActive(false);
-        MovePatientPanel.SetActive(false);
-    }
 }

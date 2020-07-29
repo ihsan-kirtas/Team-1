@@ -17,28 +17,39 @@ public class NPC_Dialog : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //GameEvents.current.ShowDialogueUI();
 
             // Call event when player enters this NPC's trigger
-            if (patient1){GameEvents.current.StartConvoPatient1();}
-            else if (patient2) { GameEvents.current.StartConvoPatient2(); }
-            else if (patient3) { GameEvents.current.StartConvoPatient3(); }
-            else if (patient4) { GameEvents.current.StartConvoPatient4(); }
-            else if (patient5) { GameEvents.current.StartConvoPatient5(); }
+            if (patient1){
+                GameEvents.current.StartContactPatient1();
+            }
+            else if (patient2) 
+            { 
+                GameEvents.current.StartContactPatient2(); 
+            }
+            else if (patient3) 
+            { 
+                GameEvents.current.StartContactPatient3(); 
+            }
+            else if (patient4) 
+            { 
+                GameEvents.current.StartContactPatient4(); 
+            }
+            else if (patient5) 
+            { 
+                GameEvents.current.StartContactPatient5(); 
+            }
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //GameEvents.current.HideDialogueUI();
-
             // Call event when player exits this NPC's trigger
-            if (patient1) { GameEvents.current.EndConvoPatient1(); }
-            else if (patient2) { GameEvents.current.EndConvoPatient2(); }
-            else if (patient3) { GameEvents.current.EndConvoPatient3(); }
-            else if (patient4) { GameEvents.current.EndConvoPatient4(); }
-            else if (patient5) { GameEvents.current.EndConvoPatient5(); }
+            if (patient1) { GameEvents.current.EndContactPatient1(); }
+            else if (patient2) { GameEvents.current.EndContactPatient2(); }
+            else if (patient3) { GameEvents.current.EndContactPatient3(); }
+            else if (patient4) { GameEvents.current.EndContactPatient4(); }
+            else if (patient5) { GameEvents.current.EndContactPatient5(); }
         }
     }
 }

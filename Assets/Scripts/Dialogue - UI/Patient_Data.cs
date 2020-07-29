@@ -18,6 +18,7 @@ public class Patient_Data : ScriptableObject
 
     public string startPatientInfo = "None";
 
+    public GameObject PatientPrefab;
 
     // --------------------------------------------------------------------------------------------------------------------
 

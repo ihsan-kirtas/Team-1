@@ -10,43 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
-  m_Name: NPC_Patient5_No_Name
+  m_Name: NPC_Patient4
   m_EditorClassIdentifier: 
-  name: Patient 5
+  name: Patient 4
   age: 30
   gender: Male
   overallHealth: Generally healthy
   additionalNotes: None
+  startPatientInfo: None
+  PatientPrefab: {fileID: 6129716226650916466, guid: 1912f86af27d82c44aa90e26c1808fd9,
+    type: 3}
   ambulanceBayConversation:
-  - amb 1
-  - amb 2
-  - amb 3
-  - amb 4
-  - amb 5
+  - Patients are handed over here assigned a triage score press next to see more
+    information and X to close the dialogue box
   bedsAreaConversation:
-  - beds 1
-  - beds 2
-  - beds 3
-  - beds 4
-  - beds 5
+  - Patients who do not need to be in the resus bay will come here
   resusBayConversation:
-  - resus 1
-  - resus 2
-  - resus 3
-  - resus 4
-  - resus 5
-  walkInConversation:
-  - walk 1
-  - walk 2
-  - walk 3
-  - walk 4
-  - walk 5
+  - Patients who require resus will be placed here
+  walkInConversation: []
   otherConversation:
-  - P5 - Other 1
-  - P5 - Other 2
-  - P5 - Other 3
-  - P5 - Other 4
-  - P5 - Other 5
+  - Hello, I am here to assist you.
   selfVentilating: 1
   oxygenInit: 95
   oxygenMod: 0.5
@@ -84,7 +67,7 @@ MonoBehaviour:
   lastMealTime: 19:00
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 0
-  currentLocation: 
+  currentLocation: Resus Bay 2
   patientActive: 0
   initValsAdded: 0
   character: {fileID: 0}

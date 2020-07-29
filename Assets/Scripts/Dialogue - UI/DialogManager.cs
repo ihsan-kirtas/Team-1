@@ -33,17 +33,17 @@ public class DialogManager : MonoBehaviour
         GameEvents.current.event_hideDialogueUI += HideDialoguePanel;   // maybe delete
 
 
-        GameEvents.current.event_startConvoPatient1 += startConvoPatient1;
-        GameEvents.current.event_startConvoPatient2 += startConvoPatient2;
-        GameEvents.current.event_startConvoPatient3 += startConvoPatient3;
-        GameEvents.current.event_startConvoPatient4 += startConvoPatient4;
-        GameEvents.current.event_startConvoPatient5 += startConvoPatient5;
+        GameEvents.current.event_startContactPatient1 += startConvoPatient1;
+        GameEvents.current.event_startContactPatient2 += startConvoPatient2;
+        GameEvents.current.event_startContactPatient3 += startConvoPatient3;
+        GameEvents.current.event_startContactPatient4 += startConvoPatient4;
+        GameEvents.current.event_startContactPatient5 += startConvoPatient5;
 
-        GameEvents.current.event_endConvoPatient1 += endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient2 += endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient3 += endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient4 += endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient5 += endConvoPatientAll;
+        GameEvents.current.event_endContactPatient1 += endConvoPatientAll;
+        GameEvents.current.event_endContactPatient2 += endConvoPatientAll;
+        GameEvents.current.event_endContactPatient3 += endConvoPatientAll;
+        GameEvents.current.event_endContactPatient4 += endConvoPatientAll;
+        GameEvents.current.event_endContactPatient5 += endConvoPatientAll;
 
 
         // link panels
@@ -65,26 +65,24 @@ public class DialogManager : MonoBehaviour
 
 
 
-        GameEvents.current.event_startConvoPatient1 -= startConvoPatient1;
-        GameEvents.current.event_startConvoPatient2 -= startConvoPatient2;
-        GameEvents.current.event_startConvoPatient3 -= startConvoPatient3;
-        GameEvents.current.event_startConvoPatient4 -= startConvoPatient4;
-        GameEvents.current.event_startConvoPatient5 -= startConvoPatient5;
+        GameEvents.current.event_startContactPatient1 -= startConvoPatient1;
+        GameEvents.current.event_startContactPatient2 -= startConvoPatient2;
+        GameEvents.current.event_startContactPatient3 -= startConvoPatient3;
+        GameEvents.current.event_startContactPatient4 -= startConvoPatient4;
+        GameEvents.current.event_startContactPatient5 -= startConvoPatient5;
 
-        GameEvents.current.event_endConvoPatient1 -= endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient2 -= endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient3 -= endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient4 -= endConvoPatientAll;
-        GameEvents.current.event_endConvoPatient5 -= endConvoPatientAll;
+        GameEvents.current.event_endContactPatient1 -= endConvoPatientAll;
+        GameEvents.current.event_endContactPatient2 -= endConvoPatientAll;
+        GameEvents.current.event_endContactPatient3 -= endConvoPatientAll;
+        GameEvents.current.event_endContactPatient4 -= endConvoPatientAll;
+        GameEvents.current.event_endContactPatient5 -= endConvoPatientAll;
     }
 
     // Start dialogue setup
     private void startConvoPatient1()
     {
-        //Debug.Log("Patient 1 convo started");
         if (patientsList.Count > 0)
         {
-            //Debug.Log("list > 0");
             currentPatient = patientsList[0].GetComponent<NPC_Dialog>().NPC_Data;
             convoIndex = 0;
             GameEvents.current.ShowDialogueUI();

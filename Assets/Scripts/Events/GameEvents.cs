@@ -232,71 +232,71 @@ public class GameEvents : MonoBehaviour
     // ---------------- Dialogue Events -----------------------------------------------------------------
 
     // --- Patient 1 Start / End Convo ---
-    public void StartConvoPatient1()
+    public void StartContactPatient1()
     {
-        if (event_startConvoPatient1 != null) { event_startConvoPatient1(); }
+        if (event_startContactPatient1 != null) { event_startContactPatient1(); }
     }
-    public event Action event_startConvoPatient1;
+    public event Action event_startContactPatient1;
 
-    public void EndConvoPatient1()
+    public void EndContactPatient1()
     {
-        if (event_endConvoPatient1 != null) { event_endConvoPatient1(); }
+        if (event_endContactPatient1 != null) { event_endContactPatient1(); }
     }
-    public event Action event_endConvoPatient1;
+    public event Action event_endContactPatient1;
 
 
     // --- Patient 2 Start / End Convo ---
-    public void StartConvoPatient2()
+    public void StartContactPatient2()
     {
-        if (event_startConvoPatient2 != null) { event_startConvoPatient2(); }
+        if (event_startContactPatient2 != null) { event_startContactPatient2(); }
     }
-    public event Action event_startConvoPatient2;
+    public event Action event_startContactPatient2;
 
-    public void EndConvoPatient2()
+    public void EndContactPatient2()
     {
-        if (event_endConvoPatient2 != null) { event_endConvoPatient2(); }
+        if (event_endContactPatient2 != null) { event_endContactPatient2(); }
     }
-    public event Action event_endConvoPatient2;
+    public event Action event_endContactPatient2;
 
 
     // --- Patient 3 Start / End Convo ---
-    public void StartConvoPatient3()
+    public void StartContactPatient3()
     {
-        if (event_startConvoPatient3 != null) { event_startConvoPatient3(); }
+        if (event_startContactPatient3 != null) { event_startContactPatient3(); }
     }
-    public event Action event_startConvoPatient3;
+    public event Action event_startContactPatient3;
 
-    public void EndConvoPatient3()
+    public void EndContactPatient3()
     {
-        if (event_endConvoPatient3 != null) { event_endConvoPatient3(); }
+        if (event_endContactPatient3 != null) { event_endContactPatient3(); }
     }
-    public event Action event_endConvoPatient3;
+    public event Action event_endContactPatient3;
 
 
     // --- Patient 1 Start / End Convo ---
-    public void StartConvoPatient4()
+    public void StartContactPatient4()
     {
-        if (event_startConvoPatient4 != null) { event_startConvoPatient4(); }
+        if (event_startContactPatient4 != null) { event_startContactPatient4(); }
     }
-    public event Action event_startConvoPatient4;
+    public event Action event_startContactPatient4;
 
-    public void EndConvoPatient4()
+    public void EndContactPatient4()
     {
-        if (event_endConvoPatient4 != null) { event_endConvoPatient4(); }
+        if (event_endContactPatient4 != null) { event_endContactPatient4(); }
     }
-    public event Action event_endConvoPatient4;
+    public event Action event_endContactPatient4;
 
 
     // --- Patient 1 Start / End Convo ---
-    public void StartConvoPatient5()
+    public void StartContactPatient5()
     {
-        if (event_startConvoPatient5 != null) { event_startConvoPatient5(); }
+        if (event_startContactPatient5 != null) { event_startContactPatient5(); }
     }
-    public event Action event_startConvoPatient5;
+    public event Action event_startContactPatient5;
 
-    public void EndConvoPatient5()
+    public void EndContactPatient5()
     {
-        if (event_endConvoPatient5 != null) { event_endConvoPatient5(); }
+        if (event_endContactPatient5 != null) { event_endContactPatient5(); }
     }
-    public event Action event_endConvoPatient5;
+    public event Action event_endContactPatient5;
 }
