@@ -9,13 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3346841239522068197}
-  - component: {fileID: 7712672397921633321}
   - component: {fileID: 7712672397921633324}
-  - component: {fileID: 7712672397921633322}
   - component: {fileID: 7712672397921633323}
   - component: {fileID: 7712672397921633325}
   - component: {fileID: 7039571433086090767}
-  - component: {fileID: 852276220886378818}
   - component: {fileID: 3967625550211102564}
   m_Layer: 0
   m_Name: NPC_Patient5
@@ -40,22 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &7712672397921633321
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740931221816456438}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &7712672397921633324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67,22 +48,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 3, z: 2}
+  m_Size: {x: 4, y: 2, z: 3}
   m_Center: {x: 0, y: 1, z: 0.2}
---- !u!136 &7712672397921633322
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740931221816456438}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.7
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!95 &7712672397921633323
 Animator:
   serializedVersion: 3
@@ -128,8 +95,8 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740931221816456438}
   m_Enabled: 1
-  m_AgentTypeID: 287145453
-  m_Radius: 0.5
+  m_AgentTypeID: 0
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -138,23 +105,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &852276220886378818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740931221816456438}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c672a3d912fdcd543bb30b1c52f6c61c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &3967625550211102564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
+  debugTarget: {x: 0, y: 0, z: 0}
 --- !u!1001 &1384670373223116672
 PrefabInstance:
   m_ObjectHideFlags: 0
