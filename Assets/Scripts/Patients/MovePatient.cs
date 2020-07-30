@@ -7,12 +7,17 @@ public class MovePatient : MonoBehaviour
 {
     private Text locationText;
 
-    public Vector3 destination;
+    public PatientManager patientManager;
+
+
 
     private void Start()
     {
         // Link location Text
         locationText = GameObject.Find("Patients Current Location").GetComponent<Text>();
+
+        // Link Patient Manager
+        patientManager = GameObject.Find("GameManager").GetComponent<PatientManager>();
     }
 
 
@@ -21,7 +26,8 @@ public class MovePatient : MonoBehaviour
     {
 
         Patient_Data currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
-        GameObject currentPatientPrefab = currentPatientData.PatientPrefab;
+
+        
 
         // Set this patients destination
         switch (location.name)
@@ -67,10 +73,8 @@ public class MovePatient : MonoBehaviour
                 break;
             default:
                 Debug.Log("PatientMove Destination set wrong");
-                destination = new Vector3(0, 0, 0);
                 break;
         }
-        destination = location.position;
 
         // update the UI Text
         locationText.text = "Assigned to: " + currentPatientData.currentLocation;
@@ -78,7 +82,16 @@ public class MovePatient : MonoBehaviour
         // Call nurse to patients current location and prepare to push them
 
 
-        // Call the MovePatientTo function attached to the patient prefab
-        currentPatientPrefab.GetComponent<PatientMover>().SetNewDestination(location);
+        // Set the new AI target
+        if(patientManager.currentPatientPrefab != null)
+        {
+            patientManager.currentPatientPrefab.GetComponent<PatientMover>().target = location;
+        }
+        else
+        {
+            Debug.Log("no current patient prefab");
+        }
+        
+
     }
 }

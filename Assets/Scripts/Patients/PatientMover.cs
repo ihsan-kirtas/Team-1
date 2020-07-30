@@ -5,25 +5,23 @@ using UnityEngine.AI;
 
 public class PatientMover : MonoBehaviour
 {
-    [SerializeField]
-    private NavMeshAgent agent;
+    NavMeshAgent agent;
+
     public Transform target;
 
     private void Start()
     {
         // Get agent on this GO
-        agent = this.GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
+
+        target = GameObject.Find("Triage Point").transform;
 
         // clear patient location from patient_data
         this.GetComponent<NPC_Dialog>().NPC_Data.currentLocation = " Un Assigned";
-
-        agent.SetDestination(new Vector3(20,0,20));
     }
 
-    public void SetNewDestination(Transform newTarget)
+    private void Update()
     {
-        target = newTarget;
-        agent.SetDestination(target.position);
-        Debug.Log("Moving patient to " + target.ToString());
+        agent.destination = target.position;
     }
 }

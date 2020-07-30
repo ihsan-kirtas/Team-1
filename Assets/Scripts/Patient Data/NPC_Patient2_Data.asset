@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
+  m_Name: NPC_Patient2_Data
+  m_EditorClassIdentifier: 
+  name: Peter Wilbourne
+  age: 30
+  gender: Male
+  overallHealth: Generally healthy
+  additionalNotes: None
+  startPatientInfo: None
+  PatientPrefab: {fileID: 141744480610468636, guid: 72312a80a02233e47b64c8904b219ba9,
+    type: 3}
+  ambulanceBayConversation:
+  - amb 1
+  - amb 2
+  - amb 3
+  - amb 4
+  - amb 5
+  bedsAreaConversation:
+  - beds 1
+  - beds 2
+  - beds 3
+  - beds 4
+  - beds 5
+  resusBayConversation:
+  - resus 1
+  - resus 2
+  - resus 3
+  - resus 4
+  - resus 5
+  walkInConversation:
+  - walk 1
+  - walk 2
+  - walk 3
+  - walk 4
+  - walk 5
+  otherConversation:
+  - Peter Other 1
+  - Peter Other 2
+  - Peter Other 3
+  - Peter Other 4
+  - Peter Other 5
+  selfVentilating: 1
+  oxygenInit: 95
+  oxygenMod: 0.5
+  oxygenTracker:
+  - 95
+  - 327
+  - 327.5
+  - 328
+  - 328.5
+  - 329
+  - 329.5
+  - 330
+  - 330.5
+  - 331
+  breathRateInit: 15
+  breathRateMod: 0.5
+  breathRateTracker:
+  - 15
+  - 247
+  - 247.5
+  - 248
+  - 248.5
+  - 249
+  - 249.5
+  - 250
+  - 250.5
+  - 251
+  accessoryMuscles: 1
+  bloodPressureSystolicInit: 140
+  bloodPressureSystolicMod: 0.5
+  bloodPressureSystolicTracker:
+  - 140
+  - 372
+  - 372.5
+  - 373
+  - 373.5
+  - 374
+  - 374.5
+  - 375
+  - 375.5
+  - 376
+  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicMod: 0.5
+  bloodPressureDiastolicTracker:
+  - 90
+  - 322
+  - 322.5
+  - 323
+  - 323.5
+  - 324
+  - 324.5
+  - 325
+  - 325.5
+  - 326
+  pulseRateInit: 70
+  pulseRateMod: 0.5
+  pulseRateTracker:
+  - 70
+  - 302
+  - 302.5
+  - 303
+  - 303.5
+  - 304
+  - 304.5
+  - 305
+  - 305.5
+  - 306
+  wholeBodyPerfusion: 1
+  capillaryRefillInit: 2
+  capillaryRefillMod: 0.5
+  capillaryRefillTracker:
+  - 2
+  - 234
+  - 234.5
+  - 235
+  - 235.5
+  - 236
+  - 236.5
+  - 237
+  - 237.5
+  - 238
+  glasgowComaScaleInit: 12
+  glasgowComaScaleMod: 0.5
+  glasgowComaScaleTracker:
+  - 12
+  - 244
+  - 244.5
+  - 245
+  - 245.5
+  - 246
+  - 246.5
+  - 247
+  - 247.5
+  - 248
+  pupilReactionInit: 4
+  pupilReactionMod: 0.5
+  pupilReactionTracker:
+  - 4
+  - 236
+  - 236.5
+  - 237
+  - 237.5
+  - 238
+  - 238.5
+  - 239
+  - 239.5
+  - 240
+  repetitiveQuestining: 1
+  hasInternalDevices: 0
+  hasCannula: 0
+  hasFever: 0
+  allergies: []
+  medicationList: []
+  medicalHistoryList: []
+  lastMealTime: 19:00
+  leadingEvents: Events leading to the presentation to hospital
+  triageScale: 0
+  currentLocation: ' Un Assigned'
+  patientActive: 1
+  initValsAdded: 1
+  character: {fileID: 0}

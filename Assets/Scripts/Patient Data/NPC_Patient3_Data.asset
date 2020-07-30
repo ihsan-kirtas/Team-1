@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
-  m_Name: NPC_Patient2_Peter_Wilbourne
+  m_Name: NPC_Patient3_Data
   m_EditorClassIdentifier: 
-  name: Peter Wilbourne
+  name: Patient 3
   age: 30
   gender: Male
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
-  PatientPrefab: {fileID: 141744480610468636, guid: 72312a80a02233e47b64c8904b219ba9,
+  PatientPrefab: {fileID: 6867055366005781249, guid: 1088e568920186a4c91d789f7b2da310,
     type: 3}
   ambulanceBayConversation:
   - amb 1
@@ -45,118 +45,38 @@ MonoBehaviour:
   - walk 4
   - walk 5
   otherConversation:
-  - Peter Other 1
-  - Peter Other 2
-  - Peter Other 3
-  - Peter Other 4
-  - Peter Other 5
+  - P3 - Other 1
+  - P3 - Other 2
+  - P3 - Other 3
+  - P3 - Other 4
+  - P3 - Other 5
   selfVentilating: 1
   oxygenInit: 95
   oxygenMod: 0.5
-  oxygenTracker:
-  - 95
-  - 160.5
-  - 161
-  - 161.5
-  - 162
-  - 162.5
-  - 163
-  - 163.5
-  - 164
-  - 164.5
+  oxygenTracker: []
   breathRateInit: 15
   breathRateMod: 0.5
-  breathRateTracker:
-  - 15
-  - 80.5
-  - 81
-  - 81.5
-  - 82
-  - 82.5
-  - 83
-  - 83.5
-  - 84
-  - 84.5
+  breathRateTracker: []
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
-  bloodPressureSystolicTracker:
-  - 140
-  - 205.5
-  - 206
-  - 206.5
-  - 207
-  - 207.5
-  - 208
-  - 208.5
-  - 209
-  - 209.5
+  bloodPressureSystolicTracker: []
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
-  bloodPressureDiastolicTracker:
-  - 90
-  - 155.5
-  - 156
-  - 156.5
-  - 157
-  - 157.5
-  - 158
-  - 158.5
-  - 159
-  - 159.5
+  bloodPressureDiastolicTracker: []
   pulseRateInit: 70
   pulseRateMod: 0.5
-  pulseRateTracker:
-  - 70
-  - 135.5
-  - 136
-  - 136.5
-  - 137
-  - 137.5
-  - 138
-  - 138.5
-  - 139
-  - 139.5
+  pulseRateTracker: []
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
-  capillaryRefillTracker:
-  - 2
-  - 67.5
-  - 68
-  - 68.5
-  - 69
-  - 69.5
-  - 70
-  - 70.5
-  - 71
-  - 71.5
+  capillaryRefillTracker: []
   glasgowComaScaleInit: 12
   glasgowComaScaleMod: 0.5
-  glasgowComaScaleTracker:
-  - 12
-  - 77.5
-  - 78
-  - 78.5
-  - 79
-  - 79.5
-  - 80
-  - 80.5
-  - 81
-  - 81.5
+  glasgowComaScaleTracker: []
   pupilReactionInit: 4
   pupilReactionMod: 0.5
-  pupilReactionTracker:
-  - 4
-  - 69.5
-  - 70
-  - 70.5
-  - 71
-  - 71.5
-  - 72
-  - 72.5
-  - 73
-  - 73.5
+  pupilReactionTracker: []
   repetitiveQuestining: 1
   hasInternalDevices: 0
   hasCannula: 0
@@ -167,7 +87,7 @@ MonoBehaviour:
   lastMealTime: 19:00
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 0
-  currentLocation: Bed Space 3
-  patientActive: 1
-  initValsAdded: 1
+  currentLocation: ' Un Assigned'
+  patientActive: 0
+  initValsAdded: 0
   character: {fileID: 0}

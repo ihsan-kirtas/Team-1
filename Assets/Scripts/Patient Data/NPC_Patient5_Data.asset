@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
-  m_Name: NPC_Patient5
+  m_Name: NPC_Patient5_Data
   m_EditorClassIdentifier: 
   name: Patient 5
   age: 30
@@ -87,7 +87,7 @@ MonoBehaviour:
   lastMealTime: 19:00
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 0
-  currentLocation: Bed Space 2
+  currentLocation: ' Un Assigned'
   patientActive: 0
   initValsAdded: 0
   character: {fileID: 0}

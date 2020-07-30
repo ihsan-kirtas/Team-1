@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class JH_PatientSpawner : MonoBehaviour
 {
-    private GameObject gameManager;
+    //private GameObject gameManager;
 
     // can make me priate when complete
-    public GameObject[] spawnPoints;
+    //public GameObject[] spawnPoints;
 
     // Can make me private when complete
-    public List<GameObject> patients;
+    public List<GameObject> allPatientsList;
+
+    private int nextPatientIndex;
+
+    private Vector3 spawnPoint;
+
+    GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Probably dont need this but this is a way to auto-find the GameManager without needing to link in the inspecter.
+        // Find the object in the game named "Spawn Point" and link it
+        spawnPoint = GameObject.Find("Spawn Point").transform.position;
+
         gameManager = GameObject.Find("GameManager");
 
+        // Get all available patent prefabs
+        allPatientsList = gameManager.GetComponent<PatientManager>().allPatients;
 
-        // Gets all the patient Game Objects from the allPatients list (GameManager/PatientManager) then adds them to your patients list inside this script.
-        // Working like this lets us only need to use 1 list throughout the whole game for all the available patients :)
-        patients = gameManager.GetComponent<PatientManager>().allPatients;
+        nextPatientIndex = 0;
 
 
 
@@ -36,28 +44,28 @@ public class JH_PatientSpawner : MonoBehaviour
         //}
 
         // Easier way - This will find all GameObjects tagged as "SpawnPoint", then add them to the array, no need to loop
-        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        //spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
 
 
 
         // ------ Instantiate Patients ------
-        for (int i = 0; i < patients.Count; i++)
-        {
-            GameObject newPatient = Instantiate(patients[i], spawnPoints[i].transform.position, Quaternion.identity);
+        //for (int i = 0; i < allPatientsList.Count; i++)
+        //{
+        //    GameObject newPatient = Instantiate(allPatientsList[i], spawnPoints[i].transform.position, Quaternion.identity);
 
-            // Set the newly instantiated patient to be the child of the Patients GameObject - Keeps things tidy :)
-            newPatient.transform.parent = GameObject.Find("Patients").transform;
+        //    // Set the newly instantiated patient to be the child of the Patients GameObject - Keeps things tidy :)
+        //    newPatient.transform.parent = GameObject.Find("Patients").transform;
 
-            // Calls a function in the ObsManager which sets up the new patients UI data. Also sends that function this patient_data object
-            Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_Data;
-            gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
+        //    // Calls a function in the ObsManager which sets up the new patients UI data. Also sends that function this patient_data object
+        //    Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_Data;
+        //    gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
 
-            // Broadcast event for a new patient being spawned
-            GameEvents.current.PatientSpawned();
+        //    // Broadcast event for a new patient being spawned
+        //    GameEvents.current.PatientSpawned();
 
-            Debug.Log("Patient: " + newPatient.name + " spawned at " + spawnPoints[i].ToString());
-        }
+        //    Debug.Log("Patient: " + newPatient.name + " spawned at " + spawnPoints[i].ToString());
+        //}
 
         // reference game manager and get component for patient manager script. all patients
 
@@ -67,9 +75,33 @@ public class JH_PatientSpawner : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void SpawnNextPatient()
     {
-        
+        if(nextPatientIndex + 1 <= allPatientsList.Count)
+        {
+            // Spawn Patient from list
+            GameObject newPatient = Instantiate(allPatientsList[nextPatientIndex], spawnPoint, Quaternion.identity);
+
+            // Set its parent object
+            newPatient.transform.parent = GameObject.Find("Patients").transform;
+
+            // Activate the patient
+            Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_Data;
+            gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
+
+            // Call spawned event
+            GameEvents.current.PatientSpawned();
+
+            Debug.Log("Patient: " + newPatient.name + " spawned");
+
+            // Increment ready for next spawn
+            nextPatientIndex++;
+        }
+        else
+        {
+            Debug.Log("No More Patients");
+            Debug.Log(nextPatientIndex + 1);
+        }
     }
 }
