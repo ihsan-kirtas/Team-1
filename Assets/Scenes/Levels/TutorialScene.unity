@@ -1888,10 +1888,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This area is Resuscitation Bay 1.\nLocated in here are lots of medical
-    equipment that can be used to save your patients life.\n\nFamiliarise yourself
-    with this equipment. \n\nThere is more equipment located here than the bedspace
-    areas.\n\nTo exit prompt press Q."
+  m_Text: 'This area is Resuscitation Bay 1.
+
+    Located in here are lots of medical
+    equipment that can be used to save your patients life.
+
+
+
+    There is more equipment
+    located here than the bedspace areas.
+
+
+    To exit prompt press Q.'
 --- !u!222 &74633849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6499,6 +6507,48 @@ MonoBehaviour:
   dialogueUiPanel: {fileID: 210590700}
   chartsMasterPanel: {fileID: 278791026}
   ObsNotAvailableAlert: {fileID: 1175980977}
+  MovePatientPanel: {fileID: 1704342241}
+--- !u!114 &291577324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291577321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
+  patientMovementLocation: {fileID: 291577332}
+  patientManager: {fileID: 291577329}
+  triageCanvas: {fileID: 1704342241}
+--- !u!114 &291577329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6185956374061179212, guid: a01fd348a8e5eaf498b13c3a2faac934,
+    type: 3}
+  m_PrefabInstance: {fileID: 78024910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291577321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec38fbd9a72d1b41b0efc9c17c2e010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &291577332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291577321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d056dfa5acaf83041a230cb3e1fe9937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientManager: {fileID: 291577329}
 --- !u!1 &296920921
 GameObject:
   m_ObjectHideFlags: 0
@@ -7090,12 +7140,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 312755303}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &314165377 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2342562573524169267, guid: d41292340c6eece45a8006ff3fe3f45d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1394558445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &314386242
 GameObject:
   m_ObjectHideFlags: 0
@@ -7164,12 +7208,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Some characters are also interactable, a dialogue box will pop up and
-    you will be able to get information from these characters and patients.
-
-
-    To
-    exit prompt press Q'
+  m_Text: "Conversation boxes pop up when you walk closer to a patient, press the
+    next button to see the patients information and X to close the box. \n\nTo exit
+    prompt press Q"
 --- !u!222 &314386245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8967,7 +9008,6 @@ GameObject:
   - component: {fileID: 404393170}
   - component: {fileID: 404393169}
   - component: {fileID: 404393168}
-  - component: {fileID: 404393167}
   m_Layer: 0
   m_Name: TriageTrigger3
   m_TagString: Untagged
@@ -8989,24 +9029,6 @@ Transform:
   m_Father: {fileID: 1271442082}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &404393167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404393165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
-  resusBed: {fileID: 0}
-  bedspaceBed: {fileID: 0}
-  triageCanvas: {fileID: 1704342241}
-  resusTarget: {fileID: 0}
-  bedspaceTarget: {fileID: 0}
 --- !u!65 &404393168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10433,7 +10455,6 @@ GameObject:
   - component: {fileID: 486689942}
   - component: {fileID: 486689941}
   - component: {fileID: 486689940}
-  - component: {fileID: 486689939}
   m_Layer: 0
   m_Name: TriageTrigger5
   m_TagString: Untagged
@@ -10455,24 +10476,6 @@ Transform:
   m_Father: {fileID: 1271442082}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &486689939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486689937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
-  resusBed: {fileID: 0}
-  bedspaceBed: {fileID: 0}
-  triageCanvas: {fileID: 1704342241}
-  resusTarget: {fileID: 0}
-  bedspaceTarget: {fileID: 0}
 --- !u!65 &486689940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16443,7 +16446,6 @@ GameObject:
   - component: {fileID: 740301466}
   - component: {fileID: 740301465}
   - component: {fileID: 740301464}
-  - component: {fileID: 740301463}
   m_Layer: 0
   m_Name: TriageTrigger4
   m_TagString: Untagged
@@ -16465,24 +16467,6 @@ Transform:
   m_Father: {fileID: 1271442082}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &740301463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740301461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
-  resusBed: {fileID: 0}
-  bedspaceBed: {fileID: 0}
-  triageCanvas: {fileID: 1704342241}
-  resusTarget: {fileID: 0}
-  bedspaceTarget: {fileID: 0}
 --- !u!65 &740301464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22297,7 +22281,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "What Triage score are you going to give the patient? \n\nClick on the
-        appropriate score on the left\n\nTo exit Triage Scoring press N on the keyboard"
+        appropriate score on the left\n\nTo exit Triage Scoring press Q on the keyboard"
       objectReference: {fileID: 0}
     - target: {fileID: 3317896623279343487, guid: 8cefea019a60da34887dd37121e2004d,
         type: 3}
@@ -25218,7 +25202,6 @@ GameObject:
   - component: {fileID: 1142346712}
   - component: {fileID: 1142346711}
   - component: {fileID: 1142346710}
-  - component: {fileID: 1142346709}
   m_Layer: 0
   m_Name: TriageTrigger2
   m_TagString: Untagged
@@ -25240,24 +25223,6 @@ Transform:
   m_Father: {fileID: 1271442082}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1142346709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142346707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b7f6a4a08c8254d857727a7d8e8c83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPatientData: {fileID: 11400000, guid: 27e005d35a4e4aa4fbd9c348072177ce, type: 2}
-  resusBed: {fileID: 0}
-  bedspaceBed: {fileID: 0}
-  triageCanvas: {fileID: 1704342241}
-  resusTarget: {fileID: 0}
-  bedspaceTarget: {fileID: 0}
 --- !u!65 &1142346710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28052,7 +28017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1271442082
 Transform:
   m_ObjectHideFlags: 0
@@ -31705,6 +31670,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6064693189342039606, guid: 5259f332b3ed3a74b83be437574f5193,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7079229920942217999, guid: 5259f332b3ed3a74b83be437574f5193,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31994,7 +31964,8 @@ MonoBehaviour:
     hospital.\n\nThis is where you would give the patient a triage score, press T
     on the keyboard to triage your patient from here they will either be moved into
     the Bed Space Area or the Resuscitation Bay.\n\nCheck on the triage scale on
-    the wall next to you if you need clarification. \n\nTo exit prompt press q"
+    the wall next to you if you need clarification on what triage category could
+    fit your patient the best. \n\nTo exit prompt press q"
 --- !u!222 &1403865210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33866,7 +33837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 138860036}
-  m_RootOrder: 24
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &1480500888
 PrefabInstance:
@@ -35902,7 +35873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fc28c7f0599104a85de529d2324995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assistantPosition: {fileID: 314165377}
+  assistantPosition: {fileID: 1420774651}
   startPosition: {fileID: 1420774651}
   assistantTimer: 0
 --- !u!1 &1606489131
@@ -51163,7 +51134,8 @@ PrefabInstance:
       propertyPath: bedspaceTarget
       value: 
       objectReference: {fileID: 1580352131}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2110934324144715310, guid: 75622d313e00093469bc5e49a8769ffb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 75622d313e00093469bc5e49a8769ffb, type: 3}
 --- !u!1 &2131315351006190242
 GameObject:

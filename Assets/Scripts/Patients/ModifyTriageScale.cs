@@ -7,88 +7,112 @@ using UnityEngine.AI;
 public class ModifyTriageScale : MonoBehaviour
 {
     // for buttons
-    
+
     public Patient_Data currentPatientData;
-    public GameObject resusBed;
-    public GameObject bedspaceBed;
+    public MovePatient patientMovementLocation;
+    private Text locationText;
+    public PatientManager patientManager;
     public GameObject triageCanvas;//triage canvas 
-    public Transform resusTarget;
-    public Transform bedspaceTarget;
     private NavMeshAgent agent;
+    public static bool GameIsPaused = false;
+    
+
+    //public Transform resusTarget;
+    //public Transform bedspaceTarget;
+    //
+    //public GameObject resusBed;
+    //public GameObject bedspaceBed;
+    //public GameObject resusBed;
+    //public GameObject bedspaceBed;
+
 
 
 
 
     void Start()
     {
+        triageCanvas.SetActive(false);
+        // Link location Text
+        locationText = GameObject.Find("Patients Current Location").GetComponent<Text>();
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        // Link Patient Manager
+        patientManager = GameObject.Find("GameManager").GetComponent<PatientManager>();
         agent = GetComponent<NavMeshAgent>();
-        triageCanvas.SetActive(false);//set all objects as false so that the player can triage using a key
+
+        //set all objects as false so that the player can triage using a key
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            triageCanvas.SetActive(true);
+            Time.timeScale = 0f;
+            GameIsPaused = true; 
+            Debug.Log(" triage canvas is activated");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;// shows cursor
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            triageCanvas.SetActive(false);
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+            Debug.Log("triage canvas is deactivated");
+            Cursor.visible = false;
+        }
     }
 
     
-
-
-    private void OnTriggerEnter(Collider player)
-    {
-
-        if (player.gameObject.tag == "Player")
-        {
-            triageCanvas.SetActive(true);
-        }
-                       
-
-        else if (Input.GetKeyDown(KeyCode.N))
-        {
-            triageCanvas.SetActive(false);
-        }
-
-        // on triage trigger enter triage scale will be enabled player will select correct triage score of 1 or 2
-    }
 
     void SetTriageScale(int cat)
     {
         currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
 
-        if(currentPatientData != null)
+        if (currentPatientData != null)
         {
             currentPatientData.triageScale = cat;
         }
     }
-
-
+    
     void setScale1()
     {
         SetTriageScale(1);
-        resusBed.SetActive(false);
-        agent.SetDestination(resusTarget.position);// resus bay 1 is the target position 
+        currentPatientData.currentLocation = "Resus Bay 1";
+        locationText.text = "Assigned to: Resus 1";
+       
     }
 
     void setScale2()
     {
         SetTriageScale(2);
-        resusBed.SetActive(false);
-        agent.SetDestination(resusTarget.position); // resus bay 1 is the target position 
+        currentPatientData.currentLocation = "Resus Bay 1";
+        locationText.text = "Assigned to: Resus 1";
     }
 
     void setScale3()
     {
         SetTriageScale(3);
-        bedspaceBed.SetActive(false);
-        agent.SetDestination(bedspaceTarget.position);// bedspace 1 is the target position 
+        currentPatientData.currentLocation = "Bed Space 2";
+        locationText.text = "Assigned to: Bed Space 2";
     }
 
     void setScale4()
     {
         SetTriageScale(4);
-        bedspaceBed.SetActive(false);
-        agent.SetDestination(bedspaceTarget.position);// bedspace 1 is the target position 
-    }
+        currentPatientData.currentLocation = "Bed Space 3";
+        locationText.text = "Assigned to: Bed Space 3";
 
+
+    }
     void setScale5()
     {
         SetTriageScale(5);
-        bedspaceBed.SetActive(false);
-        agent.SetDestination(bedspaceTarget.position);// bedspace 1 is the target position 
+        
+
+
+
     }
 }
-
