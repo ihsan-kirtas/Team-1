@@ -52,23 +52,23 @@ public class PatientManager : MonoBehaviour
 
     private void SetCurrentPatient1()
     {
-        currentPatientPrefab = GameObject.Find("NPC_Patient1");
+        currentPatientPrefab = GameObject.Find("NPC_Patient1(Clone)");
     }
     private void SetCurrentPatient2()
     {
-        currentPatientPrefab = GameObject.Find("NPC_Patient2");
+        currentPatientPrefab = GameObject.Find("NPC_Patient2(Clone)");
     }
     private void SetCurrentPatient3()
     {
-        currentPatientPrefab = GameObject.Find("NPC_Patient3");
+        currentPatientPrefab = GameObject.Find("NPC_Patient3(Clone)");
     }
     private void SetCurrentPatient4()
     {
-        currentPatientPrefab = GameObject.Find("NPC_Patient4");
+        currentPatientPrefab = GameObject.Find("NPC_Patient4(Clone)");
     }
     private void SetCurrentPatient5()
     {
-        currentPatientPrefab = GameObject.Find("NPC_Patient5");
+        currentPatientPrefab = GameObject.Find("NPC_Patient5(Clone)");
     }
     private void UnlinkCurrentPatient()
     {
