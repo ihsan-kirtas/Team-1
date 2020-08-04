@@ -34,8 +34,11 @@ public class ModifyTriageScale : MonoBehaviour
         triageCanvas.SetActive(false);
         // Link location Text
         locationText = GameObject.Find("Patients Current Location").GetComponent<Text>();
+
+        // pauses game
         Time.timeScale = 1f;
         GameIsPaused = false;
+       
         // Link Patient Manager
         patientManager = GameObject.Find("GameManager").GetComponent<PatientManager>();
         agent = GetComponent<NavMeshAgent>();
@@ -61,7 +64,7 @@ public class ModifyTriageScale : MonoBehaviour
             Time.timeScale = 1f;
             GameIsPaused = false;
             Debug.Log("triage canvas is deactivated");
-            Cursor.visible = false;
+            Cursor.visible = false;//hides cursor 
         }
     }
 
