@@ -32,9 +32,9 @@ public class AIPatrolScript : MonoBehaviour
     {
         agent.destination = assistantPosition.position;
 
-        if (agent.remainingDistance < 0.3)
+        if (agent.remainingDistance < 0.01)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(10);
             agent.destination = startPosition.position;
             assistantTimer = 10f;
 
