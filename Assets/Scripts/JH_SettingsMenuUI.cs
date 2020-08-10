@@ -47,7 +47,11 @@ public class JH_SettingsMenuUI : MonoBehaviour
     public void SetVolume(float volume)
     {
         Debug.Log(volume);
-        //audioMixer.SetFloat("volume", volume);              //The name in the brackets in the name of the exposed parameter in the Audio Mixer
+        //For method of volume using linear value (-80 to 0)
+        //audioMixer.SetFloat("volume", volume);                    //The name in the brackets "" is the name of the exposed parameter in the Audio Mixer
+
+        //For method of volume using logarithmic value (0.0001 to 1)
+        //audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);  //Found this at: https://www.youtube.com/watch?v=xNHSGMKtlv4
     }
 
     public void SetFullScreen(bool isFullscreen)
