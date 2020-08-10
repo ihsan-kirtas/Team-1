@@ -18,8 +18,6 @@ MonoBehaviour:
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
-  PatientPrefab: {fileID: 2706584118823153244, guid: 2fffc6fe8526be345876feb81a213662,
-    type: 3}
   ambulanceBayConversation:
   - This is Greg Marhe, he is a 35 year old male presents post tripping on a bowling
     ball in his garage leading him to falling over in an awkward way.
@@ -34,9 +32,9 @@ MonoBehaviour:
     not following direction '
   - Greg has a past medical history of asthma but is otherwise healthy
   bedsAreaConversation:
-  - Greg is aggitated have you checked his obs?
-  - Greg doesn't look so good would you like me to call the doctor for a review?
-  - Greg is unresponisve and making abnormal movements, we should move him to resus
+  - Greg's care was not prioritsed correctly. Greg's ICP increased causing him to
+    have a seizure and a hypoxic brain injury. Greg was rushed from the bedspace
+    area into the resuscitation bay where was sent to CT then theatre
   resusBayConversation:
   - The team leader has let us know that we have sent a trauma page out
   - The neurosurgery team are on their way
