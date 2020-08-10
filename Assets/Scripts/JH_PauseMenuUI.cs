@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class JH_PauseMenuUI : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = true;
 
     public GameObject pauseMenuUIPanel;             //This is for the panel that is used to darken the screen when the game is paused. The Pause Menu UI is under this.
     public GameObject pauseMenuUI;                  //This is the Pause Menu UI which is under the panel - connect this to PauseMenuUIBackground in Unity
@@ -16,7 +17,18 @@ public class JH_PauseMenuUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
+        
+        //Game Events Subscription
+        //GameEvents.current.event_showPauseMenuUI += Pause;
+        //GameEvents.current.event_hidePauseMenuUI += Resume;
     }
+
+    //private void OnDestroy()
+    //{
+    //    //Game Events Unsubscription
+    //    GameEvents.current.event_showPauseMenuUI -= Pause;
+    //    GameEvents.current.event_hidePauseMenuUI -= Resume;
+    //}
 
     // Update is called once per frame
     void Update()

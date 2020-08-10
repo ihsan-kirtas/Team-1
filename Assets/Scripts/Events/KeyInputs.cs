@@ -67,6 +67,15 @@ public class KeyInputs : MonoBehaviour
             {
                 GameEvents.current.HidePauseMenuUI();
             }
+
+            //if (!gameManager.GetComponent<JH_PauseMenuUI>().GameIsPaused)
+            //{
+            //    GameEvents.current.ShowPauseMenuUI();
+            //}
+            //else
+            //{
+            //    GameEvents.current.HidePauseMenuUI();
+            //}
         }
     }
 }
