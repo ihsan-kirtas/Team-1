@@ -17,7 +17,7 @@ public class Patient_Data : ScriptableObject
     public string additionalNotes = "None";
 
     public string startPatientInfo = "None";
-
+    public string uiambohandover = "TOA";
 
     // --------------------------------------------------------------------------------------------------------------------
 
