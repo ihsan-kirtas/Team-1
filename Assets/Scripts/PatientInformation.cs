@@ -15,7 +15,8 @@ public class PatientInformation : MonoBehaviour
     public Text patientJourney;
     public Text clinicalReasoning;
     public Text triageScaleScore;
-    public bool GameIsPaused = true;
+    public bool gameispaused = false;
+    
 
 
 
@@ -23,6 +24,8 @@ public class PatientInformation : MonoBehaviour
     {
 
         patientname = GameObject.Find("PatientInformation_variableName").GetComponent<Text>();
+        Time.timeScale = 1.0f;
+        gameispaused = true;
 
     }
 
@@ -32,8 +35,8 @@ public class PatientInformation : MonoBehaviour
 
         if (GameObject.Find("Player").GetComponent<DialogManager>().currentPatient != null) //if it is set put something here
         {
-            Time.timeScale = 1f;
-            GameIsPaused = false;
+            //Time.timeScale = 1f;
+            //GameIsPaused = false;
 
 
 
@@ -52,6 +55,8 @@ public class PatientInformation : MonoBehaviour
         else
         {
             patientname.text = "";
+            Time.timeScale = 0f;
+            gameispaused = false;
         }
 
         
