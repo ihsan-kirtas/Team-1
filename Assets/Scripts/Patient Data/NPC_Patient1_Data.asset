@@ -18,24 +18,19 @@ MonoBehaviour:
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
-  uiambohandover: 'This is Greg Marhe, he is a 35 year old male presents post tripping
-    on a bowling ball in his garage leading him to falling over in an awkward way.Patient
-    hit his head on the right temporal lobe on a corner of a shelf which has a small
-    cut and what seems to be a fractured left ankle in his leg caused by a loss of
-    consciousness for 15 seconds.Enroute he became combative, but his vital signs
-    have remained stable and Greg is complaining of pain in his left ankle. Greg
-    lives with his wife Maria who is expecting their first child in two weeks. Gregs
-    vitals are RR: 15 SPo2:95 on room air BP:130/88 HR:60 BGL:5.5 GCS:11 Eyes 3 Verbal
-    4 Motor 5 Pupils:4+  Arms: 5  Legs:5 Temp:37 Pain:5 Behaviour: aggressive not
-    following direction.  Greg has a past medical history of asthma but is otherwise
-    healthy.'
   ambulanceBayConversation:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - This is Greg Marhe, he is a 35 year old male presents post tripping on a bowling
+    ball in his garage leading him to falling over in an awkward way.
+  - Patient hit his head on the right temporal lobe on a corner of a shelf which
+    has a small cut and what seems to be a fractured left ankle in his leg caused
+    by a loss of consciousness for 15 seconds
+  - Enroute he became combative, but his vital signs have remained stable and Greg
+    is complaining of pain in his left ankle
+  - Greg lives with his wife Maria who is expecting their first child in two weeks
+  - 'Gregs vitals are RR: 15 SPo2:95 on room air BP:130/88 HR:60 BGL:5.5 GCS:11 Eyes
+    3 Verbal 4 Motor 5 Pupils:4+  Arms: 5  Legs:5 Temp:37 Pain:5 Behaviour: aggressive
+    not following direction '
+  - Greg has a past medical history of asthma but is otherwise healthy
   bedsAreaConversation:
   - Greg's care was not prioritsed correctly. Greg's ICP increased causing him to
     have a seizure and a hypoxic brain injury. Greg was rushed from the bedspace
@@ -164,9 +159,6 @@ MonoBehaviour:
   hasInternalDevices: 1
   hasCannula: 1
   hasFever: 0
-  currentObs: ' RR: 15, SPo2:95 on room air, BP:130/88, HR:60, BGL:5.5, GCS:11, Eyes
-    3, Verbal 4, Motor 5, Pupils:4+, Arms: 5, Legs:5, Temp:37, Pain:5, Behaviour:aggressive
-    not following direction '
   allergies: []
   medicationList:
   - Salbutamol
@@ -174,14 +166,8 @@ MonoBehaviour:
   - Asthma
   lastMealTime: 19:00
   leadingEvents: Fall over bowling ball LOC 15 seconds left ankle fracture
-  ampleText: 'Allergies: Nil Known Allergies, Medications: Salbutamol PRN, Past Medical
-    History: Asthma, Last Meal Eaten: 1900, Events Leading to Hospital Presentation:Fall
-    over bowling ball LOC 15 seconds left ankle fracture '
   triageScale: 0
   currentLocation: Bed Space 3
   patientActive: 1
   initValsAdded: 1
   character: {fileID: 0}
-  recommendations: 
-  patienthospitaljourney: 
-  clinicalReferences: 

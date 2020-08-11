@@ -17,7 +17,7 @@ public class Patient_Data : ScriptableObject
     public string additionalNotes = "None";
 
     public string startPatientInfo = "None";
-    public string uiambohandover = "";
+    public string uiambohandover = "TOA";
 
     // --------------------------------------------------------------------------------------------------------------------
 
@@ -139,9 +139,7 @@ public class Patient_Data : ScriptableObject
     // Has Fever
     public bool hasFever = false;
 
-    [Header("Current Obs")]
 
-    public string currentObs=" Self ventilating in room air, RR: 15, SPo2:95 on room air, BP:130/88, HR:60, BGL:5.5, GCS:11, Eyes 3, Verbal 4, Motor 5, Pupils:4+, Arms: 5, Legs:5, Temp:37, Pain:5, Behaviour:aggressive not following direction ";
 
     // --------------------------------------------------------------------------------------------------------------------
     // Triage - AMPLE
@@ -168,8 +166,7 @@ public class Patient_Data : ScriptableObject
     [Header("E - Events leading to the presentation to hospital")]
     public string leadingEvents = "Events leading to the presentation to hospital";     // Example: "Tripped on bowling ball in garage and hit the front right side of head on shelf, loss of consciousnesses for 15 seconds, landed on right leg ?ankle fracture"
 
-    [Header("AMPLE")]
-    public string ampleText = " ";
+
 
 
     // --------------------------------------------------------------------------------------------------------------------
@@ -186,14 +183,8 @@ public class Patient_Data : ScriptableObject
     [Header("---------- System ----------")]
     public bool patientActive = false;
     public bool initValsAdded = false;
+
     public GameObject character;
-
-    [Header("------Results------")]
-    public string recommendations;
-    public string patienthospitaljourney;
-    public string clinicalReferences;
-
-    
 
 
 }
