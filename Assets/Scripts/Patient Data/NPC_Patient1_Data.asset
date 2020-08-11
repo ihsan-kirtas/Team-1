@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
   m_Name: NPC_Patient1_Data
   m_EditorClassIdentifier: 
-  name: 'Name: Greg Marhe, Age: 30, Gender:30, Generally healthy, '
+  name: Greg Marhe
   age: 30
   gender: Male
   overallHealth: Generally healthy
@@ -56,108 +56,108 @@ MonoBehaviour:
   oxygenMod: 3
   oxygenTracker:
   - 100
-  - 2437
-  - 2440
-  - 2443
-  - 2446
-  - 2449
-  - 2452
-  - 2455
-  - 2458
-  - 2461
+  - 2470
+  - 2473
+  - 2476
+  - 2479
+  - 2482
+  - 2485
+  - 2488
+  - 2491
+  - 2494
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
-  - 404.5
-  - 405
-  - 405.5
-  - 406
-  - 406.5
-  - 407
-  - 407.5
-  - 408
-  - 408.5
+  - 410
+  - 410.5
+  - 411
+  - 411.5
+  - 412
+  - 412.5
+  - 413
+  - 413.5
+  - 414
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
-  - 529.5
-  - 530
-  - 530.5
-  - 531
-  - 531.5
-  - 532
-  - 532.5
-  - 533
-  - 533.5
+  - 535
+  - 535.5
+  - 536
+  - 536.5
+  - 537
+  - 537.5
+  - 538
+  - 538.5
+  - 539
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
-  - 479.5
-  - 480
-  - 480.5
-  - 481
-  - 481.5
-  - 482
-  - 482.5
-  - 483
-  - 483.5
+  - 485
+  - 485.5
+  - 486
+  - 486.5
+  - 487
+  - 487.5
+  - 488
+  - 488.5
+  - 489
   pulseRateInit: 70
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
-  - 459.5
-  - 460
-  - 460.5
-  - 461
-  - 461.5
-  - 462
-  - 462.5
-  - 463
-  - 463.5
+  - 465
+  - 465.5
+  - 466
+  - 466.5
+  - 467
+  - 467.5
+  - 468
+  - 468.5
+  - 469
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 391.5
-  - 392
-  - 392.5
-  - 393
-  - 393.5
-  - 394
-  - 394.5
-  - 395
-  - 395.5
+  - 397
+  - 397.5
+  - 398
+  - 398.5
+  - 399
+  - 399.5
+  - 400
+  - 400.5
+  - 401
   glasgowComaScaleInit: 11
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
-  - 401.5
-  - 402
-  - 402.5
-  - 403
-  - 403.5
-  - 404
-  - 404.5
-  - 405
-  - 405.5
+  - 407
+  - 407.5
+  - 408
+  - 408.5
+  - 409
+  - 409.5
+  - 410
+  - 410.5
+  - 411
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker:
   - 4
-  - 393.5
-  - 394
-  - 394.5
-  - 395
-  - 395.5
-  - 396
-  - 396.5
-  - 397
-  - 397.5
+  - 399
+  - 399.5
+  - 400
+  - 400.5
+  - 401
+  - 401.5
+  - 402
+  - 402.5
+  - 403
   repetitiveQuestining: 1
   hasInternalDevices: 1
   hasCannula: 1
@@ -172,7 +172,7 @@ MonoBehaviour:
   - Asthma
   lastMealTime: 19:00
   leadingEvents: 
-  triageScale: 1
+  triageScale: 2
   currentLocation: Resus Bay 2
   patientActive: 1
   initValsAdded: 1

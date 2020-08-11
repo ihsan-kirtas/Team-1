@@ -18,7 +18,7 @@ public class Patient_Data : ScriptableObject
 
     public string startPatientInfo = "None";
     public string uiambohandover = "TOA";
-    public string patientdemographics;
+    public string patientdemographics="Name:    Age:     Gender:     ";
     // --------------------------------------------------------------------------------------------------------------------
 
     [Header("---------- Dialog Ambulance Bay ----------")]
