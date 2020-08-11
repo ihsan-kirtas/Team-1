@@ -31,13 +31,12 @@ public class PatientInformation : MonoBehaviour
 
     private void Update()//every frame it is going to look for the patient data 
     {
-        
 
         if (GameObject.Find("Player").GetComponent<DialogManager>().currentPatient != null) //if it is set put something here
         {
             //Time.timeScale = 1f;
             //GameIsPaused = false;
-
+            Cursor.visible = true;
 
 
             Patient_Data patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
@@ -57,10 +56,12 @@ public class PatientInformation : MonoBehaviour
         else
         {
             patientname.text = "";
-          
+            Cursor.visible = false;
         }
 
         
         
     }
+
+ 
 }

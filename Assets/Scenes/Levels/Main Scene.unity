@@ -50087,6 +50087,19 @@ MonoBehaviour:
   pauseMenuUIPanel: {fileID: 495351365}
   pauseMenuUI: {fileID: 1929827303}
   settingsMenuUI: {fileID: 207460402}
+--- !u!114 &1488599003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488599000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa32186c5c3a37e4e9304332ec1e7d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPatientsList: []
 --- !u!114 &1488599009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76330,6 +76343,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 115937456}
     m_Modifications:
+    - target: {fileID: 223595325279963727, guid: 9b8373d436c89f648bf9537d90e1de42,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2499977769305116748, guid: 9b8373d436c89f648bf9537d90e1de42,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -76359,16 +76377,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1488599003}
     - target: {fileID: 2499977769305116785, guid: 9b8373d436c89f648bf9537d90e1de42,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: SpawnNextPatient
       objectReference: {fileID: 0}
     - target: {fileID: 2499977769305116785, guid: 9b8373d436c89f648bf9537d90e1de42,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3079359746685730002, guid: 9b8373d436c89f648bf9537d90e1de42,
         type: 3}
@@ -76510,10 +76528,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4042943716568771885, guid: 9b8373d436c89f648bf9537d90e1de42,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7486997917501591728, guid: 9b8373d436c89f648bf9537d90e1de42,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918581665709969895, guid: 9b8373d436c89f648bf9537d90e1de42,
         type: 3}
