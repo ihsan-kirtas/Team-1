@@ -18,7 +18,7 @@ public class Patient_Data : ScriptableObject
 
     public string startPatientInfo = "None";
     public string uiambohandover = "TOA";
-
+    public string paientdemographics;
     // --------------------------------------------------------------------------------------------------------------------
 
     [Header("---------- Dialog Ambulance Bay ----------")]
@@ -40,6 +40,10 @@ public class Patient_Data : ScriptableObject
     // --------------------------------------------------------------------------------------------------------------------
 
     // Triage - ABCDDEF
+
+    [Header("------Current Obs------")]
+
+    public string currentobs;
 
 
     // ### A - Airway ###
@@ -144,6 +148,8 @@ public class Patient_Data : ScriptableObject
     // --------------------------------------------------------------------------------------------------------------------
     // Triage - AMPLE
 
+    [Header("------AMPLE------")]
+    public string AMPLEtext;
 
     // A - Allergies
     [Header("A - Allergies")]
@@ -184,7 +190,17 @@ public class Patient_Data : ScriptableObject
     public bool patientActive = false;
     public bool initValsAdded = false;
 
+    [Header("")]
     public GameObject character;
 
+    [Header("----Recommendations-----")]
+    public string recommendations;
+
+
+    [Header("-----Patient Hospital Journey-----")]
+    public string patienthospitaljourney;
+
+    [Header("-----clinical References----")]
+    public string clinicalReferences;
 
 }
