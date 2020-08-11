@@ -16,6 +16,7 @@ public class PatientInformation : MonoBehaviour
     public Text patientJourney;
     public Text clinicalReasoning;
     public Text triageScaleScore;
+    public Text listOfInitialObs;
     public bool gameispaused = false;
 
 
@@ -46,6 +47,7 @@ public class PatientInformation : MonoBehaviour
             ambulancebayhandover.text = patient_data.uiambohandover;
             initalobs.text=patient_data.ambulanceBayConversation.Last().ToString();
             currentObs.text = patient_data.currentobs;
+            listOfInitialObs.text = patient_data.currentObs.ToArray().ToString();
             ample.text = patient_data.AMPLEtext;
             recommendedDecision.text = patient_data.recommendations;
             patientJourney.text = patient_data.patienthospitaljourney;

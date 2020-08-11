@@ -42,7 +42,7 @@ public class Patient_Data : ScriptableObject
     // Triage - ABCDDEF
 
     [Header("------Current Obs------")]
-
+    public List<string> currentObs = new List<string>();
     public string currentobs;
 
 
