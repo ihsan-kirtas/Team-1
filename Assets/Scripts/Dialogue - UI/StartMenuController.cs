@@ -25,12 +25,12 @@ public class StartMenuController : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(loadingScreenCoroutine());
+        StartCoroutine(loadingScreenCoroutineStart());
     }
 
     public void StartTutorial()
     {
-        SceneManager.LoadScene("TutorialScene");
+        StartCoroutine(loadingScreenCoroutineTut());
     }
     
     public void SettingMenuUI()
@@ -66,11 +66,20 @@ public class StartMenuController : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator loadingScreenCoroutine()
+    IEnumerator loadingScreenCoroutineStart()
     {
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Main Scene");
+        yield return new WaitForSeconds(1);
+        loadingScreen.SetActive(false);
+    }
+
+    IEnumerator loadingScreenCoroutineTut()
+    {
+        loadingScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("TutorialScene");
         yield return new WaitForSeconds(1);
         loadingScreen.SetActive(false);
     }
