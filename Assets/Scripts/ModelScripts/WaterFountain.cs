@@ -5,19 +5,15 @@ using UnityEngine;
 public class WaterFountain : MonoBehaviour
 {
     private AudioSource audioData;
+    public Animator animationController;
 
     void Start()
     {
-        // Dont play particles
-        GetComponent<ParticleSystem>().Stop();
-
-        // Find Audio
+        // Link Audio
         audioData = GetComponent<AudioSource>();
 
-        // Start playing sopund clip
+        // Start playing sopund clip, then pause
         audioData.Play(0);
-
-        // Pause sound clip
         audioData.Pause();
     }
 
@@ -25,13 +21,13 @@ public class WaterFountain : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            // Animation
-            GetComponent<Animation>().Play("start animation");
+            // Animation - Play
+            animationController.SetBool("PlayLeverDown", true);
 
-            // Find and play the particles
+            // Particles - Play
             GetComponent<ParticleSystem>().Play();
 
-            // Un-pause the audio clip
+            // Sound - Un-Pause
             audioData.UnPause();
         }
     }
@@ -40,13 +36,13 @@ public class WaterFountain : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            // Animation
-            GetComponent<Animation>().Play("end animation");
+            // Animation - Stop
+            animationController.SetBool("PlayLeverDown", false);
 
-            // stop the particles
+            // Particles - Stop
             GetComponent<ParticleSystem>().Stop();
 
-            // pause the sound
+            // Sound - Pause
             audioData.Pause();
         }
     }
