@@ -7,6 +7,7 @@ using System.Linq;
 public class PatientInformation : MonoBehaviour
 {
     public Text patientname;
+    public Text patientInformation;
     public Text initalobs;
     public Text ambulancebayhandover;
     public Text currentObs;
@@ -16,7 +17,7 @@ public class PatientInformation : MonoBehaviour
     public Text clinicalReasoning;
     public Text triageScaleScore;
     public bool gameispaused = false;
-    
+
 
 
 
@@ -24,8 +25,7 @@ public class PatientInformation : MonoBehaviour
     {
 
         patientname = GameObject.Find("PatientInformation_variableName").GetComponent<Text>();
-        Time.timeScale = 1.0f;
-        gameispaused = true;
+
 
     }
 
@@ -41,9 +41,11 @@ public class PatientInformation : MonoBehaviour
 
 
             Patient_Data patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
-            patientname.text = patient_data.paientdemographics;
-            patientname.text = patient_data.uiambohandover;
-            ambulancebayhandover.text = patient_data.ambulanceBayConversation.Last().ToString();
+
+            patientname.text = patient_data.patientdemographics;
+            //patientInformation.text = patient_data.patientdemographics;
+            ambulancebayhandover.text = patient_data.uiambohandover;
+            initalobs.text=patient_data.ambulanceBayConversation.Last().ToString();
             currentObs.text = patient_data.currentobs;
             ample.text = patient_data.AMPLEtext;
             recommendedDecision.text = patient_data.recommendations;
@@ -55,8 +57,7 @@ public class PatientInformation : MonoBehaviour
         else
         {
             patientname.text = "";
-            Time.timeScale = 0f;
-            gameispaused = false;
+          
         }
 
         

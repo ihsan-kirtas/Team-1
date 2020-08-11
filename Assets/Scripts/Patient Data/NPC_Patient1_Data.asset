@@ -12,30 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
   m_Name: NPC_Patient1_Data
   m_EditorClassIdentifier: 
-  name: Greg Marhe
+  name: 'Name: Greg Marhe, Age: 30, Gender:30, Generally healthy, '
   age: 30
   gender: Male
   overallHealth: Generally healthy
-  additionalNotes: None
+  additionalNotes: 'Name: Greg Marhe, Age: 30, Gender: Male'
   startPatientInfo: None
-  uiambohandover: 
-  paientdemographics: 'This is Greg Marhe, he is a 35 year old male presents post
-    tripping on a bowling ball in his garage leading him to falling over in an awkward
-    way. Patient hit his head on the right temporal lobe on a corner of a shelf which
-    has a small cut and what seems to be a fractured left ankle in his leg caused
-    by a loss of consciousness for 15 seconds. Enroute he became combative, but his
-    vital signs have remained stable and Greg is complaining of pain in his left
-    ankle. Gregs vitals are RR: 15 SPo2:95 on room air BP:130/88 HR:60 BGL:5.5 GCS:On
-    Scene 13 now 11 Eyes 3 Verbal 4 Motor 5 Pupils:4+  Arms: 5  Legs:5 Temp:37 Pain:5
-    Behaviour: aggressive not following direction. Greg lives with his wife Maria
-    who is expecting their first child in two weeks'
+  uiambohandover: 'Patient tripped on a bowling ball in his garage leading him to
+    falling over in an awkward way. Patient hit his head on the right temporal lobe
+    on a corner of a shelf which has a small cut and what seems to be a fractured
+    ankle in his left leg caused by a loss of consciousness for 15 seconds when he
+    fell. Was found by his wife at home and she called 000 at 20:30. Ambulance arrived
+    at 20:55, time of arrival to hospital 21:25.  RR: 15 SPo2:95 on room air BP:130/88
+    HR:60 BGL:5.5 GCS:11 Eyes 3 Verbal 4 Motor 5 Pupils:4+  Arms: 5  Legs:5 Temp:37
+    Pain:5 Behaviour:  aggressive not following direction. GCS on scene was 13. '
+  patientdemographics: 'Name: Greg Marhe, Age: 30, Gender: Male'
   ambulanceBayConversation:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'RR: 15 SPo2:95 on room air BP:130/88 HR:60 BGL:5.5 GCS:11 Eyes 3 Verbal 4 Motor
+    5 Pupils:4+  Arms: 5  Legs:5 Temp:37 Pain:5 Behaviour:  aggressive not following
+    direction '
   bedsAreaConversation:
   - Greg's care was not prioritsed correctly. Greg's ICP increased causing him to
     have a seizure and a hypoxic brain injury. Greg was rushed from the bedspace
@@ -53,114 +48,116 @@ MonoBehaviour:
   otherConversation:
   - Do you need any help?
   - How are you travelling, have you had a break yet?
-  currentobs: 
+  currentobs: 'RR:15 SPo2:96% on room air  BP: 135/90 HR:58 BGL:-5.4 GCS:11 Eyes
+    3 Verbal 4 Motor 5 Pupils: 4+ Arms:Left 4 Legs: Left 4 Temp:37.2 Pain:6 Behaviour:
+    aggressive not following direction. '
   selfVentilating: 1
   oxygenInit: 100
   oxygenMod: 3
   oxygenTracker:
   - 100
-  - 2167
-  - 2170
-  - 2173
-  - 2176
-  - 2179
-  - 2182
-  - 2185
-  - 2188
-  - 2191
+  - 2437
+  - 2440
+  - 2443
+  - 2446
+  - 2449
+  - 2452
+  - 2455
+  - 2458
+  - 2461
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
-  - 359.5
-  - 360
-  - 360.5
-  - 361
-  - 361.5
-  - 362
-  - 362.5
-  - 363
-  - 363.5
+  - 404.5
+  - 405
+  - 405.5
+  - 406
+  - 406.5
+  - 407
+  - 407.5
+  - 408
+  - 408.5
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
-  - 484.5
-  - 485
-  - 485.5
-  - 486
-  - 486.5
-  - 487
-  - 487.5
-  - 488
-  - 488.5
+  - 529.5
+  - 530
+  - 530.5
+  - 531
+  - 531.5
+  - 532
+  - 532.5
+  - 533
+  - 533.5
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
-  - 434.5
-  - 435
-  - 435.5
-  - 436
-  - 436.5
-  - 437
-  - 437.5
-  - 438
-  - 438.5
+  - 479.5
+  - 480
+  - 480.5
+  - 481
+  - 481.5
+  - 482
+  - 482.5
+  - 483
+  - 483.5
   pulseRateInit: 70
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
-  - 414.5
-  - 415
-  - 415.5
-  - 416
-  - 416.5
-  - 417
-  - 417.5
-  - 418
-  - 418.5
+  - 459.5
+  - 460
+  - 460.5
+  - 461
+  - 461.5
+  - 462
+  - 462.5
+  - 463
+  - 463.5
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 346.5
-  - 347
-  - 347.5
-  - 348
-  - 348.5
-  - 349
-  - 349.5
-  - 350
-  - 350.5
+  - 391.5
+  - 392
+  - 392.5
+  - 393
+  - 393.5
+  - 394
+  - 394.5
+  - 395
+  - 395.5
   glasgowComaScaleInit: 11
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
-  - 356.5
-  - 357
-  - 357.5
-  - 358
-  - 358.5
-  - 359
-  - 359.5
-  - 360
-  - 360.5
+  - 401.5
+  - 402
+  - 402.5
+  - 403
+  - 403.5
+  - 404
+  - 404.5
+  - 405
+  - 405.5
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker:
   - 4
-  - 348.5
-  - 349
-  - 349.5
-  - 350
-  - 350.5
-  - 351
-  - 351.5
-  - 352
-  - 352.5
+  - 393.5
+  - 394
+  - 394.5
+  - 395
+  - 395.5
+  - 396
+  - 396.5
+  - 397
+  - 397.5
   repetitiveQuestining: 1
   hasInternalDevices: 1
   hasCannula: 1
@@ -175,7 +172,7 @@ MonoBehaviour:
   - Asthma
   lastMealTime: 19:00
   leadingEvents: 
-  triageScale: 0
+  triageScale: 1
   currentLocation: Resus Bay 2
   patientActive: 1
   initValsAdded: 1

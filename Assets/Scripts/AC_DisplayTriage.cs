@@ -15,6 +15,8 @@ public class AC_DisplayTriage : MonoBehaviour
     public GameObject triageScore3;
     public GameObject triageScore4;
     public GameObject triageScore5;
+    public GameObject SAGO1;
+    public GameObject SAGO2;
 
 
     
@@ -36,6 +38,8 @@ public class AC_DisplayTriage : MonoBehaviour
         currentObsPage.SetActive(false);
         resultsPage.SetActive(false);
         patientTransferPage.SetActive(false);
+        SAGO1.SetActive(false);
+        SAGO2.SetActive(false);
 
     }
 
@@ -46,6 +50,8 @@ public class AC_DisplayTriage : MonoBehaviour
         currentObsPage.SetActive(false);
         resultsPage.SetActive(false);
         patientTransferPage.SetActive(false);
+        SAGO1.SetActive(false);
+        SAGO2.SetActive(false);
     }
 
     public void displayCurrentObsPage()
@@ -55,6 +61,8 @@ public class AC_DisplayTriage : MonoBehaviour
         currentObsPage.SetActive(true);
         resultsPage.SetActive(false);
         patientTransferPage.SetActive(false);
+        SAGO1.SetActive(true);
+        SAGO2.SetActive(true);
     }
 
     public void displayResultsPage()
@@ -64,6 +72,8 @@ public class AC_DisplayTriage : MonoBehaviour
         currentObsPage.SetActive(false);
         resultsPage.SetActive(true);
         patientTransferPage.SetActive(false);
+        SAGO1.SetActive(false);
+        SAGO2.SetActive(false);
     }
 
     public void displayPatientTransferPage()
@@ -73,10 +83,12 @@ public class AC_DisplayTriage : MonoBehaviour
         currentObsPage.SetActive(false);
         resultsPage.SetActive(false);
         patientTransferPage.SetActive(true);
+        SAGO1.SetActive(false);
+        SAGO2.SetActive(false);
     }
     
     public void spawnNewpatient()
     {
-         GameObject.Find("Player").GetComponent<JH_PatientSpawner>().SpawnNextPatient();
+         //GameObject.Find("Player").GetComponent<JH_PatientSpawner>().SpawnNextPatient();
     }
 }
