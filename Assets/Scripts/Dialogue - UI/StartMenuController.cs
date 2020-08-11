@@ -1,4 +1,5 @@
-﻿
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,11 +9,12 @@ public class StartMenuController : MonoBehaviour
     public GameObject mainMenuUI;                           //This is called MainMenuUIButtons in the editor
     public GameObject mainMenuSettingMenuUI;                //This currently does not exist and has a stand in
     public GameObject creditPageStandIn;                    //This is currently a stand in and may not be used like this in the final build
+    public GameObject loadingScreen;                        //This is the loading screen animation
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        
     }
 
     // Update is called once per frame
@@ -20,10 +22,10 @@ public class StartMenuController : MonoBehaviour
     {
         
     }
-    
+
     public void StartGame()
     {
-        SceneManager.LoadScene("Main Scene");
+        StartCoroutine(loadingScreenCoroutine());
     }
 
     public void StartTutorial()
@@ -62,5 +64,14 @@ public class StartMenuController : MonoBehaviour
     {
         Debug.Log("Quiet Application");
         Application.Quit();
+    }
+
+    IEnumerator loadingScreenCoroutine()
+    {
+        loadingScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Main Scene");
+        yield return new WaitForSeconds(1);
+        loadingScreen.SetActive(false);
     }
 }
