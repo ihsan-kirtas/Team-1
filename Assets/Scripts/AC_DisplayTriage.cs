@@ -15,7 +15,10 @@ public class AC_DisplayTriage : MonoBehaviour
     public GameObject triageScore3;
     public GameObject triageScore4;
     public GameObject triageScore5;
+
+
     
+
     public void SetTriageScale(int cat)
     {
        Patient_Data currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;

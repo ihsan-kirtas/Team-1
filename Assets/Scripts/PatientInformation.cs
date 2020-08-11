@@ -15,13 +15,15 @@ public class PatientInformation : MonoBehaviour
     public Text patientJourney;
     public Text clinicalReasoning;
     public Text triageScaleScore;
-    
+    public bool GameIsPaused = true;
+
 
 
     private void Start()
     {
 
         patientname = GameObject.Find("PatientInformation_variableName").GetComponent<Text>();
+
     }
 
     private void Update()//every frame it is going to look for the patient data 
@@ -30,7 +32,11 @@ public class PatientInformation : MonoBehaviour
 
         if (GameObject.Find("Player").GetComponent<DialogManager>().currentPatient != null) //if it is set put something here
         {
-            
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+
+
+
             Patient_Data patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
             patientname.text = patient_data.paientdemographics;
             patientname.text = patient_data.uiambohandover;
