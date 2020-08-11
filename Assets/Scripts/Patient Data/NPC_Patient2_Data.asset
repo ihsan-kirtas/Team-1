@@ -18,8 +18,14 @@ MonoBehaviour:
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
-  PatientPrefab: {fileID: 141744480610468636, guid: 72312a80a02233e47b64c8904b219ba9,
-    type: 3}
+  uiambohandover: 'Patient was attacked in the middle of the night by an unknown
+    animal. He was and still is heavily inebriated so he''s not sure what exactly
+    happened but a chunk of 5 centimeters seems to be missing from the back of his
+    left leg calf region from a bite wound. He also says he is nauseous, unknown
+    time of injury as Peter is unable to tell us what time the incident occurred.
+    Time of call 01:30, ambulance arrived on scene at 02:00, time of arrival to hospital
+    02:30. '
+  patientdemographics: 'Name: Peter wilbourne   Age: 30    Gender:  Male   '
   ambulanceBayConversation:
   - amb 1
   - amb 2
@@ -50,6 +56,8 @@ MonoBehaviour:
   - Peter Other 3
   - Peter Other 4
   - Peter Other 5
+  currentobs: "Vital Signs: 110/70 HR: 118 Body temperature (35.5\xB0C) Pedal pulse
+    weak Dusky left leg Bleeding from behind left calf Pain score 7/10 "
   selfVentilating: 1
   oxygenInit: 95
   oxygenMod: 0.5
@@ -161,13 +169,23 @@ MonoBehaviour:
   hasInternalDevices: 0
   hasCannula: 0
   hasFever: 0
+  AMPLEtext: 'Allergies: Nil, Medications: Abacavir, dolutegravir, Past Medical History:
+    HIV, Last Meal Eaten: 17:00, Events Leading to Hospital Presentation: Found unconsious
+    after bringe drinking this afternoon, unknown amount of alcohol consumption.'
   allergies: []
   medicationList: []
   medicalHistoryList: []
-  lastMealTime: 19:00
+  lastMealTime: 17:00
   leadingEvents: Events leading to the presentation to hospital
-  triageScale: 0
+  triageScale: 3
   currentLocation: ' Un Assigned'
   patientActive: 1
   initValsAdded: 1
   character: {fileID: 0}
+  recommendations: 'Peter scored a Triage Score of 3. He is at risk of hypovolaemic
+    shock due to blood loss '
+  patienthospitaljourney: Peter when to the operating theatre to repair a venous
+    and artery that was severed during his dog bite. He was treated with antibiotics,
+    however post operative complications occured and Peter required a below the knee
+    amputation
+  clinicalReferences: 'For further information refer to the following: '
