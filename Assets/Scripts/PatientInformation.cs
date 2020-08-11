@@ -14,7 +14,8 @@ public class PatientInformation : MonoBehaviour
     public Text recommendedDecision;
     public Text patientJourney;
     public Text clinicalReasoning;
-
+    public Text triageScaleScore;
+    
 
 
     private void Start()
@@ -39,12 +40,15 @@ public class PatientInformation : MonoBehaviour
             recommendedDecision.text = patient_data.recommendations;
             patientJourney.text = patient_data.patienthospitaljourney;
             clinicalReasoning.text = patient_data.clinicalReferences;
-
+            triageScaleScore.text="Triage Score: "+ patient_data.triageScale.ToString();
 
         }
         else
         {
             patientname.text = "";
         }
+
+        
+        
     }
 }

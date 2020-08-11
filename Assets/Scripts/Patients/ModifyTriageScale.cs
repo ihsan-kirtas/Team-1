@@ -83,16 +83,14 @@ public class ModifyTriageScale : MonoBehaviour
     void setScale1()
     {
         SetTriageScale(1);
-        currentPatientData.currentLocation = "Resus Bay 1";
-        locationText.text = "Assigned to: Resus 1";
+  
        
     }
 
     void setScale2()
     {
         SetTriageScale(2);
-        currentPatientData.currentLocation = "Resus Bay 1";
-        locationText.text = "Assigned to: Resus 1";
+        
     }
 
     void setScale3()

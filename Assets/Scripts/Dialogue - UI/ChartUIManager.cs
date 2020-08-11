@@ -44,6 +44,7 @@ public class ChartUIManager : MonoBehaviour
         viewingChart = true;
 
         chartsMasterPanel.SetActive(true);
+        
     }
 
     void HideChartsUI()
