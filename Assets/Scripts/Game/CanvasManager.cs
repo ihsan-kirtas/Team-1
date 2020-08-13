@@ -19,4 +19,14 @@ public class CanvasManager : MonoBehaviour
 
     // Move patient panel
     public GameObject MovePatientPanel;
+
+    // Conversation available popup - "press C for convo"
+    public GameObject convoAvailablePanel;
+
+
+    private void Start()
+    {
+        // Turn off panels on start of game
+        convoAvailablePanel.SetActive(false);
+    }
 }

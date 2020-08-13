@@ -299,4 +299,11 @@ public class GameEvents : MonoBehaviour
         if (event_endContactPatient5 != null) { event_endContactPatient5(); }
     }
     public event Action event_endContactPatient5;
+
+    // -- C pressed (Show Conversation --
+    public void CPressed()
+    {
+        if (event_CPressed != null) { event_CPressed(); }
+    }
+    public event Action event_CPressed;
 }

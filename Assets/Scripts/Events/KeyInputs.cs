@@ -76,6 +76,14 @@ public class KeyInputs : MonoBehaviour
             //{
             //    GameEvents.current.HidePauseMenuUI();
             //}
+
+
+        }
+
+        // Start Convo - open dialogue box
+        if (Input.GetKeyDown("c"))
+        {
+            GameEvents.current.CPressed();
         }
     }
 }
