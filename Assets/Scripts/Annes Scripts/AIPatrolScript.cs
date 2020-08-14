@@ -13,8 +13,7 @@ public class AIPatrolScript : MonoBehaviour
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-               
+        agent = GetComponent<NavMeshAgent>();  
     }
 
     void Update()
@@ -24,7 +23,6 @@ public class AIPatrolScript : MonoBehaviour
         {
             StartCoroutine(assistantWaitTime());
         }
-
     }
 
 
@@ -32,14 +30,13 @@ public class AIPatrolScript : MonoBehaviour
     {
         agent.destination = assistantPosition.position;
 
-        if (agent.remainingDistance < 0.01)
+        if (agent.remainingDistance < 0.01f)
         {
             yield return new WaitForSeconds(10);
             agent.destination = startPosition.position;
             assistantTimer = 10f;
 
         }
-        
     }
 
      
