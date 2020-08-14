@@ -1,71 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Linq;
-using UnityEngine.Events;
 
 public class ChartUIManager : MonoBehaviour
 {
-    private GameObject chartsMasterPanel;
+    private GameObject gameManager;
+    private GameObject chartsMasterPanel;           
 
-    [Header("System / debug")]
-    private Patient_Data current_patient_data;
-    public bool viewingChart = true;
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        // Subscribe to events
-        GameEvents.current.event_showChartUI += ShowChartsUI;    // Show Charts UI
-        GameEvents.current.event_hideChartUI += HideChartsUI;    // Hide Charts UI
-
-        // link to charts panel
-        chartsMasterPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().chartsMasterPanel;
-
-        viewingChart = false;
-        chartsMasterPanel.SetActive(false);
+        GameEvents.current.event_spacePressed += SpacePressed;                              // SUBSCRIBE to Space Pressed event
+        gameManager = GameObject.Find("GameManager");                                       // Find GameManager
+        chartsMasterPanel = gameManager.GetComponent<CanvasManager>().chartsMasterPanel;    // Link Chart Master Panel
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe to events
-        GameEvents.current.event_showChartUI -= ShowChartsUI;
-        GameEvents.current.event_hideChartUI -= HideChartsUI;
+        GameEvents.current.event_spacePressed -= SpacePressed;                              // UN SUBSCRIBE
     }
 
-
-    void ShowChartsUI()
+    void SpacePressed()
     {
-        current_patient_data = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
-
-        // Toggle viewing chart bool
-        viewingChart = true;
-
-        chartsMasterPanel.SetActive(true);
-        
-    }
-
-    void HideChartsUI()
-    {
-        // Toggle viewing chart bool
-        viewingChart = false;
-        chartsMasterPanel.SetActive(false);
-
-        current_patient_data = null;
-    }
-
-
-
-    string generateTrackerString(List<float> tracker)
-    {
-        string return_str = "";
-        foreach (float ob in tracker)
+        if (chartsMasterPanel.activeSelf)                   // If this is already active
         {
-            return_str += System.Math.Round(ob).ToString() + " | ";
+            chartsMasterPanel.SetActive(false);             // Disable Charts Master Panel
+            GameEvents.current.CheckCameraLock();           // Checks wheather to Lock / Unlock Camera
         }
-        return return_str;
+        else
+        {
+            if (GameObject.Find("Player").GetComponent<DialogManager>().currentPatient != null)
+            {
+                chartsMasterPanel.SetActive(true);          // Activate the Chart Master Panel
+                GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
+
+            }
+            else
+            {
+                StartCoroutine(DisplayNoObsMessage());
+            }
+        }
     }
 
+    IEnumerator DisplayNoObsMessage()
+    {
+        gameManager.GetComponent<CanvasManager>().ObsNotAvailableAlert.SetActive(true);     // Show "No Charts" message
+        yield return new WaitForSeconds(2);                                                 // Wait 2 secods
+        gameManager.GetComponent<CanvasManager>().ObsNotAvailableAlert.SetActive(false);    // Hide Message
+    }
 }

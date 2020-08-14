@@ -27,7 +27,7 @@ public class DialogManager : MonoBehaviour
         // -- EVENT SUBSCRIPTIONS --
 
         // When the player presses C
-        GameEvents.current.event_CPressed += CPressed;
+        GameEvents.current.event_cPressed += CPressed;
 
         // Link the patients data to this script when player makes contact.
         GameEvents.current.event_startContactPatient1 += LinkToPatient1;
@@ -65,7 +65,7 @@ public class DialogManager : MonoBehaviour
         // -- EVENT UN-SUBSCRIPTIONS --
 
         // When the player presses C
-        GameEvents.current.event_CPressed -= CPressed;
+        GameEvents.current.event_cPressed -= CPressed;
 
         // Link the patients data to this script when player makes contact.
         GameEvents.current.event_startContactPatient1 -= LinkToPatient1;
@@ -131,7 +131,7 @@ public class DialogManager : MonoBehaviour
             if (dialogPanel.activeSelf)
             {
                 dialogPanel.SetActive(false);               // If the dialogue panel is already active then turn it off.
-                GameEvents.current.CheckCameraLock();           // Checks wheather to Lock / Unlock Camera
+                GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
             }
             else                                            // Dialogue panel isnt active, lets activate it.
             {

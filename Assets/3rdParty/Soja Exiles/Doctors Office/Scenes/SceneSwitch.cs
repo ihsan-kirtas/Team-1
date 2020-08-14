@@ -23,9 +23,9 @@ public class SceneSwitch : MonoBehaviour {
             SceneManager.LoadScene("Structure_02");
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    Application.Quit();
+        //}
     }
 }

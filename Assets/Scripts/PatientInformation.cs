@@ -25,7 +25,7 @@ public class PatientInformation : MonoBehaviour
     private void Start()
     {
 
-        patientname = GameObject.Find("PatientInformation_variableName").GetComponent<Text>();
+        //patientname = GameObject.Find("PatientInformation_variableName").GetComponent<Text>();
 
 
     }

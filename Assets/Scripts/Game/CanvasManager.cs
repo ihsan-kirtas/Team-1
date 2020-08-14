@@ -12,13 +12,23 @@ public class CanvasManager : MonoBehaviour
     public GameObject ObsNotAvailableAlert; // Notifies the player that they need to be near a patient to view their obs
     public GameObject MovePatientPanel;     // Move patient panel
     public GameObject convoAvailablePanel;  // Conversation available popup - "press C for convo"
+    public GameObject pauseMenuMasterPanel; // Pause menu panel - Triggered by Esc
+    public GameObject pauseMenuHomePage;    // Pause menu child
+    public GameObject pauseMenuSettingsPage;// Pause menu child
+
 
     private void Start()
     {
-        convoAvailablePanel.SetActive(false);                           // Turn off panels on start of game
+        // Hide all panels on start
+        dialogueUiPanel.SetActive(false);
+        chartsMasterPanel.SetActive(false);
+        ObsNotAvailableAlert.SetActive(false);
+        //MovePatientPanel.SetActive(false);
+        convoAvailablePanel.SetActive(false);
+        pauseMenuMasterPanel.SetActive(false);
+
         GameEvents.current.event_checkCameraLock += CheckLockState;     // Subscribe to check event
     }
-
 
     private void OnDestroy()
     {
@@ -29,7 +39,7 @@ public class CanvasManager : MonoBehaviour
     void CheckLockState()
     {
         // If there is an active panel
-        if(dialogueUiPanel.activeSelf || chartsMasterPanel.activeSelf)
+        if(dialogueUiPanel.activeSelf || chartsMasterPanel.activeSelf || pauseMenuMasterPanel.activeSelf)
         {
             // Lock the camera - UI Mode
             GameEvents.current.LockCamera();
