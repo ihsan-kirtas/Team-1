@@ -128,19 +128,30 @@ public class DialogManager : MonoBehaviour
         // If the player is actually at a patient
         if(currentPatient != null)
         {
-            npcNameText.text = currentPatient.name;     // Set The Dialog Box Patients Name
+            if (dialogPanel.activeSelf)
+            {
+                dialogPanel.SetActive(false);               // If the dialogue panel is already active then turn it off.
+                GameEvents.current.CheckCameraLock();           // Checks wheather to Lock / Unlock Camera
+            }
+            else                                            // Dialogue panel isnt active, lets activate it.
+            {
+                npcNameText.text = currentPatient.name;     // Set The Dialog Box Patients Name
 
-            // Select which conversation list to access based on which area the player is located in.
-            if (ZoneManager.inAmbulanceBay)
-            { conversation = new List<string>(currentPatient.ambulanceBayConversation); }
-            else if (ZoneManager.inBedsArea)
-            { conversation = new List<string>(currentPatient.bedsAreaConversation); }
-            else if (ZoneManager.inResus1 || ZoneManager.inResus2)
-            { conversation = new List<string>(currentPatient.resusBayConversation); }
-            else{ conversation = new List<string>(currentPatient.otherConversation); }
+                // Select which conversation list to access based on which area the player is located in.
+                if (ZoneManager.inAmbulanceBay)
+                { conversation = new List<string>(currentPatient.ambulanceBayConversation); }
+                else if (ZoneManager.inBedsArea)
+                { conversation = new List<string>(currentPatient.bedsAreaConversation); }
+                else if (ZoneManager.inResus1 || ZoneManager.inResus2)
+                { conversation = new List<string>(currentPatient.resusBayConversation); }
+                else { conversation = new List<string>(currentPatient.otherConversation); }
 
-            convoIndex = 0;                                 // Sets the conversation back to item 0 in the conversation.
-            dialogText.text = conversation[convoIndex];     // Update the current convo text being displayed.
+                convoIndex = 0;                                 // Sets the conversation back to item 0 in the conversation.
+                dialogText.text = conversation[convoIndex];     // Update the current convo text being displayed.
+                dialogPanel.SetActive(true);                    // Show the Dialogue Panel
+
+                GameEvents.current.CheckCameraLock();           // Checks wheather to Lock / Unlock Camera
+            }
         }
     }
 

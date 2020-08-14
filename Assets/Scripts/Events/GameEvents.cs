@@ -300,10 +300,36 @@ public class GameEvents : MonoBehaviour
     }
     public event Action event_endContactPatient5;
 
-    // -- C pressed (Show Conversation --
+
+
+
+
+    // -- C pressed (Show Conversation) --
     public void CPressed()
     {
         if (event_CPressed != null) { event_CPressed(); }
     }
     public event Action event_CPressed;
+
+    public void CheckCameraLock()  // Makes decision wherater to lock camera or not
+    {
+        if (event_checkCameraLock != null) { event_checkCameraLock(); }
+    }
+    public event Action event_checkCameraLock;
+
+    // -- Lock / Unlock UI --
+    public void LockCamera()    // For UI Mode
+    {
+        if (event_lockCamera != null) { event_lockCamera(); }
+    }
+    public event Action event_lockCamera;
+
+    public void UnlockCamera()  // For Game Mode
+    {
+        if (event_unlockCamera != null) { event_unlockCamera(); }
+    }
+    public event Action event_unlockCamera;
+
+
+
 }

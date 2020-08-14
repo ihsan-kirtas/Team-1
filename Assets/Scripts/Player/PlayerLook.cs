@@ -8,111 +8,59 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    // Set input names
-    private string mouseXInputName = "Mouse X";
-    private string mouseYInputName = "Mouse Y";
+    private string mouseXInputName = "Mouse X";     // For Input
+    private string mouseYInputName = "Mouse Y";     // For Input
+    private float mouseSensitivity = 150;           // Mouse sensitivity
+    private float xAxisClamp;                       // Stop looking too high or low
 
-    private float mouseSensitivity = 150;
+    private Transform playerBody;                   // Parent's body transform
 
-    // Parent's body transform
-    private Transform playerBody;
-
-    // Locks camera position while viewing UI
-    private bool moveCamera;
-
-    // Stop looking too high or low
-    private float xAxisClamp;
-
-
-    private GameObject dialogPanel;
-    private GameObject chartsMasterPanel;
-
+    private bool moveCamera;                        // Controls wheather to move or lock camera on update
 
     private void Awake()
     {
         playerBody = this.transform.parent;         // Attach parent's transform on script run
-        ActivateGameCamera();
+        UnlockCamera();                             // Unlock camera for start of game
         xAxisClamp = 0.0f;
     }
 
     private void Start()
     {
-        // Subscribe to events
-
-        // Camera - Activate UI Mode
-        //GameEvents.current.event_showChartUI += ActivateUICamera;           // Chart UI
-        GameEvents.current.event_showDialogueUI += ActivateUICamera;        // Dialogue UI
-        GameEvents.current.event_showPauseMenuUI += ActivateUICamera;       // Pause Menu UI
-
-        // Camera - Activate Game Mode
-        //GameEvents.current.event_hideChartUI += ActivateGameCamera;         // Chart UI
-        GameEvents.current.event_hideDialogueUI += ActivateGameCamera;      // Dialogue UI
-        GameEvents.current.event_hidePauseMenuUI += ActivateGameCamera;     // Pause Menu UI
-
-        // link panels
-        dialogPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().dialogueUiPanel;
-        chartsMasterPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().chartsMasterPanel;
-
-        // set cursor and cam to game mode
-        moveCamera = true;
-        Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen
-
+        // Lock / Unlock UI
+        // These events are broadcasted from the CanvasManager script
+        GameEvents.current.event_lockCamera += LockCamera;          // Lock UI - UI Mode
+        GameEvents.current.event_unlockCamera += UnlockCamera;      // Unlock UI - Game Mode
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe to events - OLD
-        //GameEvents.current.onUIActivated -= ActivateUICamera;
-        //GameEvents.current.onUIDeactivated -= ActivateGameCamera;
-
-
-
-        // Camera - Activate UI Mode
-        //GameEvents.current.event_showChartUI -= ActivateUICamera;           // Chart UI
-        GameEvents.current.event_showDialogueUI -= ActivateUICamera;        // Dialogue UI
-        GameEvents.current.event_showPauseMenuUI -= ActivateUICamera;       // Pause Menu UI
-
-        // Camera - Activate Game Mode
-        //GameEvents.current.event_hideChartUI -= ActivateGameCamera;         // Chart UI
-        GameEvents.current.event_hideDialogueUI -= ActivateGameCamera;      // Dialogue UI
-        GameEvents.current.event_hidePauseMenuUI -= ActivateGameCamera;     // Pause Menu UI
+        // Lock / Unlock UI
+        GameEvents.current.event_lockCamera -= LockCamera;          // Lock UI - UI Mode
+        GameEvents.current.event_unlockCamera -= UnlockCamera;      // Unlock UI - Game Mode
     }
-
-    // Switch camera mode to Game
-    void ActivateGameCamera()
-    {   
-
-        //Debug.Log("GAME CAMERA SETTIGS");
-        moveCamera = true;
-        Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen
-
-
-    }
-
-
-    // Switch camera mode to UI
-    void ActivateUICamera()
-    {
-        //Debug.Log("UI CAMERA SETTINGS");
-        moveCamera = false;
-        Cursor.lockState = CursorLockMode.None;   // Unlocks the cursor for UI buttons
-    }
-
-
 
     private void Update()
     {
-        if (moveCamera)
-        {
-            CameraRotation();
-        }
+        if (moveCamera){ CameraRotation(); }    // Apply camera rotations if allowed
     }
 
+    void LockCamera()       //UI Mode
+    {
+        moveCamera = false;                         // Locks the camera in one position
+        Cursor.lockState = CursorLockMode.None;     // Enables the cursor for UI, makes visible
+    }
+
+    void UnlockCamera()     // Game Mode
+    {
+        moveCamera = true;                          // Allow the camera to move
+        Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen and makes invisible
+    }
+
+    // Camera rotation controller
     private void CameraRotation()
     {
         float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
-
 
         // Clamp look angles
         xAxisClamp += mouseY;
