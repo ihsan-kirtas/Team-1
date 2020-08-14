@@ -2,226 +2,165 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
-// Setup steps
-// Tag player with "Player" Tag
-// Link UI Next button to Next function in inspector
-// Link UI Close button to StopDialog function in inspector
-
-// Unity's character controller will make clicking UI buttons a mess.
-
+// Script: James Siebert
 
 public class DialogManager : MonoBehaviour
 {
-    public List<GameObject> patientsList;
-    public Patient_Data currentPatient;
+    public Patient_Data currentPatient;         // The Patient_Data of the patient you are next to
 
-    private GameObject dialogPanel;
+    public List<GameObject> patientsList;       // List of all patients
+    
+    private GameObject gameManager;             // GameManager Object
 
-    private Text npcNameText;
-    private Text dialogText;
+    private GameObject dialogPanel;             // The Dialogue Panel
+    private GameObject convoAvailablePanel;     // The Conversation Available Notification
 
-    private List<string> conversation;
-    private int convoIndex;
-
+    private Text npcNameText;                   // Dialogue box NPC Name
+    private Text dialogText;                    // Dialogue box Conversation text
+    private List<string> conversation;          // Dialogue conversation list
+    private int convoIndex;                     // Dialogue index for setting the current message to show
+    
 
     void Start()
     {
-        // Subscribe to events
-        GameEvents.current.event_showDialogueUI += ShowDialoguePanel;   // maybe delete
-        GameEvents.current.event_hideDialogueUI += HideDialoguePanel;   // maybe delete
+        // -- EVENT SUBSCRIPTIONS --
 
+        // When the player presses C
+        GameEvents.current.event_CPressed += CPressed;
 
-        GameEvents.current.event_startContactPatient1 += startConvoPatient1;
-        GameEvents.current.event_startContactPatient2 += startConvoPatient2;
-        GameEvents.current.event_startContactPatient3 += startConvoPatient3;
-        GameEvents.current.event_startContactPatient4 += startConvoPatient4;
-        GameEvents.current.event_startContactPatient5 += startConvoPatient5;
+        // Link the patients data to this script when player makes contact.
+        GameEvents.current.event_startContactPatient1 += LinkToPatient1;
+        GameEvents.current.event_startContactPatient2 += LinkToPatient2;
+        GameEvents.current.event_startContactPatient3 += LinkToPatient3;
+        GameEvents.current.event_startContactPatient4 += LinkToPatient4;
+        GameEvents.current.event_startContactPatient5 += LinkToPatient5;
 
-        GameEvents.current.event_endContactPatient1 += endConvoPatientAll;
-        GameEvents.current.event_endContactPatient2 += endConvoPatientAll;
-        GameEvents.current.event_endContactPatient3 += endConvoPatientAll;
-        GameEvents.current.event_endContactPatient4 += endConvoPatientAll;
-        GameEvents.current.event_endContactPatient5 += endConvoPatientAll;
+        // Reset when the player breaks contact with the patient.
+        GameEvents.current.event_endContactPatient1 += UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient2 += UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient3 += UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient4 += UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient5 += UnLinkPatientsCommon;
 
+        // Link Game Manager
+        gameManager = GameObject.Find("GameManager");
 
-        // link panels
-        dialogPanel = GameObject.Find("GameManager").GetComponent<CanvasManager>().dialogueUiPanel;
+        // Link patients list
+        patientsList = gameManager.GetComponent<PatientManager>().allPatients;
 
-        patientsList = GameObject.Find("GameManager").GetComponent<PatientManager>().allPatients;
+        // Link pannels
+        dialogPanel = gameManager.GetComponent<CanvasManager>().dialogueUiPanel;
+        convoAvailablePanel = gameManager.GetComponent<CanvasManager>().convoAvailablePanel;
 
+        // Link Dialogue text - (Find only available when an object is active)
         dialogPanel.SetActive(true);
         npcNameText = GameObject.Find("Dialog_NPC_Name").GetComponent<Text>();
         dialogText = GameObject.Find("Dialog_Text").GetComponent<Text>();
-        dialogPanel.SetActive(false);                               // Sets the dialog panel to not active
+        dialogPanel.SetActive(false);
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe to events
-        GameEvents.current.event_showDialogueUI -= ShowDialoguePanel;   // Show dialogue
-        GameEvents.current.event_hideDialogueUI -= HideDialoguePanel;   // Hide Dialogue
+        // -- EVENT UN-SUBSCRIPTIONS --
 
+        // When the player presses C
+        GameEvents.current.event_CPressed -= CPressed;
 
+        // Link the patients data to this script when player makes contact.
+        GameEvents.current.event_startContactPatient1 -= LinkToPatient1;
+        GameEvents.current.event_startContactPatient2 -= LinkToPatient2;
+        GameEvents.current.event_startContactPatient3 -= LinkToPatient3;
+        GameEvents.current.event_startContactPatient4 -= LinkToPatient4;
+        GameEvents.current.event_startContactPatient5 -= LinkToPatient5;
 
-        GameEvents.current.event_startContactPatient1 -= startConvoPatient1;
-        GameEvents.current.event_startContactPatient2 -= startConvoPatient2;
-        GameEvents.current.event_startContactPatient3 -= startConvoPatient3;
-        GameEvents.current.event_startContactPatient4 -= startConvoPatient4;
-        GameEvents.current.event_startContactPatient5 -= startConvoPatient5;
-
-        GameEvents.current.event_endContactPatient1 -= endConvoPatientAll;
-        GameEvents.current.event_endContactPatient2 -= endConvoPatientAll;
-        GameEvents.current.event_endContactPatient3 -= endConvoPatientAll;
-        GameEvents.current.event_endContactPatient4 -= endConvoPatientAll;
-        GameEvents.current.event_endContactPatient5 -= endConvoPatientAll;
+        // Reset when the player breaks contact with the patient.
+        GameEvents.current.event_endContactPatient1 -= UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient2 -= UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient3 -= UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient4 -= UnLinkPatientsCommon;
+        GameEvents.current.event_endContactPatient5 -= UnLinkPatientsCommon;
     }
 
-    // Start dialogue setup
-    private void startConvoPatient1()
+    // Attach the NPC Data from the patient to this "currentPatient" variable. All scripts access the current patient from here
+    void LinkToPatient1()
     {
-        if (patientsList.Count > 0)
+        currentPatient = patientsList[0].GetComponent<NPC_Dialog>().NPC_Data;
+        LinkPatientsCommon();
+    }
+    void LinkToPatient2()
+    {
+        currentPatient = patientsList[1].GetComponent<NPC_Dialog>().NPC_Data;
+        LinkPatientsCommon();
+    }
+    void LinkToPatient3()
+    {
+        currentPatient = patientsList[2].GetComponent<NPC_Dialog>().NPC_Data;
+        LinkPatientsCommon();
+    }
+    void LinkToPatient4()
+    {
+        currentPatient = patientsList[3].GetComponent<NPC_Dialog>().NPC_Data;
+        LinkPatientsCommon();
+    }
+    void LinkToPatient5()
+    {
+        currentPatient = patientsList[4].GetComponent<NPC_Dialog>().NPC_Data;
+        LinkPatientsCommon();
+    }
+
+    // If player comes in contact with patient - Common Code
+    void LinkPatientsCommon()
+    {
+        convoAvailablePanel.SetActive(true);        // Shows the player that conversation is available if they want it
+    }
+    // If player breaks contact with patient - Common Code
+    void UnLinkPatientsCommon()
+    {
+        convoAvailablePanel.SetActive(false);       // Hides the Conversation available UI
+        currentPatient = null;                      // Unlinks the current patients data 
+        // Force Hide the dialogue if it is visible
+    }
+
+    // Player has signified they want to show the conversation available
+    private void CPressed()
+    {
+        // If the player is actually at a patient
+        if(currentPatient != null)
         {
-            currentPatient = patientsList[0].GetComponent<NPC_Dialog>().NPC_Data;
-            convoIndex = 0;
-            GameEvents.current.ShowDialogueUI();
-            Start_Dialog();
-        }
-    }
-    private void startConvoPatient2()
-    {
-        //Debug.Log("Patient 2 convo started");
-        if (patientsList.Count > 0)
-        {
-            currentPatient = patientsList[1].GetComponent<NPC_Dialog>().NPC_Data;
-            convoIndex = 0;
-            GameEvents.current.ShowDialogueUI();
-            Start_Dialog();
-        }
-    }
-    private void startConvoPatient3()
-    {
-        //Debug.Log("Patient 3 convo started");
-        if (patientsList.Count > 0)
-        {
-            currentPatient = patientsList[2].GetComponent<NPC_Dialog>().NPC_Data;
-            convoIndex = 0;
-            GameEvents.current.ShowDialogueUI();
-            Start_Dialog();
-        }
-    }
-    private void startConvoPatient4()
-    {
-        //Debug.Log("Patient 4 convo started");
-        if (patientsList.Count > 0)
-        {
-            currentPatient = patientsList[3].GetComponent<NPC_Dialog>().NPC_Data;
-            convoIndex = 0;
-            GameEvents.current.ShowDialogueUI();
-            Start_Dialog();
-        }
-    }
-    private void startConvoPatient5()
-    {
-        //Debug.Log("Patient 5 convo started");
-        if (patientsList.Count > 0)
-        {
-            currentPatient = patientsList[4].GetComponent<NPC_Dialog>().NPC_Data;
-            convoIndex = 0;
-            GameEvents.current.ShowDialogueUI();
-            Start_Dialog();
-        }
-    }
+            npcNameText.text = currentPatient.name;     // Set The Dialog Box Patients Name
 
-    // End dialogue
-    private void endConvoPatientAll()
-    {
-        //Debug.Log("All patient convo ended");
+            // Select which conversation list to access based on which area the player is located in.
+            if (ZoneManager.inAmbulanceBay)
+            { conversation = new List<string>(currentPatient.ambulanceBayConversation); }
+            else if (ZoneManager.inBedsArea)
+            { conversation = new List<string>(currentPatient.bedsAreaConversation); }
+            else if (ZoneManager.inResus1 || ZoneManager.inResus2)
+            { conversation = new List<string>(currentPatient.resusBayConversation); }
+            else{ conversation = new List<string>(currentPatient.otherConversation); }
 
-        GameEvents.current.HideDialogueUI();
-
-        currentPatient = null;
-    }
-
-
-
-
-
-    private void ShowDialoguePanel()
-    {
-        dialogPanel.SetActive(true);
-    }
-
-    private void HideDialoguePanel()
-    {
-        dialogPanel.SetActive(false);
-    }
-
-    // UI - Close Button
-    public void CloseButton()
-    {
-        // Calls Hide Dialogue event
-        GameEvents.current.HideDialogueUI();
-    }
-
-
-    public void Start_Dialog()
-    {
-        npcNameText.text = currentPatient.name;                            // Set the UI NPC name on the dialog box
-
-
-
-        // Which convsersation to use based on players location
-        if (ZoneManager.inAmbulanceBay)
-        {
-            conversation = new List<string>(currentPatient.ambulanceBayConversation);
-        }
-        else if (ZoneManager.inBedsArea)
-        {
-            conversation = new List<string>(currentPatient.bedsAreaConversation);
-        }
-        else if (ZoneManager.inResus1 || ZoneManager.inResus2)
-        {
-            conversation = new List<string>(currentPatient.resusBayConversation);
-        }
-        else
-        {
-            conversation = new List<string>(currentPatient.otherConversation);
-        }
-
-
-        convoIndex = 0;                                             // The 1st thing in our list
-        ShowText();
-    }
-
-
-    public void StopDialog()
-    {
-        dialogPanel.SetActive(false);                               // Hide the dialog panel
-    }
-
-    private void ShowText()
-    {
-        dialogText.text = conversation[convoIndex];                 // Set the text to current part of the conversation.
-    }
-
-
-    public void Next()                                              // Increment convo to the next message
-    {
-        if (convoIndex < conversation.Count - 1)                    // Check the convo length before incrementing
-        {
-            convoIndex += 1;
-            ShowText();
+            convoIndex = 0;                                 // Sets the conversation back to item 0 in the conversation.
+            dialogText.text = conversation[convoIndex];     // Update the current convo text being displayed.
         }
     }
 
-    public void Previous()                                              // decrement convo to the previous message
+    // Display the next message in the convo
+    public void Next()
     {
-        if (convoIndex > 0)                                             // only go as low as 0
+        if (convoIndex < conversation.Count - 1)            // Check the convo length before incrementing
         {
-            convoIndex -= 1;
-            ShowText();
+            convoIndex += 1;                                // Increment the convo text list by 1.
+            dialogText.text = conversation[convoIndex];     // Update the current convo text being displayed.
+        }
+    }
+
+    // Display the previous message in the convo
+    public void Previous()
+    {
+        if (convoIndex > 0)                                 // Check the convo min before decementing.
+        {
+            convoIndex -= 1;                                // Decrement the convo text list by 1.
+            dialogText.text = conversation[convoIndex];     // Update the current convo text being displayed.
         }
     }
 }
