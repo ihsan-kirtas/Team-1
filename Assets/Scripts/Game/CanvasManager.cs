@@ -7,14 +7,15 @@ public class CanvasManager : MonoBehaviour
     // This is used as a master connection point for all UI.
     // Link the panels here once then reference panels here instead of in each script.
 
-    public GameObject dialogueUiPanel;      // Dialogue Main UI
-    public GameObject chartsMasterPanel;    // Charts main UI
-    public GameObject ObsNotAvailableAlert; // Notifies the player that they need to be near a patient to view their obs
-    public GameObject MovePatientPanel;     // Move patient panel
-    public GameObject convoAvailablePanel;  // Conversation available popup - "press C for convo"
-    public GameObject pauseMenuMasterPanel; // Pause menu panel - Triggered by Esc
-    public GameObject pauseMenuHomePage;    // Pause menu child
-    public GameObject pauseMenuSettingsPage;// Pause menu child
+    public GameObject dialogueUiPanel;          // Dialogue Main UI
+    public GameObject chartsMasterPanel;        // Charts main UI
+    public GameObject ObsNotAvailableAlert;     // Notifies the player that they need to be near a patient to view their obs
+    public GameObject ConvoNotAvailableAlert;   // No conversation available alert
+    public GameObject MovePatientPanel;         // Move patient panel
+    public GameObject convoAvailablePanel;      // Conversation available popup - "press C for convo"
+    public GameObject pauseMenuMasterPanel;     // Pause menu panel - Triggered by Esc
+    public GameObject pauseMenuHomePage;        // Pause menu child
+    public GameObject pauseMenuSettingsPage;    // Pause menu child
 
 
     private void Start()

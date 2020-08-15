@@ -9,7 +9,7 @@ public class KeyInputs : MonoBehaviour
         // Pause Menu UI
         if (Input.GetKeyDown("p"))
         {
-            GameEvents.current.EscapePressed();
+            GameEvents.current.PPressed();
         }
 
         // Charts UI

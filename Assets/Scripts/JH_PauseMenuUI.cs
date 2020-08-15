@@ -13,7 +13,7 @@ public class JH_PauseMenuUI : MonoBehaviour
 
     private void Start()
     {
-        GameEvents.current.event_escapePressed += EscapePressed;                                // SUBSCRIBE to Escape Pressed event
+        GameEvents.current.event_pPressed += PPressed;                                // SUBSCRIBE to Escape Pressed event
 
         gameManager = GameObject.Find("GameManager");                                           // Link Game Manager
         pauseMenuUIPanel = gameManager.GetComponent<CanvasManager>().pauseMenuMasterPanel;      // Main background panel
@@ -23,10 +23,10 @@ public class JH_PauseMenuUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameEvents.current.event_escapePressed -= EscapePressed;                                // UN SUBSCRIBE to Escape Pressed
+        GameEvents.current.event_pPressed -= PPressed;                                // UN SUBSCRIBE to Escape Pressed
     }
 
-    void EscapePressed()                            // Called on event_escapePressed
+    void PPressed()                            // Called on event_escapePressed
     {
         if (pauseMenuUIPanel.activeSelf) 
         { 

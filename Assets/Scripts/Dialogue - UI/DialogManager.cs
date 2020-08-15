@@ -153,6 +153,17 @@ public class DialogManager : MonoBehaviour
                 GameEvents.current.CheckCameraLock();           // Checks wheather to Lock / Unlock Camera
             }
         }
+        else
+        {
+            StartCoroutine(DisplayNoConvoMessage());
+        }
+    }
+
+    IEnumerator DisplayNoConvoMessage()
+    {
+        gameManager.GetComponent<CanvasManager>().ConvoNotAvailableAlert.SetActive(true);       // Show "No Charts" message
+        yield return new WaitForSeconds(2);                                                     // Wait 2 secods
+        gameManager.GetComponent<CanvasManager>().ConvoNotAvailableAlert.SetActive(false);      // Hide Message
     }
 
     // Display the next message in the convo
