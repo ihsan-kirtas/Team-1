@@ -24,6 +24,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject obsChartPagePanel;
     public GameObject initialObsPagePanel;
     public GameObject patientInfoPagePanel;
+    public GameObject chartsButtons;
 
 
     private void Start()
@@ -47,6 +48,7 @@ public class CanvasManager : MonoBehaviour
         initialObsPagePanel.SetActive(false);
         patientInfoPagePanel.SetActive(false);
 
+        chartsButtons.SetActive(true);
     }
 
     private void OnDestroy()

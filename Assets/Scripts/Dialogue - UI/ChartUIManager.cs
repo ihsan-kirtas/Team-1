@@ -30,8 +30,9 @@ public class ChartUIManager : MonoBehaviour
         {
             if (GameObject.Find("Player").GetComponent<DialogManager>().currentPatient != null)
             {
-                chartsMasterPanel.SetActive(true);          // Activate the Chart Master Panel
-                GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
+                chartsMasterPanel.SetActive(true);                                                  // Activate the Chart Master Panel
+                chartsMasterPanel.GetComponent<chartsUIPageManager>().SwitchPanel("patient info");  // Open the default page
+                GameEvents.current.CheckCameraLock();                                               // Checks wheather to Lock / Unlock Camera
             }
             else
             {

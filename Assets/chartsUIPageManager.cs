@@ -23,9 +23,6 @@ public class chartsUIPageManager : MonoBehaviour
         obsChartPage = gameManager.GetComponent<CanvasManager>().obsChartPagePanel;
         initialObsPage = gameManager.GetComponent<CanvasManager>().initialObsPagePanel;
         patientInfoPage = gameManager.GetComponent<CanvasManager>().patientInfoPagePanel;
-
-        // Set initial page to active
-        SwitchPanel("patient info");
     }
 
     // This switches the active page on the Charts UI. Designed to connect to the UI buttons
@@ -43,18 +40,24 @@ public class chartsUIPageManager : MonoBehaviour
         {
             case "results":
                 resultsPage.SetActive(true);
+                resultsPage.GetComponent<ResultsPageController>().UpdateResultsPage();    // Update the values
                 break;
             case "transfer":
                 patientTransferPage.SetActive(true);
+                patientTransferPage.GetComponent<PatientTransferPageController>().UpdatePatientTransferPage();    // Update the values
                 break;
             case "obs chart":
                 obsChartPage.SetActive(true);
+                obsChartPage.GetComponent<ObsChartPageController>().UpdateObsChartPage();    // Update the values
                 break;
             case "initial obs":
                 initialObsPage.SetActive(true);
+                initialObsPage.GetComponent<InitiallObsPageController>().UpdateInitialObsPage();    // Update the values
                 break;
             case "patient info":
                 patientInfoPage.SetActive(true);
+                patientInfoPage.GetComponent<PatientInformationPageController>().UpdatePatientInformationPage();    // Update the values
+
                 break;
             default:
                 Debug.LogError("Wrong page name entered on chart ui button");
