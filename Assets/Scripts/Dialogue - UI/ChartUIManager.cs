@@ -32,7 +32,6 @@ public class ChartUIManager : MonoBehaviour
             {
                 chartsMasterPanel.SetActive(true);          // Activate the Chart Master Panel
                 GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
-
             }
             else
             {
