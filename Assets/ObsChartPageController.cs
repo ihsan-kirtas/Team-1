@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ObsChartPageController : MonoBehaviour
 {
-    private Patient_Data currentPatientData;
-    private GameObject player;
+    private Patient_Data pd;
+    public GameObject player;
 
     //public Text patientname;
     public Text initialObsText;
@@ -14,9 +14,9 @@ public class ObsChartPageController : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player");     // Link player
+        //player = GameObject.Find("Player");     // Link player
 
-        initialObsText.text = "";
+        //initialObsText.text = "";
     }
 
     public void UpdateObsChartPage()
@@ -24,12 +24,12 @@ public class ObsChartPageController : MonoBehaviour
         Debug.Log("Update obs chart Page");
 
         // Update current patient Data
-        currentPatientData = player.GetComponent<DialogManager>().currentPatient;
+        pd = player.GetComponent<DialogManager>().currentPatient;
 
-        if (currentPatientData != null)
+        if (pd != null)
         {
             // Set Text
-            initialObsText.text = currentPatientData.uiambohandover;
+            //initialObsText.text = pd.uiambohandover;
 
         }
         else

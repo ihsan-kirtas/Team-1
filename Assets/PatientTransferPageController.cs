@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PatientTransferPageController : MonoBehaviour
 {
     private Patient_Data currentPatientData;
-    private GameObject player;
+    public GameObject player;
 
     //public Text patientname;
     public Text initialObsText;
@@ -14,9 +14,9 @@ public class PatientTransferPageController : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player");     // Link player
+        //player = GameObject.Find("Player");     // Link player
 
-        initialObsText.text = "";
+        //initialObsText.text = "";
     }
 
     public void UpdatePatientTransferPage()
@@ -29,7 +29,7 @@ public class PatientTransferPageController : MonoBehaviour
         if (currentPatientData != null)
         {
             // Set Text
-            initialObsText.text = currentPatientData.uiambohandover;
+            //initialObsText.text = currentPatientData.uiambohandover;
 
         }
         else

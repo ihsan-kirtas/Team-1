@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class ResultsPageController : MonoBehaviour
 {
-    private Patient_Data currentPatientData;
-    private GameObject player;
+    private Patient_Data pd;
+    public GameObject player;
 
     //public Text patientname;
-    public Text initialObsText;
+    public Text yourDecisionText;
+    public Text recommendedDecisionText; 
+    public Text patientJourneyText;
 
 
     private void Start()
     {
-        player = GameObject.Find("Player");     // Link player
+        //player = GameObject.Find("Player");     // Link player
 
-        initialObsText.text = "";
+        //yourDecisionText.text = "";
+        //recommendedDecisionText.text = "";
+        //patientJourneyText.text = "";
     }
 
     public void UpdateResultsPage()
@@ -24,17 +28,39 @@ public class ResultsPageController : MonoBehaviour
         Debug.Log("Update results Page");
 
         // Update current patient Data
-        currentPatientData = player.GetComponent<DialogManager>().currentPatient;
+        pd = player.GetComponent<DialogManager>().currentPatient;
 
-        if (currentPatientData != null)
+        if (pd != null)
         {
             // Set Text
-            initialObsText.text = currentPatientData.uiambohandover;
+            yourDecisionText.text = "";
+            recommendedDecisionText.text = "";
+            patientJourneyText.text = "";
 
         }
         else
         {
-            initialObsText.text = "";
+            yourDecisionText.text = BuildYourDecisionText();
+            recommendedDecisionText.text = BuildYourDecisionText();
+            patientJourneyText.text = pd.patienthospitaljourney;
         }
+    }
+
+    public string BuildYourDecisionText()
+    {
+        string returnString =
+            "Name: " + pd.name + "\n" +
+            " Include Triage score here";
+
+        return returnString;
+    }
+
+
+    public string BuildRecommendedDecisionText()
+    {
+        string returnString = pd.recommendations + "\n" +
+        " Include Clinical Reasoning here";
+
+        return returnString;
     }
 }

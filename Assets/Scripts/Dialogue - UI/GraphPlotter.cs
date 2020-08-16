@@ -21,9 +21,6 @@ public class GraphPlotter : MonoBehaviour
     public GameObject dataOwner;
 
 
-
-
-
     // Global
     public List<float> tracker;
 
@@ -56,9 +53,6 @@ public class GraphPlotter : MonoBehaviour
     {
         // Subscribe to events
         GameEvents.current.event_updatePatientData += UpdateValues;
-
-
-
 
         noDataAvailable.SetActive(true);
 
