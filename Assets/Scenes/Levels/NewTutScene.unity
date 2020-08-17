@@ -552,7 +552,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh633206
+  m_Name: pb_Mesh169844
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -715,7 +715,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh633024
+  m_Name: pb_Mesh169670
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4060,13 +4060,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1778202707657358824}
   - {fileID: 5187167334282556536}
-  - {fileID: 7079229921058016193}
+  - {fileID: 1778202707657358824}
   - {fileID: 992006253594992929}
+  - {fileID: 7079229921058016193}
   - {fileID: 273030279}
   - {fileID: 55078967}
   - {fileID: 809199095}
+  - {fileID: 2100689616}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4081,7 +4082,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh635762
+  m_Name: pb_Mesh172166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7222,7 +7223,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh632622
+  m_Name: pb_Mesh169304
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7827,7 +7828,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh634824
+  m_Name: pb_Mesh171290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9502,7 +9503,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh634646
+  m_Name: pb_Mesh171124
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14565,7 +14566,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh635320
+  m_Name: pb_Mesh171756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16880,7 +16881,7 @@ Transform:
   - {fileID: 1298870698}
   - {fileID: 1453769642}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &590560793
 GameObject:
@@ -18486,6 +18487,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c1eb55a3482f354283198744104572b, type: 3}
+--- !u!1 &633059899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633059900}
+  - component: {fileID: 633059902}
+  - component: {fileID: 633059901}
+  m_Layer: 5
+  m_Name: TutText2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &633059900
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633059899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2100689616}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.3, y: 2.3}
+  m_SizeDelta: {x: 1839.9, y: 355.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &633059901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633059899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c9cf06aac2100a84ea339991e5ce36c0, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Here is the Ambulance Offload Bay.\r\nPatients are handed over from Ambulance
+    Officers here.\r\n\r\nYou will get a full handover of why the paitent presented
+    to hospital.\r\n\r\nThis is where you would give the patient a triage score,
+    press Space Bar on the keyboard to triage your patient from here they will either
+    be moved into the Bed Space Area or the Resuscitation Bay, press Space Bar again
+    to close the Triage Score.\r\n\r\nCheck on the triage scale on the wall next
+    to you if you need clarification on what triage category could fit your patient
+    the best. \r\n\r\nTo exit prompt press the key Q\r\n"
+--- !u!222 &633059902
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633059899}
+  m_CullTransparentMesh: 0
 --- !u!1001 &633125016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21620,6 +21705,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 758580280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &759074091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759074092}
+  - component: {fileID: 759074094}
+  - component: {fileID: 759074093}
+  m_Layer: 5
+  m_Name: TutText1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &759074092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759074091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2100689616}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.3, y: 2.3}
+  m_SizeDelta: {x: 1839.9, y: 355.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &759074093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759074091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c9cf06aac2100a84ea339991e5ce36c0, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "You have been assigned as the Registered Nurse to triage, and start treatment
+    for patients in a busy Emergency Room. \r\n\r\nPress the C key to have a conversation
+    with other health care professionals.\r\n\r\nPress the P key to pause the game.
+    \r\n\r\nUse the WASD keys on your keyboard and mouse and look around. Press the
+    P key to go back to the main menu and to exit the tutorial prompts press Q. \r\n"
+--- !u!222 &759074094
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759074091}
+  m_CullTransparentMesh: 0
 --- !u!1 &764244255
 GameObject:
   m_ObjectHideFlags: 0
@@ -24824,7 +24990,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh634224
+  m_Name: pb_Mesh170758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26040,6 +26206,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 960536403}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &967706222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967706223}
+  - component: {fileID: 967706225}
+  - component: {fileID: 967706224}
+  m_Layer: 5
+  m_Name: TutText6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &967706223
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967706222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2100689616}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.7, y: -49.4}
+  m_SizeDelta: {x: 1823.8, y: 183.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &967706224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967706222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c9cf06aac2100a84ea339991e5ce36c0, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Congratulations you have finished the tutorial.
+
+    
+
+    Press P key
+    and start the game or to exit prompt press the key Q.
+
+'
+--- !u!222 &967706225
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967706222}
+  m_CullTransparentMesh: 0
 --- !u!1001 &969986878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29671,7 +29921,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh635236
+  m_Name: pb_Mesh171678
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34356,7 +34606,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh633250
+  m_Name: pb_Mesh169888
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34611,7 +34861,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh635956
+  m_Name: pb_Mesh172336
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34774,7 +35024,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh632480
+  m_Name: pb_Mesh169170
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36093,7 +36343,7 @@ Transform:
   m_LocalScale: {x: 4.059739, y: 1, z: 3.2041864}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1263075345
 GameObject:
@@ -36266,6 +36516,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266514064}
   m_Mesh: {fileID: -764453047935165280, guid: dcc7b7076d4c64d41ad5c46eae8dbdd9, type: 3}
+--- !u!1 &1266637112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266637113}
+  - component: {fileID: 1266637115}
+  - component: {fileID: 1266637114}
+  m_Layer: 5
+  m_Name: TutText4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1266637113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266637112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2100689616}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.7, y: -49.4}
+  m_SizeDelta: {x: 1823.8, y: 183.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1266637114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266637112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c9cf06aac2100a84ea339991e5ce36c0, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\rThe Resuscitation Bays 1 and 2 are located ahead. \r\n\r\nIf your patient
+    is Triaged a score of 1 or 2 the patient will be transported to here for treatment.\r\n\r\nTo
+    exit prompt press the key Q.\r\n"
+--- !u!222 &1266637115
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266637112}
+  m_CullTransparentMesh: 0
 --- !u!1 &1266742693
 GameObject:
   m_ObjectHideFlags: 0
@@ -37092,7 +37421,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh632684
+  m_Name: pb_Mesh169366
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37670,6 +37999,145 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1306123028}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1308050982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3578617017215073891, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: tutText
+      value: 
+      objectReference: {fileID: 967706222}
+    - target: {fileID: 3578617017215073891, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: uiTextObject
+      value: 
+      objectReference: {fileID: 2100689615}
+    - target: {fileID: 3578617017427558380, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: uiTextObject
+      value: 
+      objectReference: {fileID: 2100689615}
+    - target: {fileID: 3578617017427558380, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: tutText
+      value: 
+      objectReference: {fileID: 633059899}
+    - target: {fileID: 3578617017685639224, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: uiTextObject
+      value: 
+      objectReference: {fileID: 2100689615}
+    - target: {fileID: 3578617017685639224, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: tutText
+      value: 
+      objectReference: {fileID: 759074091}
+    - target: {fileID: 3578617017685639228, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617017685639228, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.8100686
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.734147
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1442413
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944882, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018178944885, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: m_Name
+      value: TutorialTriggerManager Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578617018433041472, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: uiTextObject
+      value: 
+      objectReference: {fileID: 2100689615}
+    - target: {fileID: 3578617018433041472, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: tutText
+      value: 
+      objectReference: {fileID: 1790804829}
+    - target: {fileID: 3578617018492506139, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: uiTextObject
+      value: 
+      objectReference: {fileID: 2100689615}
+    - target: {fileID: 3578617018492506139, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: tutText
+      value: 
+      objectReference: {fileID: 1266637112}
+    - target: {fileID: 3578617018524030831, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: uiTextObject
+      value: 
+      objectReference: {fileID: 2100689615}
+    - target: {fileID: 3578617018524030831, guid: ca2af14c787fca64fbb75b7c67682747,
+        type: 3}
+      propertyPath: tutText
+      value: 
+      objectReference: {fileID: 1864805814}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca2af14c787fca64fbb75b7c67682747, type: 3}
 --- !u!1001 &1308343868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38493,7 +38961,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh632594
+  m_Name: pb_Mesh169280
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39154,7 +39622,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh634432
+  m_Name: pb_Mesh170934
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41537,7 +42005,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh634806
+  m_Name: pb_Mesh171272
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45037,7 +45505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh635790
+  m_Name: pb_Mesh172194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45608,7 +46076,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh633400
+  m_Name: pb_Mesh170012
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52951,6 +53419,93 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1786796558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1790804829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790804830}
+  - component: {fileID: 1790804832}
+  - component: {fileID: 1790804831}
+  m_Layer: 5
+  m_Name: TutText5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1790804830
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790804829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2100689616}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.7, y: -49.4}
+  m_SizeDelta: {x: 1823.8, y: 183.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1790804831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790804829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c9cf06aac2100a84ea339991e5ce36c0, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'This area is Resuscitation Bay 1.
+
+    Located here are lots of medical
+    equipment that can be used to save your patients life.
+
+    
+
+    To exit prompt
+    press the key Q.
+
+'
+--- !u!222 &1790804832
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790804829}
+  m_CullTransparentMesh: 0
 --- !u!1 &1794147187
 GameObject:
   m_ObjectHideFlags: 0
@@ -60000,6 +60555,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1859863420}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1864805814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864805815}
+  - component: {fileID: 1864805817}
+  - component: {fileID: 1864805816}
+  m_Layer: 5
+  m_Name: TutText3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1864805815
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864805814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2100689616}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.7, y: -49.4}
+  m_SizeDelta: {x: 1823.8, y: 183.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1864805816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864805814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c9cf06aac2100a84ea339991e5ce36c0, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\rLocated here are the patient rooms, once you allocate a Triage score
+    to your patient, depending on their score they will come here or to the Resus
+    Bay. \r\n\r\nTo exit prompt press the key Q.\r\n"
+--- !u!222 &1864805817
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864805814}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1865597799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64547,7 +65181,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh635718
+  m_Name: pb_Mesh172130
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -66522,7 +67156,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh634878
+  m_Name: pb_Mesh171340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -66679,6 +67313,85 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2100689615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100689616}
+  - component: {fileID: 2100689618}
+  - component: {fileID: 2100689617}
+  m_Layer: 5
+  m_Name: TutuorialImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2100689616
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100689615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 759074092}
+  - {fileID: 633059900}
+  - {fileID: 1864805815}
+  - {fileID: 1266637113}
+  - {fileID: 1790804830}
+  - {fileID: 967706223}
+  m_Father: {fileID: 115937456}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.5, y: -328.3}
+  m_SizeDelta: {x: 1894.7, y: 384.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2100689617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100689615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 81ca1357c782c5049bc9f8823244c839, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2100689618
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100689615}
+  m_CullTransparentMesh: 0
 --- !u!1 &2107015842
 GameObject:
   m_ObjectHideFlags: 0
@@ -68976,7 +69689,7 @@ RectTransform:
   - {fileID: 2603495684548921409}
   - {fileID: 1652721807566172426}
   m_Father: {fileID: 115937456}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -74108,7 +74821,7 @@ RectTransform:
   - {fileID: 5187167335351721534}
   - {fileID: 1437452237}
   m_Father: {fileID: 115937456}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -75012,7 +75725,7 @@ PrefabInstance:
     - target: {fileID: 9142675354629785598, guid: f89e0f47e2bb5254e9155e98bb5bf70e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9142675354629785598, guid: f89e0f47e2bb5254e9155e98bb5bf70e,
         type: 3}
@@ -75195,7 +75908,7 @@ PrefabInstance:
     - target: {fileID: 5950228153019338217, guid: 7b80bf09a55004c4ca03892152df8914,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5950228153019338217, guid: 7b80bf09a55004c4ca03892152df8914,
         type: 3}
