@@ -86,86 +86,101 @@ MonoBehaviour:
   oxygenMod: 3
   oxygenTracker:
   - 100
-  - 3130
-  - 3133
-  - 3136
-  - 3139
-  - 3142
-  - 3145
-  - 3148
-  - 3151
-  - 3154
+  - 3172
+  - 3175
+  - 3178
+  - 3181
+  - 3184
+  - 3187
+  - 3190
+  - 3193
+  - 3196
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
-  - 520
-  - 520.5
-  - 521
-  - 521.5
-  - 522
-  - 522.5
-  - 523
-  - 523.5
-  - 524
-  accessoryMuscles: 1
-  bloodPressureSystolicInit: 140
+  - 527
+  - 527.5
+  - 528
+  - 528.5
+  - 529
+  - 529.5
+  - 530
+  - 530.5
+  - 531
+  accessoryMuscles: 0
+  bloodPressureSystolicInit: 130
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
-  - 645
-  - 645.5
-  - 646
-  - 646.5
-  - 647
-  - 647.5
-  - 648
-  - 648.5
-  - 649
-  bloodPressureDiastolicInit: 90
+  - 652
+  - 652.5
+  - 653
+  - 653.5
+  - 654
+  - 654.5
+  - 655
+  - 655.5
+  - 656
+  bloodPressureDiastolicInit: 88
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
-  - 595
-  - 595.5
-  - 596
-  - 596.5
-  - 597
-  - 597.5
-  - 598
-  - 598.5
-  - 599
-  pulseRateInit: 70
+  - 602
+  - 602.5
+  - 603
+  - 603.5
+  - 604
+  - 604.5
+  - 605
+  - 605.5
+  - 606
+  pulseRateInit: 60
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
-  - 575
-  - 575.5
-  - 576
-  - 576.5
-  - 577
-  - 577.5
-  - 578
-  - 578.5
-  - 579
+  - 582
+  - 582.5
+  - 583
+  - 583.5
+  - 584
+  - 584.5
+  - 585
+  - 585.5
+  - 586
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 507
-  - 507.5
-  - 508
-  - 508.5
-  - 509
-  - 509.5
-  - 510
-  - 510.5
-  - 511
+  - 514
+  - 514.5
+  - 515
+  - 515.5
+  - 516
+  - 516.5
+  - 517
+  - 517.5
+  - 518
   glasgowComaScaleInit: 11
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
+  - 524
+  - 524.5
+  - 525
+  - 525.5
+  - 526
+  - 526.5
+  - 527
+  - 527.5
+  - 528
+  pupilReactionInit: 4
+  pupilReactionMod: 0.5
+  pupilReactionTracker:
+  - 4
+  - 516
+  - 516.5
   - 517
   - 517.5
   - 518
@@ -173,24 +188,9 @@ MonoBehaviour:
   - 519
   - 519.5
   - 520
-  - 520.5
-  - 521
-  pupilReactionInit: 4
-  pupilReactionMod: 0.5
-  pupilReactionTracker:
-  - 4
-  - 509
-  - 509.5
-  - 510
-  - 510.5
-  - 511
-  - 511.5
-  - 512
-  - 512.5
-  - 513
   repetitiveQuestining: 1
-  hasInternalDevices: 1
-  hasCannula: 1
+  hasInternalDevices: 0
+  hasCannula: 0
   hasFever: 0
   AMPLEtext: 'Allergies: Nil Known Allergies, Medications: Salbutamol, Past Medical
     History: Asthma, Last Meal Eater: 19:00, Events Leading to the presentation to
