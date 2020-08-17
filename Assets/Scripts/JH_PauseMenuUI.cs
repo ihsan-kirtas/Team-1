@@ -10,6 +10,7 @@ public class JH_PauseMenuUI : MonoBehaviour
     private GameObject pauseMenuUIPanel;             // This is for the panel that is used to darken the screen when the game is paused. The Pause Menu UI is under this.
     private GameObject pauseMenuUI;                  // This is the Pause Menu UI which is under the panel - connect this to PauseMenuUIBackground in Unity
     private GameObject settingsMenuUI;               // Connect this to SettingMenuUIBackground in Unity
+    private GameObject terminologyPageUI;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class JH_PauseMenuUI : MonoBehaviour
         pauseMenuUIPanel = gameManager.GetComponent<CanvasManager>().pauseMenuMasterPanel;      // Main background panel
         pauseMenuUI = gameManager.GetComponent<CanvasManager>().pauseMenuHomePage;              // Pause menu home page
         settingsMenuUI = gameManager.GetComponent<CanvasManager>().pauseMenuSettingsPage;       // Pause menu settings page
+        terminologyPageUI = gameManager.GetComponent<CanvasManager>().terminologyPage;          // Medical terminology page
     }
 
     private void OnDestroy()
@@ -84,9 +86,21 @@ public class JH_PauseMenuUI : MonoBehaviour
         settingsMenuUI.SetActive(true);             // Turn ON Settings BG panel
     }
 
-    public void ReturnToPauseMenu()                 // SWITCH PAGES
+    public void SettingsReturnToPauseMenu()         // SWITCH PAGES
     {
         settingsMenuUI.SetActive(false);            // Turn OFF Settings BG panel
+        pauseMenuUI.SetActive(true);                // Turn ON Pause BG panel
+    }
+
+    public void TerminologyPage()                   // SWITCH PAGES
+    {
+        pauseMenuUI.SetActive(false);               // Turn OFF Pause BG panel
+        terminologyPageUI.SetActive(true);          // Turn ON Terminology BG panel
+    }
+
+    public void TerminologyReturnToPauseMenu()      // SWITCH PAGES
+    {
+        terminologyPageUI.SetActive(false);         // Turn OFF Terminology BG panel
         pauseMenuUI.SetActive(true);                // Turn ON Pause BG panel
     }
 

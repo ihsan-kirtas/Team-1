@@ -15,6 +15,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject pauseMenuMasterPanel;     // Pause menu panel - Triggered by Esc
     public GameObject pauseMenuHomePage;        // Pause menu child
     public GameObject pauseMenuSettingsPage;    // Pause menu child
+    public GameObject terminologyPage;          // Pause menu child - currently using a stand in
 
     // Charts UI
     public GameObject chartsMasterPanel;        // Charts main UI
