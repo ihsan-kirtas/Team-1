@@ -7,63 +7,74 @@ using System.Linq;
 
 public class GraphPlotter : MonoBehaviour
 {
-
-    [SerializeField] private Sprite circleSprite;       // Serialized So you can set in the editor
     public RectTransform graphContainer;
-
-    public Patient_Data currentPatientData;
-
     public List<GameObject> currentGraphObjects;
-
     public Color lineColor;
+    public GameObject noDataAvailableMessage;
 
-    public GameObject noDataAvailable;
-    public GameObject dataOwner;
-
-
-    // Global
+    
     public List<float> tracker;
+    private Patient_Data currentPatientData;
 
-    public Text maxValue;
-    public Text HighValue;
-    public Text LowValue;
-    public Text MinValue;
 
-    private string chartName;
+    private int heightSegments;
+    private int widthSegments = 21;
 
     // Graph limits and zones
     private float graphMax;
-    private float graphHigh;
-    private float graphLow;
+    private float graphHighMax;
+    private float graphHighMin;
+    private float graphLowMax;
+    private float graphLowMin;
     private float graphMin;
 
+    private int maxZoneBoxStart;
+    private int maxZoneBoxSpan;
+    private int highZoneBoxStart;
+    private int highZoneBoxSpan;
+    private int normalZoneBoxStart;
+    private int normalZoneBoxSpan;
+    private int lowZoneBoxStart;
+    private int lowZoneBoxSpan;
+    private int MinZoneBoxStart;
+    private int MinZoneBoxSpan;
 
-    // Which chart are you using - 1 only
-    public bool usingBloodPressureDiastolicTracker;
-    public bool usingBloodPressureSystolicTracker;
-    public bool usingOxygenTracker;
+
+
+    
+
+
+    [Header("Choose Chart - Tick only 1")]
     public bool usingBreathRateTracker;
-    public bool usingPulseRateTracker;
-    public bool usingCapillaryRefillTracker;
-    public bool usingGlasgowComaScaleTracker;
-    public bool usingPupilReactionTracker;
+
+    private bool usingBloodPressureDiastolicTracker;
+    private bool usingBloodPressureSystolicTracker;
+    private bool usingOxygenTracker;
+    private bool usingPulseRateTracker;
+    private bool usingCapillaryRefillTracker;
+    private bool usingGlasgowComaScaleTracker;
+    private bool usingPupilReactionTracker;
 
 
     private void Start()
     {
         // Subscribe to events
-        GameEvents.current.event_updatePatientData += UpdateValues;
+        //GameEvents.current.event_updatePatientData += UpdateValues;
 
-        noDataAvailable.SetActive(true);
+        //noDataAvailable.SetActive(true);
 
         // Draws the borders, zones and guide lines.
-        DrawBorders();
+        //DrawBorders();
+
+        
+        SetGraphBGData();   // Sets the chart BG and value data (only needed once)
+        DrawBackground();   // Draws the Chart BG
     }
 
     private void OnDestroy()
     {
         // Unsubscribe to events
-        GameEvents.current.event_updatePatientData -= UpdateValues;
+        //GameEvents.current.event_updatePatientData -= UpdateValues;
     }
 
     private void UpdateValues()
@@ -82,18 +93,12 @@ public class GraphPlotter : MonoBehaviour
         currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
 
 
-        noDataAvailable.SetActive(false);
-        dataOwner.SetActive(false);
+        noDataAvailableMessage.SetActive(false);
 
 
 
         if (currentPatientData != null)
         {
-
-            dataOwner.GetComponent<Text>().text = currentPatientData.name;
-
-            // Sets variables for the specific chart.   Max, High, Low, Min & the tracker data to use.
-            SetTrackerData();
 
             float listLength = tracker.Count;
             float xSpacingPercentage = 0.1f;
@@ -106,9 +111,6 @@ public class GraphPlotter : MonoBehaviour
 
 
             string currentValue = tracker.Last().ToString();
-
-            dataOwner.GetComponent<Text>().text = chartName + " | " + GameObject.Find("Player").GetComponent<DialogManager>().currentPatient.name + " | " + currentValue;
-            dataOwner.SetActive(true);
 
 
 
@@ -139,17 +141,91 @@ public class GraphPlotter : MonoBehaviour
         {
             Debug.Log("NO GRAPH DATA AVAILABLE");
 
-            noDataAvailable.SetActive(true);
+            noDataAvailableMessage.SetActive(true);
 
         }
     }
+
+
+    void DrawBackground()
+    {
+        Debug.Log("background called");
+
+        // Build layers in REVERSE ORDER: CreateBox(name, start at segment 8, spans how many segments)
+        CreateBox("maxZoneBox", maxZoneBoxStart, maxZoneBoxSpan);
+        CreateBox("highZoneBox", highZoneBoxStart, highZoneBoxSpan);
+        CreateBox("normalZoneBox", normalZoneBoxStart, normalZoneBoxSpan);
+        CreateBox("lowZoneBox", lowZoneBoxStart, lowZoneBoxSpan);
+        CreateBox("MinZoneBox", MinZoneBoxStart, MinZoneBoxSpan);
+    }
+
+    // Draw Background Boxes
+    GameObject CreateBox(string boxName, int start_seg, int span)
+    {
+        Debug.Log("create box initiated");
+
+
+        GameObject box = new GameObject(boxName, typeof(Image));           // Create GO
+        box.transform.SetParent(graphContainer, false);                    // Sets parent to this graph GO
+
+
+
+
+        // Set color
+        Color chartRed = new Color(1f, 0f, 0f, 0.5f);
+        Color chartYellow = new Color(1f, 1f, 0f, 0.5f);
+        Color chartNormal = new Color(1f, 1f, 1f, 0.5f);
+        if (boxName == "maxZoneBox")
+        { box.GetComponent<Image>().color = chartRed; }
+        else if(boxName == "highZoneBox")
+        { box.GetComponent<Image>().color = chartYellow; }
+        else if (boxName == "normalZoneBox")
+        { box.GetComponent<Image>().color = chartNormal; }
+        else if (boxName == "lowZoneBox")
+        { box.GetComponent<Image>().color = chartYellow; }
+        else if (boxName == "MinZoneBox")
+        { box.GetComponent<Image>().color = chartRed; }
+        else  //Error
+        { box.GetComponent<Image>().color = Color.magenta; }
+
+
+        float segmentSize = graphContainer.sizeDelta.y / heightSegments;
+
+        RectTransform box_rt = box.GetComponent<RectTransform>();
+
+
+        float startPosY = (segmentSize * start_seg) - (span*segmentSize);               // Bottom Left of box
+        box_rt.anchoredPosition = new Vector2(0,startPosY);                             // Set Position
+          
+        box_rt.sizeDelta = new Vector2(graphContainer.sizeDelta.x, span*segmentSize);   // Set size
+
+        box_rt.anchorMin = new Vector2(0, 0);                                           // Set Anchors
+        box_rt.anchorMax = new Vector2(0, 0);
+        box_rt.pivot = new Vector2(0, 0);
+
+
+
+        return box;
+    }
+
+
+    void drawData()
+    {
+
+    }
+
+    void PlotPoint_(int xSegment, int ySegment)
+    {
+
+    }
+
+
 
     private GameObject PlotPoint(Vector2 position)
     {
         GameObject gameObject = new GameObject("circle", typeof(Image));                // Create a new game object, Type: Image, name: circle
         currentGraphObjects.Add(gameObject);                                            // Add new object to list so they can all be deleted on refresh
         gameObject.transform.SetParent(graphContainer, false);                          // Make circle a child of the graph container
-        gameObject.GetComponent<Image>().sprite = circleSprite;                         // Set the gameobjects sprite to the circle sptite
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get the rect transform
         rectTransform.anchoredPosition = position;                                      // Set a new position for that rect transform
         rectTransform.sizeDelta = new Vector2(11, 11);                                  // ?? size delta ??
@@ -160,23 +236,6 @@ public class GraphPlotter : MonoBehaviour
         return gameObject;                                                              // Returns the game object so we can use it to make the connecting lines.
     }
 
-    private void DrawBorders()
-    {
-
-        // Max Limit
-
-        // High Zone
-
-        // Normal Zone
-
-        // Low Zone
-
-        // Min Limit
-
-        // Guide Lines
-
-        // Outside borders
-    }
 
     private void LinkPoints(Vector2 pointPosA, Vector2 pointPosB)
     {
@@ -198,87 +257,151 @@ public class GraphPlotter : MonoBehaviour
         rectTransform.localEulerAngles = new Vector3(0, 0, angle);                      // Apply angle to new line
     }
 
-    private void SetTrackerData()
+    private void SetGraphBGData()
     {
+        if (usingBreathRateTracker)
+        {
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+
+            heightSegments = 8;      // How many segments should the chart be broken into
+
+            maxZoneBoxStart = 8;    // Start segment from top down
+            maxZoneBoxSpan = 2;     // spans for x segments
+            highZoneBoxStart = 6;
+            highZoneBoxSpan = 1;
+            normalZoneBoxStart = 5;
+            normalZoneBoxSpan = 2;
+            lowZoneBoxStart = 3;
+            lowZoneBoxSpan = 1;
+            MinZoneBoxStart = 2;
+            MinZoneBoxSpan = 2;
+        }
+
+
+
+
+
+
 
         if (usingBloodPressureDiastolicTracker)
         {
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
 
-            graphMax = 180;
-            graphHigh = 140;
-            graphLow = 60;
-            graphMin = 50;
-            tracker = currentPatientData.bloodPressureDiastolicTracker;
-            chartName = "Blood Pressure Diastolic";
+            //graphMax = 180;
+            //graphHigh = 140;
+            //graphLow = 60;
+            //graphMin = 50;
+
         }
         if (usingBloodPressureSystolicTracker)
         {
-            graphMax = 200;
-            graphHigh = 160;
-            graphLow = 110;
-            graphMin = 80;
-            tracker = currentPatientData.bloodPressureSystolicTracker;
-            chartName = "Blood Pressure Systolic";
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
+
+            //graphMax = 200;
+            //graphHigh = 160;
+            //graphLow = 110;
+            //graphMin = 80;
+
+
         }
         if (usingOxygenTracker)
         {
-            graphMax = 150;
-            graphHigh = 130;
-            graphLow = 60;
-            graphMin = 50;
-            tracker = currentPatientData.oxygenTracker;
-            chartName = "Oxygen";
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
+
+            //graphMax = 150;
+            //graphHigh = 130;
+            //graphLow = 60;
+            //graphMin = 50;
+
         }
-        if (usingBreathRateTracker)
-        {
-            graphMax = 40;
-            graphHigh = 30;
-            graphLow = 10;
-            graphMin = 5;
-            tracker = currentPatientData.breathRateTracker;
-            chartName = "Breath Rate";
-        }
+
 
         if (usingPulseRateTracker)
         {
-            graphMax = 200;
-            graphHigh = 150;
-            graphLow = 50;
-            graphMin = 20;
-            tracker = currentPatientData.pulseRateTracker;
-            chartName = "Pulse Rate";
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
+
+            //graphMax = 200;
+            //graphHigh = 150;
+            //graphLow = 50;
+            //graphMin = 20;
+
         }
         if (usingCapillaryRefillTracker)
         {
-            graphMax = 10;
-            graphHigh = 5;
-            graphLow = 1;
-            graphMin = 0;
-            tracker = currentPatientData.capillaryRefillTracker;
-            chartName = "Capillary Refill";
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
+
+            //graphMax = 10;
+            //graphHigh = 5;
+            //graphLow = 1;
+            //graphMin = 0;
+
         }
         if (usingGlasgowComaScaleTracker)
         {
-            graphMax = 30;
-            graphHigh = 20;
-            graphLow = 5;
-            graphMin = 1;
-            tracker = currentPatientData.glasgowComaScaleTracker;
-            chartName = "Glasgow Coma Scale";
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
+
+            //graphMax = 30;
+            //graphHigh = 20;
+            //graphLow = 5;
+            //graphMin = 1;
+
         }
         if (usingPupilReactionTracker)
         {
-            graphMax = 10;
-            graphHigh = 8;
-            graphLow = 2;
-            graphMin = 0;
-            tracker = currentPatientData.pupilReactionTracker;
-            chartName = "Pupil Reaction";
-        }
+            graphMax = 40f;          // Chart Max
+            graphHighMax = 30f;      // High zone Max
+            graphHighMin = 25f;      // High zone Min
+            graphLowMax = 10f;       // Low zone Max
+            graphLowMin = 5f;        // Low zone Min
+            graphMin = 0f;           // Chart Min
+            heightSegments = 8;      // How many segments should the chart be broken into
 
-        maxValue.text = graphMax.ToString();
-        HighValue.text = graphHigh.ToString();
-        LowValue.text = graphLow.ToString();
-        MinValue.text = graphMin.ToString();
+            //graphMax = 10;
+            //graphHigh = 8;
+            //graphLow = 2;
+            //graphMin = 0;
+
+        }
     }
 }

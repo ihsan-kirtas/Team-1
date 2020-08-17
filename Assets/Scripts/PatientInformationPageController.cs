@@ -31,7 +31,7 @@ public class PatientInformationPageController : MonoBehaviour
     // Call me whenever you display patient Information page
     public void UpdatePatientInformationPage()
     {
-        Debug.Log("Update patient Info");
+        //Debug.Log("Update patient Info");
 
         // Update current patient Data
         pd = player.GetComponent<DialogManager>().currentPatient;
@@ -42,7 +42,7 @@ public class PatientInformationPageController : MonoBehaviour
             patientInformation.text = BuildPatientInfoText();
             ample.text = BuildAMPLEText();
             ambulancebayhandover.text = pd.uiambohandover;
-            Debug.Log(">>> player info Text UPDATED<<<");
+            //Debug.Log(">>> player info Text UPDATED<<<");
         }
         else
         {

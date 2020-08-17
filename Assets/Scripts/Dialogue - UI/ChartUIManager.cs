@@ -31,23 +31,23 @@ public class ChartUIManager : MonoBehaviour
 
     void SpacePressed()
     {
-        Debug.Log("ChartUIManager - SpacePressed()");
+        //Debug.Log("ChartUIManager - SpacePressed()");
         if (chartsMasterPanel.activeSelf)                   // If this is already active
         {
-            Debug.Log("ChartUIManager - chart master active");
+            //Debug.Log("ChartUIManager - chart master active");
             chartsMasterPanel.SetActive(false);             // Disable Charts Master Panel
             GameEvents.current.CheckCameraLock();           // Checks wheather to Lock / Unlock Camera
         }
         else
         {
-            Debug.Log("ChartUIManager - chart master NOT active");
+            //Debug.Log("ChartUIManager - chart master NOT active");
             if (player.GetComponent<DialogManager>().currentPatient != null)
             {
-                Debug.Log("ChartUIManager - patient data found");
+                //Debug.Log("ChartUIManager - patient data found");
                 chartsMasterPanel.SetActive(true);                                                  // Activate the Chart Master Panel
                 chartsMasterPanel.GetComponent<chartsUIPageManager>().SwitchPanel("patient info");  // Open the default page
                 GameEvents.current.CheckCameraLock();                                               // Checks wheather to Lock / Unlock Camera
-                Debug.Log("ChartUIManager - check cam lock event called");
+                //Debug.Log("ChartUIManager - check cam lock event called");
             }
             else
             {

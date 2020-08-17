@@ -63,7 +63,7 @@ public class chartsUIPageManager : MonoBehaviour
                 initialObsPage.SetActive(true);
                 break;
             case "patient info":
-                Debug.Log("PATIENT INFO PAGE");
+                //Debug.Log("PATIENT INFO PAGE");
                 patientInfoPage.GetComponent<PatientInformationPageController>().UpdatePatientInformationPage();    // Update the values
                 patientInfoPage.SetActive(true);
                 break;
