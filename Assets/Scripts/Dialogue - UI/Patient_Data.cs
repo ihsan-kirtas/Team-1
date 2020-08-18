@@ -144,6 +144,11 @@ public class Patient_Data : ScriptableObject
     // Has Fever
     public bool hasFever = false;
 
+    // Temperature
+    public float tempInit = 4.0f;
+    public float tempMod = 0.5f;
+    public List<float> tempTracker;
+
 
 
     // --------------------------------------------------------------------------------------------------------------------

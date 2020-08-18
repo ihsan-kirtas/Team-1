@@ -58,9 +58,9 @@ public class GraphPlotter : MonoBehaviour
     private bool usingTempTracker;
 
     //??? no charts
-    private bool usingCapillaryRefillTracker;
-    private bool usingGlasgowComaScaleTracker;
-    private bool usingPupilReactionTracker;
+    //private bool usingCapillaryRefillTracker;
+    //private bool usingGlasgowComaScaleTracker;
+    //private bool usingPupilReactionTracker;
 
 
     [Header("View only")]
@@ -146,11 +146,26 @@ public class GraphPlotter : MonoBehaviour
 
 
         // Build layers in REVERSE ORDER: CreateBox(name, start at segment 8, spans how many segments)
-        CreateBox("maxZoneBox", maxZoneBoxStart, maxZoneBoxSpan);
-        CreateBox("highZoneBox", highZoneBoxStart, highZoneBoxSpan);
-        CreateBox("normalZoneBox", normalZoneBoxStart, normalZoneBoxSpan);
-        CreateBox("lowZoneBox", lowZoneBoxStart, lowZoneBoxSpan);
-        CreateBox("MinZoneBox", MinZoneBoxStart, MinZoneBoxSpan);
+        if(maxZoneBoxSpan != 0)
+        {
+            CreateBox("maxZoneBox", maxZoneBoxStart, maxZoneBoxSpan);
+        }
+        if (highZoneBoxSpan != 0)
+        {
+            CreateBox("highZoneBox", highZoneBoxStart, highZoneBoxSpan);
+        }
+        if (normalZoneBoxSpan != 0)
+        {
+            CreateBox("normalZoneBox", normalZoneBoxStart, normalZoneBoxSpan);
+        }
+        if (lowZoneBoxSpan != 0)
+        {
+            CreateBox("lowZoneBox", lowZoneBoxStart, lowZoneBoxSpan);
+        }
+        if (MinZoneBoxSpan != 0)
+        {
+            CreateBox("MinZoneBox", MinZoneBoxStart, MinZoneBoxSpan);
+        }
     }
 
     // Draw Background Boxes
@@ -266,43 +281,6 @@ public class GraphPlotter : MonoBehaviour
         label_rt.anchorMax = new Vector2(0, 0);
         label_rt.pivot = new Vector2(0, 0);
 
-
-
-        // Link to previous point if not the first point
-        //if(xSegment != 0)
-        //{
-        //    GameObject link = new GameObject("link", typeof(RectTransform));                  // create new link GO
-
-        //    RectTransform linkParent = point.GetComponent<RectTransform>();
-
-        //    Image linkImage = link.AddComponent<Image>();
-
-        //    link.transform.SetParent(linkParent, false);
-
-        //    linkImage.color = Color.magenta;                            // Set line colour
-
-        //    RectTransform link_rt = link.GetComponent<RectTransform>();         // Get rect transform
-
-        //    GameObject lastPoint = currentGraphObjects.Last();
-
-        //    Vector2 dir = (currentGraphObjects.Last().transform.position - point.transform.position).normalized;                               // Line Direction
-        //    //Debug.Log(dir);
-
-        //    float distance = Vector2.Distance(currentGraphObjects.Last().transform.position, point.transform.position);                        // Line Distance
-        //    //Debug.Log(distance);
-
-        //    link_rt.anchorMin = new Vector2(0, 0);                                    // Set anchor
-        //    link_rt.anchorMax = new Vector2(0, 0);                                    // Set anchor
-        //    link_rt.sizeDelta = new Vector2(segmentWidth, 3f);                                 // Set size delta
-        //    link_rt.anchoredPosition = new Vector2(-30, 0.5f * segmentHeight);              // Half way between A and B
-        //    link_rt.pivot = new Vector2(0, 0);
-
-        //    Vector2 forward = new Vector2(-1, 0);
-        //    float angle = Vector2.Angle(forward, dir);                                      // Get line angle
-        //    link_rt.localEulerAngles = new Vector3(0, 0, angle);                      // Apply angle to new line
-        //}
-
-
         return point;
     }
 
@@ -312,10 +290,6 @@ public class GraphPlotter : MonoBehaviour
         if (usingBreathRateTracker)
         {
             graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
             graphMin = 0f;           // Chart Min
 
             heightSegments = 8;      // How many segments should the chart be broken into
@@ -332,126 +306,101 @@ public class GraphPlotter : MonoBehaviour
             MinZoneBoxSpan = 2;
         }
 
+        if (usingOxygenTracker)
+        {
+            graphMax = 240f;          // Chart Max
+            graphMin = 80f;           // Chart Min
 
+            heightSegments = 5;      // How many segments should the chart be broken into
 
-
-
+            maxZoneBoxStart = 0;    // Start segment from top down
+            maxZoneBoxSpan = 0;     // spans for x segments
+            highZoneBoxStart = 0;
+            highZoneBoxSpan = 0;
+            normalZoneBoxStart = 5;
+            normalZoneBoxSpan = 2;
+            lowZoneBoxStart = 3;
+            lowZoneBoxSpan = 1;
+            MinZoneBoxStart = 2;
+            MinZoneBoxSpan = 2;
+        }
 
 
         if (usingBloodPressureDiastolicTracker)
         {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
+            graphMax = 240f;          // Chart Max
+            graphMin = 30f;           // Chart Min
 
-            //graphMax = 180;
-            //graphHigh = 140;
-            //graphLow = 60;
-            //graphMin = 50;
+            heightSegments = 21;      // How many segments should the chart be broken into
 
+            maxZoneBoxStart = 21;    // Start segment from top down
+            maxZoneBoxSpan = 4;     // spans for x segments
+            highZoneBoxStart = 17;
+            highZoneBoxSpan = 2;
+            normalZoneBoxStart = 15;
+            normalZoneBoxSpan = 8;
+            lowZoneBoxStart = 7;
+            lowZoneBoxSpan = 1;
+            MinZoneBoxStart = 6;
+            MinZoneBoxSpan = 6;
         }
+
         if (usingBloodPressureSystolicTracker)
         {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
+            graphMax = 240f;          // Chart Max
+            graphMin = 30f;           // Chart Min
 
-            //graphMax = 200;
-            //graphHigh = 160;
-            //graphLow = 110;
-            //graphMin = 80;
+            heightSegments = 21;      // How many segments should the chart be broken into
 
-
-        }
-        if (usingOxygenTracker)
-        {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
-
-            //graphMax = 150;
-            //graphHigh = 130;
-            //graphLow = 60;
-            //graphMin = 50;
-
+            maxZoneBoxStart = 21;    // Start segment from top down
+            maxZoneBoxSpan = 4;     // spans for x segments
+            highZoneBoxStart = 17;
+            highZoneBoxSpan = 2;
+            normalZoneBoxStart = 15;
+            normalZoneBoxSpan = 8;
+            lowZoneBoxStart = 7;
+            lowZoneBoxSpan = 1;
+            MinZoneBoxStart = 6;
+            MinZoneBoxSpan = 6;
         }
 
 
         if (usingPulseRateTracker)
         {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
+            graphMax = 170f;          // Chart Max
+            graphMin = 30f;           // Chart Min
 
-            //graphMax = 200;
-            //graphHigh = 150;
-            //graphLow = 50;
-            //graphMin = 20;
+            heightSegments = 14;      // How many segments should the chart be broken into
 
+            maxZoneBoxStart = 14;    // Start segment from top down
+            maxZoneBoxSpan = 3;     // spans for x segments
+            highZoneBoxStart = 11;
+            highZoneBoxSpan = 2;
+            normalZoneBoxStart = 9;
+            normalZoneBoxSpan = 7;
+            lowZoneBoxStart = 2;
+            lowZoneBoxSpan = 1;
+            MinZoneBoxStart = 1;
+            MinZoneBoxSpan = 1;
         }
-        if (usingCapillaryRefillTracker)
+
+        if (usingTempTracker)
         {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
+            graphMax = 41.5f;          // Chart Max
+            graphMin = 33.5f;           // Chart Min
 
-            //graphMax = 10;
-            //graphHigh = 5;
-            //graphLow = 1;
-            //graphMin = 0;
+            heightSegments = 16;      // How many segments should the chart be broken into
 
-        }
-        if (usingGlasgowComaScaleTracker)
-        {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
-
-            //graphMax = 30;
-            //graphHigh = 20;
-            //graphLow = 5;
-            //graphMin = 1;
-
-        }
-        if (usingPupilReactionTracker)
-        {
-            graphMax = 40f;          // Chart Max
-            graphHighMax = 30f;      // High zone Max
-            graphHighMin = 25f;      // High zone Min
-            graphLowMax = 10f;       // Low zone Max
-            graphLowMin = 5f;        // Low zone Min
-            graphMin = 0f;           // Chart Min
-            heightSegments = 8;      // How many segments should the chart be broken into
-
-            //graphMax = 10;
-            //graphHigh = 8;
-            //graphLow = 2;
-            //graphMin = 0;
-
+            maxZoneBoxStart = 0;    // Start segment from top down
+            maxZoneBoxSpan = 0;     // spans for x segments
+            highZoneBoxStart = 16;
+            highZoneBoxSpan = 6;
+            normalZoneBoxStart = 10;
+            normalZoneBoxSpan = 6;
+            lowZoneBoxStart = 4;
+            lowZoneBoxSpan = 4;
+            MinZoneBoxStart = 0;
+            MinZoneBoxSpan = 0;
         }
     }
 }
