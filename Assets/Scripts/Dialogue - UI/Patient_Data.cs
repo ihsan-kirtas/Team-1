@@ -52,6 +52,7 @@ public class Patient_Data : ScriptableObject
 
     // If the patient is self-ventilating or assisted ventilation by an Endotracheal Tube.
     public bool selfVentilating = true;
+    public string patientVentilationStatus;
 
 
     // ### B - Breathing ###
