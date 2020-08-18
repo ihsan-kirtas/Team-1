@@ -24,43 +24,10 @@ public class ObsManager : MonoBehaviour
     public void ActivatePatient(Patient_Data patient_data)
     {
         // Set Initial Obs Chart data + Activate
-        ClearObsTrackers(patient_data);                  // clears out any data from the previous game in the scriptable object.
-        NewPatientInitialObs(patient_data);
         patient_data.patientActive = true;
         //Debug.Log("activate patient complete");
     }
 
-    void ClearObsTrackers(Patient_Data patient_data)
-    {
-        patient_data.bloodPressureSystolicTracker.Clear();      // Blood Pressure - Systolic
-        patient_data.bloodPressureDiastolicTracker.Clear();     // Blood Pressure - Diastolic
-        patient_data.breathRateTracker.Clear();                 // Breath Rate
-        patient_data.capillaryRefillTracker.Clear();            // Capillary Refill
-        patient_data.glasgowComaScaleTracker.Clear();           // Glasgow Coma Scale
-        patient_data.oxygenTracker.Clear();                     // Oxygen
-        patient_data.pulseRateTracker.Clear();                  // Pulse Rate
-        patient_data.pupilReactionTracker.Clear();              // Pupil Reaction
-        //Debug.Log("patient data cleared");
-    }
-
-
-    // Called when patient added. Adds initial values as the 1st observation recording in the tracker list
-    void NewPatientInitialObs(Patient_Data patient_data)
-    {
-        patient_data.bloodPressureSystolicTracker.Add(patient_data.bloodPressureSystolicInit);          // Blood Pressure - Systolic
-        patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicInit);        // Blood Pressure - Diastolic
-        patient_data.breathRateTracker.Add(patient_data.breathRateInit);                                // Breath Rate
-        patient_data.capillaryRefillTracker.Add(patient_data.capillaryRefillInit);                      // Capillary Refill
-        patient_data.glasgowComaScaleTracker.Add(patient_data.glasgowComaScaleInit);                    // Glasgow Coma Scale
-        patient_data.oxygenTracker.Add(patient_data.oxygenInit);                                        // Oxygen
-        patient_data.pulseRateTracker.Add(patient_data.pulseRateInit);                                  // Pulse Rate
-        patient_data.pupilReactionTracker.Add(patient_data.pupilReactionInit);                          // Pupil Reaction
-
-        // Set initial values added to true, allows obs to start auto recording
-        patient_data.initValsAdded = true;
-
-        //Debug.Log("DEV - initial obs done");
-    }
 
     void ProcessAllCurrentPatients()
     {

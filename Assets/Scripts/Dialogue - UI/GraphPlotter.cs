@@ -27,10 +27,6 @@ public class GraphPlotter : MonoBehaviour
 
     // Graph limits and zones
     private float graphMax;
-    private float graphHighMax;
-    private float graphHighMin;
-    private float graphLowMax;
-    private float graphLowMin;
     private float graphMin;
 
     private int maxZoneBoxStart;
@@ -44,24 +40,16 @@ public class GraphPlotter : MonoBehaviour
     private int MinZoneBoxStart;
     private int MinZoneBoxSpan;
 
+    private bool wiped = false;
+
 
     [Header("Choose Chart - Tick only 1")]
     public bool usingBreathRateTracker;
-    private bool usingOxygenTracker;        // o2 saturation
-
-
-    private bool usingBloodPressureDiastolicTracker;
-    private bool usingBloodPressureSystolicTracker;
-    
-    private bool usingPulseRateTracker;
-
-    private bool usingTempTracker;
-
-    //??? no charts
-    //private bool usingCapillaryRefillTracker;
-    //private bool usingGlasgowComaScaleTracker;
-    //private bool usingPupilReactionTracker;
-
+    public bool usingOxygenTracker;        // o2 saturation
+    public bool usingBloodPressureDiastolicTracker;
+    public bool usingBloodPressureSystolicTracker;
+    public bool usingPulseRateTracker;
+    public bool usingTempTracker;
 
     [Header("View only")]
     public Patient_Data currentPatientData;
@@ -70,27 +58,27 @@ public class GraphPlotter : MonoBehaviour
 
     private void Start()
     {
-        // Subscribe to events
-        //GameEvents.current.event_updatePatientData += UpdateValues;
-
-        //noDataAvailable.SetActive(true);
-
-        // Draws the borders, zones and guide lines.
-        //DrawBorders();
-
-
-    SetGraphBGData();   // Sets the chart BG and value data (only needed once)
+        SetGraphBGData();   // Sets the chart BG and value data (only needed once)
         DrawBackground();   // Draws the Chart BG
     }
 
     private void Update()
     {
+
         if (gameManager.GetComponent<CanvasManager>().obsChartPagePanel.activeSelf && player.GetComponent<DialogManager>().currentPatient != null)
         {
+            // wipe data if havent 
+            if (!wiped)
+            {
+                WipeData();
+                wiped = true;
+            }
+
             // if time has passed for next data refresh
             if(Time.frameCount > frameRecord + drawDataFrequency)
             {
                 LinkData();
+                
                 drawData();                     // Refresh data
                 frameRecord = Time.frameCount;  // Record time when this happened
                 Debug.Log("Chart Data Updated");
@@ -98,10 +86,40 @@ public class GraphPlotter : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    void WipeData()
     {
-        // Unsubscribe to events
-        //GameEvents.current.event_updatePatientData -= UpdateValues;
+        currentPatientData = player.GetComponent<DialogManager>().currentPatient;
+
+        if (usingBreathRateTracker)
+        {
+            currentPatientData.breathRateTracker.Clear();
+            currentPatientData.breathRateTracker.Add(currentPatientData.breathRateInit);
+        }
+        else if (usingOxygenTracker)
+        {
+            currentPatientData.oxygenTracker.Clear();
+            currentPatientData.oxygenTracker.Add(currentPatientData.oxygenInit);
+        }
+        else if (usingBloodPressureDiastolicTracker)
+        {
+            currentPatientData.bloodPressureDiastolicTracker.Clear();
+            currentPatientData.bloodPressureDiastolicTracker.Add(currentPatientData.bloodPressureDiastolicInit);
+        }
+        else if (usingBloodPressureSystolicTracker)
+        {
+            currentPatientData.bloodPressureSystolicTracker.Clear();
+            currentPatientData.bloodPressureSystolicTracker.Add(currentPatientData.bloodPressureSystolicInit);
+        }
+        else if (usingPulseRateTracker)
+        {
+            currentPatientData.pulseRateTracker.Clear();
+            currentPatientData.pulseRateTracker.Add(currentPatientData.pulseRateInit);
+        }
+        else if (usingTempTracker)
+        {
+            currentPatientData.tempTracker.Clear();
+            currentPatientData.tempTracker.Add(currentPatientData.tempInit);
+        }
     }
 
     void LinkData()
@@ -109,20 +127,30 @@ public class GraphPlotter : MonoBehaviour
         currentPatientData = player.GetComponent<DialogManager>().currentPatient;
 
         if (usingBreathRateTracker)
-        { tracker = currentPatientData.breathRateTracker; }
+        {
+            tracker = currentPatientData.breathRateTracker; 
+        }
         else if (usingOxygenTracker)
-        { tracker = currentPatientData.oxygenTracker; }
+        {
+            tracker = currentPatientData.oxygenTracker; 
+        }
         else if (usingBloodPressureDiastolicTracker)
-        { tracker = currentPatientData.bloodPressureDiastolicTracker; }
+        {
+            tracker = currentPatientData.bloodPressureDiastolicTracker; 
+        }
         else if (usingBloodPressureSystolicTracker)
-        { tracker = currentPatientData.bloodPressureSystolicTracker; }
+        {
+            tracker = currentPatientData.bloodPressureSystolicTracker; 
+        }
         else if (usingPulseRateTracker)
-        { tracker = currentPatientData.pulseRateTracker; }
-        //else if (usingTempTracker)
-        //{ tracker = currentPatientData.breathRateTracker; }
+        {
+            tracker = currentPatientData.pulseRateTracker;
+        }
+        else if (usingTempTracker)
+        {
+            tracker = currentPatientData.tempTracker; 
+        }
     }
-
-
 
     void DrawBackground()
     {
@@ -299,10 +327,10 @@ public class GraphPlotter : MonoBehaviour
             highZoneBoxStart = 6;
             highZoneBoxSpan = 1;
             normalZoneBoxStart = 5;
-            normalZoneBoxSpan = 2;
-            lowZoneBoxStart = 3;
+            normalZoneBoxSpan = 3;
+            lowZoneBoxStart = 2;
             lowZoneBoxSpan = 1;
-            MinZoneBoxStart = 2;
+            MinZoneBoxStart = 1;
             MinZoneBoxSpan = 2;
         }
 
