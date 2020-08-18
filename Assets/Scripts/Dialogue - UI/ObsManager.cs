@@ -57,34 +57,39 @@ public class ObsManager : MonoBehaviour
     }
 
     // Add new Observations to the tracker. (new value = last value + modifier)
-    void RecordObsChanges(Patient_Data patient_data)
+    void RecordObsChanges(Patient_Data pd)
     {
-        if (patient_data.initValsAdded)
-        {
-            // Add values to existing list
-            patient_data.bloodPressureSystolicTracker.Add(patient_data.bloodPressureSystolicTracker.Last() + patient_data.bloodPressureSystolicMod);        // Blood Pressure - Systolic
-            patient_data.bloodPressureDiastolicTracker.Add(patient_data.bloodPressureDiastolicTracker.Last() + patient_data.bloodPressureDiastolicMod);     // Blood Pressure - Diastolic
-            patient_data.breathRateTracker.Add(patient_data.breathRateTracker.Last() + patient_data.breathRateMod);                                         // Breath Rate
-            patient_data.capillaryRefillTracker.Add(patient_data.capillaryRefillTracker.Last() + patient_data.capillaryRefillMod);                          // Capillary Refill
-            patient_data.glasgowComaScaleTracker.Add(patient_data.glasgowComaScaleTracker.Last() + patient_data.glasgowComaScaleMod);                       // Glasgow Coma Scale
-            patient_data.oxygenTracker.Add(patient_data.oxygenTracker.Last() + patient_data.oxygenMod);                                                     // Oxygen
-            patient_data.pulseRateTracker.Add(patient_data.pulseRateTracker.Last() + patient_data.pulseRateMod);                                            // Pulse Rate
-            patient_data.pupilReactionTracker.Add(patient_data.pupilReactionTracker.Last() + patient_data.pupilReactionMod);                                // Pupil Reaction
-            patient_data.tempTracker.Add(patient_data.tempTracker.Last() + patient_data.tempMod);                                                           // Temp Tracker
 
-            // if length > 10 remove 2nd item in the list
-            TrimListSize(patient_data.bloodPressureSystolicTracker);
-            TrimListSize(patient_data.bloodPressureDiastolicTracker);
-            TrimListSize(patient_data.breathRateTracker);
-            TrimListSize(patient_data.capillaryRefillTracker);
-            TrimListSize(patient_data.glasgowComaScaleTracker);
-            TrimListSize(patient_data.oxygenTracker);
-            TrimListSize(patient_data.pulseRateTracker);
-            TrimListSize(patient_data.pupilReactionTracker);
-            TrimListSize(patient_data.tempTracker);
+        // Add values to existing list
+        if(pd.bloodPressureSystolicTracker.Count > 0)
+            pd.bloodPressureSystolicTracker.Add(pd.bloodPressureSystolicTracker.Last() + pd.bloodPressureSystolicMod);        // Blood Pressure - Systolic
+        if (pd.bloodPressureDiastolicTracker.Count > 0)
+            pd.bloodPressureDiastolicTracker.Add(pd.bloodPressureDiastolicTracker.Last() + pd.bloodPressureDiastolicMod);     // Blood Pressure - Diastolic
+        if(pd.breathRateTracker.Count > 0)
+            pd.breathRateTracker.Add(pd.breathRateTracker.Last() + pd.breathRateMod);                                         // Breath Rate
+        if (pd.oxygenTracker.Count > 0)
+            pd.oxygenTracker.Add(pd.oxygenTracker.Last() + pd.oxygenMod);                                                     // Oxygen
+        if (pd.pulseRateTracker.Count > 0)
+            pd.pulseRateTracker.Add(pd.pulseRateTracker.Last() + pd.pulseRateMod);                                            // Pulse Rate
+        if (pd.tempTracker.Count > 0)
+            pd.tempTracker.Add(pd.tempTracker.Last() + pd.tempMod);                                                           // Temp Tracker
 
-            //Debug.Log("DEV - Obs updated for " + patient_data.name);
-        }
+        //pd.capillaryRefillTracker.Add(pd.capillaryRefillTracker.Last() + pd.capillaryRefillMod);                          // Capillary Refill
+        //pd.glasgowComaScaleTracker.Add(pd.glasgowComaScaleTracker.Last() + pd.glasgowComaScaleMod);                       // Glasgow Coma Scale
+        //pd.pupilReactionTracker.Add(pd.pupilReactionTracker.Last() + pd.pupilReactionMod);                                // Pupil Reaction
+
+        // if length > 10 remove 2nd item in the list
+        TrimListSize(pd.bloodPressureSystolicTracker);
+        TrimListSize(pd.bloodPressureDiastolicTracker);
+        TrimListSize(pd.breathRateTracker);
+        
+        TrimListSize(pd.oxygenTracker);
+        TrimListSize(pd.pulseRateTracker);
+        TrimListSize(pd.tempTracker);
+
+        //TrimListSize(pd.pupilReactionTracker);
+        //TrimListSize(pd.capillaryRefillTracker);
+        //TrimListSize(pd.glasgowComaScaleTracker);
     }
 
     // List cleanup - Used to stop the Obs array from getting too huge. keeps the initial value and deletes the 2nd value if length >10

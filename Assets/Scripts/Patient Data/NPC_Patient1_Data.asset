@@ -82,37 +82,30 @@ MonoBehaviour:
     3 Verbal 4 Motor 5 Pupils: 4+ Arms:Left 4 Legs: Left 4 Temp:37.2 Pain:6 Behaviour:
     aggressive not following direction. '
   selfVentilating: 1
+  patientVentilationStatus: 
   oxygenInit: 100
   oxygenMod: 3
   oxygenTracker:
-  - 5
-  - 266
-  - 269
-  - 272
-  - 275
-  - 278
-  - 281
-  - 284
-  - 287
-  - 290
-  - 293
-  - 296
-  - 299
-  - 302
-  - 305
-  - 308
-  - 311
-  - 314
-  - 317
-  - 320
-  - 323
+  - 100
+  - 103
+  - 106
+  - 109
+  - 112
+  - 115
+  - 118
+  - 121
+  - 124
+  - 127
+  - 130
+  - 133
+  - 136
+  - 139
+  - 142
+  - 145
+  - 148
   breathRateInit: 20
   breathRateMod: 0.5
   breathRateTracker:
-  - 10
-  - 18.5
-  - 19
-  - 19.5
   - 20
   - 20.5
   - 21
@@ -133,91 +126,52 @@ MonoBehaviour:
   accessoryMuscles: 0
   bloodPressureSystolicInit: 130
   bloodPressureSystolicMod: 0.5
-  bloodPressureSystolicTracker:
-  - 140
-  - 1017
-  - 1017.5
-  - 1018
-  - 1018.5
-  - 1019
-  - 1019.5
-  - 1020
-  - 1020.5
-  - 1021
-  - 1021.5
-  - 1022
-  - 1022.5
-  - 1023
-  - 1023.5
-  - 1024
-  - 1024.5
-  - 1025
-  - 1025.5
-  - 1026
-  - 1026.5
+  bloodPressureSystolicTracker: []
   bloodPressureDiastolicInit: 88
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
+  - 88
+  - 88.5
+  - 89
+  - 89.5
   - 90
-  - 967
-  - 967.5
-  - 968
-  - 968.5
-  - 969
-  - 969.5
-  - 970
-  - 970.5
-  - 971
-  - 971.5
-  - 972
-  - 972.5
-  - 973
-  - 973.5
-  - 974
-  - 974.5
-  - 975
-  - 975.5
-  - 976
-  - 976.5
+  - 90.5
+  - 91
+  - 91.5
+  - 92
+  - 92.5
+  - 93
+  - 93.5
+  - 94
+  - 94.5
+  - 95
+  - 95.5
+  - 96
   pulseRateInit: 60
   pulseRateMod: 0.5
   pulseRateTracker:
-  - 70
-  - 925.5
-  - 926
-  - 926.5
-  - 927
-  - 927.5
-  - 928
-  - 928.5
-  - 929
-  - 929.5
-  - 930
-  - 930.5
-  - 931
-  - 931.5
-  - 932
-  - 932.5
-  - 933
-  - 933.5
-  - 934
-  - 934.5
-  - 935
+  - 60
+  - 60.5
+  - 61
+  - 61.5
+  - 62
+  - 62.5
+  - 63
+  - 63.5
+  - 64
+  - 64.5
+  - 65
+  - 65.5
+  - 66
+  - 66.5
+  - 67
+  - 67.5
+  - 68
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
   - 2
-  - 857.5
-  - 858
-  - 858.5
-  - 859
-  - 859.5
-  - 860
-  - 860.5
-  - 861
-  - 861.5
-  - 862
   - 862.5
   - 863
   - 863.5
@@ -228,10 +182,6 @@ MonoBehaviour:
   - 866
   - 866.5
   - 867
-  glasgowComaScaleInit: 11
-  glasgowComaScaleMod: 0.5
-  glasgowComaScaleTracker:
-  - 12
   - 867.5
   - 868
   - 868.5
@@ -242,6 +192,10 @@ MonoBehaviour:
   - 871
   - 871.5
   - 872
+  glasgowComaScaleInit: 11
+  glasgowComaScaleMod: 0.5
+  glasgowComaScaleTracker:
+  - 12
   - 872.5
   - 873
   - 873.5
@@ -252,34 +206,43 @@ MonoBehaviour:
   - 876
   - 876.5
   - 877
+  - 877.5
+  - 878
+  - 878.5
+  - 879
+  - 879.5
+  - 880
+  - 880.5
+  - 881
+  - 881.5
+  - 882
   pupilReactionInit: 4
   pupilReactionMod: 0.5
-  pupilReactionTracker:
-  - 4
-  - 859.5
-  - 860
-  - 860.5
-  - 861
-  - 861.5
-  - 862
-  - 862.5
-  - 863
-  - 863.5
-  - 864
-  - 864.5
-  - 865
-  - 865.5
-  - 866
-  - 866.5
-  - 867
-  - 867.5
-  - 868
-  - 868.5
-  - 869
+  pupilReactionTracker: []
   repetitiveQuestining: 1
   hasInternalDevices: 0
   hasCannula: 0
   hasFever: 0
+  tempInit: 37
+  tempMod: 0.1
+  tempTracker:
+  - 0
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  - 0.70000005
+  - 0.8000001
+  - 0.9000001
+  - 1.0000001
+  - 1.1000001
+  - 1.2000002
+  - 1.3000002
+  - 1.4000002
+  - 1.5000002
+  - 1.6000003
   AMPLEtext: 'Allergies: Nil Known Allergies, Medications: Salbutamol, Past Medical
     History: Asthma, Last Meal Eater: 19:00, Events Leading to the presentation to
     Hospital: Fall over bowling ball LOC 15 seconds left ankle fracture. '

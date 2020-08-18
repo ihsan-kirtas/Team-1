@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 
 public class GraphPlotter : MonoBehaviour
@@ -67,6 +68,7 @@ public class GraphPlotter : MonoBehaviour
 
         if (gameManager.GetComponent<CanvasManager>().obsChartPagePanel.activeSelf && player.GetComponent<DialogManager>().currentPatient != null)
         {
+            noDataAvailableMessage.SetActive(false);
             // wipe data if havent 
             if (!wiped)
             {
@@ -83,6 +85,10 @@ public class GraphPlotter : MonoBehaviour
                 frameRecord = Time.frameCount;  // Record time when this happened
                 Debug.Log("Chart Data Updated");
             }
+        }
+        else
+        {
+            noDataAvailableMessage.SetActive(true);
         }
     }
 
@@ -289,11 +295,13 @@ public class GraphPlotter : MonoBehaviour
 
         if(xSegment == 0)
         {
-            labelText.text = yValue.ToString() + " - Start";
+            float val = Mathf.Round(yValue * 100) / 100;
+            labelText.text = val.ToString() + " - Start";
         }
         else
         {
-            labelText.text = yValue.ToString();
+            float val = Mathf.Round(yValue * 100) / 100;
+            labelText.text = val.ToString();
         }
         
         labelText.font = pointFont;
