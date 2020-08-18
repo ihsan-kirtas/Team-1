@@ -79,6 +79,33 @@ public class GraphPlotter : MonoBehaviour
         //DrawBorders();
 
 
+    SetGraphBGData();   // Sets the chart BG and value data (only needed once)
+        DrawBackground();   // Draws the Chart BG
+    }
+
+    private void Update()
+    {
+        if (gameManager.GetComponent<CanvasManager>().obsChartPagePanel.activeSelf && player.GetComponent<DialogManager>().currentPatient != null)
+        {
+            // if time has passed for next data refresh
+            if(Time.frameCount > frameRecord + drawDataFrequency)
+            {
+                LinkData();
+                drawData();                     // Refresh data
+                frameRecord = Time.frameCount;  // Record time when this happened
+                Debug.Log("Chart Data Updated");
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe to events
+        //GameEvents.current.event_updatePatientData -= UpdateValues;
+    }
+
+    void LinkData()
+    {
         currentPatientData = player.GetComponent<DialogManager>().currentPatient;
 
         if (usingBreathRateTracker)
@@ -93,36 +120,8 @@ public class GraphPlotter : MonoBehaviour
         { tracker = currentPatientData.pulseRateTracker; }
         //else if (usingTempTracker)
         //{ tracker = currentPatientData.breathRateTracker; }
-
-        
-
-
-
-    SetGraphBGData();   // Sets the chart BG and value data (only needed once)
-        DrawBackground();   // Draws the Chart BG
     }
 
-    private void Update()
-    {
-
-
-        if (gameManager.GetComponent<CanvasManager>().obsChartPagePanel.activeSelf)
-        {
-            // if time has passed for next data refresh
-            if(Time.frameCount > frameRecord + drawDataFrequency)
-            {
-                drawData();                     // Refresh data
-                frameRecord = Time.frameCount;  // Record time when this happened
-                Debug.Log("Chart Data Updated");
-            }
-        }
-    }
-
-    private void OnDestroy()
-    {
-        // Unsubscribe to events
-        //GameEvents.current.event_updatePatientData -= UpdateValues;
-    }
 
 
     void DrawBackground()
@@ -257,7 +256,7 @@ public class GraphPlotter : MonoBehaviour
         labelText.font = pointFont;
         labelText.color = Color.black;
         labelText.alignment = TextAnchor.MiddleLeft;
-        labelText.fontSize = 55;
+        labelText.fontSize = 45;
 
         RectTransform label_rt = label.GetComponent<RectTransform>();
         label_rt.Rotate(new Vector3(0, 0, 90));
