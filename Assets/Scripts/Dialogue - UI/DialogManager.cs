@@ -7,12 +7,15 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+
     public Patient_Data currentPatient;         // The Patient_Data of the patient you are next to
     public List<GameObject> patientsList;       // List of all patients
     private GameObject gameManager;             // GameManager Object
 
     private GameObject dialogPanel;             // The Dialogue Panel
+
     private GameObject convoAvailablePanel;     // The Conversation Available Notification
+    public Text convoAvailText;
 
     private Text npcNameText;                   // Dialogue box NPC Name
     private Text dialogText;                    // Dialogue box Conversation text
@@ -111,6 +114,7 @@ public class DialogManager : MonoBehaviour
     void LinkPatientsCommon()
     {
         convoAvailablePanel.SetActive(true);        // Shows the player that conversation is available if they want it
+        convoAvailText.text = "Conversation\nAvailable\nPress C\n" + currentPatient.name;
     }
     // If player breaks contact with patient - Common Code
     void UnLinkPatientsCommon()

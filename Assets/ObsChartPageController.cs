@@ -34,7 +34,7 @@ public class ObsChartPageController : MonoBehaviour
         }
         else
         {
-            initialObsText.text = "";
+            //initialObsText.text = "";
         }
     }
 }
