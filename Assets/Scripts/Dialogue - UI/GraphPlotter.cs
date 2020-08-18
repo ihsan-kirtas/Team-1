@@ -7,14 +7,19 @@ using System.Linq;
 
 public class GraphPlotter : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject gameManager;
+
     public RectTransform graphContainer;
-    public List<GameObject> currentGraphObjects;
-    public Color lineColor;
+    public RectTransform BGContainer;
+    public RectTransform pointsContainer;
     public GameObject noDataAvailableMessage;
 
-    
-    public List<float> tracker;
-    private Patient_Data currentPatientData;
+    public Sprite pointSprite;
+    public Font pointFont;
+
+    private float drawDataFrequency = 300f;
+    private float frameRecord = 0f;
 
 
     private int heightSegments;
@@ -40,21 +45,28 @@ public class GraphPlotter : MonoBehaviour
     private int MinZoneBoxSpan;
 
 
-
-    
-
-
     [Header("Choose Chart - Tick only 1")]
     public bool usingBreathRateTracker;
+    private bool usingOxygenTracker;        // o2 saturation
+
 
     private bool usingBloodPressureDiastolicTracker;
     private bool usingBloodPressureSystolicTracker;
-    private bool usingOxygenTracker;
+    
     private bool usingPulseRateTracker;
+
+    private bool usingTempTracker;
+
+    //??? no charts
     private bool usingCapillaryRefillTracker;
     private bool usingGlasgowComaScaleTracker;
     private bool usingPupilReactionTracker;
 
+
+    [Header("View only")]
+    public Patient_Data currentPatientData;
+    public List<float> tracker;
+    public List<GameObject> currentGraphObjects;
 
     private void Start()
     {
@@ -66,9 +78,44 @@ public class GraphPlotter : MonoBehaviour
         // Draws the borders, zones and guide lines.
         //DrawBorders();
 
+
+        currentPatientData = player.GetComponent<DialogManager>().currentPatient;
+
+        if (usingBreathRateTracker)
+        { tracker = currentPatientData.breathRateTracker; }
+        else if (usingOxygenTracker)
+        { tracker = currentPatientData.oxygenTracker; }
+        else if (usingBloodPressureDiastolicTracker)
+        { tracker = currentPatientData.bloodPressureDiastolicTracker; }
+        else if (usingBloodPressureSystolicTracker)
+        { tracker = currentPatientData.bloodPressureSystolicTracker; }
+        else if (usingPulseRateTracker)
+        { tracker = currentPatientData.pulseRateTracker; }
+        //else if (usingTempTracker)
+        //{ tracker = currentPatientData.breathRateTracker; }
+
         
-        SetGraphBGData();   // Sets the chart BG and value data (only needed once)
+
+
+
+    SetGraphBGData();   // Sets the chart BG and value data (only needed once)
         DrawBackground();   // Draws the Chart BG
+    }
+
+    private void Update()
+    {
+
+
+        if (gameManager.GetComponent<CanvasManager>().obsChartPagePanel.activeSelf)
+        {
+            // if time has passed for next data refresh
+            if(Time.frameCount > frameRecord + drawDataFrequency)
+            {
+                drawData();                     // Refresh data
+                frameRecord = Time.frameCount;  // Record time when this happened
+                Debug.Log("Chart Data Updated");
+            }
+        }
     }
 
     private void OnDestroy()
@@ -77,79 +124,27 @@ public class GraphPlotter : MonoBehaviour
         //GameEvents.current.event_updatePatientData -= UpdateValues;
     }
 
-    private void UpdateValues()
-    {
-        // Delete all current graph items ready for new items
-        if (currentGraphObjects.Count > 0)
-        {
-            foreach (GameObject item in currentGraphObjects)
-            {
-                Destroy(item);
-            }
-        }
-
-
-        // check / link the current patient data
-        currentPatientData = GameObject.Find("Player").GetComponent<DialogManager>().currentPatient;
-
-
-        noDataAvailableMessage.SetActive(false);
-
-
-
-        if (currentPatientData != null)
-        {
-
-            float listLength = tracker.Count;
-            float xSpacingPercentage = 0.1f;
-            float xSpacing = graphContainer.rect.width * xSpacingPercentage;
-
-            float graphHeight = graphContainer.rect.height;
-            float graphYrange = graphMax - graphMin;
-
-            GameObject lastCircleGameObject = null;
-
-
-            string currentValue = tracker.Last().ToString();
-
-
-
-            for (int i = 0; i < listLength; i++)
-            {
-                // Calculate X
-                float xPos = i * xSpacing;                                  // TODO issues with > 10 values
-
-                // Calculate Y
-                float obValue = tracker[i];                                 // Ob Value
-                float yPercent = (obValue - graphMin) / graphYrange;        // percentage of the allowable range
-                float yPos = yPercent * graphHeight;                        // apply to graph height
-
-                // Plot point on graph - get the GO it returns
-                GameObject circleGameObject = PlotPoint(new Vector2(xPos, yPos));
-
-                if (lastCircleGameObject != null)
-                {
-                    // Join the previous point to this point with a line - LinkPoints(PosA, PosB)
-                    LinkPoints(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
-
-                }
-                lastCircleGameObject = circleGameObject;
-
-            }
-        }
-        else
-        {
-            Debug.Log("NO GRAPH DATA AVAILABLE");
-
-            noDataAvailableMessage.SetActive(true);
-
-        }
-    }
-
 
     void DrawBackground()
     {
         Debug.Log("background called");
+
+        // Setup BG Container properly
+        RectTransform bg_rt = BGContainer.GetComponent<RectTransform>();
+        bg_rt.anchoredPosition = new Vector2(0, 0);                             
+        bg_rt.sizeDelta = new Vector2(graphContainer.sizeDelta.x, graphContainer.sizeDelta.y);
+        bg_rt.anchorMin = new Vector2(0, 0);
+        bg_rt.anchorMax = new Vector2(0, 0);
+        bg_rt.pivot = new Vector2(0, 0);
+
+        // Setup Points Container properly
+        RectTransform points_rt = pointsContainer.GetComponent<RectTransform>();
+        points_rt.anchoredPosition = new Vector2(0, 0);
+        points_rt.sizeDelta = new Vector2(graphContainer.sizeDelta.x, graphContainer.sizeDelta.y);
+        points_rt.anchorMin = new Vector2(0, 0);
+        points_rt.anchorMax = new Vector2(0, 0);
+        points_rt.pivot = new Vector2(0, 0);
+
 
         // Build layers in REVERSE ORDER: CreateBox(name, start at segment 8, spans how many segments)
         CreateBox("maxZoneBox", maxZoneBoxStart, maxZoneBoxSpan);
@@ -162,14 +157,8 @@ public class GraphPlotter : MonoBehaviour
     // Draw Background Boxes
     GameObject CreateBox(string boxName, int start_seg, int span)
     {
-        Debug.Log("create box initiated");
-
-
         GameObject box = new GameObject(boxName, typeof(Image));           // Create GO
-        box.transform.SetParent(graphContainer, false);                    // Sets parent to this graph GO
-
-
-
+        box.transform.SetParent(BGContainer, false);                    // Sets parent to this graph GO
 
         // Set color
         Color chartRed = new Color(1f, 0f, 0f, 0.5f);
@@ -188,22 +177,18 @@ public class GraphPlotter : MonoBehaviour
         else  //Error
         { box.GetComponent<Image>().color = Color.magenta; }
 
-
-        float segmentSize = graphContainer.sizeDelta.y / heightSegments;
+        float segmentHeight = graphContainer.sizeDelta.y / heightSegments;
 
         RectTransform box_rt = box.GetComponent<RectTransform>();
 
-
-        float startPosY = (segmentSize * start_seg) - (span*segmentSize);               // Bottom Left of box
+        float startPosY = (segmentHeight * start_seg) - (span*segmentHeight);               // Bottom Left of box
         box_rt.anchoredPosition = new Vector2(0,startPosY);                             // Set Position
           
-        box_rt.sizeDelta = new Vector2(graphContainer.sizeDelta.x, span*segmentSize);   // Set size
+        box_rt.sizeDelta = new Vector2(graphContainer.sizeDelta.x, span*segmentHeight);   // Set size
 
         box_rt.anchorMin = new Vector2(0, 0);                                           // Set Anchors
         box_rt.anchorMax = new Vector2(0, 0);
         box_rt.pivot = new Vector2(0, 0);
-
-
 
         return box;
     }
@@ -211,53 +196,119 @@ public class GraphPlotter : MonoBehaviour
 
     void drawData()
     {
+        // Wipes old points ready for refresh
+        foreach(GameObject item in currentGraphObjects)
+        {
+            Destroy(item);
+        }
+        currentGraphObjects.Clear();
 
+        float index = 0;
+        foreach (float value in tracker)
+        {
+            // Create plot point and add it to the cracker so it can be deleted
+            currentGraphObjects.Add(PlotNextPoint(index, value));
+            index++;
+        }
     }
 
-    void PlotPoint_(int xSegment, int ySegment)
+    GameObject PlotNextPoint(float xSegment, float yValue)
     {
+        GameObject point = new GameObject("Point", typeof(Image));    // Create GO
+        point.GetComponent<Image>().sprite = pointSprite;
+        point.transform.SetParent(pointsContainer, false);                    // Sets parent to this graph GO
+        Color pointColor = new Color(0f, 0f, 0f, 1f);
+        point.GetComponent<Image>().color = pointColor;
 
+        float segmentHeight = graphContainer.sizeDelta.y / heightSegments;
+        float segmentWidth = graphContainer.sizeDelta.x / widthSegments;
+
+        RectTransform point_rt = point.GetComponent<RectTransform>();
+
+        float range = graphMax - graphMin;
+        float yPercent = (yValue - graphMin) / range;
+        float yPos = (yPercent * graphContainer.sizeDelta.y) - (0.5f * segmentHeight);
+
+        float xPos = (xSegment * segmentWidth);
+
+        point_rt.anchoredPosition = new Vector2(xPos, yPos);                             // Set Position
+
+        point_rt.sizeDelta = new Vector2(segmentWidth, segmentHeight);   // Set size
+        point_rt.anchorMin = new Vector2(0, 0);                                           // Set Anchors
+        point_rt.anchorMax = new Vector2(0, 0);
+        point_rt.pivot = new Vector2(0, 0);
+
+        // Data value label
+        GameObject label = new GameObject("Label", typeof(RectTransform));
+        RectTransform parentPoint = point.GetComponent<RectTransform>();
+        label.transform.SetParent(parentPoint, false);
+
+        Text labelText = label.AddComponent<Text>();
+
+        if(xSegment == 0)
+        {
+            labelText.text = yValue.ToString() + " - Start";
+        }
+        else
+        {
+            labelText.text = yValue.ToString();
+        }
+        
+        labelText.font = pointFont;
+        labelText.color = Color.black;
+        labelText.alignment = TextAnchor.MiddleLeft;
+        labelText.fontSize = 55;
+
+        RectTransform label_rt = label.GetComponent<RectTransform>();
+        label_rt.Rotate(new Vector3(0, 0, 90));
+        label_rt.anchoredPosition = new Vector2(segmentWidth,segmentHeight);
+        label_rt.sizeDelta = new Vector2(500,segmentWidth);   // Set size
+        label_rt.anchorMin = new Vector2(0, 0);                                           // Set Anchors
+        label_rt.anchorMax = new Vector2(0, 0);
+        label_rt.pivot = new Vector2(0, 0);
+
+
+
+        // Link to previous point if not the first point
+        //if(xSegment != 0)
+        //{
+        //    GameObject link = new GameObject("link", typeof(RectTransform));                  // create new link GO
+
+        //    RectTransform linkParent = point.GetComponent<RectTransform>();
+
+        //    Image linkImage = link.AddComponent<Image>();
+
+        //    link.transform.SetParent(linkParent, false);
+
+        //    linkImage.color = Color.magenta;                            // Set line colour
+
+        //    RectTransform link_rt = link.GetComponent<RectTransform>();         // Get rect transform
+
+        //    GameObject lastPoint = currentGraphObjects.Last();
+
+        //    Vector2 dir = (currentGraphObjects.Last().transform.position - point.transform.position).normalized;                               // Line Direction
+        //    //Debug.Log(dir);
+
+        //    float distance = Vector2.Distance(currentGraphObjects.Last().transform.position, point.transform.position);                        // Line Distance
+        //    //Debug.Log(distance);
+
+        //    link_rt.anchorMin = new Vector2(0, 0);                                    // Set anchor
+        //    link_rt.anchorMax = new Vector2(0, 0);                                    // Set anchor
+        //    link_rt.sizeDelta = new Vector2(segmentWidth, 3f);                                 // Set size delta
+        //    link_rt.anchoredPosition = new Vector2(-30, 0.5f * segmentHeight);              // Half way between A and B
+        //    link_rt.pivot = new Vector2(0, 0);
+
+        //    Vector2 forward = new Vector2(-1, 0);
+        //    float angle = Vector2.Angle(forward, dir);                                      // Get line angle
+        //    link_rt.localEulerAngles = new Vector3(0, 0, angle);                      // Apply angle to new line
+        //}
+
+
+        return point;
     }
 
 
-
-    private GameObject PlotPoint(Vector2 position)
-    {
-        GameObject gameObject = new GameObject("circle", typeof(Image));                // Create a new game object, Type: Image, name: circle
-        currentGraphObjects.Add(gameObject);                                            // Add new object to list so they can all be deleted on refresh
-        gameObject.transform.SetParent(graphContainer, false);                          // Make circle a child of the graph container
-        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get the rect transform
-        rectTransform.anchoredPosition = position;                                      // Set a new position for that rect transform
-        rectTransform.sizeDelta = new Vector2(11, 11);                                  // ?? size delta ??
-
-        rectTransform.anchorMin = new Vector2(0, 0);                                    // Anchor to lower left corner
-        rectTransform.anchorMax = new Vector2(0, 0);                                    // Anchor to lower left corner
-
-        return gameObject;                                                              // Returns the game object so we can use it to make the connecting lines.
-    }
-
-
-    private void LinkPoints(Vector2 pointPosA, Vector2 pointPosB)
-    {
-        GameObject gameObject = new GameObject("link", typeof(Image));                  // create new link GO
-        currentGraphObjects.Add(gameObject);                                            // Add new object to list so they can all be deleted on refresh
-        gameObject.transform.SetParent(graphContainer, false);                          // Set parent
-        gameObject.GetComponent<Image>().color = new Color(1, 1, 1, .5f);               // Set line colour
-        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();         // Get rect transform
-        Vector2 dir = (pointPosB - pointPosA).normalized;                               // Line Direction
-        float distance = Vector2.Distance(pointPosA, pointPosB);                        // Line Distance
-        rectTransform.anchorMin = new Vector2(0, 0);                                    // Set anchor
-        rectTransform.anchorMax = new Vector2(0, 0);                                    // Set anchor
-        rectTransform.sizeDelta = new Vector2(80, 3f);                                 // Set size delta
-        rectTransform.anchoredPosition = pointPosA + dir * distance * .5f;              // Half way between A and B
-
-        Vector2 forward = new Vector2(1, 0);
-        float angle = Vector2.Angle(forward, dir);                                      // Get line angle
-
-        rectTransform.localEulerAngles = new Vector3(0, 0, angle);                      // Apply angle to new line
-    }
-
-    private void SetGraphBGData()
+    void SetGraphBGData()
     {
         if (usingBreathRateTracker)
         {

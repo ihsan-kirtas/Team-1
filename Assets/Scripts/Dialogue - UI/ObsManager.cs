@@ -121,7 +121,7 @@ public class ObsManager : MonoBehaviour
     // List cleanup - Used to stop the Obs array from getting too huge. keeps the initial value and deletes the 2nd value if length >10
     void TrimListSize(List<float> tracker)
     {
-        while (tracker.Count > 10)
+        while (tracker.Count > 21)
         {
             // remove the 2nd value in the list
             tracker.Remove(tracker[1]);
