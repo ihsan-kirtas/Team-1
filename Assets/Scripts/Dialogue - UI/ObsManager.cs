@@ -70,6 +70,7 @@ public class ObsManager : MonoBehaviour
             patient_data.oxygenTracker.Add(patient_data.oxygenTracker.Last() + patient_data.oxygenMod);                                                     // Oxygen
             patient_data.pulseRateTracker.Add(patient_data.pulseRateTracker.Last() + patient_data.pulseRateMod);                                            // Pulse Rate
             patient_data.pupilReactionTracker.Add(patient_data.pupilReactionTracker.Last() + patient_data.pupilReactionMod);                                // Pupil Reaction
+            patient_data.tempTracker.Add(patient_data.tempTracker.Last() + patient_data.tempMod);                                                           // Temp Tracker
 
             // if length > 10 remove 2nd item in the list
             TrimListSize(patient_data.bloodPressureSystolicTracker);
@@ -80,6 +81,7 @@ public class ObsManager : MonoBehaviour
             TrimListSize(patient_data.oxygenTracker);
             TrimListSize(patient_data.pulseRateTracker);
             TrimListSize(patient_data.pupilReactionTracker);
+            TrimListSize(patient_data.tempTracker);
 
             //Debug.Log("DEV - Obs updated for " + patient_data.name);
         }
