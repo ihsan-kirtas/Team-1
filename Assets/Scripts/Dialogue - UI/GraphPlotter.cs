@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using System;
 
+// Script contributors: James Siebert
 
 public class GraphPlotter : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GraphPlotter : MonoBehaviour
     public Sprite pointSprite;
     public Font pointFont;
 
-    private float drawDataFrequency = 300f;
+    public float drawDataFrequency = 300f;
     private float frameRecord = 0f;
 
 

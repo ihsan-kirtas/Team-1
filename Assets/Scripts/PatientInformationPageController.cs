@@ -4,35 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+// Script contributors: James Siebert
+
 public class PatientInformationPageController : MonoBehaviour
 {
     private Patient_Data pd;
     public GameObject player;
 
-    //public Text patientname;
     public Text patientInformation;
     public Text ample;
     public Text ambulancebayhandover;
 
 
-    private void Start()
-    {
-        //player = GameObject.Find("Player");     // Link player
-
-        //patientInformation.text = "";
-        //ample.text = "";
-        //ambulancebayhandover.text = "";
-        //Debug.Log(">>> player info Text WIPED<<<");
-    }
-
-
-
-
     // Call me whenever you display patient Information page
     public void UpdatePatientInformationPage()
     {
-        //Debug.Log("Update patient Info");
-
         // Update current patient Data
         pd = player.GetComponent<DialogManager>().currentPatient;
 
@@ -42,7 +28,6 @@ public class PatientInformationPageController : MonoBehaviour
             patientInformation.text = BuildPatientInfoText();
             ample.text = BuildAMPLEText();
             ambulancebayhandover.text = pd.uiambohandover;
-            //Debug.Log(">>> player info Text UPDATED<<<");
         }
         else
         {
@@ -77,31 +62,22 @@ public class PatientInformationPageController : MonoBehaviour
     }
 
 
-    // Prints the list to a string.
-    // Print String List
+    // Print String List - string builder
     public string PSL(List<string> stringList)
     {
-        string returnString = "";
-        if(stringList.Count > 0)
+        string returnString = "";                               // Set initial return string
+        if (stringList.Count > 0)                               // If there is data to display
         {
-            foreach (string str in stringList)
+            foreach (string str in stringList)                  // For all items in list
             {
-                // Append new string 
-                if (returnString == "")
-                {
-                    returnString = str;
-                }
+                if (returnString == "")                         // If this is the first entry
+                    returnString = str;                         // Just add the string
                 else
-                {
-                    returnString = returnString + ", " + str;
-                }
+                    returnString = returnString + ", " + str;   // Add the string plus a ","
             }
         }
         else
-        {
-            returnString = "NA";
-        }
-        return returnString;
+            returnString = "NA";                                // If list was empty return "NA"
+        return returnString;                                    // If list had values return them as a string
     }
-
 }

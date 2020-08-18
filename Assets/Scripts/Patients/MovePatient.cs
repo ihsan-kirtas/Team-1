@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script contributors: James Siebert
+
 public class MovePatient : MonoBehaviour
 {
     public Text locationText;
     public GameObject gameManager;
     public GameObject player;
     private PatientManager patientManager;
-    private float drawDataFrequency = 300f;
+    public float drawDataFrequency = 300f;
     private float frameRecord = 0f;
 
 
