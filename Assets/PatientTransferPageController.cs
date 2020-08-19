@@ -14,6 +14,8 @@ public class PatientTransferPageController : MonoBehaviour
 
     private void Start()
     {
+
+        
         //player = GameObject.Find("Player");     // Link player
 
         //initialObsText.text = "";
@@ -41,14 +43,15 @@ public class PatientTransferPageController : MonoBehaviour
     public void SaveDateTime()
     {
         // Gets the current date time stored in player prefs, if nothing set to ""
-        string originalString = PlayerPrefs.GetString("DateTime", "").ToString();
+        string originalString = PlayerPrefs.GetString("playerName + DateTime", "").ToString();
 
         // If empty 
         if (originalString == "")
             // just set the datetime
-            PlayerPrefs.SetString("DateTime", System.DateTime.Now.ToString());
+
+            PlayerPrefs.SetString("playerName + DateTime", System.DateTime.Now.ToString());
         else
             // else if there is already values then add a ","
-            PlayerPrefs.SetString("DateTime", originalString + "\n" + System.DateTime.Now.ToString());
+            PlayerPrefs.SetString(" playerName + DateTime", originalString + "\n" + System.DateTime.Now.ToString());
     }
 }

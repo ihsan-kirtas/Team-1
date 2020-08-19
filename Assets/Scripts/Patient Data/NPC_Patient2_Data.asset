@@ -27,17 +27,13 @@ MonoBehaviour:
     02:30. '
   patientdemographics: 'Name: Peter wilbourne   Age: 30    Gender:  Male   '
   ambulanceBayConversation:
-  - amb 1
-  - amb 2
-  - amb 3
-  - amb 4
-  - amb 5
+  - 'Time of Dispatch Call: 01:30'
+  - 'Time of Arrival on Scene: 02:00'
+  - Time of Arrival at Hospital:02:30
   bedsAreaConversation:
-  - beds 1
-  - beds 2
-  - beds 3
-  - beds 4
-  - beds 5
+  - The patient in bed 1 is ready for transfer to the ward
+  - I need an XRay on the patient in bed 4
+  - I need to get some pain relief for the patient in bed 5
   resusBayConversation:
   - resus 1
   - resus 2
@@ -51,14 +47,14 @@ MonoBehaviour:
   - walk 4
   - walk 5
   otherConversation:
-  - Peter Other 1
-  - Peter Other 2
-  - Peter Other 3
-  - Peter Other 4
-  - Peter Other 5
+  - Coffee is life right now
+  - Theres some cake left in the fridge from the morning shift
+  - I need to start some fluids on the patient in bed 6
+  currentObs: []
   currentobs: "Vital Signs: 110/70 HR: 118 Body temperature (35.5\xB0C) Pedal pulse
     weak Dusky left leg Bleeding from behind left calf Pain score 7/10 "
   selfVentilating: 1
+  patientVentilationStatus: Self ventilating in room air
   oxygenInit: 95
   oxygenMod: 0.5
   oxygenTracker:
@@ -86,7 +82,7 @@ MonoBehaviour:
   - 250.5
   - 251
   accessoryMuscles: 1
-  bloodPressureSystolicInit: 140
+  bloodPressureSystolicInit: 108
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
@@ -99,7 +95,7 @@ MonoBehaviour:
   - 375
   - 375.5
   - 376
-  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicInit: 75
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
@@ -112,7 +108,7 @@ MonoBehaviour:
   - 325
   - 325.5
   - 326
-  pulseRateInit: 70
+  pulseRateInit: 117
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
@@ -139,7 +135,7 @@ MonoBehaviour:
   - 237
   - 237.5
   - 238
-  glasgowComaScaleInit: 12
+  glasgowComaScaleInit: 15
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker:
   - 12
@@ -165,16 +161,25 @@ MonoBehaviour:
   - 239
   - 239.5
   - 240
-  repetitiveQuestining: 1
+  repetitiveQuestining: 0
   hasInternalDevices: 0
   hasCannula: 0
   hasFever: 0
-  AMPLEtext: 'Allergies: Nil, Medications: Abacavir, dolutegravir, Past Medical History:
-    HIV, Last Meal Eaten: 17:00, Events Leading to Hospital Presentation: Found unconsious
-    after bringe drinking this afternoon, unknown amount of alcohol consumption.'
+  tempInit: 35.5
+  tempMod: 0.5
+  tempTracker: []
+  AMPLEtext: 'Allergies: Nil, Medications: Abacavir, Bictegravi, Dolutegravir and
+    Lamivudine. Past Medical History: Recent HIV diagnosis, Last Meal Eaten: 17:00,
+    Events Leading to Hospital Presentation: Found unconsious after bringe drinking
+    this afternoon, unknown amount of alcohol consumption.'
   allergies: []
-  medicationList: []
-  medicalHistoryList: []
+  medicationList:
+  - Bictegravir
+  - Dolutegravir
+  - Abacavir
+  - Lamivudine
+  medicalHistoryList:
+  - Recent HIV Diagnosis
   lastMealTime: 17:00
   leadingEvents: Events leading to the presentation to hospital
   triageScale: 3
@@ -188,4 +193,4 @@ MonoBehaviour:
     and artery that was severed during his dog bite. He was treated with antibiotics,
     however post operative complications occured and Peter required a below the knee
     amputation
-  clinicalReferences: 'For further information refer to the following: '
+  clinicalReferences: 'For further information refer to the following: https://bestpractice.bmj.com.acs.hcn.com.au/topics/en-gb/1196 '

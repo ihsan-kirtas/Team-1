@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class AC_ShowDateTime : MonoBehaviour
 {
-
+    
     public Text timedateBox;
-   
-
+    string playerNameString;  
     public float drawDataFrequency = 300;
     private float frameRecord = 0;
     
 
     public void showData()
     {
-       timedateBox.text= PlayerPrefs.GetString("DateTime", "").ToString();
-        Debug.Log("updated date and time");
+       
+       timedateBox.text= PlayerPrefs.GetString("playerName + DateTime", "").ToString();
+       Debug.Log("updated player name, date and time");
     }
 
     private void Start()
     {
+        
         showData();
     }
 

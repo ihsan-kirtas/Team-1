@@ -12,26 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
   m_Name: NPC_Patient3_Data
   m_EditorClassIdentifier: 
-  name: Patient 3
-  age: 30
-  gender: Male
+  name: 'Karen '
+  age: 45
+  gender: Female
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
-  PatientPrefab: {fileID: 6867055366005781249, guid: 1088e568920186a4c91d789f7b2da310,
-    type: 3}
+  uiambohandover: 'Karen was transferred via ambulance from home post discharge from
+    another metropolitan emergency department, requesting a second opinion on the
+    management of an injury to her right big toe, post kicking toe on the coffee
+    table in her home 7/24 hours ago. Patient unable to get to hospital as she was
+    unable to drive rang 000. X-Ray attended at another hospital nil fractures noted,
+    patient vitals stable afebrile, complaining of 7/10 pain, refusing analgesia
+    wishing to speak to emergency manager to put formal complaint re: treatment at
+    previous hospital. '
+  patientdemographics: 'Name:    Age:     Gender:     '
   ambulanceBayConversation:
-  - amb 1
-  - amb 2
-  - amb 3
-  - amb 4
-  - amb 5
+  - 'Time of Dispatch: 03:00'
+  - 'Time of Arrival on Scene: 04:00'
+  - 'Time of Arrival to Hospital: 04:20'
   bedsAreaConversation:
-  - beds 1
-  - beds 2
-  - beds 3
-  - beds 4
-  - beds 5
+  - I need to obs on the patient in bed 3
+  - I need to run a blood gas on the patient in bed 1
+  - I need to give paracetamol to the patient in bed 1
   resusBayConversation:
   - resus 1
   - resus 2
@@ -45,33 +48,37 @@ MonoBehaviour:
   - walk 4
   - walk 5
   otherConversation:
-  - P3 - Other 1
-  - P3 - Other 2
-  - P3 - Other 3
-  - P3 - Other 4
-  - P3 - Other 5
+  - Have you contacted the after hours manager about Karen?
+  - Did you need help with anything?
+  currentObs: []
+  currentobs: 'RR:20 SPo2:99% BP:125/75 HR:80 BGL:4.5mmol/L GCS:15 Temp:36.9 Pain:5/10 
+    Neurovascular: Strong pedal pulses Able to move right big toe Some small bruising
+    noted X-Ray attended at local hospital nil fractures noted on X-Ray Patient unhappy
+    with current management Patient reports having 3 glasses of wine, when the incident
+    occurred '
   selfVentilating: 1
-  oxygenInit: 95
+  patientVentilationStatus: 
+  oxygenInit: 99
   oxygenMod: 0.5
   oxygenTracker: []
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker: []
   accessoryMuscles: 1
-  bloodPressureSystolicInit: 140
+  bloodPressureSystolicInit: 125
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker: []
-  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicInit: 75
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker: []
-  pulseRateInit: 70
+  pulseRateInit: 80
   pulseRateMod: 0.5
   pulseRateTracker: []
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker: []
-  glasgowComaScaleInit: 12
+  glasgowComaScaleInit: 15
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker: []
   pupilReactionInit: 4
@@ -81,13 +88,25 @@ MonoBehaviour:
   hasInternalDevices: 0
   hasCannula: 0
   hasFever: 0
+  tempInit: 37
+  tempMod: 0.5
+  tempTracker: []
+  AMPLEtext: 
   allergies: []
   medicationList: []
   medicalHistoryList: []
-  lastMealTime: 19:00
+  lastMealTime: 20:00
   leadingEvents: Events leading to the presentation to hospital
-  triageScale: 0
+  triageScale: 5
   currentLocation: ' Un Assigned'
   patientActive: 0
   initValsAdded: 0
   character: {fileID: 0}
+  recommendations: This patient can wait for treatment or referral to her GP for
+    ongoing treatment
+  patienthospitaljourney: 'Karen became increasingly angry towards staff over increased
+    wait times and other patients being treated before her. Zero tollerance policy
+    was actioned and the after hours manager spoke with the patient in regards to
+    her abusive behaviours towards staff. Karen was then advised that her toe was
+    not broken and she left the department in a taxi home. '
+  clinicalReferences: 'For more information: https://www1.health.nsw.gov.au/pds/ActivePDSDocuments/PD2015_001.pdf'

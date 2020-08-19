@@ -28,21 +28,13 @@ MonoBehaviour:
     Pain:5 Behaviour:  aggressive not following direction. GCS on scene was 13. '
   patientdemographics: 'Name: Greg Marhe, Age: 30, Gender: Male'
   ambulanceBayConversation:
-  - 'RR: 15 SPo2:95 on room air BP:130/88 HR:60 BGL:5.5 GCS:11 Eyes 3 Verbal 4 Motor
-    5 Pupils:4+  Arms: 5  Legs:5 Temp:37 Pain:5 Behaviour:  aggressive not following
-    direction '
-  - 2
-  - 3
-  - 4
-  - 5
+  - 'Time of Dispatch Call: 20:30'
+  - 'Arrival of Ambulance on Scene: 20:55'
+  - 'Time of Arrival to Hospital: 21:30'
   bedsAreaConversation:
-  - Greg's care was not prioritsed correctly. Greg's ICP increased causing him to
-    have a seizure and a hypoxic brain injury. Greg was rushed from the bedspace
-    area into the resuscitation bay where was sent to CT then theatre
-  - 2
-  - 3
-  - 4
-  - 5
+  - Did you need help with anything?
+  - I have to get bloods on the patient in bed 2
+  - 'Do you need help with anything? '
   resusBayConversation:
   - The team leader has let us know that we have sent a trauma page out
   - The neurosurgery team are on their way
@@ -61,6 +53,7 @@ MonoBehaviour:
   otherConversation:
   - Do you need any help?
   - How are you travelling, have you had a break yet?
+  - 'Have you had a break yet? '
   currentObs:
   - 'RR: 15'
   - 'Sp02: 96% room air'
@@ -263,4 +256,5 @@ MonoBehaviour:
   patienthospitaljourney: 'Greg was found to have a bleed in the front right temperal
     lobe region of his brain and his ICP was greatly increasing. He needed an emergency
     craniotomy and spent some time in the ICU '
-  clinicalReferences: 'For more information on the Triage process: https://acem.org.au/getmedia/e82835b0-6595-407b-92eb-4c7e00f3ef42/australian-triage-process-review.aspx, '
+  clinicalReferences: 'For more information on the Triage process: https://acem.org.au/getmedia/e82835b0-6595-407b-92eb-4c7e00f3ef42/australian-triage-process-review.aspx,
+    For best practice information refer to https://bestpractice.bmj.com.acs.hcn.com.au/topics/en-gb/515'
