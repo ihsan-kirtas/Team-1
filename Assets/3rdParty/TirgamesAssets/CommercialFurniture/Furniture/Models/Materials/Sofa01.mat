@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sofa01
-  m_Shader: {fileID: 4800000, guid: a519d87aaddc77a4b9d569d599039285, type: 3}
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -72,7 +72,7 @@ Material:
     - _Cutoff: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
@@ -93,7 +93,7 @@ Material:
     m_Colors:
     - _AlphaColor: {r: 1, g: 1, b: 1, a: 1}
     - _BlueColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionMapScaleOffset: {r: 1, g: 1, b: 0, a: 0}
     - _GreenColor: {r: 0.47794116, g: 0.47794116, b: 0.47794116, a: 1}
