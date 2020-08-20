@@ -13,7 +13,8 @@ public class Ac_DateTimeI : MonoBehaviour
     public void SaveDateTime()
     {
         
-        PlayerPrefs.SetString("Date and Time", System.DateTime.Now.ToString());
+        PlayerPrefs.SetString("Date and Time", System.DateTime.Today.ToString());
+        Debug.Log("date and time updated");
     }
 
     // Update is called once per frame

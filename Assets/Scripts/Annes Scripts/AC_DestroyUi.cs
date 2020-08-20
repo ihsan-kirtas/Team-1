@@ -6,14 +6,26 @@ using UnityEngine.UI;
 public class AC_DestroyUi : MonoBehaviour
 {
     public GameObject uiText;
-    public GameObject uiPanel;
+    public GameObject uiTextField;
+    public GameObject uiSubmitButton;
+    public GameObject uiMainMenuButton;
 
-    private void Update()
+    public void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
+        uiMainMenuButton.SetActive(false);
+    }
 
+    public void DisableTextBox()
+    {
+        uiText.SetActive(false);
+        uiTextField.SetActive(false);
+        uiSubmitButton.SetActive(false);
+
+        if (uiSubmitButton==false)
+        {
+            uiMainMenuButton.SetActive(true);
         }
+
     }
 
 

@@ -16,7 +16,7 @@ public class AC_ShowDateTime : MonoBehaviour
     public void showData()
     {
        
-       timedateBox.text= PlayerPrefs.GetString("playerName + DateTime", "").ToString();
+       timedateBox.text= PlayerPrefs.GetString("name + DateTime", "").ToString();
        Debug.Log("updated player name, date and time");
     }
 

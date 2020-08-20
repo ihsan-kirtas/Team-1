@@ -6,21 +6,17 @@ using System;
 
 public class AC_SavePlayerName : MonoBehaviour
 {
-    public InputField inputText;
-     string playerName;
+    public InputField textBox;
+    
 
-    private void Start()
+    public void clickSaveNameButton()
     {
-        playerName = PlayerPrefs.GetString("playernametext");
-        inputText.text = playerName;
+        PlayerPrefs.SetString("name", textBox.text);
+
+        Debug.Log("your name is" + PlayerPrefs.GetString("name"));
     }
 
-    public void SavePlayerName()
-    {
-        playerName = inputText.text;
-        PlayerPrefs.SetString("playernametext", playerName);
-        Debug.Log("player name being shown");
-    }
+   
 
 
 }
