@@ -5,48 +5,53 @@ using UnityEngine.UI;
 
 public class AC_RaycastScript : MonoBehaviour
 {
-    public RaycastHit hit;
+    public float range = 50f;
+    public Camera fpsCam;
+    public float fadeTime;
+    //public GameObject uiCanvas;
+    public Text myText;
+    public string objectName;
     public Ray ray;
-    public GameObject uiTextObject;
-    
-    private void Update()
+    public  RaycastHit hit;
+
+    public bool displayInfo;
+
+
+    private void Start()
+
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        uiTextObject.SetActive(false);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (hit.collider!=null)
-                {
-                    
-                    uiTextObject.SetActive(true);
-                    Debug.Log(hit.transform.name);
-
-                }
-
-                else
-                {
-                    
-                    uiTextObject.SetActive(false);
-                }
-            }
-
-            //if (Input.GetButtonDown("escape"))
-            //{
-            //    uiTextObject.SetActive(false);
-            //}
-
-           
-        }
+        myText = GameObject.Find("Text").GetComponent<Text>();
+        myText.color = Color.clear;
     }
 
-    
 
+    private void Update()
+    {
+       
 
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            displayInfo = true;
+            FadeText();
+        }
 
+    }
+
+    void FadeText()
+    {
+        if (displayInfo)
+        {
+            myText.text = objectName;
+            myText.color = Color.Lerp(myText.color, Color.white, fadeTime * Time.deltaTime);
+            Debug.Log("change object name");
+        }
+
+        else
+        {
+            myText.color = Color.Lerp(myText.color, Color.clear, fadeTime * Time.deltaTime);
+        }
+    }
 
 
 

@@ -20,10 +20,7 @@ public class AC_MouseOverUI : MonoBehaviour
     {
         FadeText();
 
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    Screen.lockCursor = false;
-        //}
+       
     }
 
     private void OnMouseOver()
