@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 public class JH_SettingsMenuUI : MonoBehaviour
 {
-    //public AudioMixer audioMixer;                           //Audio hasn't been set up yet but the scripting for the functionality is set to be implemented - this hasn't been tested
+    public AudioMixer audioMixer;                           //Audio hasn't been set up yet but the scripting for the functionality is set to be implemented - this hasn't been tested
 
     Resolution[] resolutions;
 
@@ -51,7 +51,7 @@ public class JH_SettingsMenuUI : MonoBehaviour
         //audioMixer.SetFloat("volume", volume);                    //The name in the brackets "" is the name of the exposed parameter in the Audio Mixer
 
         //For method of volume using logarithmic value (0.0001 to 1)
-        //audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);  //Found this at: https://www.youtube.com/watch?v=xNHSGMKtlv4
+        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);  //Found this at: https://www.youtube.com/watch?v=xNHSGMKtlv4
     }
 
     public void SetFullScreen(bool isFullscreen)
