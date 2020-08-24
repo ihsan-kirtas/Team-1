@@ -12,62 +12,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
   m_Name: NPC_Patient4_Data
   m_EditorClassIdentifier: 
-  name: Patient 4
-  age: 30
+  name: Nathan Myers
+  age: 16
   gender: Male
   overallHealth: Generally healthy
-  additionalNotes: None
-  startPatientInfo: None
-  PatientPrefab: {fileID: 6129716226650916466, guid: 1912f86af27d82c44aa90e26c1808fd9,
-    type: 3}
+  additionalNotes: 'Sexually Active '
+  startPatientInfo: 
+  uiambohandover: 'Patient complaining of 8/10 lower abdominal pain, radiating from
+    the groin to the lower abdomen, not coming in waves, paracetamol and ibuprofen
+    given by mother with nil effect  vomiting and feeling nauseated. Patient reports
+    small amount of scrotal swelling. Inter hospital transfer from regional hospital
+    for surgical management of ?appendicitis ?colitis ?testicular torsion ?Inflammation
+    due to sexually transmitted disease ?kidney stone ?UTI . '
+  patientdemographics: 'Name: Nathan Myers Age: 16 Gender: Male'
   ambulanceBayConversation:
-  - Patients are handed over here assigned a triage score press next to see more
-    information and X to close the dialogue box
+  - 'Time of Dispatch: 04:00'
+  - 'Time of Arrival on Scene: 04:20'
+  - 'Time of Arrival at Hospital: 5:00'
   bedsAreaConversation:
-  - Patients who do not need to be in the resus bay will come here
+  - Do you need help with anything?
+  - Do you need me to check pain relief for you?
+  - Did you want me to page the surgical team?
   resusBayConversation:
   - Patients who require resus will be placed here
   walkInConversation: []
   otherConversation:
   - Hello, I am here to assist you.
+  currentObs: []
+  currentobs: 'RR:25 SPo2:95% BP:135/88 HR:98 BGL:5.6mmol/L GCS:15 Temp:36.0 Pain:8/10
+    Fluids:Nil by mouth, 80ml/hr Sodium Chloride 0.9% + 5% Glucose '
   selfVentilating: 1
+  patientVentilationStatus: Patient self ventilating in room air
   oxygenInit: 95
   oxygenMod: 0.5
   oxygenTracker: []
-  breathRateInit: 15
+  breathRateInit: 25
   breathRateMod: 0.5
   breathRateTracker: []
-  accessoryMuscles: 1
+  accessoryMuscles: no use of accesory muscles
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker: []
-  bloodPressureDiastolicInit: 90
+  bloodPressureDiastolicInit: 87
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker: []
-  pulseRateInit: 70
+  pulseRateInit: 99
   pulseRateMod: 0.5
   pulseRateTracker: []
   wholeBodyPerfusion: 1
-  capillaryRefillInit: 2
+  capillaryRefillInit: 3
   capillaryRefillMod: 0.5
   capillaryRefillTracker: []
-  glasgowComaScaleInit: 12
+  glasgowComaScaleInit: 15
   glasgowComaScaleMod: 0.5
   glasgowComaScaleTracker: []
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker: []
-  repetitiveQuestining: 1
-  hasInternalDevices: 0
-  hasCannula: 0
-  hasFever: 0
-  allergies: []
-  medicationList: []
-  medicalHistoryList: []
-  lastMealTime: 19:00
-  leadingEvents: Events leading to the presentation to hospital
-  triageScale: 0
+  repetitiveQuestioning: patient not repeating any questions
+  hasInternalDevices: no
+  hasCannula: yes in left cubital fossa
+  painScore: 9/10
+  painLocation: lower abdomen
+  woundDressings: nil wound dressings
+  temperature: 36.0
+  tempInit: 37
+  tempMod: 0.5
+  tempTracker: []
+  fluidStatus: 80ml/hr Sodium Chloride 0.9% + 5% Glucose
+  lastVoided: 03:00
+  lastBowelsOpen: 19:00
+  AMPLEtext: 
+  allergies:
+  - Nil Known Allergies
+  medicationList:
+  - 'Paracetamol 1 Gram: 01:00'
+  - 'Ibuprofen 400mg : 02:00'
+  - 'Oxycodone 10mg: 03:00'
+  medicalHistoryList:
+  - Nil regular medications
+  lastMealTime: '17:00 '
+  leadingEvents: Patient brought by mother to Western ED, nil Paediatric Urology
+    coverage, patient transfered to ED for opinion and management of abdomal pain.
+  triageScale: 2
   currentLocation: ' Un Assigned'
   patientActive: 0
   initValsAdded: 0
   character: {fileID: 0}
+  recommendations: With high suspicion of testicular torsion, immediate urological
+    consultation with emergency surgery is suggested, followed with pain relief.
+    If surgical intervention is unable to occur manual detorsion is to be attended.
+    Ultrasound of the area is to be attended with a urinalysis, full blood count,
+    c-reactive protein plus Scintigraphy to occur.
+  patienthospitaljourney: Nathan was sent for an urgent ultrasound with a Scintigraphy
+    which showed a torsion of the right teste. He was rushed to the operating theatre
+    where the Urologist performed a scrotal exploration and untwisted his teste.
+    He was sent to the ward and was discharged on day three post op. It was not known
+    how he got his torsion and the Urologist managed to save his right teste.
+  clinicalReferences: 'Testicular torsion can clinically look like other surgical
+    and non-surgical diagnosis, males that present similarly should be screen adequately
+    for more information refer to https://www.acr.org/Clinical-Resources/ACR-Appropriateness-Criteria  '

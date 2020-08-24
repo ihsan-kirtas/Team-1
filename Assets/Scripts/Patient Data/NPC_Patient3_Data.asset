@@ -26,7 +26,7 @@ MonoBehaviour:
     patient vitals stable afebrile, complaining of 7/10 pain, refusing analgesia
     wishing to speak to emergency manager to put formal complaint re: treatment at
     previous hospital. '
-  patientdemographics: 'Name:    Age:     Gender:     '
+  patientdemographics: 'Name:  Karen Rose  Age: 45    Gender:  Female   '
   ambulanceBayConversation:
   - 'Time of Dispatch: 03:00'
   - 'Time of Arrival on Scene: 04:00'
@@ -84,13 +84,19 @@ MonoBehaviour:
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker: []
-  repetitiveQuestining: 1
+  repetitiveQuestioning: 
   hasInternalDevices: 0
   hasCannula: 0
-  hasFever: 0
+  painScore: 
+  painLocation: 
+  woundDressings: 
+  temperature: 
   tempInit: 37
   tempMod: 0.5
   tempTracker: []
+  fluidStatus: 
+  lastVoided: 
+  lastBowelsOpen: 
   AMPLEtext: 
   allergies: []
   medicationList: []
