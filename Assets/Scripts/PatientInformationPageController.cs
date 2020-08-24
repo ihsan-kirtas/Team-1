@@ -43,8 +43,8 @@ public class PatientInformationPageController : MonoBehaviour
     {
         string returnString =
             "Name: " + pd.name + "\n" +
-            "Age: " + pd.name.ToString() + "\n" +
-            "Sex: " + pd.name + "\n" +
+            "Age: " + pd.age.ToString() + "\n" +
+            "Sex: " + pd.gender + "\n" +
             "Overall Health: " + pd.overallHealth + "\n" +
             "Additional Notes: " + pd.additionalNotes + "\n";
         return returnString;
@@ -57,7 +57,7 @@ public class PatientInformationPageController : MonoBehaviour
             "M - Medications: " + PSL(pd.medicationList) + "\n" +
             "P - Past Medical History: " + PSL(pd.medicalHistoryList) + "\n" +
             "L - Last Meal Time: " + pd.lastMealTime + "\n" +
-            "E - Medications: " + pd.leadingEvents + "\n";
+            "E - Events Leading to Hospital Presentation: " + pd.leadingEvents + "\n";
         return returnString;
     }
 

@@ -30,27 +30,31 @@ public class ResultsPageController : MonoBehaviour
         // Update current patient Data
         pd = player.GetComponent<DialogManager>().currentPatient;
 
-        if (pd != null)
-        {
-            // Set Text
-            yourDecisionText.text = "";
-            recommendedDecisionText.text = "";
-            patientJourneyText.text = "";
+        yourDecisionText.text = BuildYourDecisionText();
+        recommendedDecisionText.text = BuildRecommendedDecisionText();
+        patientJourneyText.text = PatientHospitalJourneyText();
 
-        }
-        else
-        {
-            yourDecisionText.text = BuildYourDecisionText();
-            recommendedDecisionText.text = BuildYourDecisionText();
-            patientJourneyText.text = pd.patienthospitaljourney;
-        }
+        //if (pd != null)
+        //{
+        //    // Set Text
+        //    yourDecisionText.text = "";
+        //    recommendedDecisionText.text = "";
+        //    patientJourneyText.text = "";
+
+        //}
+        //else
+        //{
+        //    yourDecisionText.text = BuildYourDecisionText();
+        //    recommendedDecisionText.text = BuildRecommendedDecisionText();
+        //    patientJourneyText.text = PatientHospitalJourneyText();
+        //}
     }
 
     public string BuildYourDecisionText()
     {
         string returnString =
-            "Name: " + pd.name + "\n" +
-            " Include Triage score here";
+            "Triage Score " + pd.triageScale + "\n";
+           
 
         return returnString;
     }
@@ -58,9 +62,18 @@ public class ResultsPageController : MonoBehaviour
 
     public string BuildRecommendedDecisionText()
     {
-        string returnString = pd.recommendations + "\n" +
-        " Include Clinical Reasoning here";
+        string returnString =
+            "Recommendations " + pd.recommendations + "\n" +
+            "Clinical References " + pd.clinicalReferences + "\n";
+        
 
+        return returnString;
+    }
+
+    public string PatientHospitalJourneyText()
+    {
+        string returnString =
+            " " + pd.patienthospitaljourney + "\n";
         return returnString;
     }
 }

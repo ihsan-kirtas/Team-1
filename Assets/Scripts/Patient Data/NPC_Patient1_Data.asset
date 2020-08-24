@@ -16,16 +16,17 @@ MonoBehaviour:
   age: 30
   gender: Male
   overallHealth: Generally healthy
-  additionalNotes: 'Name: Greg Marhe, Age: 30, Gender: Male'
+  additionalNotes: Wife Maria will give birth in two weeks.
   startPatientInfo: None
   uiambohandover: 'Patient tripped on a bowling ball in his garage leading him to
-    falling over in an awkward way. Patient hit his head on the right temporal lobe
+    fall over in an awkward way. Patient hit his head on the right temporal lobe
     on a corner of a shelf which has a small cut and what seems to be a fractured
     ankle in his left leg caused by a loss of consciousness for 15 seconds when he
-    fell. Was found by his wife at home and she called 000 at 20:30. Ambulance arrived
-    at 20:55, time of arrival to hospital 21:25.  RR: 15 SPo2:95 on room air BP:130/88
-    HR:60 BGL:5.5 GCS:11 Eyes 3 Verbal 4 Motor 5 Pupils:4+  Arms: 5  Legs:5 Temp:37
-    Pain:5 Behaviour:  aggressive not following direction. GCS on scene was 13. '
+    fell. Was found by his wife at home and she called 000 at 20:30. The ambulance
+    arrived at 20:55, time of arrival to hospital 21:25.  RR: 15 SPo2:95 on room
+    air BP:130/88 HR:60 BGL:5.5 GCS:11 Eyes 3 Verbal 4 Motor 5 Pupils:4+  Arms: 5 
+    Legs:5 Temp:37 Pain:5 Behaviour: Greg is aggressive not following directions
+    and asking questions in a repetitive manner. GCS on the scene was 13. '
   patientdemographics: 'Name: Greg Marhe, Age: 30, Gender: Male'
   ambulanceBayConversation:
   - 'Time of Dispatch Call: 20:30'
@@ -74,49 +75,19 @@ MonoBehaviour:
   currentobs: 'RR:15 SPo2:96% on room air  BP: 135/90 HR:58 BGL:-5.4 GCS:11 Eyes
     3 Verbal 4 Motor 5 Pupils: 4+ Arms:Left 4 Legs: Left 4 Temp:37.2 Pain:6 Behaviour:
     aggressive not following direction. '
-  selfVentilating: 1
-  patientVentilationStatus: 
+  selfVentilating: Spontaneous Self Ventilating
+  patientVentilationStatus: Patient Self Ventilating in room air
   oxygenInit: 100
   oxygenMod: 3
   oxygenTracker:
   - 100
   - 103
-  - 106
-  - 109
-  - 112
-  - 115
-  - 118
-  - 121
-  - 124
-  - 127
-  - 130
-  - 133
-  - 136
-  - 139
-  - 142
-  - 145
-  - 148
   breathRateInit: 20
   breathRateMod: 0.5
   breathRateTracker:
   - 20
   - 20.5
-  - 21
-  - 21.5
-  - 22
-  - 22.5
-  - 23
-  - 23.5
-  - 24
-  - 24.5
-  - 25
-  - 25.5
-  - 26
-  - 26.5
-  - 27
-  - 27.5
-  - 28
-  accessoryMuscles: 0
+  accessoryMuscles: Nil use of accessory muscles for breathing
   bloodPressureSystolicInit: 130
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker: []
@@ -125,42 +96,12 @@ MonoBehaviour:
   bloodPressureDiastolicTracker:
   - 88
   - 88.5
-  - 89
-  - 89.5
-  - 90
-  - 90.5
-  - 91
-  - 91.5
-  - 92
-  - 92.5
-  - 93
-  - 93.5
-  - 94
-  - 94.5
-  - 95
-  - 95.5
-  - 96
   pulseRateInit: 60
   pulseRateMod: 0.5
   pulseRateTracker:
   - 60
   - 60.5
-  - 61
-  - 61.5
-  - 62
-  - 62.5
-  - 63
-  - 63.5
-  - 64
-  - 64.5
-  - 65
-  - 65.5
-  - 66
-  - 66.5
-  - 67
-  - 67.5
-  - 68
-  wholeBodyPerfusion: 1
+  wholeBodyPerfusion: Patient well perfused
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
   capillaryRefillTracker:
@@ -212,42 +153,36 @@ MonoBehaviour:
   pupilReactionInit: 4
   pupilReactionMod: 0.5
   pupilReactionTracker: []
-  repetitiveQuestining: 1
-  hasInternalDevices: 0
-  hasCannula: 0
-  hasFever: 0
-  tempInit: 37
+  repetitiveQuestioning: Patient confused to time and place and asking staff what
+    day and time it is
+  hasInternalDevices: Nil internal devices
+  hasCannula: Cannula inserted, removed by patient enroute
+  painScore: 7/10
+  painLocation: Right temporal lobe and left leg
+  woundDressings: non-adherent dressing applied with bandage to right temporal lobe,
+    on inspection nil bone fragments, actively bleeding on scene
+  temperature: Patient is afebrile, 36.5
+  tempInit: 36.5
   tempMod: 0.1
   tempTracker:
-  - 0
-  - 0.1
-  - 0.2
-  - 0.3
-  - 0.4
-  - 0.5
-  - 0.6
-  - 0.70000005
-  - 0.8000001
-  - 0.9000001
-  - 1.0000001
-  - 1.1000001
-  - 1.2000002
-  - 1.3000002
-  - 1.4000002
-  - 1.5000002
-  - 1.6000003
+  - 36.5
+  - 36.6
+  fluidStatus: 
+  lastVoided: 19:30
+  lastBowelsOpen: '07:00 '
   AMPLEtext: 'Allergies: Nil Known Allergies, Medications: Salbutamol, Past Medical
     History: Asthma, Last Meal Eater: 19:00, Events Leading to the presentation to
     Hospital: Fall over bowling ball LOC 15 seconds left ankle fracture. '
-  allergies: []
+  allergies:
+  - Nil Known Allergies
   medicationList:
   - Salbutamol
   medicalHistoryList:
   - Asthma
   lastMealTime: 19:00
-  leadingEvents: 
+  leadingEvents: Tripped and fell over bowling ball with a LOC 15 seconds
   triageScale: 2
-  currentLocation: Resus Bay 2
+  currentLocation: ' Un Assigned'
   patientActive: 1
   initValsAdded: 1
   character: {fileID: 0}

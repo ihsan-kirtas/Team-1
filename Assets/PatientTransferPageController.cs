@@ -40,18 +40,5 @@ public class PatientTransferPageController : MonoBehaviour
         }
     }
 
-    public void SaveDateTime()
-    {
-        // Gets the current date time stored in player prefs, if nothing set to ""
-        string originalString = PlayerPrefs.GetString("name + DateTime", "").ToString();
-
-        // If empty 
-        if (originalString == "")
-            // just set the datetime
-
-            PlayerPrefs.SetString("name + DateTime", System.DateTime.Now.ToString());
-        else
-            // else if there is already values then add a ","
-            PlayerPrefs.SetString(" name + DateTime", originalString + "\n" + System.DateTime.Now.ToString());
-    }
+  
 }

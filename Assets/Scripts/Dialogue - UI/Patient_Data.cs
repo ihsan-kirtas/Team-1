@@ -51,7 +51,7 @@ public class Patient_Data : ScriptableObject
     [Header("---------- Triage - ABCDDEF ----------")]
 
     // If the patient is self-ventilating or assisted ventilation by an Endotracheal Tube.
-    public bool selfVentilating = true;
+    public string selfVentilating ;
     public string patientVentilationStatus;
 
 
@@ -70,7 +70,7 @@ public class Patient_Data : ScriptableObject
     public List<float> breathRateTracker;
 
     // Using accessory muscles?
-    public bool accessoryMuscles = true;
+    public string accessoryMuscles;
 
 
 
@@ -99,7 +99,7 @@ public class Patient_Data : ScriptableObject
     public List<float> pulseRateTracker;
 
     // Whole Body Perfusion
-    public bool wholeBodyPerfusion = true;
+    public string wholeBodyPerfusion;
 
     // Capillary Refill - The time it takes for blood to flow back into a squeezed hand
     public float capillaryRefillInit = 2.0f;
@@ -123,33 +123,42 @@ public class Patient_Data : ScriptableObject
     public List<float> pupilReactionTracker;
 
     // Repetitive Questioning
-    public bool repetitiveQuestining = true;
-
-
-
+    public string repetitiveQuestioning;
+    
+    
     // ### D - Devices / Pain assessment and location of pain ###
-    [Header("D - Devices")]
+    [Header("D - Devices/Pain")]
 
     // Has Internal Devices - pacemaker, cannular etc
-    public bool hasInternalDevices = false;
+    public string hasInternalDevices ;
 
     // Has a Cannular
-    public bool hasCannula = false;
+    public string hasCannula ;
 
+    //Pain Assessment
+    public string painScore;
+    public string painLocation;
+
+    //wound dressing
+
+    public string woundDressings;
 
 
     // ### E - Environment ###
     [Header("E - Environment")]
 
     // Has Fever
-    public bool hasFever = false;
+    public string temperature;
 
     // Temperature
     public float tempInit = 37.0f;
     public float tempMod = 0.5f;
     public List<float> tempTracker;
 
-
+    [Header("-----F-Fluids------")]
+    public string fluidStatus;
+    public string lastVoided;
+    public string lastBowelsOpen;
 
     // --------------------------------------------------------------------------------------------------------------------
     // Triage - AMPLE
