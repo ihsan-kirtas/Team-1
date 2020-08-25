@@ -30,7 +30,7 @@ public class JH_PatientSpawner : MonoBehaviour
 
     public void SpawnNextPatient()
     {
-        if(nextPatientIndex + 1 <= allPatientsList.Count)
+        if(nextPatientIndex + 1 <= 4) // Capped at 4 patients
         {
             // Spawn Patient from list
             GameObject newPatient = Instantiate(allPatientsList[nextPatientIndex], spawnPoint, Quaternion.identity);
