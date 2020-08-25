@@ -38,9 +38,9 @@ public class StartMenuController : MonoBehaviour
         mainMenuSettingMenuUI.SetActive(false);
     }
 
-    public void StartPlayerData()                           // This starts the load screen before going to Player Data scene
+    public void StartPlayerTimes()                          // This starts the load screen before going to Player Data scene
     {                                                       // NOTE this could link to the wrong scene. Change this under the corresponding coroutine
-        StartCoroutine(loadingScreenCoroutinePlayerData());
+        StartCoroutine(loadingScreenCoroutinePlayerTimes());
     }
 
     public void Credits()
@@ -98,11 +98,11 @@ public class StartMenuController : MonoBehaviour
     //    loadingScreen.SetActive(false);
     //}
 
-    IEnumerator loadingScreenCoroutinePlayerData()          // Coroutine for Player Data button
+    IEnumerator loadingScreenCoroutinePlayerTimes()         // Coroutine for Player Data button
     {
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Player Data");              // Change to correct scene here for player prefs if this is the incorrect scene. 
+        SceneManager.LoadScene("ShowPlayerData");              // Change to correct scene here for player prefs if this is the incorrect scene. 
         yield return new WaitForSeconds(1);
         loadingScreen.SetActive(false);
     }
