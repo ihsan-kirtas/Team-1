@@ -48,14 +48,15 @@ public class GraphPlotter : MonoBehaviour
     [Header("Choose Chart - Tick only 1")]
     public bool usingBreathRateTracker;
     public bool usingOxygenTracker;        // o2 saturation
-    public bool usingBloodPressureDiastolicTracker;
-    public bool usingBloodPressureSystolicTracker;
+    public bool usingBloodPressure;
+    private bool usingBloodPressureSystolicTracker;
     public bool usingPulseRateTracker;
     public bool usingTempTracker;
 
     [Header("View only")]
     public Patient_Data currentPatientData;
     public List<float> tracker;
+    public List<float> tracker2; // for BP only (D) // must be the top value as it will have the label
     public List<GameObject> currentGraphObjects;
 
     private void Start()
@@ -107,15 +108,17 @@ public class GraphPlotter : MonoBehaviour
             currentPatientData.oxygenTracker.Clear();
             currentPatientData.oxygenTracker.Add(currentPatientData.oxygenInit);
         }
-        else if (usingBloodPressureDiastolicTracker)
+        else if (usingBloodPressure)
         {
             currentPatientData.bloodPressureDiastolicTracker.Clear();
             currentPatientData.bloodPressureDiastolicTracker.Add(currentPatientData.bloodPressureDiastolicInit);
+            currentPatientData.bloodPressureSystolicTracker.Clear();
+            currentPatientData.bloodPressureSystolicTracker.Add(currentPatientData.bloodPressureSystolicInit);
         }
         else if (usingBloodPressureSystolicTracker)
         {
-            currentPatientData.bloodPressureSystolicTracker.Clear();
-            currentPatientData.bloodPressureSystolicTracker.Add(currentPatientData.bloodPressureSystolicInit);
+            currentPatientData.bloodPressureSystolicTracker.Clear(); // delete
+            currentPatientData.bloodPressureSystolicTracker.Add(currentPatientData.bloodPressureSystolicInit); // delete
         }
         else if (usingPulseRateTracker)
         {
@@ -135,27 +138,33 @@ public class GraphPlotter : MonoBehaviour
 
         if (usingBreathRateTracker)
         {
-            tracker = currentPatientData.breathRateTracker; 
+            tracker = currentPatientData.breathRateTracker;
+            tracker2 = null;
         }
         else if (usingOxygenTracker)
         {
-            tracker = currentPatientData.oxygenTracker; 
+            tracker = currentPatientData.oxygenTracker;
+            tracker2 = null;
         }
-        else if (usingBloodPressureDiastolicTracker)
+        else if (usingBloodPressure)
         {
-            tracker = currentPatientData.bloodPressureDiastolicTracker; 
+            tracker = currentPatientData.bloodPressureSystolicTracker; //top value (for label)
+            tracker2 = currentPatientData.bloodPressureDiastolicTracker;  // bottom value
         }
         else if (usingBloodPressureSystolicTracker)
         {
-            tracker = currentPatientData.bloodPressureSystolicTracker; 
+            tracker = currentPatientData.bloodPressureSystolicTracker;  // delete
+            tracker2 = null;
         }
         else if (usingPulseRateTracker)
         {
             tracker = currentPatientData.pulseRateTracker;
+            tracker2 = null;
         }
         else if (usingTempTracker)
         {
-            tracker = currentPatientData.tempTracker; 
+            tracker = currentPatientData.tempTracker;
+            tracker2 = null;
         }
     }
 
@@ -252,16 +261,31 @@ public class GraphPlotter : MonoBehaviour
         }
         currentGraphObjects.Clear();
 
+
         float index = 0;
-        foreach (float value in tracker)
+
+        if (tracker2 != null) // If using blood pressure
         {
-            // Create plot point and add it to the cracker so it can be deleted
-            currentGraphObjects.Add(PlotNextPoint(index, value));
-            index++;
+            for (int i = 0; i < tracker.Count; i++)
+            {
+                currentGraphObjects.Add(PlotNextPoint(index, tracker[i], tracker2[i], false)); // build point as usual with label
+                currentGraphObjects.Add(PlotNextPoint(index, tracker2[i], 0f, true)); // Bottom value
+                index++;
+            }
+        }
+        else // not using blood pressure
+        {
+            foreach (float value in tracker) // top value
+            {
+                // Create plot point and add it to the cracker so it can be deleted  (index, top, bottom, bottom exists)
+                currentGraphObjects.Add(PlotNextPoint(index, value, 0f, false));
+
+                index++;
+            }
         }
     }
 
-    GameObject PlotNextPoint(float xSegment, float yValue)
+    GameObject PlotNextPoint(float xSegment, float yValue, float yValue2bot, bool bottom)
     {
         GameObject point = new GameObject("Point", typeof(Image));    // Create GO
         point.GetComponent<Image>().sprite = pointSprite;
@@ -296,13 +320,44 @@ public class GraphPlotter : MonoBehaviour
 
         if(xSegment == 0)
         {
-            float val = Mathf.Round(yValue * 100) / 100;
-            labelText.text = val.ToString() + " - Start";
+            if (bottom)
+            {
+                float val = Mathf.Round(yValue * 100) / 100;
+                labelText.text = "";
+            }
+            else if (usingBloodPressure)
+            {
+                float val = Mathf.Round(yValue * 100) / 100; // top
+                float val2bot = Mathf.Round(yValue2bot * 100) / 100; // bottom value
+
+                labelText.text = val.ToString() + "/" + val2bot.ToString() + " - Start";
+            }
+            else
+            {
+                float val = Mathf.Round(yValue * 100) / 100;
+                labelText.text = val.ToString() + " - Start";
+            }
         }
         else
         {
-            float val = Mathf.Round(yValue * 100) / 100;
-            labelText.text = val.ToString();
+            if (bottom)
+            {
+                float val = Mathf.Round(yValue * 100) / 100;
+                labelText.text = "";
+            }
+            else if (usingBloodPressure)
+            {
+                float val = Mathf.Round(yValue * 100) / 100; // top
+                float val2bot = Mathf.Round(yValue2bot * 100) / 100; // bot
+
+                labelText.text = val.ToString() + "/" + val2bot.ToString();
+            }
+            else
+            {
+                float val = Mathf.Round(yValue * 100) / 100;
+                labelText.text = val.ToString();
+            }
+
         }
         
         labelText.font = pointFont;
@@ -363,7 +418,7 @@ public class GraphPlotter : MonoBehaviour
         }
 
 
-        if (usingBloodPressureDiastolicTracker)
+        if (usingBloodPressure)
         {
             graphMax = 240f;          // Chart Max
             graphMin = 30f;           // Chart Min
