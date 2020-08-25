@@ -13,6 +13,8 @@ public class JH_PatientSpawner : MonoBehaviour
 
     GameObject gameManager;
 
+    private bool spawnEnabled = true;
+
 
     void Start()
     {
@@ -30,30 +32,47 @@ public class JH_PatientSpawner : MonoBehaviour
 
     public void SpawnNextPatient()
     {
-        if(nextPatientIndex + 1 <= 4) // Capped at 4 patients
+        if (spawnEnabled)
         {
-            // Spawn Patient from list
-            GameObject newPatient = Instantiate(allPatientsList[nextPatientIndex], spawnPoint, Quaternion.identity);
+            if (nextPatientIndex + 1 <= 4) // Capped at 4 patients
+            {
+                // Spawn Patient from list
+                GameObject newPatient = Instantiate(allPatientsList[nextPatientIndex], spawnPoint, Quaternion.identity);
 
-            // Set its parent object
-            newPatient.transform.parent = GameObject.Find("Patients").transform;
+                // Set its parent object
+                newPatient.transform.parent = GameObject.Find("Patients").transform;
 
-            // Activate the patient
-            Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_Data;
-            gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
+                // Activate the patient
+                Patient_Data patient_data = newPatient.GetComponent<NPC_Dialog>().NPC_Data;
+                gameManager.GetComponent<ObsManager>().ActivatePatient(patient_data);
 
-            // Call spawned event
-            GameEvents.current.PatientSpawned();
+                // Call spawned event
+                GameEvents.current.PatientSpawned();
 
-            Debug.Log("Patient: " + newPatient.name + " spawned");
+                Debug.Log("Patient: " + newPatient.name + " spawned");
 
-            // Increment ready for next spawn
-            nextPatientIndex++;
+                // Increment ready for next spawn
+                nextPatientIndex++;
+            }
+            else
+            {
+                Debug.Log("No More Patients");
+                Debug.Log(nextPatientIndex + 1);
+            }
+
+            StartCoroutine(EnableSpawn());
         }
         else
         {
-            Debug.Log("No More Patients");
-            Debug.Log(nextPatientIndex + 1);
+            Debug.Log("spawn timer delay");
         }
+        
+    }
+
+    IEnumerator EnableSpawn()
+    {
+        spawnEnabled = false;
+        yield return new WaitForSeconds(3);
+        spawnEnabled = true;
     }
 }
