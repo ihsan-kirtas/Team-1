@@ -15,7 +15,7 @@ public class AIPatrolScriptV2 : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        agent.destination = wayPoints[1].position;
+        agent.destination = wayPoints[5].position;
 
     }
 
