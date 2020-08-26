@@ -6,35 +6,40 @@ public class AC_ZDoorOpening : MonoBehaviour
 {
     public Animator leftDoorOpening;
     public Animator rightDoorOpening;
-    public AudioSource doorOpening;
+     
 
-    
-
+   
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Patient"))
         {
             // Animation - Play
-            leftDoorOpening.SetBool("Left Door", true);
-            rightDoorOpening.SetBool("RightDoor", true);
 
-          
+            leftDoorOpening.SetBool("LeftDoorOpen", true);
+            rightDoorOpening.SetBool("RightDoorOpen", true);
+
+            //leftDoorOpening.transform.position = new Vector3(0, 0, 2);
+            //rightDoorOpening.transform.position = new Vector3(0.007935028f, -0.1499473f, -1.45f);
+            Debug.Log("door opening");
             // Sound - Un-Pause
-            doorOpening.Play();
+            
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Patient"))
         {
-            // Animation - Stop
-            leftDoorOpening.SetBool("Left Door", false);
-            rightDoorOpening.SetBool(" RightDoor ", false);
+            // Animation - Play
 
+            leftDoorOpening.SetBool("LeftDoorOpen", false);
+            rightDoorOpening.SetBool("RightDoorOpen", false);
 
-            // Sound - Pause
-            doorOpening.Pause();
+            //leftDoorOpening.transform.position = new Vector3(0, 0, 2);
+            //rightDoorOpening.transform.position = new Vector3(0.007935028f, -0.1499473f, -1.45f);
+            Debug.Log("door opening");
+            // Sound - Un-Pause
+
         }
     }
 

@@ -12568,12 +12568,12 @@ MonoBehaviour:
   drawDataFrequency: 300
   usingBreathRateTracker: 1
   usingOxygenTracker: 0
-  usingBloodPressureDiastolicTracker: 0
-  usingBloodPressureSystolicTracker: 0
+  usingBloodPressure: 0
   usingPulseRateTracker: 0
   usingTempTracker: 0
   currentPatientData: {fileID: 0}
   tracker: []
+  tracker2: []
   currentGraphObjects: []
 --- !u!114 &444668728
 MonoBehaviour:
@@ -18581,7 +18581,7 @@ MonoBehaviour:
     be moved into the Bed Space Area or the Resuscitation Bay, press Space Bar again
     to close the Triage Score.\r\n\r\nCheck on the triage scale on the wall next
     to you if you need clarification on what triage category could fit your patient
-    the best. \r\n\r\nTo exit prompt press the key Q\r\n"
+    the best. \r\n\r\nTo exit prompt press the key Q\r.\n"
 --- !u!222 &633059902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21864,7 +21864,8 @@ MonoBehaviour:
     for patients in a busy Emergency Room. \r\n\r\nPress the C key to have a conversation
     with other health care professionals.\r\n\r\nPress the P key to pause the game.
     \r\n\r\nUse the WASD keys on your keyboard and mouse and look around. Press the
-    P key to go back to the main menu and to exit the tutorial prompts press Q. \r\n"
+    P key to go back to the main menu and \n\nTo exit the tutorial prompts press
+    Q. \r\n"
 --- !u!222 &759074094
 CanvasRenderer:
   m_ObjectHideFlags: 0
