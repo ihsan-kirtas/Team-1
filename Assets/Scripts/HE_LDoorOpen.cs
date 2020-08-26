@@ -48,7 +48,10 @@ public class HE_LDoorOpen : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             open = true;
-
+        }
+        if (other.CompareTag("Patient"))
+        {
+            open = true;
         }
     }
 
@@ -56,6 +59,10 @@ public class HE_LDoorOpen : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
+            open = false;
+        }
+        if (other.CompareTag("Patient"))
         {
             open = false;
         }

@@ -96,9 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b432bc3bd2d09449fc655154b45fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseXInputName: Mouse X
-  mouseYInputName: Mouse Y
-  mouseSensitivity: 150
 --- !u!1 &6173860941153854253
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,9 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2132ebe872c585498a518e575d2a7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogPanel: {fileID: 0}
-  npcNameText: {fileID: 0}
-  dialogText: {fileID: 0}
+  currentPatient: {fileID: 0}
+  patientsList: []
+  convoAvailText: {fileID: 0}
 --- !u!114 &6173860941153854254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,9 +180,8 @@ MonoBehaviour:
   horizontalInputName: Horizontal
   verticalInputName: Vertical
   movementSpeed: 6
+  disablePlayerLock: 0
   moveBody: 0
-  dialogPanel: {fileID: 0}
-  ClipBoardPanel: {fileID: 0}
 --- !u!114 &6173860941153854250
 MonoBehaviour:
   m_ObjectHideFlags: 0
