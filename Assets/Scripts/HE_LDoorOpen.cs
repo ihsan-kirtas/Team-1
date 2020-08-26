@@ -45,11 +45,7 @@ public class HE_LDoorOpen : MonoBehaviour
     // Activate the Main function when Player enter the trigger area
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            open = true;
-        }
-        if (other.CompareTag("Patient"))
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Patient")
         {
             open = true;
         }
@@ -58,11 +54,7 @@ public class HE_LDoorOpen : MonoBehaviour
     // Deactivate the Main function when Player exit the trigger area
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            open = false;
-        }
-        if (other.CompareTag("Patient"))
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Patient")
         {
             open = false;
         }
