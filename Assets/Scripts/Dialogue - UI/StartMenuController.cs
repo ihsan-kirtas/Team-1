@@ -45,17 +45,17 @@ public class StartMenuController : MonoBehaviour
 
     public void Credits()
     {
-        //StartCoroutine(loadingScreenCoroutineCredits());        // This is the most probable way this will work and the functionality is coded - for now the UI element is a stand in to shown functionality.
-        creditPageStandIn.SetActive(true);
-        mainMenuUI.SetActive(false);
+        StartCoroutine(loadingScreenCoroutineCredits());        // This is the most probable way this will work and the functionality is coded - for now the UI element is a stand in to shown functionality.
+        //creditPageStandIn.SetActive(true);
+        //mainMenuUI.SetActive(false);
     }
 
-    public void CreditsReturnToMainMenu()                   // This is a stand in function for current credits stand in. 
-    {                                                       // This will be deactivated when credits scene is made.
-        mainMenuUI.SetActive(true);
-        mainMenuUI.GetComponent<Animator>().enabled = false;
-        creditPageStandIn.SetActive(false);
-    }
+    //public void CreditsReturnToMainMenu()                   // This is a stand in function for current credits stand in. 
+    //{                                                       // This will be deactivated when credits scene is made.
+    //    mainMenuUI.SetActive(true);
+    //    mainMenuUI.GetComponent<Animator>().enabled = false;
+    //    creditPageStandIn.SetActive(false);
+    //}
 
     public void ExitGame()
     {
@@ -89,20 +89,20 @@ public class StartMenuController : MonoBehaviour
         loadingScreen.SetActive(false);
     }
 
-    //IEnumerator loadingScreenCoroutineCredits()               // Coroutine for Credits button
-    //{
-    //    loadingScreen.SetActive(true);
-    //    yield return new WaitForSeconds(3);
-    //    SceneManager.LoadScene("Main Scene");                 // This scene name will need to be changed when this is a credits scene is made.
-    //    yield return new WaitForSeconds(1);
-    //    loadingScreen.SetActive(false);
-    //}
-
     IEnumerator loadingScreenCoroutinePlayerTimes()         // Coroutine for Player Data button
     {
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("ShowPlayerData");              // Change to correct scene here for player prefs if this is the incorrect scene. 
+        SceneManager.LoadScene("ShowPlayerData");           // Change to correct scene here for player prefs if this is the incorrect scene. 
+        yield return new WaitForSeconds(1);
+        loadingScreen.SetActive(false);
+    }
+
+    IEnumerator loadingScreenCoroutineCredits()               // Coroutine for Credits button
+    {
+        loadingScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("CreditScene");                 // This scene name will need to be changed when this is a credits scene is made.
         yield return new WaitForSeconds(1);
         loadingScreen.SetActive(false);
     }
