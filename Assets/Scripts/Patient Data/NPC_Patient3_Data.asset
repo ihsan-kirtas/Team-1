@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e5f9d45dc1d35439ebdcd347f8474a, type: 3}
   m_Name: NPC_Patient3_Data
   m_EditorClassIdentifier: 
-  name: 'Karen '
+  name: 'Karlene Rose '
   age: 45
   gender: Female
   overallHealth: Generally healthy
   additionalNotes: None
   startPatientInfo: None
-  uiambohandover: 'Karen was transferred via ambulance from home post discharge from
-    another metropolitan emergency department, requesting a second opinion on the
-    management of an injury to her right big toe, post kicking toe on the coffee
+  uiambohandover: 'Karlene was transferred via ambulance from home post discharge
+    from another metropolitan emergency department, requesting a second opinion on
+    the management of an injury to her right big toe, post kicking toe on the coffee
     table in her home 7/24 hours ago. Patient unable to get to hospital as she was
     unable to drive rang 000. X-Ray attended at another hospital nil fractures noted,
     patient vitals stable afebrile, complaining of 7/10 pain, refusing analgesia
     wishing to speak to emergency manager to put formal complaint re: treatment at
     previous hospital. '
-  patientdemographics: 'Name:  Karen Rose  Age: 45    Gender:  Female   '
+  patientdemographics: 'Name:  Karlene Rose  Age: 45    Gender:  Female   '
   ambulanceBayConversation:
   - 'Time of Dispatch: 03:00'
   - 'Time of Arrival on Scene: 04:00'
@@ -102,7 +102,14 @@ MonoBehaviour:
   medicationList: []
   medicalHistoryList: []
   lastMealTime: 20:00
-  leadingEvents: Events leading to the presentation to hospital
+  leadingEvents: 'Karlene was transferred via ambulance from home post discharge
+    from another metropolitan emergency department, requesting a second opinion on
+    the management of an injury to her right big toe, post kicking toe on the coffee
+    table in her home 7/24 hours ago. Patient unable to get to hospital as she was
+    unable to drive rang 000. X-Ray attended at another hospital nil fractures noted,
+    patient vitals stable afebrile, complaining of 7/10 pain, refusing analgesia
+    wishing to speak to emergency manager to put formal complaint re: treatment at
+    previous hospital. '
   triageScale: 5
   currentLocation: ' Un Assigned'
   patientActive: 0
@@ -110,9 +117,9 @@ MonoBehaviour:
   character: {fileID: 0}
   recommendations: This patient can wait for treatment or referral to her GP for
     ongoing treatment
-  patienthospitaljourney: 'Karen became increasingly angry towards staff over increased
+  patienthospitaljourney: 'Karlene became increasingly angry towards staff over increased
     wait times and other patients being treated before her. Zero tolerance policy
     was actioned and the after hours manager spoke with the patient in regards to
-    her abusive behaviours towards staff. Karen was then advised that her toe was
+    her abusive behaviours towards staff. Karlene was then advised that her toe was
     not broken and she left the department in a taxi home. '
   clinicalReferences: 'For more information: https://www1.health.nsw.gov.au/pds/ActivePDSDocuments/PD2015_001.pdf'
