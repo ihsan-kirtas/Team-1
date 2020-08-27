@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class AC_ : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject crosshair;
+
+
     void Start()
     {
-        
-    }
+        crosshair.SetActive(true);
+
+
+     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            crosshair.SetActive(true);
+        }
+        else
+        {
+            crosshair.SetActive(true);
+        }
     }
 }

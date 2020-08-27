@@ -9,6 +9,7 @@ public class AC_PauseMenuED : MonoBehaviour
     public GameObject pauseMenuUI;                  // This is the Pause Menu UI which is under the panel - connect this to PauseMenuUIBackground in Unity
     public GameObject settingsMenuUI;               // Connect this to SettingMenuUIBackground in Unity
     public GameObject terminologyPageUI;            // Connect this to TerminologyPageBackground in Unity
+    public GameObject uiDotForLooking;
     public static bool GameIsPaused = false;
    
 
@@ -38,7 +39,7 @@ public class AC_PauseMenuED : MonoBehaviour
         pauseMenuUIPanel.SetActive(false);          // Turns off the Pause Menu Panel
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        uiDotForLooking.SetActive(true);
         Time.timeScale = 1f;                        // Resumes the game at normal speed
         GameIsPaused = false;
     }
@@ -48,7 +49,7 @@ public class AC_PauseMenuED : MonoBehaviour
         pauseMenuUIPanel.SetActive(true);           // Turns on the Pause Menu Panel
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
+        uiDotForLooking.SetActive(false);
         Time.timeScale = 0f;                        // Pauses the game
         GameIsPaused = true;
     }
