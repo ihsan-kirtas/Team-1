@@ -13,7 +13,7 @@ public class JH_PatientSpawner : MonoBehaviour
 
     GameObject gameManager;
 
-    private bool spawnEnabled = true;
+    public bool spawnEnabled = true;
 
 
     void Start()
