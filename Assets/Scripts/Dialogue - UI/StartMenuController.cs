@@ -7,7 +7,7 @@ public class StartMenuController : MonoBehaviour
 {
     public GameObject mainMenuUI;                           //This is called MainMenuUIButtons in the editor
     public GameObject mainMenuSettingMenuUI;                //This currently does not exist and has a stand in
-    public GameObject creditPageStandIn;                    //This is currently a stand in and may not be used like this in the final build
+    // public GameObject creditPageStandIn;                    //This is currently a stand in and may not be used like this in the final build
     public GameObject loadingScreen;                        //This is the loading screen animation
 
     public void StartGame()

@@ -80,17 +80,6 @@ public class JH_PauseMenuUI : MonoBehaviour
         SceneManager.LoadScene("NewTutScene");    //Using scene names as Index hasn't been worked on yet. This will need to be changed in the script - I forgot how to make it changable in Unity
     }
 
-    public void RestartFreeRoam()
-    {
-        pauseMenuUIPanel.SetActive(false);          // Turns off the Pause Menu Panel
-        GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
-
-        Time.timeScale = 1f;                        // Resumes the game at normal speed
-        GameIsPaused = false;
-
-        SceneManager.LoadScene("Emergency Dept");    //Using scene names as Index hasn't been worked on yet. This will need to be changed in the script - I forgot how to make it changable in Unity
-    }
-
     public void SettingsMenu()                      // SWITCH PAGES
     {
         pauseMenuUI.SetActive(false);               // Turn OFF Pause BG panel
