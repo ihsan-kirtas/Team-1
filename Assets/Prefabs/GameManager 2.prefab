@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1581790838832090847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023478646154776807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5311b6791fb4248428dc27b17f1ff4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  alwaysOnUIPanel: {fileID: 0}
+  cinemachineMaster: {fileID: 0}
+--- !u!114 &1581790838832090857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023478646154776807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081e3c13cddd54941a35bca8193c7456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1581790838832090859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023478646154776807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1f63bd107622e41a705e22c5057b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientDatas: []
+--- !u!114 &1581790838832090860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023478646154776807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1f63bd107622e41a705e22c5057b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientDatas: []
+--- !u!1001 &9162413597135303582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 152762409211503427, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 11b9581ad93abdd4b86933ac5468a52a,
+        type: 2}
+    - target: {fileID: 152762409211503428, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: resolutionDropdown
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503428, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 11b9581ad93abdd4b86933ac5468a52a,
+        type: 2}
+    - target: {fileID: 152762409211503429, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503480, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 152762409211503481, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317052, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 9023478646154776807}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: dialogueUiPanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: ObsNotAvailableAlert
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: ConvoNotAvailableAlert
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: convoAvailablePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: pauseMenuMasterPanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: pauseMenuHomePage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: pauseMenuSettingsPage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: terminologyPage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: chartsMasterPanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: resultsPagePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: patientTransferPagePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: obsChartPagePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: initialObsPagePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: patientInfoPagePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: chartsButtons
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: NoMorePatientsAlert
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724068288912317054, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: noMorePatientsAlert
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265337154618409612, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: patientDatas.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: cf2220d078f039d4cb8cf750e730ebf8,
+        type: 2}
+    - target: {fileID: 3265337154618409612, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: patientDatas.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 85f7e88f0472df447bdd70b285438487,
+        type: 2}
+    - target: {fileID: 3265337154618409612, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: patientDatas.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e47e0d1a32268347b07eed525704950,
+        type: 2}
+    - target: {fileID: 3265337154618409612, guid: 22ee1956e4bc7ef48be8884108cd175c,
+        type: 3}
+      propertyPath: patientDatas.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ebe1f4c68f61a849a9855d88a23bed3,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22ee1956e4bc7ef48be8884108cd175c, type: 3}
+--- !u!1 &9023478646154776807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 152762409211503481, guid: 22ee1956e4bc7ef48be8884108cd175c,
+    type: 3}
+  m_PrefabInstance: {fileID: 9162413597135303582}
+  m_PrefabAsset: {fileID: 0}

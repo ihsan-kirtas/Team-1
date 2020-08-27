@@ -82,25 +82,42 @@ MonoBehaviour:
   oxygenTracker:
   - 100
   - 103
+  - 106
+  - 109
+  - 112
   breathRateInit: 20
   breathRateMod: 0.5
   breathRateTracker:
   - 20
   - 20.5
+  - 21
+  - 21.5
+  - 22
   accessoryMuscles: Nil use of accessory muscles for breathing
   bloodPressureSystolicInit: 130
   bloodPressureSystolicMod: 0.5
-  bloodPressureSystolicTracker: []
+  bloodPressureSystolicTracker:
+  - 130
+  - 130.5
+  - 131
+  - 131.5
+  - 132
   bloodPressureDiastolicInit: 88
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 88
   - 88.5
+  - 89
+  - 89.5
+  - 90
   pulseRateInit: 60
   pulseRateMod: 0.5
   pulseRateTracker:
   - 60
   - 60.5
+  - 61
+  - 61.5
+  - 62
   wholeBodyPerfusion: Patient well perfused
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
@@ -167,6 +184,9 @@ MonoBehaviour:
   tempTracker:
   - 36.5
   - 36.6
+  - 36.699997
+  - 36.799995
+  - 36.899994
   fluidStatus: 
   lastVoided: 19:30
   lastBowelsOpen: '07:00 '
@@ -181,8 +201,8 @@ MonoBehaviour:
   - Asthma
   lastMealTime: 19:00
   leadingEvents: Tripped and fell over bowling ball with a LOC 15 seconds
-  triageScale: 2
-  currentLocation: ' Un Assigned'
+  triageScale: 3
+  currentLocation: Bed Space 3
   patientActive: 1
   initValsAdded: 1
   character: {fileID: 0}

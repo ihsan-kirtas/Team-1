@@ -60,20 +60,45 @@ MonoBehaviour:
   patientVentilationStatus: 
   oxygenInit: 99
   oxygenMod: 0.5
-  oxygenTracker: []
+  oxygenTracker:
+  - 99
+  - 99.5
+  - 100
+  - 100.5
+  - 101
   breathRateInit: 15
   breathRateMod: 0.5
-  breathRateTracker: []
+  breathRateTracker:
+  - 15
+  - 15.5
+  - 16
+  - 16.5
+  - 17
   accessoryMuscles: 1
   bloodPressureSystolicInit: 125
   bloodPressureSystolicMod: 0.5
-  bloodPressureSystolicTracker: []
+  bloodPressureSystolicTracker:
+  - 125
+  - 125.5
+  - 126
+  - 126.5
+  - 127
   bloodPressureDiastolicInit: 75
   bloodPressureDiastolicMod: 0.5
-  bloodPressureDiastolicTracker: []
+  bloodPressureDiastolicTracker:
+  - 75
+  - 75.5
+  - 76
+  - 76.5
+  - 77
   pulseRateInit: 80
   pulseRateMod: 0.5
-  pulseRateTracker: []
+  pulseRateTracker:
+  - 80
+  - 80.5
+  - 81
+  - 81.5
+  - 82
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
@@ -92,8 +117,13 @@ MonoBehaviour:
   woundDressings: 
   temperature: 
   tempInit: 37
-  tempMod: 0.5
-  tempTracker: []
+  tempMod: 0.1
+  tempTracker:
+  - 37
+  - 37.5
+  - 38
+  - 38.5
+  - 39
   fluidStatus: 
   lastVoided: 
   lastBowelsOpen: 
@@ -111,8 +141,8 @@ MonoBehaviour:
     wishing to speak to emergency manager to put formal complaint re: treatment at
     previous hospital. '
   triageScale: 5
-  currentLocation: ' Un Assigned'
-  patientActive: 0
+  currentLocation: Bed Space 3
+  patientActive: 1
   initValsAdded: 0
   character: {fileID: 0}
   recommendations: This patient can wait for treatment or referral to her GP for
