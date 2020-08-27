@@ -106,5 +106,5 @@ public class MovePatient : MonoBehaviour
         {
             locationText.text = "No Patient";
         }
-    }
+    } 
 }

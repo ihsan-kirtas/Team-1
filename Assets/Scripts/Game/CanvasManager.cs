@@ -11,7 +11,7 @@ public class CanvasManager : MonoBehaviour
     
     public GameObject ObsNotAvailableAlert;     // Notifies the player that they need to be near a patient to view their obs
     public GameObject ConvoNotAvailableAlert;   // No conversation available alert
-    public GameObject NoMorePatientsAlert;      // No more patients alert
+    public GameObject noMorePatientsAlert;      // No more patients alert
     public GameObject convoAvailablePanel;      // Conversation available popup - "press C for convo"
     public GameObject pauseMenuMasterPanel;     // Pause menu panel - Triggered by Esc
     public GameObject pauseMenuHomePage;        // Pause menu child
@@ -35,6 +35,7 @@ public class CanvasManager : MonoBehaviour
 
 
         // Hide all panels on start
+        noMorePatientsAlert.SetActive(false);
         dialogueUiPanel.SetActive(false);
         chartsMasterPanel.SetActive(false);
         ObsNotAvailableAlert.SetActive(false);

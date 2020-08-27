@@ -11,9 +11,11 @@ public class JH_PatientSpawner : MonoBehaviour
 
     private Vector3 spawnPoint;
 
-    GameObject gameManager;
+    public GameObject gameManager;
 
     public bool spawnEnabled = true;
+
+    public float initialSpawnDelay = 10;
 
 
     void Start()
@@ -27,6 +29,9 @@ public class JH_PatientSpawner : MonoBehaviour
         allPatientsList = gameManager.GetComponent<PatientManager>().allPatients;
 
         nextPatientIndex = 0;
+
+        // spawn first patient
+        StartCoroutine(InitialSpawn());
     }
 
 
@@ -36,6 +41,7 @@ public class JH_PatientSpawner : MonoBehaviour
         {
             if (nextPatientIndex + 1 <= 4) // Capped at 4 patients
             {
+
                 // Spawn Patient from list
                 GameObject newPatient = Instantiate(allPatientsList[nextPatientIndex], spawnPoint, Quaternion.identity);
 
@@ -57,8 +63,14 @@ public class JH_PatientSpawner : MonoBehaviour
             else
             {
                 Debug.Log("No More Patients");
-                Debug.Log(nextPatientIndex + 1);
+                StartCoroutine(DisplayNoMorePatientsAlert());
+                //Debug.Log(nextPatientIndex + 1);
             }
+            // Close UI
+            gameManager.GetComponent<CanvasManager>().resultsPagePanel.SetActive(false);
+            gameManager.GetComponent<CanvasManager>().chartsMasterPanel.SetActive(false);
+            // Check event
+            GameEvents.current.CheckCameraLock();
 
             StartCoroutine(EnableSpawn());
         }
@@ -74,5 +86,18 @@ public class JH_PatientSpawner : MonoBehaviour
         spawnEnabled = false;
         yield return new WaitForSeconds(3);
         spawnEnabled = true;
+    }
+
+    IEnumerator DisplayNoMorePatientsAlert()
+    {
+        gameManager.GetComponent<CanvasManager>().noMorePatientsAlert.SetActive(true);      // Show message
+        yield return new WaitForSeconds(10);                                                 // Wait x seconds
+        gameManager.GetComponent<CanvasManager>().noMorePatientsAlert.SetActive(false);     // Hide Message
+    }
+
+    IEnumerator InitialSpawn()
+    {
+        yield return new WaitForSeconds(initialSpawnDelay);                                                 // Wait x seconds
+        SpawnNextPatient();
     }
 }
