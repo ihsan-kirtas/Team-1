@@ -10,7 +10,7 @@ public class JH_PauseMenuUI : MonoBehaviour
     private GameObject pauseMenuUIPanel;             // This is for the panel that is used to darken the screen when the game is paused. The Pause Menu UI is under this.
     private GameObject pauseMenuUI;                  // This is the Pause Menu UI which is under the panel - connect this to PauseMenuUIBackground in Unity
     private GameObject settingsMenuUI;               // Connect this to SettingMenuUIBackground in Unity
-    private GameObject terminologyPageUI;
+    private GameObject terminologyPageUI;            // Connect this to TerminologyPageBackground in Unity
 
     private void Start()
     {
@@ -44,7 +44,7 @@ public class JH_PauseMenuUI : MonoBehaviour
     {
         pauseMenuUIPanel.SetActive(false);          // Turns off the Pause Menu Panel
         GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
-        Cursor.lockState = CursorLockMode.None;
+        
         Time.timeScale = 1f;                        // Resumes the game at normal speed
         GameIsPaused = false;
     }
@@ -53,8 +53,7 @@ public class JH_PauseMenuUI : MonoBehaviour
     {
         pauseMenuUIPanel.SetActive(true);           // Turns on the Pause Menu Panel
         GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
-        Cursor.lockState = CursorLockMode.Confined;
-
+        
         Time.timeScale = 0f;                        // Pauses the game
         GameIsPaused = true;
     }

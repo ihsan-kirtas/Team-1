@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class AC_PauseMenuED : MonoBehaviour
 {
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUIPanel;             // This is for the panel that is used to darken the screen when the game is paused. The Pause Menu UI is under this.
+    public GameObject pauseMenuUI;                  // This is the Pause Menu UI which is under the panel - connect this to PauseMenuUIBackground in Unity
+    public GameObject settingsMenuUI;               // Connect this to SettingMenuUIBackground in Unity
+    public GameObject terminologyPageUI;
     public static bool GameIsPaused = false;
    
     
