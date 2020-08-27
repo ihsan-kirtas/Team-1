@@ -47954,6 +47954,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_old
       objectReference: {fileID: 0}
+    - target: {fileID: 578960112430039381, guid: 4475c2b9a71eb664f8f9e884d977ea30,
+        type: 3}
+      propertyPath: m_Text
+      value: "Here is the Ambulance Offload Bay.\n\nPatients are handed over from
+        Ambulance Officers here.\n\nYou will get a full handover of why the paitent
+        presented to hospital.\n\nThis is where you would give the patient a triage
+        score, press T on the keyboard to triage your patient from here they will
+        either be moved into the Bed Space Area or the Resuscitation Bay.\n\nCheck
+        on the triage scale on the wall next to you if you need clarification on
+        what triage category could fit your patient the best. \n"
+      objectReference: {fileID: 0}
     - target: {fileID: 578960112677308694, guid: 4475c2b9a71eb664f8f9e884d977ea30,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -47963,6 +47974,60 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 384.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 578960112677308695, guid: 4475c2b9a71eb664f8f9e884d977ea30,
+        type: 3}
+      propertyPath: m_Text
+      value: "\n\n\n\nYou have been assigned as the Registered Nurse to triage, and
+        start treatment for patients in a busy Emergency Room. \n\nUse the WASD keys
+        on your keyboard and mouse and look around. Press the ESC key to go back
+        to the main menu.. \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 578960112909789051, guid: 4475c2b9a71eb664f8f9e884d977ea30,
+        type: 3}
+      propertyPath: m_Text
+      value: "\n\n\nThe Resuscitation Bays 1 and 2 are located ahead. \n\nIf your
+        patient is Triaged a score of 1 or 2 the patient will be transported to here
+        for treatment.\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 578960113099792405, guid: 4475c2b9a71eb664f8f9e884d977ea30,
+        type: 3}
+      propertyPath: m_Text
+      value: '
+
+
+
+
+
+        Congratulations you have finished the tutorial.
+
+
+        Press
+        ESC key and start the game.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 578960113887140692, guid: 4475c2b9a71eb664f8f9e884d977ea30,
+        type: 3}
+      propertyPath: m_Text
+      value: '
+
+
+        This area is Resuscitation Bay 1.
+
+
+
+        Located in
+        here are lots of medical equipment that can be used to save your patients
+        life.
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 578960113935577205, guid: 4475c2b9a71eb664f8f9e884d977ea30,
+        type: 3}
+      propertyPath: m_Text
+      value: "\n\nLocated here are the patient rooms, once you allocate a Triage
+        score to your patient.\n\nDepending on their score they will come here or
+        to the Resus Bay. \n\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4475c2b9a71eb664f8f9e884d977ea30, type: 3}
@@ -58218,6 +58283,7 @@ MonoBehaviour:
   pointSprite: {fileID: 0}
   pointFont: {fileID: 0}
   drawDataFrequency: 300
+  wiped: 0
   usingBreathRateTracker: 1
   usingOxygenTracker: 0
   usingBloodPressure: 0

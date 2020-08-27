@@ -32,14 +32,21 @@ public class AC_UiTrigger : MonoBehaviour
        
 
     }
-
-    private void Update()
+    private void OnTriggerExit(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (player.gameObject.tag == "Player")
         {
             uiTextObject.SetActive(false);
             tutText.SetActive(false);
+
+            Debug.Log("player entered trigger");
+
+
+
         }
+
+
+
     }
 
 
