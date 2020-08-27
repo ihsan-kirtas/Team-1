@@ -7,13 +7,15 @@ public class AC_UiTrigger : MonoBehaviour
 {
     public GameObject uiTextObject;
     public GameObject tutText;
+    //public GameObject button;
    
     
     public void Start()
     {
         uiTextObject.SetActive(false);
         tutText.SetActive(false);
-        
+        //button.SetActive(false);
+
     }
 
     private void OnTriggerEnter(Collider player)
@@ -22,7 +24,8 @@ public class AC_UiTrigger : MonoBehaviour
         {
             uiTextObject.SetActive(true);
             tutText.SetActive(true);
-            
+            //button.SetActive(true);
+
             Debug.Log("player entered trigger");
 
                        
@@ -33,37 +36,47 @@ public class AC_UiTrigger : MonoBehaviour
 
     }
 
-    private void Update()
+    private void OnTriggerExit(Collider player)
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (player.gameObject.tag == "Player")
         {
             uiTextObject.SetActive(false);
             tutText.SetActive(false);
+            //button.SetActive(true);
+
+            Debug.Log("player entered trigger");
+
+
+
         }
+
+
+
     }
 
 
 
-    //public void destroyUiElements()
+    //public void OnButtonClick()
     //{
-    //    Destroy(tutText);
-    //    Destroy(uiTextObject);
-    //    Destroy(uiExitButton);
+    //    uiTextObject.SetActive(false);
+    //    tutText.SetActive(false);
+    //    button.SetActive(false);
+
+    //    Debug.Log("button click works");
+
     //}
 
-    //private void OnTriggerExit(Collider player)
+    //private void Update()
     //{
-    //    if (player.gameObject.tag == "Player")
+    //    if (Input.GetKeyDown(KeyCode.Q))
     //    {
-
-    //        Destroy(uiTextObject);
-    //        Destroy(tutText);
-    //        //uiTextObject.SetActive(false);
-    //        //tutText.SetActive(false);
-    //        //Debug.Log("player exited trigger");
+    //        uiTextObject.SetActive(false);
+    //        tutText.SetActive(false);
     //    }
-
     //}
+
+
+
 
 
 }
