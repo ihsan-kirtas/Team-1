@@ -44,7 +44,7 @@ public class JH_PauseMenuUI : MonoBehaviour
     {
         pauseMenuUIPanel.SetActive(false);          // Turns off the Pause Menu Panel
         GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
-
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1f;                        // Resumes the game at normal speed
         GameIsPaused = false;
     }
@@ -53,6 +53,7 @@ public class JH_PauseMenuUI : MonoBehaviour
     {
         pauseMenuUIPanel.SetActive(true);           // Turns on the Pause Menu Panel
         GameEvents.current.CheckCameraLock();       // Checks wheather to Lock / Unlock Camera
+        Cursor.lockState = CursorLockMode.Confined;
 
         Time.timeScale = 0f;                        // Pauses the game
         GameIsPaused = true;
