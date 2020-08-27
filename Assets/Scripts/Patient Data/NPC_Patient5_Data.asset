@@ -35,27 +35,42 @@ MonoBehaviour:
   oxygenTracker:
   - 95
   - 95.5
+  - 96
+  - 96.5
+  - 97
   breathRateInit: 15
   breathRateMod: 0.5
   breathRateTracker:
   - 15
   - 15.5
+  - 16
+  - 16.5
+  - 17
   accessoryMuscles: 1
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
   bloodPressureSystolicTracker:
   - 140
   - 140.5
+  - 141
+  - 141.5
+  - 142
   bloodPressureDiastolicInit: 90
   bloodPressureDiastolicMod: 0.5
   bloodPressureDiastolicTracker:
   - 90
   - 90.5
+  - 91
+  - 91.5
+  - 92
   pulseRateInit: 70
   pulseRateMod: 0.5
   pulseRateTracker:
   - 70
   - 70.5
+  - 71
+  - 71.5
+  - 72
   wholeBodyPerfusion: 1
   capillaryRefillInit: 2
   capillaryRefillMod: 0.5
@@ -74,10 +89,13 @@ MonoBehaviour:
   woundDressings: 
   temperature: 
   tempInit: 37
-  tempMod: 0.5
+  tempMod: 0.1
   tempTracker:
   - 37
   - 37.5
+  - 38
+  - 38.5
+  - 39
   fluidStatus: 
   lastVoided: 
   lastBowelsOpen: 

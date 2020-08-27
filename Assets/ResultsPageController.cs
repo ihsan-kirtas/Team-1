@@ -25,7 +25,7 @@ public class ResultsPageController : MonoBehaviour
 
     public void UpdateResultsPage()
     {
-        Debug.Log("Update results Page");
+        //Debug.Log("Update results Page");
 
         // Update current patient Data
         pd = player.GetComponent<DialogManager>().currentPatient;

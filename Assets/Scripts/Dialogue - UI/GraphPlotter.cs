@@ -42,7 +42,7 @@ public class GraphPlotter : MonoBehaviour
     private int MinZoneBoxStart;
     private int MinZoneBoxSpan;
 
-    private bool wiped = false;
+    public bool wiped = false;
 
 
     [Header("Choose Chart - Tick only 1")]
@@ -72,11 +72,11 @@ public class GraphPlotter : MonoBehaviour
         {
             noDataAvailableMessage.SetActive(false);
             // wipe data if havent 
-            if (!wiped)
-            {
-                WipeData();
-                wiped = true;
-            }
+            //if (!wiped)
+            //{
+            //    WipeData();
+            //    wiped = true;
+            //}
 
             // if time has passed for next data refresh
             if(Time.frameCount > frameRecord + drawDataFrequency)
@@ -85,7 +85,7 @@ public class GraphPlotter : MonoBehaviour
                 
                 drawData();                     // Refresh data
                 frameRecord = Time.frameCount;  // Record time when this happened
-                Debug.Log("Chart Data Updated");
+                //Debug.Log("Chart Data Updated");
             }
         }
         else
@@ -94,7 +94,7 @@ public class GraphPlotter : MonoBehaviour
         }
     }
 
-    void WipeData()
+    void WipeData()// Not used anymore
     {
         currentPatientData = player.GetComponent<DialogManager>().currentPatient;
 
@@ -170,7 +170,7 @@ public class GraphPlotter : MonoBehaviour
 
     void DrawBackground()
     {
-        Debug.Log("background called");
+        //Debug.Log("background called");
 
         // Setup BG Container properly
         RectTransform bg_rt = BGContainer.GetComponent<RectTransform>();

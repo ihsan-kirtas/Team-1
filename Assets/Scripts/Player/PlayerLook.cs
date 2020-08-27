@@ -48,12 +48,14 @@ public class PlayerLook : MonoBehaviour
     {
         moveCamera = false;                         // Locks the camera in one position
         Cursor.lockState = CursorLockMode.None;     // Enables the cursor for UI, makes visible
+        Cursor.visible = true;
     }
 
     void UnlockCamera()     // Game Mode
     {
         moveCamera = true;                          // Allow the camera to move
         Cursor.lockState = CursorLockMode.Locked;   // Locks the cursor the the middle of the screen and makes invisible
+        Cursor.visible = false;
     }
 
     // Camera rotation controller

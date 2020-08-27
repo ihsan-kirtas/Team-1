@@ -23,7 +23,7 @@ public class PatientTransferPageController : MonoBehaviour
 
     public void UpdatePatientTransferPage()
     {
-        Debug.Log("Update patient transfer Page");
+        //Debug.Log("Update patient transfer Page");
 
         // Update current patient Data
         currentPatientData = player.GetComponent<DialogManager>().currentPatient;

@@ -45,20 +45,45 @@ MonoBehaviour:
   patientVentilationStatus: Patient self ventilating in room air
   oxygenInit: 95
   oxygenMod: 0.5
-  oxygenTracker: []
+  oxygenTracker:
+  - 95
+  - 95.5
+  - 96
+  - 96.5
+  - 97
   breathRateInit: 25
   breathRateMod: 0.5
-  breathRateTracker: []
+  breathRateTracker:
+  - 25
+  - 25.5
+  - 26
+  - 26.5
+  - 27
   accessoryMuscles: no use of accesory muscles
   bloodPressureSystolicInit: 140
   bloodPressureSystolicMod: 0.5
-  bloodPressureSystolicTracker: []
+  bloodPressureSystolicTracker:
+  - 140
+  - 140.5
+  - 141
+  - 141.5
+  - 142
   bloodPressureDiastolicInit: 87
   bloodPressureDiastolicMod: 0.5
-  bloodPressureDiastolicTracker: []
+  bloodPressureDiastolicTracker:
+  - 87
+  - 87.5
+  - 88
+  - 88.5
+  - 89
   pulseRateInit: 99
   pulseRateMod: 0.5
-  pulseRateTracker: []
+  pulseRateTracker:
+  - 99
+  - 99.5
+  - 100
+  - 100.5
+  - 101
   wholeBodyPerfusion: 1
   capillaryRefillInit: 3
   capillaryRefillMod: 0.5
@@ -77,8 +102,13 @@ MonoBehaviour:
   woundDressings: nil wound dressings
   temperature: 36.0
   tempInit: 37
-  tempMod: 0.5
-  tempTracker: []
+  tempMod: 0.1
+  tempTracker:
+  - 37
+  - 37.5
+  - 38
+  - 38.5
+  - 39
   fluidStatus: 80ml/hr Sodium Chloride 0.9% + 5% Glucose
   lastVoided: 03:00
   lastBowelsOpen: 19:00
@@ -95,8 +125,8 @@ MonoBehaviour:
   leadingEvents: Patient brought by mother to Western ED, nil Paediatric Urology
     coverage, patient transfered to ED for opinion and management of abdomal pain.
   triageScale: 2
-  currentLocation: ' Un Assigned'
-  patientActive: 0
+  currentLocation: Bed Space 3
+  patientActive: 1
   initValsAdded: 0
   character: {fileID: 0}
   recommendations: With high suspicion of testicular torsion, immediate urological
