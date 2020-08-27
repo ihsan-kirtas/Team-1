@@ -1228,6 +1228,7 @@ GameObject:
   - component: {fileID: 606820336}
   - component: {fileID: 606820335}
   - component: {fileID: 606820338}
+  - component: {fileID: 606820339}
   m_Layer: 5
   m_Name: MainAnimation
   m_TagString: Untagged
@@ -1407,6 +1408,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &606820339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606820333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9742b365bb02bd84fb252eb397531c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorvisibility: 1
 --- !u!1 &680051340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,6 +5128,7 @@ GameObject:
   - component: {fileID: 4381391496143559709}
   - component: {fileID: 4381391496143559705}
   - component: {fileID: 4381391496143559706}
+  - component: {fileID: 4381391496143559711}
   m_Layer: 0
   m_Name: LoadingScreen Animation
   m_TagString: Untagged
@@ -5121,3 +5136,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4381391496143559711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381391496143559710}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9742b365bb02bd84fb252eb397531c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorvisibility: 0
