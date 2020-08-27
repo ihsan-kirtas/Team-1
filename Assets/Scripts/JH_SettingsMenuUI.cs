@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using System.Linq;
 
 public class JH_SettingsMenuUI : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class JH_SettingsMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        resolutions = Screen.resolutions;
+        //resolutions = Screen.resolutions;
+
+        var resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
 
         resolutionDropdown.ClearOptions();
 
