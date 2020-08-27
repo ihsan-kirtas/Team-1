@@ -1858,7 +1858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &55078967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2029011763}
-  - {fileID: 1750713075}
   m_Father: {fileID: 115937456}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25822,7 +25821,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1152817249}
-  - {fileID: 2048657047}
   - {fileID: 1514921345}
   m_Father: {fileID: 115937456}
   m_RootOrder: 6
@@ -36160,14 +36158,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2048657047}
   m_Father: {fileID: 809199095}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 6.1, y: 6.8}
-  m_SizeDelta: {x: 600, y: 25}
+  m_SizeDelta: {x: 1000, y: 25}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1152817250
 MonoBehaviour:
@@ -36182,7 +36181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9981086, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -48922,7 +48921,7 @@ RectTransform:
   m_Children:
   - {fileID: 296510553}
   m_Father: {fileID: 809199095}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -56200,12 +56199,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 55078967}
-  m_RootOrder: 1
+  m_Father: {fileID: 2029011763}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860.00006, y: 446.02997}
+  m_AnchoredPosition: {x: 0, y: -17.81}
   m_SizeDelta: {x: 200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750713076
@@ -71111,7 +71110,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1750713075}
   m_Father: {fileID: 55078967}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81368,7 +81368,7 @@ PrefabInstance:
     - target: {fileID: 6173860940115667411, guid: 76e6753c73a9a10438c2e2c942a118ab,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173860941153854249, guid: 76e6753c73a9a10438c2e2c942a118ab,
         type: 3}
@@ -82652,7 +82652,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 809199095}
+    m_TransformParent: {fileID: 1152817249}
     m_Modifications:
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
@@ -82672,17 +82672,17 @@ PrefabInstance:
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
@@ -82692,7 +82692,7 @@ PrefabInstance:
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
@@ -82712,17 +82712,17 @@ PrefabInstance:
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.029973
+      value: 18.99
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.7999864
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513668, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
@@ -82792,17 +82792,27 @@ PrefabInstance:
     - target: {fileID: 9073073651062513675, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.5019608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513675, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.5019608
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9073073651062513675, guid: cfae6b952392c1e4f8ef194bf19f0839,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.5019608
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073073651062513675, guid: cfae6b952392c1e4f8ef194bf19f0839,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073073651062513675, guid: cfae6b952392c1e4f8ef194bf19f0839,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfae6b952392c1e4f8ef194bf19f0839, type: 3}

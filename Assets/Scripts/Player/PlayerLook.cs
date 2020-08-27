@@ -10,7 +10,7 @@ public class PlayerLook : MonoBehaviour
 {
     private string mouseXInputName = "Mouse X";     // For Input
     private string mouseYInputName = "Mouse Y";     // For Input
-    private float mouseSensitivity = 150;           // Mouse sensitivity
+    public float mouseSensitivity = 200;           // Mouse sensitivity
     private float xAxisClamp;                       // Stop looking too high or low
 
     private Transform playerBody;                   // Parent's body transform
