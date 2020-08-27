@@ -100,11 +100,11 @@ public class StartMenuController : MonoBehaviour
 
     IEnumerator loadingScreenCoroutineCredits()               // Coroutine for Credits button
     {
-        loadingScreen.SetActive(true);
-        yield return new WaitForSeconds(3);
+       // loadingScreen.SetActive(true);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("CreditScene");                 // This scene name will need to be changed when this is a credits scene is made.
         yield return new WaitForSeconds(1);
-        loadingScreen.SetActive(false);
+       // loadingScreen.SetActive(false);
     }
 }
 
