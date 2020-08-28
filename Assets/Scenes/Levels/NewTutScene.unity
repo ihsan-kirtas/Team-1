@@ -18744,14 +18744,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Here is the Ambulance Offload Bay.\r\nPatients are handed over from Ambulance
-    Officers here.\r\n\r\nYou will get a full handover of why the paitent presented
-    to hospital.\r\n\r\nThis is where you would give the patient a triage score,
-    press Space Bar on the keyboard to triage your patient from here they will either
-    be moved into the Bed Space Area or the Resuscitation Bay, press Space Bar again
-    to close the Triage Score.\r\n\r\nCheck on the triage scale on the wall next
-    to you if you need clarification on what triage category could fit your patient
-    the best. \r\n\r\nTo exit prompt press the key Q\r.\n"
+  m_Text: "Here is the Ambulance Offload Bay.\r\n\nPatients are handed over from
+    Ambulance Officers here.\r\n\r\nYou will get a full handover of why the paitent
+    presented to hospital.\r\n\r\nThis is where you would give the patient a triage
+    score, press Space Bar on the keyboard to triage your patient from here they
+    will either be moved into the Bed Space Area or the Resuscitation Bay, press
+    Space Bar again to close the Triage Score.\r\n\r\nCheck on the triage scale on
+    the wall next to you if you need clarification on what triage category could
+    fit your patient the best. \r\n\r\n\n"
 --- !u!222 &633059902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22030,11 +22030,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You have been assigned as the Registered Nurse to triage, and start treatment
-    for patients in a busy Emergency Room. \r\nPress the C key to have a conversation
-    with other health care professionals.\r\nPress the P key to pause the game. \r\n\r\nUse
-    the WASD keys on your keyboard and mouse and look around. Press the P key to
-    go back to the main menu and \n\nTo exit the tutorial prompts press Q. \r\n"
+  m_Text: "\nYou have been assigned as the Registered Nurse to triage, and start
+    treatment for patients in a busy Emergency Room. \r\n\nPress the C key to have
+    a conversation with other health care professionals.\r\n\nPress the P key to
+    pause the game. \r\n\r\nUse the WASD keys on your keyboard and mouse and look
+    around.\n\n\n\n"
 --- !u!222 &759074094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26601,12 +26601,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Congratulations you have finished the tutorial.
+  m_Text: '
+
+
+    Congratulations you have finished the tutorial.
 
 
 
-    Press P key and
-    start the game or to exit prompt press the key Q.\'
+    Press P
+    key and start the game or to exit. '
 --- !u!222 &967706225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36840,9 +36843,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rThe Resuscitation Bays 1 and 2 are located ahead. \r\n\r\nIf your patient
-    is Triaged a score of 1 or 2 the patient will be transported to here for treatment.\r\n\r\nTo
-    exit prompt press the key Q.\r"
+  m_Text: "\r\n\nThe Resuscitation Bays 1 and 2 are located ahead. \r\n\r\nIf your
+    patient is Triaged a score of 1 or 2 the patient will be transported to here
+    for treatment.\r\n\r\n"
 --- !u!222 &1266637115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53665,15 +53668,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This area is Resuscitation Bay 1.
+  m_Text: '
 
-    Located here are lots of medical
-    equipment that can be used to save your patients life.
-
+    This area is Resuscitation Bay 1.
 
 
-    To exit prompt
-    press the key Q.'
+
+    Located here are lots of
+    medical equipment that can be used to save your patients life.
+
+
+'
 --- !u!222 &1790804832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60962,9 +60967,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rLocated here are the patient rooms, once you allocate a Triage score
-    to your patient, depending on their score they will come here or to the Resus
-    Bay. \r\n\r\nTo exit prompt press the key Q.\r"
+  m_Text: "\r\n\nLocated here are the patient rooms, once you allocate a Triage score
+    to your patient.\n\nDepending on their score they will come here or to the Resus
+    Bay. \r\n\r\n"
 --- !u!222 &1864805817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -75325,8 +75330,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1488599002}
-        m_MethodName: Restart
+      - m_Target: {fileID: 5187167333878165912}
+        m_MethodName: loadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -75377,6 +75382,7 @@ GameObject:
   - component: {fileID: 5187167333878165909}
   - component: {fileID: 5187167333878165908}
   - component: {fileID: 6018008557941840990}
+  - component: {fileID: 5187167333878165912}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -75403,6 +75409,19 @@ RectTransform:
   m_AnchoredPosition: {x: -0.071746826, y: 90}
   m_SizeDelta: {x: 218.2, y: 35.75}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5187167333878165912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5187167333878165910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8808de76fca7548a52ab44e9daffa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myScene: NewTutScene
 --- !u!222 &5187167333878165914
 CanvasRenderer:
   m_ObjectHideFlags: 0
