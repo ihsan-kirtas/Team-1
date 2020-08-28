@@ -93,7 +93,7 @@ public class StartMenuController : MonoBehaviour
     {
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("ShowPlayerData");           // Change to correct scene here for player prefs if this is the incorrect scene. 
+        SceneManager.LoadScene("Save Player Name 1");           // Change to correct scene here for player prefs if this is the incorrect scene. 
         yield return new WaitForSeconds(1);
         loadingScreen.SetActive(false);
     }
