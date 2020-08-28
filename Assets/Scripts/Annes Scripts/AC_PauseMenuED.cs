@@ -16,6 +16,7 @@ public class AC_PauseMenuED : MonoBehaviour
     private void Start()
     {
         pauseMenuUIPanel.SetActive(false);
+        Cursor.visible = false;                     // Makes cursor invisible
     }
     
     // Update is called once per frame
@@ -37,9 +38,11 @@ public class AC_PauseMenuED : MonoBehaviour
     public void Resume()
     {
         pauseMenuUIPanel.SetActive(false);          // Turns off the Pause Menu Panel
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        uiDotForLooking.SetActive(true);
+        uiDotForLooking.SetActive(true);            // Turns on UI Crosshair
+
+        Cursor.lockState = CursorLockMode.Locked;   // Locks cursor
+        Cursor.visible = false;                     // Makes cursor invisible
+
         Time.timeScale = 1f;                        // Resumes the game at normal speed
         GameIsPaused = false;
     }
@@ -47,9 +50,11 @@ public class AC_PauseMenuED : MonoBehaviour
     void Pause()
     {
         pauseMenuUIPanel.SetActive(true);           // Turns on the Pause Menu Panel
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        uiDotForLooking.SetActive(false);
+        uiDotForLooking.SetActive(false);           // Turns off UI Crosshair
+
+        Cursor.lockState = CursorLockMode.None;     // Unlocks cursor
+        Cursor.visible = true;                      // Makes cursor visible
+
         Time.timeScale = 0f;                        // Pauses the game
         GameIsPaused = true;
     }
@@ -57,8 +62,10 @@ public class AC_PauseMenuED : MonoBehaviour
     public void RestartFreeRoam()
     {
         pauseMenuUIPanel.SetActive(false);          // Turns off the Pause Menu Panel
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        uiDotForLooking.SetActive(true);            // Turns on UI Crosshair
+
+        Cursor.lockState = CursorLockMode.Locked;   // Locks cursor
+        Cursor.visible = false;                     // Makes cursor invisible
 
         Time.timeScale = 1f;                        // Resumes the game at normal speed
         GameIsPaused = false;
@@ -92,8 +99,8 @@ public class AC_PauseMenuED : MonoBehaviour
 
     public void ExitToMenu()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;     // Unlocks cursor
+        Cursor.visible = true;                      // Makes cursor visible
 
         Time.timeScale = 1f;                        // Resumes the game at normal speed
 
