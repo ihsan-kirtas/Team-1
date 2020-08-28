@@ -74715,7 +74715,7 @@ PrefabInstance:
     - target: {fileID: 7384470124617638084, guid: eb6c25b00f4c90748a2a2293c81bb711,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7384470124617638085, guid: eb6c25b00f4c90748a2a2293c81bb711,
         type: 3}
@@ -74827,6 +74827,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7384470125390347591, guid: eb6c25b00f4c90748a2a2293c81bb711,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Click on the Triage Score that you think the patient is and
+
+        then
+        click on the area you wish to transfer the patient.
+
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7384470125664157126, guid: eb6c25b00f4c90748a2a2293c81bb711,
         type: 3}
       propertyPath: player
@@ -74900,7 +74911,7 @@ PrefabInstance:
     - target: {fileID: 8421052665005207866, guid: eb6c25b00f4c90748a2a2293c81bb711,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8421052665005207867, guid: eb6c25b00f4c90748a2a2293c81bb711,
         type: 3}
@@ -75711,6 +75722,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260972593362897487, guid: 1124660fe76513d488ebab77a2555e9d,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Key Reference: P - Pause  C- Conversation   Space Bar- Patient Charts '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260972593386394806, guid: 1124660fe76513d488ebab77a2555e9d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1137.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260972593386394806, guid: 1124660fe76513d488ebab77a2555e9d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260972593386394806, guid: 1124660fe76513d488ebab77a2555e9d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260972593386394806, guid: 1124660fe76513d488ebab77a2555e9d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8260972594266990880, guid: 1124660fe76513d488ebab77a2555e9d,
         type: 3}
