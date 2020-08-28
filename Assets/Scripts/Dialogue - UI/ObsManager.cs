@@ -59,7 +59,6 @@ public class ObsManager : MonoBehaviour
     // Add new Observations to the tracker. (new value = last value + modifier)
     void RecordObsChanges(Patient_Data pd)
     {
-
         // Add values to existing list
         if(pd.bloodPressureSystolicTracker.Count > 0)
             pd.bloodPressureSystolicTracker.Add(pd.bloodPressureSystolicTracker.Last() + pd.bloodPressureSystolicMod);        // Blood Pressure - Systolic
@@ -74,10 +73,6 @@ public class ObsManager : MonoBehaviour
         if (pd.tempTracker.Count > 0)
             pd.tempTracker.Add(pd.tempTracker.Last() + pd.tempMod);                                                           // Temp Tracker
 
-        //pd.capillaryRefillTracker.Add(pd.capillaryRefillTracker.Last() + pd.capillaryRefillMod);                          // Capillary Refill
-        //pd.glasgowComaScaleTracker.Add(pd.glasgowComaScaleTracker.Last() + pd.glasgowComaScaleMod);                       // Glasgow Coma Scale
-        //pd.pupilReactionTracker.Add(pd.pupilReactionTracker.Last() + pd.pupilReactionMod);                                // Pupil Reaction
-
         // if length > 10 remove 2nd item in the list
         TrimListSize(pd.bloodPressureSystolicTracker);
         TrimListSize(pd.bloodPressureDiastolicTracker);
@@ -86,10 +81,6 @@ public class ObsManager : MonoBehaviour
         TrimListSize(pd.oxygenTracker);
         TrimListSize(pd.pulseRateTracker);
         TrimListSize(pd.tempTracker);
-
-        //TrimListSize(pd.pupilReactionTracker);
-        //TrimListSize(pd.capillaryRefillTracker);
-        //TrimListSize(pd.glasgowComaScaleTracker);
     }
 
     // List cleanup - Used to stop the Obs array from getting too huge. keeps the initial value and deletes the 2nd value if length >10
