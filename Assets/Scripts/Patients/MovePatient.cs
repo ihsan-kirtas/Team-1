@@ -31,11 +31,11 @@ public class MovePatient : MonoBehaviour
             if(gameManager.GetComponent<CanvasManager>().patientTransferPagePanel.activeSelf && player.GetComponent<DialogManager>().currentPatient != null)
             {
                 // update the UI Text
-                locationText.text = "Assigned to: " + player.GetComponent<DialogManager>().currentPatient.currentLocation;
+                //locationText.text = "Assigned to: " + player.GetComponent<DialogManager>().currentPatient.currentLocation;
             }
             else
             {
-                locationText.text = "No Patient";
+                //locationText.text = "No Patient";
             }
 
             frameRecord = Time.frameCount;  // Record time when this happened
